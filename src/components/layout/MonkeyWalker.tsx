@@ -32,7 +32,7 @@ function Monkey({ onFinish }: { onFinish: () => void }) {
     if (!group.current) return;
     elapsed.current += delta;
     if (elapsed.current > STATIC_DURATION) {
-      group.current.position.x += delta * 2.2;
+      group.current.position.x += delta * 2.0;
       if (group.current.position.x > 14) onFinish();
     }
   });
