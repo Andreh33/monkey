@@ -49,3 +49,5 @@ prisma/dev.db-journal
 # uploads (kept .gitkeep only)
 public/uploads/products/*
 !public/uploads/products/.gitkeep
+
+.vercel
