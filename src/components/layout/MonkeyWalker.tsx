@@ -5,7 +5,9 @@ import { Canvas, useFrame } from "@react-three/fiber";
 import { useGLTF, useAnimations } from "@react-three/drei";
 import * as THREE from "three";
 
-const MODEL_URL = "/modelo/source/dead-monkey-walk.glb";
+const MODEL_URL = "/modelo1/monkey_dancing.glb";
+
+let alreadyPlayed = false;
 
 function Monkey({ onFinish }: { onFinish: () => void }) {
   const group = useRef<THREE.Group>(null);
@@ -13,13 +15,15 @@ function Monkey({ onFinish }: { onFinish: () => void }) {
   const { actions, names } = useAnimations(animations, group);
 
   useEffect(() => {
-    if (names.length > 0 && actions[names[0]]) {
-      const action = actions[names[0]]!;
+    const walkName =
+      names.find((n) => /walk|caminar|run|move/i.test(n)) ?? names[0];
+    if (walkName && actions[walkName]) {
+      const action = actions[walkName]!;
       action.reset().fadeIn(0.2).play();
       action.setLoop(THREE.LoopRepeat, Infinity);
     }
     return () => {
-      if (names[0] && actions[names[0]]) actions[names[0]]?.fadeOut(0.2);
+      if (walkName && actions[walkName]) actions[walkName]?.fadeOut(0.2);
     };
   }, [actions, names]);
 
@@ -36,7 +40,7 @@ function Monkey({ onFinish }: { onFinish: () => void }) {
       ref={group}
       position={[14, -2.9, 0]}
       rotation={[0, Math.PI * 1.5, 0]}
-      scale={0.04}
+      scale={0.6}
     >
       <primitive object={scene} />
     </group>
@@ -51,18 +55,12 @@ export default function MonkeyWalker() {
 
   useEffect(() => {
     if (typeof window === "undefined") return;
-    try {
-      if (sessionStorage.getItem("monkey_walked")) return;
-    } catch {
-      return;
-    }
+    if (alreadyPlayed) return;
     setShow(true);
   }, []);
 
   const finish = () => {
-    try {
-      sessionStorage.setItem("monkey_walked", "1");
-    } catch {}
+    alreadyPlayed = true;
     setShow(false);
   };
 
