@@ -12,7 +12,7 @@ let alreadyPlayed = false;
 function Monkey({ onFinish }: { onFinish: () => void }) {
   const group = useRef<THREE.Group>(null);
   const elapsed = useRef(0);
-  const STATIC_DURATION = 5; // segundos quieto antes de irse
+  const STATIC_DURATION = 6.5; // segundos quieto antes de irse
   const { scene, animations } = useGLTF(MODEL_URL);
   const { actions, names } = useAnimations(animations, group);
 
