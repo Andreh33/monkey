@@ -34,9 +34,9 @@ function Monkey({ onFinish }: { onFinish: () => void }) {
   return (
     <group
       ref={group}
-      position={[14, -3.2, 0]}
+      position={[14, -2.9, 0]}
       rotation={[0, Math.PI * 1.5, 0]}
-      scale={0.25}
+      scale={0.04}
     >
       <primitive object={scene} />
     </group>
