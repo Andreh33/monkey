@@ -1,0 +1,107 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id        String    @id @default(cuid())
+  email     String    @unique
+  password  String
+  name      String?
+  phone     String?
+  role      String    @default("CLIENT")
+  addresses Address[]
+  orders    Order[]
+  createdAt DateTime  @default(now())
+  updatedAt DateTime  @updatedAt
+}
+
+model Address {
+  id         String  @id @default(cuid())
+  userId     String
+  user       User    @relation(fields: [userId], references: [id], onDelete: Cascade)
+  label      String
+  fullName   String
+  street     String
+  city       String
+  postalCode String
+  country    String  @default("España")
+  phone      String?
+  isDefault  Boolean @default(false)
+}
+
+model Product {
+  id          String         @id @default(cuid())
+  slug        String         @unique
+  name        String
+  description String
+  shortDesc   String
+  price       Float
+  compareAt   Float?
+  currency    String         @default("EUR")
+  sku         String?        @unique
+  stock       Int            @default(0)
+  category    String
+  brand       String?
+  maxSpeed    Int?
+  range       Int?
+  motorPower  Int?
+  battery     String?
+  weight      Float?
+  maxLoad     Int?
+  stripeLink  String
+  featured    Boolean        @default(false)
+  active      Boolean        @default(true)
+  images      ProductImage[]
+  createdAt   DateTime       @default(now())
+  updatedAt   DateTime       @updatedAt
+}
+
+model ProductImage {
+  id        String  @id @default(cuid())
+  productId String
+  product   Product @relation(fields: [productId], references: [id], onDelete: Cascade)
+  url       String
+  alt       String?
+  order     Int     @default(0)
+}
+
+model Order {
+  id        String   @id @default(cuid())
+  userId    String?
+  user      User?    @relation(fields: [userId], references: [id])
+  email     String
+  status    String   @default("PENDING")
+  total     Float
+  items     String
+  stripeRef String?
+  createdAt DateTime @default(now())
+}
+
+model RepairRequest {
+  id           String   @id @default(cuid())
+  name         String
+  email        String
+  phone        String
+  scooterBrand String
+  scooterModel String?
+  problem      String
+  problemType  String
+  preferred    String?
+  status       String   @default("NEW")
+  notes        String?
+  createdAt    DateTime @default(now())
+}
+
+model ContactMessage {
+  id        String   @id @default(cuid())
+  name      String
+  email     String
+  phone     String?
+  message   String
+  createdAt DateTime @default(now())
+}
