@@ -11,36 +11,38 @@ let alreadyPlayed = false;
 
 function Monkey({ onFinish }: { onFinish: () => void }) {
   const group = useRef<THREE.Group>(null);
+  const elapsed = useRef(0);
+  const STATIC_DURATION = 3.2; // segundos quieto antes de irse
   const { scene, animations } = useGLTF(MODEL_URL);
   const { actions, names } = useAnimations(animations, group);
 
   useEffect(() => {
-    const walkName =
-      names.find((n) => /walk|caminar|run|move/i.test(n)) ?? names[0];
-    if (walkName && actions[walkName]) {
-      const action = actions[walkName]!;
+    const animName = names[0];
+    if (animName && actions[animName]) {
+      const action = actions[animName]!;
       action.reset().fadeIn(0.2).play();
       action.setLoop(THREE.LoopRepeat, Infinity);
     }
     return () => {
-      if (walkName && actions[walkName]) actions[walkName]?.fadeOut(0.2);
+      if (names[0] && actions[names[0]]) actions[names[0]]?.fadeOut(0.2);
     };
   }, [actions, names]);
 
   useFrame((_state, delta) => {
     if (!group.current) return;
-    group.current.position.x -= delta * 4.2;
-    if (group.current.position.x < -14) {
-      onFinish();
+    elapsed.current += delta;
+    if (elapsed.current > STATIC_DURATION) {
+      group.current.position.x += delta * 5.5;
+      if (group.current.position.x > 14) onFinish();
     }
   });
 
   return (
     <group
       ref={group}
-      position={[14, -2.9, 0]}
-      rotation={[0, Math.PI * 1.5, 0]}
-      scale={0.6}
+      position={[0, -2.9, 0]}
+      rotation={[0, Math.PI / 2, 0]}
+      scale={1.8}
     >
       <primitive object={scene} />
     </group>
