@@ -8,7 +8,7 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
           <div>
             <Link href="/" className="font-display text-3xl tracking-wider">
-              MONOPATÍN<span className="text-gradient">·SHOP</span>
+              MONKEY<span className="text-gradient">·MOTION</span>
             </Link>
             <p className="mt-4 text-sm text-text-secondary leading-relaxed">
               Venta y reparación de patinetes eléctricos en Tarragona. Calidad. Rapidez. Confianza.
@@ -53,7 +53,7 @@ export function Footer() {
               </li>
               <li className="flex items-center gap-2 text-text-secondary">
                 <Mail className="w-4 h-4 text-accent-orange" />
-                <a href="mailto:hola@monopatinshop.es" className="hover:text-white transition-colors">hola@monopatinshop.es</a>
+                <a href="mailto:hola@monkeymotion.es" className="hover:text-white transition-colors">hola@monkeymotion.es</a>
               </li>
               <li className="flex items-start gap-2 text-text-secondary">
                 <Clock className="w-4 h-4 text-accent-orange mt-0.5" />
@@ -93,7 +93,7 @@ export function Footer() {
         </div>
 
         <div className="mt-12 pt-6 border-t border-border flex flex-col sm:flex-row items-center justify-between gap-4">
-          <p className="text-xs text-text-muted font-mono">© 2026 MONOPATÍN SHOP · TARRAGONA · Todos los derechos reservados</p>
+          <p className="text-xs text-text-muted font-mono">© 2026 MONKEYMOTION · TARRAGONA · Todos los derechos reservados</p>
           <p className="text-xs text-text-muted">Hecho en Tarragona con energía urbana ⚡</p>
         </div>
       </div>

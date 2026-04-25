@@ -48,7 +48,7 @@ export function Navbar() {
       <div className="container-custom flex items-center justify-between gap-6">
         <Link href="/" className="flex items-center gap-2 shrink-0">
           <span className="font-display text-2xl sm:text-3xl tracking-wider">
-            MONOPATÍN<span className="text-gradient">·SHOP</span>
+            MONKEY<span className="text-gradient">·MOTION</span>
           </span>
         </Link>
 

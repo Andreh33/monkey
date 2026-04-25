@@ -27,7 +27,7 @@ export function AdminSidebar() {
     <aside className="w-64 shrink-0 bg-bg-secondary border-r border-border min-h-screen flex flex-col">
       <div className="p-6 border-b border-border">
         <Link href="/admin" className="font-display text-xl tracking-wider">
-          MONOPATÍN<span className="text-gradient">·ADMIN</span>
+          MONKEY<span className="text-gradient">·ADMIN</span>
         </Link>
       </div>
       <nav className="flex-1 p-4 space-y-1">
