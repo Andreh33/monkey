@@ -53,7 +53,7 @@ export function Footer() {
               </li>
               <li className="flex items-center gap-2 text-text-secondary">
                 <Mail className="w-4 h-4 text-accent-orange" />
-                <a href="mailto:hola@monkeymotion.es" className="hover:text-white transition-colors">hola@monkeymotion.es</a>
+                <a href="mailto:info@monopatinshop.com" className="hover:text-white transition-colors">info@monopatinshop.com</a>
               </li>
               <li className="flex items-start gap-2 text-text-secondary">
                 <Clock className="w-4 h-4 text-accent-orange mt-0.5" />
