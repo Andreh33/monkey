@@ -115,8 +115,8 @@ export default function ReparacionesPage() {
               <div className="card-base p-5">
                 <p className="font-display text-2xl tracking-wider mb-2">Horario</p>
                 <p className="text-sm text-text-secondary leading-relaxed font-mono">
-                  Lunes a Viernes · 10:00-14:00 / 17:00-20:00<br />
-                  Sábados · 10:00-14:00<br />
+                  Lunes a Viernes · 10:00-20:00<br />
+                  Sábados · 11:00-15:00<br />
                   Domingos · Cerrado
                 </p>
               </div>

@@ -46,9 +46,9 @@ export default function ContactoPage() {
 
               <ContactRow icon={Clock} title="Horario">
                 <span className="font-mono text-xs leading-relaxed">
-                  L-V · 10:00-14:00 / 17:00-20:00
+                  L-V · 10:00-20:00
                   <br />
-                  S · 10:00-14:00
+                  S · 11:00-15:00
                   <br />
                   D · Cerrado
                 </span>

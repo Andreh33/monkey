@@ -10,14 +10,14 @@ import MonkeyWalkerLoader from "@/components/layout/MonkeyWalkerLoader";
 
 export const metadata: Metadata = {
   title: {
-    default: "MonkeyMotion · Venta y Reparación de Patinetes Eléctricos · Tarragona",
-    template: "%s · MonkeyMotion Tarragona",
+    default: "MonopatinShop · Venta y Reparación de Patinetes Eléctricos · Tarragona",
+    template: "%s · MonopatinShop Tarragona",
   },
   description:
     "Tienda especializada en venta y reparación de patinetes eléctricos en Tarragona. Todas las marcas. Diagnóstico gratuito. Garantía 2 años.",
   keywords: ["patinetes eléctricos", "Tarragona", "reparación", "Xiaomi", "Segway", "Dualtron"],
   openGraph: {
-    title: "MonkeyMotion · Patinetes Eléctricos Tarragona",
+    title: "MonopatinShop · Patinetes Eléctricos Tarragona",
     description: "Venta y reparación de patinetes eléctricos en Tarragona.",
     type: "website",
     locale: "es_ES",

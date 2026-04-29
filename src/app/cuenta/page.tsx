@@ -25,7 +25,7 @@ export default async function CuentaInicio() {
   return (
     <div>
       <h1 className="display-lg mb-2">Hola, {session.user.name?.split(" ")[0] || "amig@"}</h1>
-      <p className="text-text-secondary mb-10">Bienvenido a tu panel personal de MonkeyMotion.</p>
+      <p className="text-text-secondary mb-10">Bienvenido a tu panel personal de MonopatinShop.</p>
 
       <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
         {cards.map((c) => {

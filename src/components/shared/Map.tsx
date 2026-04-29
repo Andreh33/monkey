@@ -31,7 +31,7 @@ export function ShopMap() {
         />
         <Marker position={POSITION} icon={ICON}>
           <Popup>
-            <strong>MonkeyMotion</strong>
+            <strong>MonopatinShop</strong>
             <br />
             Venta y reparación de patinetes
             <br />

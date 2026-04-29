@@ -36,7 +36,7 @@ export default function AdminLoginPage() {
             <Lock className="w-7 h-7 text-black" />
           </div>
           <p className="eyebrow mb-2">★ ADMIN AREA ★</p>
-          <h1 className="display-md">MonkeyMotion</h1>
+          <h1 className="display-md">MonopatinShop</h1>
           <p className="text-text-muted text-sm mt-2">Acceso restringido al equipo</p>
         </div>
 

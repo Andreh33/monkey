@@ -26,7 +26,7 @@ export default function NosotrosPage() {
       <section className="relative h-[60vh] min-h-[420px] flex items-end overflow-hidden">
         <Image
           src="/imagenes/local-13.jpeg"
-          alt="Tienda MonkeyMotion en Tarragona"
+          alt="Tienda MonopatinShop en Tarragona"
           fill
           priority
           className="object-cover"
@@ -47,7 +47,7 @@ export default function NosotrosPage() {
               <h2 className="display-md mb-6">De la pasión por la calle al taller</h2>
               <div className="space-y-4 text-text-secondary leading-relaxed">
                 <p>
-                  MonkeyMotion nace de la pasión por la movilidad eléctrica y la cultura urbana de Tarragona. Empezamos como un pequeño taller arreglando los patinetes de amigos y vecinos del barrio, y poco a poco se ha convertido en el referente de la ciudad para venta y reparación de patinetes eléctricos.
+                  MonopatinShop nace de la pasión por la movilidad eléctrica y la cultura urbana de Tarragona. Empezamos como un pequeño taller arreglando los patinetes de amigos y vecinos del barrio, y poco a poco se ha convertido en el referente de la ciudad para venta y reparación de patinetes eléctricos.
                 </p>
                 <p>
                   Detrás del shop hay un equipo que vive el patinete como medio de transporte, como deporte y como forma de vida. Conocemos cada modelo, cada problema típico y cada solución. Y lo más importante: tratamos cada patinete que entra como si fuera el nuestro.
@@ -64,7 +64,7 @@ export default function NosotrosPage() {
 
           <ScrollReveal delay={0.2}>
             <div className="relative aspect-[4/5] rounded-2xl overflow-hidden border border-border">
-              <Image src="/imagenes/local-17.jpeg" alt="Equipo MonkeyMotion" fill sizes="(max-width: 1024px) 100vw, 50vw" className="object-cover" />
+              <Image src="/imagenes/local-17.jpeg" alt="Equipo MonopatinShop" fill sizes="(max-width: 1024px) 100vw, 50vw" className="object-cover" />
               <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
               <div className="absolute bottom-6 left-6 right-6">
                 <p className="font-display text-3xl tracking-wider text-white">Tarragona · 2026</p>

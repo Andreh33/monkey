@@ -105,6 +105,10 @@ export function ProductForm({ product }: { product?: Product }) {
             <Label>Categoría *</Label>
             <select name="category" defaultValue={product?.category ?? "patinete"} className="input-base">
               <option value="patinete">Patinete</option>
+              <option value="moto">Moto</option>
+              <option value="movilidad-reducida">Movilidad reducida</option>
+              <option value="vehiculo-electrico">Vehículo eléctrico</option>
+              <option value="bicicleta">Bicicleta</option>
               <option value="accesorio">Accesorio</option>
               <option value="recambio">Recambio</option>
             </select>

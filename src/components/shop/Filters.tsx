@@ -35,6 +35,10 @@ export function Filters({ brands }: { brands: string[] }) {
           options={[
             { value: "all", label: "Todas" },
             { value: "patinete", label: "Patinetes" },
+            { value: "moto", label: "Motos" },
+            { value: "movilidad-reducida", label: "Movilidad reducida" },
+            { value: "vehiculo-electrico", label: "Vehículos eléctricos" },
+            { value: "bicicleta", label: "Bicicletas" },
             { value: "accesorio", label: "Accesorios" },
             { value: "recambio", label: "Recambios" },
           ]}

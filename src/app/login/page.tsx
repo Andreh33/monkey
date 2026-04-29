@@ -75,10 +75,10 @@ function LoginInner() {
       </div>
 
       <div className="hidden lg:block relative overflow-hidden">
-        <Image src="/imagenes/local-19.jpeg" alt="MonkeyMotion" fill className="object-cover" style={{ filter: "brightness(0.5) saturate(1.2)" }} />
+        <Image src="/imagenes/local-19.jpeg" alt="MonopatinShop" fill className="object-cover" style={{ filter: "brightness(0.5) saturate(1.2)" }} />
         <div className="absolute inset-0" style={{ background: "linear-gradient(135deg, rgba(255,42,42,0.6) 0%, rgba(198,21,21,0.4) 100%)", mixBlendMode: "multiply" }} />
         <div className="absolute inset-0 flex flex-col justify-end p-12 z-10">
-          <p className="eyebrow text-white/80 mb-3">★ MONKEYMOTION ★</p>
+          <p className="eyebrow text-white/80 mb-3">★ MONOPATINSHOP ★</p>
           <h2 className="display-lg text-white">Bienvenido<br />de vuelta.</h2>
           <p className="mt-4 text-white/85 text-lg max-w-md">Tu patinete te espera. Tus pedidos también.</p>
         </div>

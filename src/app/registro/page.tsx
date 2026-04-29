@@ -43,7 +43,7 @@ export default function RegistroPage() {
         password: data.password,
         redirect: false,
       });
-      toast.success("Cuenta creada. Bienvenido a MonkeyMotion.");
+      toast.success("Cuenta creada. Bienvenido a MonopatinShop.");
       router.push("/cuenta");
       router.refresh();
     } catch (err) {
@@ -58,7 +58,7 @@ export default function RegistroPage() {
       <div className="flex items-center justify-center px-6 py-16">
         <div className="w-full max-w-md">
           <p className="eyebrow mb-3">★ NUEVA CUENTA ★</p>
-          <h1 className="display-lg mb-3">Únete a MonkeyMotion</h1>
+          <h1 className="display-lg mb-3">Únete a MonopatinShop</h1>
           <p className="text-text-secondary mb-8">Crea tu cuenta para gestionar pedidos y reparaciones.</p>
 
           <form onSubmit={onSubmit} className="space-y-4">
@@ -96,7 +96,7 @@ export default function RegistroPage() {
       </div>
 
       <div className="hidden lg:block relative overflow-hidden">
-        <Image src="/imagenes/local-21.jpeg" alt="MonkeyMotion" fill className="object-cover" style={{ filter: "brightness(0.5) saturate(1.2)" }} />
+        <Image src="/imagenes/local-21.jpeg" alt="MonopatinShop" fill className="object-cover" style={{ filter: "brightness(0.5) saturate(1.2)" }} />
         <div className="absolute inset-0" style={{ background: "linear-gradient(135deg, rgba(255,136,0,0.55) 0%, rgba(255,42,42,0.45) 100%)", mixBlendMode: "multiply" }} />
         <div className="absolute inset-0 flex flex-col justify-end p-12 z-10">
           <p className="eyebrow text-white/80 mb-3">★ TARRAGONA ★</p>

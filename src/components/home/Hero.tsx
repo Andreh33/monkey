@@ -12,7 +12,7 @@ export function Hero() {
       <div className="absolute inset-0">
         <Image
           src="/imagenes/local-15.jpeg"
-          alt="MonkeyMotion taller en Tarragona"
+          alt="MonopatinShop taller en Tarragona"
           fill
           priority
           className="object-cover"
