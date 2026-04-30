@@ -14,7 +14,7 @@ export const metadata: Metadata = {
     template: "%s · MonopatinShop Tarragona",
   },
   description:
-    "Tienda especializada en venta y reparación de patinetes eléctricos en Tarragona. Todas las marcas. Diagnóstico gratuito. Garantía 2 años.",
+    "Tienda especializada en venta y reparación de patinetes eléctricos en Tarragona. Todas las marcas. Diagnóstico gratis si reparas con nosotros. Garantía 2 años.",
   keywords: ["patinetes eléctricos", "Tarragona", "reparación", "Xiaomi", "Segway", "Dualtron"],
   openGraph: {
     title: "MonopatinShop · Patinetes Eléctricos Tarragona",

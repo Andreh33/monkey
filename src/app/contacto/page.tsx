@@ -36,7 +36,7 @@ export default function ContactoPage() {
               <ContactRow icon={MapPin} title="Dirección">
                 C/ Jaume I, 5
                 <br />
-                43003 Tarragona
+                43005 Tarragona
               </ContactRow>
 
               <ContactRow icon={Phone} title="Teléfonos">

@@ -74,7 +74,7 @@ export function ServicesSplit() {
             <p className="eyebrow text-white/80 mb-3">02 / REPARACIÓN</p>
             <h2 className="display-lg text-white">REPARACIÓN</h2>
             <p className="mt-4 max-w-md text-white/85 text-base md:text-lg leading-relaxed">
-              ¿Tu patinete no arranca? Diagnóstico gratuito y arreglo rápido. Todas las marcas, todos los problemas.
+              ¿Tu patinete no arranca? Diagnóstico gratis si reparas con nosotros y arreglo rápido. Todas las marcas, todos los problemas.
             </p>
             <div className="mt-6 inline-flex items-center gap-2 text-white font-semibold uppercase tracking-wider text-sm">
               Pedir reparación

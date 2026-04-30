@@ -32,7 +32,7 @@ export default function ReparacionesPage() {
           <p className="eyebrow mb-3">★ TALLER PROPIO EN TARRAGONA ★</p>
           <h1 className="display-xl max-w-5xl">Reparamos tu patinete <span className="text-gradient">como si fuera nuevo</span>.</h1>
           <p className="mt-6 text-lg text-text-secondary max-w-2xl leading-relaxed">
-            Diagnóstico gratuito. Presupuesto sin compromiso. Todas las marcas. Reparaciones con piezas originales o equivalentes y garantía sobre el trabajo realizado.
+            Diagnóstico gratis si reparas con nosotros. Presupuesto sin compromiso. Todas las marcas. Reparaciones con piezas originales o equivalentes y garantía sobre el trabajo realizado.
           </p>
           <div className="mt-7"><PhoneButtons /></div>
         </ScrollReveal>

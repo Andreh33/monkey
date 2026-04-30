@@ -15,7 +15,7 @@ export function Footer() {
             </p>
             <div className="mt-5 flex items-start gap-2 text-sm text-text-secondary">
               <MapPin className="w-4 h-4 mt-0.5 text-accent-orange shrink-0" />
-              <span>C/ Jaume I, 5<br />43003 Tarragona</span>
+              <span>C/ Jaume I, 5<br />43005 Tarragona</span>
             </div>
           </div>
 

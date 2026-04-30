@@ -5,7 +5,7 @@ import { MessageSquare, Search, FileText, CheckCircle2 } from "lucide-react";
 import { ScrollReveal } from "@/components/shared/ScrollReveal";
 
 const steps = [
-  { n: "01", icon: MessageSquare, title: "Tráenoslo o escríbenos", text: "Pásate por el taller o cuéntanos lo que pasa por WhatsApp. Diagnóstico gratuito siempre." },
+  { n: "01", icon: MessageSquare, title: "Tráenoslo o escríbenos", text: "Pásate por el taller o cuéntanos lo que pasa por WhatsApp. Diagnóstico gratis si reparas con nosotros." },
   { n: "02", icon: Search, title: "Diagnóstico", text: "Revisamos el patinete a fondo y te decimos exactamente qué tiene." },
   { n: "03", icon: FileText, title: "Presupuesto", text: "Claro, transparente y sin sorpresas. Tú decides si seguimos adelante." },
   { n: "04", icon: CheckCircle2, title: "Reparado", text: "Tu patinete listo, probado y como nuevo. Garantía sobre la reparación." },

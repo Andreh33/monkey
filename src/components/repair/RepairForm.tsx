@@ -70,7 +70,7 @@ export function RepairForm() {
         <div>
           <p className="eyebrow">★ FORMULARIO ★</p>
           <h3 className="font-display text-3xl sm:text-4xl tracking-wider mt-2">Pide tu presupuesto</h3>
-          <p className="text-text-secondary mt-2 text-sm">Sin compromiso. Diagnóstico gratuito siempre.</p>
+          <p className="text-text-secondary mt-2 text-sm">Sin compromiso. Diagnóstico gratis si reparas con nosotros.</p>
         </div>
 
         <div className="grid sm:grid-cols-2 gap-4">
