@@ -1,6 +1,5 @@
 import { NextResponse } from "next/server";
-import { writeFile, mkdir } from "fs/promises";
-import path from "path";
+import { put } from "@vercel/blob";
 import sharp from "sharp";
 import { getServerSession } from "next-auth";
 import { authOptions } from "@/lib/auth";
@@ -19,23 +18,27 @@ export async function POST(req: Request) {
 
   const buffer = Buffer.from(await file.arrayBuffer());
 
-  const uploadDir = path.join(process.cwd(), "public", "uploads", "products");
-  await mkdir(uploadDir, { recursive: true });
-
-  const ext = "webp";
-  const filename = `${Date.now()}-${Math.random().toString(36).slice(2, 8)}.${ext}`;
-  const fullPath = path.join(uploadDir, filename);
-
+  let optimized: Buffer;
   try {
-    const optimized = await sharp(buffer)
+    optimized = await sharp(buffer)
       .resize(1600, 1600, { fit: "inside", withoutEnlargement: true })
       .webp({ quality: 85 })
       .toBuffer();
-    await writeFile(fullPath, optimized);
   } catch {
-    // Fallback: write original bytes if sharp fails
-    await writeFile(fullPath, buffer);
+    optimized = buffer;
   }
 
-  return NextResponse.json({ ok: true, url: `/uploads/products/${filename}` });
+  const filename = `products/${Date.now()}-${Math.random().toString(36).slice(2, 8)}.webp`;
+
+  try {
+    const blob = await put(filename, optimized, {
+      access: "public",
+      contentType: "image/webp",
+      addRandomSuffix: false,
+    });
+    return NextResponse.json({ ok: true, url: blob.url });
+  } catch (err) {
+    const message = err instanceof Error ? err.message : "Error subiendo a Blob";
+    return NextResponse.json({ ok: false, error: message }, { status: 500 });
+  }
 }
