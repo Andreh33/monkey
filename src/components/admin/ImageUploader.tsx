@@ -24,6 +24,38 @@ import { toast } from "sonner";
 
 export type UploadedImage = { id: string; url: string; alt?: string };
 
+const MAX_DIMENSION = 1600;
+const TARGET_MAX_BYTES = 3.5 * 1024 * 1024; // bajo el límite de 4.5MB de Vercel
+
+async function downscaleImage(file: File): Promise<File> {
+  if (!file.type.startsWith("image/")) return file;
+  if (file.type === "image/gif" || file.type === "image/svg+xml") return file;
+  if (file.size <= TARGET_MAX_BYTES) {
+    // archivo ya pequeño, lo subimos tal cual (sharp lo optimizará en el servidor)
+    return file;
+  }
+  try {
+    const bitmap = await createImageBitmap(file);
+    const scale = Math.min(1, MAX_DIMENSION / Math.max(bitmap.width, bitmap.height));
+    const w = Math.round(bitmap.width * scale);
+    const h = Math.round(bitmap.height * scale);
+    const canvas = document.createElement("canvas");
+    canvas.width = w;
+    canvas.height = h;
+    const ctx = canvas.getContext("2d");
+    if (!ctx) return file;
+    ctx.drawImage(bitmap, 0, 0, w, h);
+    bitmap.close?.();
+    const blob: Blob | null = await new Promise((resolve) =>
+      canvas.toBlob((b) => resolve(b), "image/jpeg", 0.85)
+    );
+    if (!blob) return file;
+    return new File([blob], file.name.replace(/\.[^.]+$/, "") + ".jpg", { type: "image/jpeg" });
+  } catch {
+    return file;
+  }
+}
+
 export function ImageUploader({
   value,
   onChange,
@@ -40,11 +72,23 @@ export function ImageUploader({
     try {
       const uploaded: UploadedImage[] = [];
       for (const file of Array.from(files)) {
+        const prepared = await downscaleImage(file);
         const fd = new FormData();
-        fd.append("file", file);
+        fd.append("file", prepared, prepared.name);
         const res = await fetch("/api/upload", { method: "POST", body: fd });
-        const data = await res.json();
-        if (!res.ok || !data.url) throw new Error(data.error || "Error subiendo");
+        const text = await res.text();
+        let data: { url?: string; error?: string } = {};
+        try {
+          data = text ? JSON.parse(text) : {};
+        } catch {
+          // respuesta no-JSON (HTML de error, body vacío por límite de tamaño, etc.)
+        }
+        if (!res.ok || !data.url) {
+          if (res.status === 413 || res.status === 0 || !text) {
+            throw new Error("Imagen demasiado grande. Prueba con una más ligera.");
+          }
+          throw new Error(data.error || `Error ${res.status} subiendo imagen`);
+        }
         uploaded.push({ id: `${Date.now()}-${Math.random()}`, url: data.url, alt: "" });
       }
       onChange([...value, ...uploaded]);
