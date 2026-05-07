@@ -24,34 +24,51 @@ import { toast } from "sonner";
 
 export type UploadedImage = { id: string; url: string; alt?: string };
 
+const MAX_INPUT_BYTES = 10 * 1024 * 1024; // 10 MB máximo de entrada
+const MAX_UPLOAD_BYTES = 4 * 1024 * 1024; // mantenerse bajo el límite de Vercel
 const MAX_DIMENSION = 1600;
-const TARGET_MAX_BYTES = 3.5 * 1024 * 1024; // bajo el límite de 4.5MB de Vercel
 
 async function downscaleImage(file: File): Promise<File> {
   if (!file.type.startsWith("image/")) return file;
   if (file.type === "image/gif" || file.type === "image/svg+xml") return file;
-  if (file.size <= TARGET_MAX_BYTES) {
-    // archivo ya pequeño, lo subimos tal cual (sharp lo optimizará en el servidor)
-    return file;
+  if (file.size > MAX_INPUT_BYTES) {
+    throw new Error(`La imagen pesa más de 10 MB (${(file.size / 1024 / 1024).toFixed(1)} MB). Usa una más ligera.`);
   }
+  if (file.size <= MAX_UPLOAD_BYTES) return file;
+
   try {
     const bitmap = await createImageBitmap(file);
     const scale = Math.min(1, MAX_DIMENSION / Math.max(bitmap.width, bitmap.height));
-    const w = Math.round(bitmap.width * scale);
-    const h = Math.round(bitmap.height * scale);
+    let w = Math.round(bitmap.width * scale);
+    let h = Math.round(bitmap.height * scale);
     const canvas = document.createElement("canvas");
-    canvas.width = w;
-    canvas.height = h;
     const ctx = canvas.getContext("2d");
-    if (!ctx) return file;
-    ctx.drawImage(bitmap, 0, 0, w, h);
+    if (!ctx) {
+      bitmap.close?.();
+      return file;
+    }
+
+    const qualities = [0.85, 0.75, 0.65, 0.55, 0.45];
+    let blob: Blob | null = null;
+    for (const q of qualities) {
+      canvas.width = w;
+      canvas.height = h;
+      ctx.drawImage(bitmap, 0, 0, w, h);
+      blob = await new Promise<Blob | null>((resolve) =>
+        canvas.toBlob((b) => resolve(b), "image/jpeg", q)
+      );
+      if (blob && blob.size <= MAX_UPLOAD_BYTES) break;
+      // si todavía no entra, reducimos también dimensiones para la siguiente vuelta
+      w = Math.round(w * 0.85);
+      h = Math.round(h * 0.85);
+    }
     bitmap.close?.();
-    const blob: Blob | null = await new Promise((resolve) =>
-      canvas.toBlob((b) => resolve(b), "image/jpeg", 0.85)
-    );
-    if (!blob) return file;
+    if (!blob || blob.size > MAX_UPLOAD_BYTES) {
+      throw new Error("No se pudo comprimir la imagen lo suficiente. Usa una con menos resolución.");
+    }
     return new File([blob], file.name.replace(/\.[^.]+$/, "") + ".jpg", { type: "image/jpeg" });
-  } catch {
+  } catch (err) {
+    if (err instanceof Error) throw err;
     return file;
   }
 }
