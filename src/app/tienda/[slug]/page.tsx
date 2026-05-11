@@ -53,6 +53,12 @@ export default async function ProductPage({ params }: { params: { slug: string }
                 <p className="price-mono text-xl text-text-muted line-through mb-2">{formatPrice(product.compareAt)}<span>€</span></p>
               )}
             </div>
+            <p className="text-sm text-text-secondary">
+              <Truck className="inline w-4 h-4 mr-1.5 text-accent-orange align-[-2px]" />
+              {product.shippingCost && product.shippingCost > 0
+                ? <>Envío: <span className="font-mono font-semibold text-white">{formatPrice(product.shippingCost)}€</span></>
+                : <span className="font-semibold text-success">Envío gratuito</span>}
+            </p>
 
             <div className="grid grid-cols-2 gap-3">
               {specs.map((s) => {
@@ -119,6 +125,11 @@ export default async function ProductPage({ params }: { params: { slug: string }
               <div>
                 <p className="font-semibold text-white mb-1">Envío rápido</p>
                 <p>Enviamos en 24-48h a toda España peninsular. Recogida gratuita en nuestra tienda en Tarragona.</p>
+                <p className="mt-2 font-mono text-xs">
+                  {product.shippingCost && product.shippingCost > 0
+                    ? <>Coste de envío: <span className="text-white">{formatPrice(product.shippingCost)}€</span></>
+                    : <span className="text-success">Envío gratuito a península</span>}
+                </p>
               </div>
               <div>
                 <p className="font-semibold text-white mb-1">Garantía oficial</p>

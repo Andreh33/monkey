@@ -22,6 +22,7 @@ const productSchema = z.object({
   weight: z.coerce.number().optional().nullable(),
   maxLoad: z.coerce.number().int().optional().nullable(),
   stripeLink: z.string().url(),
+  shippingCost: z.coerce.number().nonnegative().nullable().optional(),
   featured: z.boolean(),
   active: z.boolean(),
   images: z.array(z.object({ url: z.string(), alt: z.string().optional().nullable() })).default([]),
@@ -71,6 +72,7 @@ export async function POST(req: Request) {
         weight: data.weight ?? null,
         maxLoad: data.maxLoad ?? null,
         stripeLink: data.stripeLink,
+        shippingCost: data.shippingCost ?? null,
         featured: data.featured,
         active: data.active,
         images: {

@@ -24,17 +24,31 @@ type Product = {
   weight?: number | null;
   maxLoad?: number | null;
   stripeLink: string;
+  shippingCost?: number | null;
   featured: boolean;
   active: boolean;
   images: { url: string; alt?: string | null }[];
 };
 
-export function ProductForm({ product }: { product?: Product }) {
+const DEFAULT_CATEGORIES = [
+  "patinete",
+  "moto",
+  "movilidad-reducida",
+  "vehiculo-electrico",
+  "bicicleta",
+  "accesorio",
+  "recambio",
+];
+
+export function ProductForm({ product, categories = [] }: { product?: Product; categories?: string[] }) {
   const router = useRouter();
   const isEdit = !!product?.id;
   const [loading, setLoading] = useState(false);
   const [images, setImages] = useState<UploadedImage[]>(
     (product?.images ?? []).map((img, i) => ({ id: `existing-${i}`, url: img.url, alt: img.alt ?? undefined }))
+  );
+  const categorySuggestions = Array.from(
+    new Set([...DEFAULT_CATEGORIES, ...categories, ...(product?.category ? [product.category] : [])].filter(Boolean))
   );
 
   async function onSubmit(e: React.FormEvent<HTMLFormElement>) {
@@ -49,7 +63,7 @@ export function ProductForm({ product }: { product?: Product }) {
       compareAt: fd.get("compareAt") ? Number(fd.get("compareAt")) : null,
       sku: String(fd.get("sku") ?? "") || null,
       stock: Number(fd.get("stock") ?? 0),
-      category: String(fd.get("category") ?? "patinete"),
+      category: String(fd.get("category") ?? "patinete").trim().toLowerCase().replace(/\s+/g, "-") || "patinete",
       brand: String(fd.get("brand") ?? "") || null,
       maxSpeed: fd.get("maxSpeed") ? Number(fd.get("maxSpeed")) : null,
       range: fd.get("range") ? Number(fd.get("range")) : null,
@@ -58,6 +72,7 @@ export function ProductForm({ product }: { product?: Product }) {
       weight: fd.get("weight") ? Number(fd.get("weight")) : null,
       maxLoad: fd.get("maxLoad") ? Number(fd.get("maxLoad")) : null,
       stripeLink: String(fd.get("stripeLink") ?? ""),
+      shippingCost: fd.get("shippingCost") !== null && fd.get("shippingCost") !== "" ? Number(fd.get("shippingCost")) : null,
       featured: fd.get("featured") === "on",
       active: fd.get("active") === "on",
       images: images.map((i) => ({ url: i.url, alt: i.alt ?? "" })),
@@ -103,17 +118,34 @@ export function ProductForm({ product }: { product?: Product }) {
           <div><Label>SKU</Label><input name="sku" defaultValue={product?.sku ?? ""} className="input-base" /></div>
           <div>
             <Label>Categoría *</Label>
-            <select name="category" defaultValue={product?.category ?? "patinete"} className="input-base">
-              <option value="patinete">Patinete</option>
-              <option value="moto">Moto</option>
-              <option value="movilidad-reducida">Movilidad reducida</option>
-              <option value="vehiculo-electrico">Vehículo eléctrico</option>
-              <option value="bicicleta">Bicicleta</option>
-              <option value="accesorio">Accesorio</option>
-              <option value="recambio">Recambio</option>
-            </select>
+            <input
+              name="category"
+              required
+              list="category-options"
+              defaultValue={product?.category ?? ""}
+              className="input-base"
+              placeholder="Escribe o elige una"
+            />
+            <datalist id="category-options">
+              {categorySuggestions.map((c) => (
+                <option key={c} value={c} />
+              ))}
+            </datalist>
+            <p className="text-xs text-text-muted mt-1">Puedes escribir una nueva categoría o elegir una existente.</p>
           </div>
           <div><Label>Marca</Label><input name="brand" defaultValue={product?.brand ?? ""} className="input-base" /></div>
+          <div>
+            <Label>Coste de envío (€)</Label>
+            <input
+              name="shippingCost"
+              type="number"
+              step="0.01"
+              min="0"
+              defaultValue={product?.shippingCost ?? ""}
+              className="input-base"
+              placeholder="Vacío = envío gratis"
+            />
+          </div>
         </div>
       </Section>
 

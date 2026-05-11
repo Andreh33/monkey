@@ -19,7 +19,7 @@ import {
   rectSortingStrategy,
 } from "@dnd-kit/sortable";
 import { CSS } from "@dnd-kit/utilities";
-import { Trash2, GripVertical, ImagePlus, Loader2 } from "lucide-react";
+import { Trash2, GripVertical, ImagePlus, Loader2, LinkIcon } from "lucide-react";
 import { toast } from "sonner";
 
 export type UploadedImage = { id: string; url: string; alt?: string };
@@ -81,7 +81,33 @@ export function ImageUploader({
   onChange: (images: UploadedImage[]) => void;
 }) {
   const [uploading, setUploading] = useState(false);
+  const [urlInput, setUrlInput] = useState("");
   const sensors = useSensors(useSensor(PointerSensor), useSensor(KeyboardSensor, { coordinateGetter: sortableKeyboardCoordinates }));
+
+  function addUrls() {
+    const candidates = urlInput
+      .split(/[\s,]+/)
+      .map((s) => s.trim())
+      .filter(Boolean);
+    if (candidates.length === 0) return;
+    const valid: UploadedImage[] = [];
+    const invalid: string[] = [];
+    for (const raw of candidates) {
+      try {
+        const u = new URL(raw);
+        if (u.protocol !== "https:" && u.protocol !== "http:") throw new Error("protocolo no soportado");
+        valid.push({ id: `url-${Date.now()}-${Math.random()}`, url: raw, alt: "" });
+      } catch {
+        invalid.push(raw);
+      }
+    }
+    if (valid.length > 0) {
+      onChange([...value, ...valid]);
+      toast.success(`${valid.length} imagen(es) añadida(s) por URL`);
+      setUrlInput("");
+    }
+    if (invalid.length > 0) toast.error(`URL inválida: ${invalid.join(", ")}`);
+  }
 
   async function onFiles(files: FileList | null) {
     if (!files) return;
@@ -152,6 +178,30 @@ export function ImageUploader({
         </SortableContext>
       </DndContext>
       <p className="text-xs text-text-muted">Arrastra para reordenar. La primera imagen será la portada.</p>
+
+      <div className="rounded-lg border border-border bg-bg-secondary p-4 space-y-2">
+        <div className="flex items-center gap-2 text-sm text-text-secondary">
+          <LinkIcon className="w-4 h-4 text-accent-orange" />
+          <span className="font-semibold">Añadir por URL</span>
+        </div>
+        <p className="text-xs text-text-muted">Pega uno o varios enlaces (separados por coma, espacio o salto de línea).</p>
+        <div className="flex flex-col sm:flex-row gap-2">
+          <input
+            type="url"
+            value={urlInput}
+            onChange={(e) => setUrlInput(e.target.value)}
+            onKeyDown={(e) => {
+              if (e.key === "Enter") {
+                e.preventDefault();
+                addUrls();
+              }
+            }}
+            placeholder="https://ejemplo.com/foto.jpg"
+            className="input-base flex-1"
+          />
+          <button type="button" onClick={addUrls} className="btn-outline text-sm">Añadir URL</button>
+        </div>
+      </div>
     </div>
   );
 }

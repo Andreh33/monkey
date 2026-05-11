@@ -55,6 +55,7 @@ model Product {
   weight      Float?
   maxLoad     Int?
   stripeLink  String
+  shippingCost Float?
   featured    Boolean        @default(false)
   active      Boolean        @default(true)
   images      ProductImage[]
