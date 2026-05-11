@@ -2,6 +2,7 @@ import { notFound } from "next/navigation";
 import { prisma } from "@/lib/prisma";
 import { ProductGallery } from "@/components/shop/ProductGallery";
 import { ProductActions } from "@/components/shop/ProductActions";
+import { ProductDescription } from "@/components/shop/ProductDescription";
 import { ProductCard } from "@/components/shop/ProductCard";
 import { Gauge, Battery, Zap, BatteryCharging, Weight, Users, Shield, Truck, Headphones } from "lucide-react";
 import { formatPrice } from "@/lib/utils";
@@ -87,14 +88,7 @@ export default async function ProductPage({ params }: { params: { slug: string }
 
         <div className="mt-16 grid grid-cols-1 lg:grid-cols-3 gap-8">
           <div className="lg:col-span-2 space-y-8">
-            <div>
-              <h2 className="font-display text-3xl tracking-wider mb-4">Descripción</h2>
-              <div className="prose prose-invert max-w-none text-text-secondary leading-relaxed space-y-4">
-                {product.description.split("\n\n").map((p, i) => (
-                  <p key={i}>{p}</p>
-                ))}
-              </div>
-            </div>
+            <ProductDescription description={product.description} />
 
             <div>
               <h2 className="font-display text-3xl tracking-wider mb-4">Especificaciones técnicas</h2>
