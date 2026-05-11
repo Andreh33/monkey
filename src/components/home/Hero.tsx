@@ -29,7 +29,7 @@ export function Hero() {
           transition={{ duration: 0.6 }}
           className="eyebrow mb-5"
         >
-          ★ TARRAGONA · DESDE TU CALLE ★
+          ★ TARRAGONA · DESDE 2017 ★
         </motion.p>
 
         <motion.h1
