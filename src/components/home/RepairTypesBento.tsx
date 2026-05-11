@@ -22,7 +22,7 @@ export function RepairTypesBento() {
     <section className="section-pad container-custom">
       <ScrollReveal>
         <div className="mb-12 text-center">
-          <p className="eyebrow mb-3">★ QUÉ REPARAMOS ★</p>
+          <p className="eyebrow mb-3">★ QUÉ REPARAMOS · DESDE 2017 ★</p>
           <h2 className="display-lg">Todo lo que falla</h2>
           <p className="mt-3 text-text-secondary max-w-xl mx-auto">Si tu patinete tiene un problema, nosotros lo arreglamos.</p>
         </div>
