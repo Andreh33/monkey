@@ -3,6 +3,7 @@ import { prisma } from "@/lib/prisma";
 import { ProductGallery } from "@/components/shop/ProductGallery";
 import { ProductActions } from "@/components/shop/ProductActions";
 import { ProductDescription } from "@/components/shop/ProductDescription";
+import { ReviewCta } from "@/components/shop/ReviewCta";
 import { ProductCard } from "@/components/shop/ProductCard";
 import { Gauge, Battery, Zap, BatteryCharging, Weight, Users, Shield, Truck, Headphones } from "lucide-react";
 import { formatPrice } from "@/lib/utils";
@@ -40,7 +41,7 @@ export default async function ProductPage({ params }: { params: { slug: string }
     <>
       <section className="container-custom py-12">
         <div className="grid grid-cols-1 lg:grid-cols-[1.4fr_1fr] gap-10 lg:gap-14">
-          <ProductGallery images={product.images} name={product.name} />
+          <ProductGallery images={product.images} name={product.name} youtubeUrl={product.youtubeUrl} />
 
           <div className="lg:sticky lg:top-24 self-start space-y-6">
             {product.brand && (
@@ -88,6 +89,7 @@ export default async function ProductPage({ params }: { params: { slug: string }
 
         <div className="mt-16 grid grid-cols-1 lg:grid-cols-3 gap-8">
           <div className="lg:col-span-2 space-y-8">
+            <ReviewCta youtubeUrl={product.youtubeUrl} />
             <ProductDescription description={product.description} />
 
             <div>

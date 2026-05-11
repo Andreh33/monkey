@@ -25,6 +25,7 @@ type Product = {
   maxLoad?: number | null;
   stripeLink: string;
   shippingCost?: number | null;
+  youtubeUrl?: string | null;
   featured: boolean;
   active: boolean;
   images: { url: string; alt?: string | null }[];
@@ -73,6 +74,7 @@ export function ProductForm({ product, categories = [] }: { product?: Product; c
       maxLoad: fd.get("maxLoad") ? Number(fd.get("maxLoad")) : null,
       stripeLink: String(fd.get("stripeLink") ?? ""),
       shippingCost: fd.get("shippingCost") !== null && fd.get("shippingCost") !== "" ? Number(fd.get("shippingCost")) : null,
+      youtubeUrl: String(fd.get("youtubeUrl") ?? "").trim() || null,
       featured: fd.get("featured") === "on",
       active: fd.get("active") === "on",
       images: images.map((i) => ({ url: i.url, alt: i.alt ?? "" })),
@@ -164,6 +166,18 @@ export function ProductForm({ product, categories = [] }: { product?: Product; c
         <Label>URL de Payment Link de Stripe *</Label>
         <input name="stripeLink" required type="url" defaultValue={product?.stripeLink} className="input-base" placeholder="https://buy.stripe.com/..." />
         <p className="text-xs text-text-muted mt-2">El botón "Comprar ahora" del cliente redirigirá a este link en una nueva pestaña.</p>
+      </Section>
+
+      <Section title="🎬 Video de YouTube">
+        <Label>URL del video / review (opcional)</Label>
+        <input
+          name="youtubeUrl"
+          type="url"
+          defaultValue={product?.youtubeUrl ?? ""}
+          className="input-base"
+          placeholder="https://www.youtube.com/watch?v=..."
+        />
+        <p className="text-xs text-text-muted mt-2">Se mostrará como última miniatura en la galería del producto y como CTA "Mira nuestra review en YouTube" encima de la descripción.</p>
       </Section>
 
       <Section title="Imágenes">

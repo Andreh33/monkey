@@ -56,6 +56,7 @@ model Product {
   maxLoad     Int?
   stripeLink  String
   shippingCost Float?
+  youtubeUrl  String?
   featured    Boolean        @default(false)
   active      Boolean        @default(true)
   images      ProductImage[]

@@ -23,6 +23,7 @@ const productSchema = z.object({
   maxLoad: z.coerce.number().int().optional().nullable(),
   stripeLink: z.string().url(),
   shippingCost: z.coerce.number().nonnegative().nullable().optional(),
+  youtubeUrl: z.string().url().nullable().optional().or(z.literal("").transform(() => null)),
   featured: z.boolean(),
   active: z.boolean(),
   images: z.array(z.object({ url: z.string(), alt: z.string().optional().nullable() })).default([]),
@@ -73,6 +74,7 @@ export async function POST(req: Request) {
         maxLoad: data.maxLoad ?? null,
         stripeLink: data.stripeLink,
         shippingCost: data.shippingCost ?? null,
+        youtubeUrl: data.youtubeUrl ?? null,
         featured: data.featured,
         active: data.active,
         images: {
