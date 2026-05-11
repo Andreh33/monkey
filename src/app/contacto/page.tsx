@@ -1,4 +1,4 @@
-import { MapPin, Phone, MessageCircle, Clock } from "lucide-react";
+import { MapPin, Phone, MessageCircle, Clock, Mail } from "lucide-react";
 import { ContactForm } from "@/components/shared/ContactForm";
 import MapLoader from "@/components/shared/MapLoader";
 import { ScrollReveal } from "@/components/shared/ScrollReveal";
@@ -42,6 +42,10 @@ export default function ContactoPage() {
               <ContactRow icon={Phone} title="Teléfonos">
                 <a href="tel:+34643274756" className="block hover:text-white transition-colors font-mono">+34 643 27 47 56</a>
                 <a href="tel:+34616686593" className="block hover:text-white transition-colors font-mono">+34 616 686 593</a>
+              </ContactRow>
+
+              <ContactRow icon={Mail} title="Email">
+                <a href="mailto:monkeymotionoficial@gmail.com" className="hover:text-white transition-colors break-all">monkeymotionoficial@gmail.com</a>
               </ContactRow>
 
               <ContactRow icon={Clock} title="Horario">
