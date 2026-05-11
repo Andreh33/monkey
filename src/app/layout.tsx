@@ -7,6 +7,7 @@ import { TopBar } from "@/components/layout/TopBar";
 import { WhatsAppButton } from "@/components/shared/WhatsAppButton";
 import { CartDrawer } from "@/components/shop/CartDrawer";
 import MonkeyWalkerLoader from "@/components/layout/MonkeyWalkerLoader";
+import { Analytics } from "@vercel/analytics/next";
 
 export const metadata: Metadata = {
   title: {
@@ -37,6 +38,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <WhatsAppButton />
           <CartDrawer />
         </Providers>
+        <Analytics />
       </body>
     </html>
   );
