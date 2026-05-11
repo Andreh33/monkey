@@ -7,6 +7,7 @@ export function BrandsTicker() {
     <section className="py-14 border-y border-border bg-bg-secondary/40">
       <div className="text-center mb-6">
         <p className="eyebrow">★ TODAS LAS MARCAS ★</p>
+        <p className="mt-2 font-display tracking-widest text-text-muted text-sm sm:text-base">DESDE 2017</p>
       </div>
       <Marquee
         items={brands}
