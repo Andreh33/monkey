@@ -8,7 +8,7 @@ export function CtaBanner() {
       <ScrollReveal>
         <div
           className="container-custom py-20 lg:py-28 my-16 rounded-3xl overflow-hidden relative"
-          style={{ background: "linear-gradient(135deg, #FF2A2A 0%, #FF8800 100%)" }}
+          style={{ background: "linear-gradient(135deg, #FF2A2A 0%, #FF003C 100%)" }}
         >
           <div className="absolute inset-0 noise opacity-50 pointer-events-none" />
           <div className="relative z-10 text-center">

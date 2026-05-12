@@ -32,7 +32,7 @@ export default function AdminLoginPage() {
     <section className="min-h-screen flex items-center justify-center bg-bg-primary px-6">
       <div className="w-full max-w-sm">
         <div className="text-center mb-10">
-          <div className="inline-flex w-16 h-16 rounded-2xl items-center justify-center mb-4" style={{ background: "linear-gradient(135deg, #FF2A2A 0%, #FF8800 100%)" }}>
+          <div className="inline-flex w-16 h-16 rounded-2xl items-center justify-center mb-4" style={{ background: "linear-gradient(135deg, #FF2A2A 0%, #FF003C 100%)" }}>
             <Lock className="w-7 h-7 text-black" />
           </div>
           <p className="eyebrow mb-2">★ ADMIN AREA ★</p>

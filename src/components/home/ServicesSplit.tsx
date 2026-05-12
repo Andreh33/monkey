@@ -66,7 +66,7 @@ export function ServicesSplit() {
           <div
             className="absolute inset-0 transition-opacity duration-500"
             style={{
-              background: "linear-gradient(135deg, rgba(255,136,0,0.85) 0%, rgba(255,69,0,0.65) 100%)",
+              background: "linear-gradient(135deg, rgba(255,0,60,0.85) 0%, rgba(255,23,68,0.65) 100%)",
               mixBlendMode: "multiply",
             }}
           />

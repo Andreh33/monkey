@@ -83,7 +83,7 @@ export default function MonkeyWalker() {
       >
         <ambientLight intensity={0.55} />
         <directionalLight position={[5, 6, 5]} intensity={1.1} color="#ffffff" />
-        <pointLight position={[-4, 2, 3]} color="#FF8800" intensity={3} distance={12} />
+        <pointLight position={[-4, 2, 3]} color="#FF003C" intensity={3} distance={12} />
         <pointLight position={[4, 1, 2]} color="#FF2A2A" intensity={2} distance={10} />
         <Suspense fallback={null}>
           <Monkey onFinish={finish} />

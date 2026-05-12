@@ -97,7 +97,7 @@ export default function RegistroPage() {
 
       <div className="hidden lg:block relative overflow-hidden">
         <Image src="/imagenes/local-21.jpeg" alt="MonopatinShop" fill className="object-cover" style={{ filter: "brightness(0.5) saturate(1.2)" }} />
-        <div className="absolute inset-0" style={{ background: "linear-gradient(135deg, rgba(255,136,0,0.55) 0%, rgba(255,42,42,0.45) 100%)", mixBlendMode: "multiply" }} />
+        <div className="absolute inset-0" style={{ background: "linear-gradient(135deg, rgba(255,0,60,0.55) 0%, rgba(255,42,42,0.45) 100%)", mixBlendMode: "multiply" }} />
         <div className="absolute inset-0 flex flex-col justify-end p-12 z-10">
           <p className="eyebrow text-white/80 mb-3">★ TARRAGONA ★</p>
           <h2 className="display-lg text-white">Únete a la<br />tribu eléctrica.</h2>

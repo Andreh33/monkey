@@ -79,7 +79,7 @@ export default function ReparacionesPage() {
               return (
                 <ScrollReveal key={s.n} delay={i * 0.1}>
                   <div className="relative bg-bg-primary border border-border rounded-2xl p-6 h-full">
-                    <div className="absolute -top-3 left-5 px-2.5 py-0.5 rounded-full text-xs font-bold font-mono" style={{ background: "linear-gradient(135deg, #FF2A2A 0%, #FF8800 100%)", color: "#0A0A0C" }}>{s.n}</div>
+                    <div className="absolute -top-3 left-5 px-2.5 py-0.5 rounded-full text-xs font-bold font-mono" style={{ background: "linear-gradient(135deg, #FF2A2A 0%, #FF003C 100%)", color: "#0A0A0C" }}>{s.n}</div>
                     <Icon className="w-8 h-8 text-accent-orange mb-3 mt-2" strokeWidth={1.4} />
                     <h3 className="font-display text-2xl tracking-wider">{s.title}</h3>
                     <div className="inline-flex items-center gap-1.5 mt-1 text-xs font-mono text-accent-orange">

@@ -40,9 +40,9 @@ const config: Config = {
         mono: ["var(--font-mono)", "JetBrains Mono", "monospace"],
       },
       backgroundImage: {
-        "brand-gradient": "linear-gradient(135deg, #FF2A2A 0%, #FF8800 100%)",
+        "brand-gradient": "linear-gradient(135deg, #FF2A2A 0%, #FF003C 100%)",
         "brand-gradient-soft":
-          "linear-gradient(135deg, rgba(255,42,42,0.15) 0%, rgba(255,136,0,0.15) 100%)",
+          "linear-gradient(135deg, rgba(255,42,42,0.15) 0%, rgba(255,0,60,0.15) 100%)",
         "noise":
           "url(\"data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 1  0 0 0 0 1  0 0 0 0 1  0 0 0 0.04 0'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>\")",
       },
@@ -56,7 +56,7 @@ const config: Config = {
         },
         glow: {
           "0%, 100%": { boxShadow: "0 0 20px rgba(255,42,42,0.2)" },
-          "50%": { boxShadow: "0 0 40px rgba(255,68,0,0.45)" },
+          "50%": { boxShadow: "0 0 40px rgba(255,23,68,0.45)" },
         },
         "border-spin": {
           "0%": { "--angle": "0deg" },

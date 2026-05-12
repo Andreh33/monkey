@@ -121,7 +121,7 @@ export default function NosotrosPage() {
         <ScrollReveal>
           <div
             className="rounded-3xl p-12 text-center relative overflow-hidden"
-            style={{ background: "linear-gradient(135deg, #FF2A2A 0%, #FF8800 100%)" }}
+            style={{ background: "linear-gradient(135deg, #FF2A2A 0%, #FF003C 100%)" }}
           >
             <div className="absolute inset-0 noise opacity-50 pointer-events-none" />
             <div className="relative z-10">

@@ -30,7 +30,7 @@ export function RepairProcess() {
             viewport={{ once: true }}
             transition={{ duration: 1.4, ease: [0.22, 1, 0.36, 1] }}
             className="hidden lg:block absolute top-12 left-12 right-12 h-[2px] origin-left"
-            style={{ background: "linear-gradient(90deg, #FF2A2A 0%, #FF8800 100%)" }}
+            style={{ background: "linear-gradient(90deg, #FF2A2A 0%, #FF003C 100%)" }}
           />
 
           {steps.map((s, i) => {
@@ -38,7 +38,7 @@ export function RepairProcess() {
             return (
               <ScrollReveal key={s.n} delay={i * 0.12}>
                 <div className="relative bg-bg-primary border border-border rounded-2xl p-6 hover:border-accent-red/50 transition-all duration-300 h-full">
-                  <div className="absolute -top-4 left-6 px-3 py-1 rounded-full text-xs font-bold font-mono" style={{ background: "linear-gradient(135deg, #FF2A2A 0%, #FF8800 100%)", color: "#0A0A0C" }}>
+                  <div className="absolute -top-4 left-6 px-3 py-1 rounded-full text-xs font-bold font-mono" style={{ background: "linear-gradient(135deg, #FF2A2A 0%, #FF003C 100%)", color: "#0A0A0C" }}>
                     {s.n}
                   </div>
                   <Icon className="w-9 h-9 text-accent-orange mb-4 mt-2" strokeWidth={1.4} />

@@ -49,7 +49,7 @@ export function ProductCard({ product }: { product: ProductCardData }) {
           {product.featured && (
             <span
               className="absolute top-3 left-3 px-2.5 py-1 text-[10px] font-bold uppercase tracking-widest rounded-full text-white"
-              style={{ background: "linear-gradient(135deg, #FF2A2A 0%, #FF8800 100%)" }}
+              style={{ background: "linear-gradient(135deg, #FF2A2A 0%, #FF003C 100%)" }}
             >
               Destacado
             </span>
