@@ -36,7 +36,9 @@ export function Footer() {
               <li><Link href="/login" className="text-text-secondary hover:text-white transition-colors">Iniciar sesión</Link></li>
               <li><Link href="/registro" className="text-text-secondary hover:text-white transition-colors">Crear cuenta</Link></li>
               <li><Link href="/cuenta/pedidos" className="text-text-secondary hover:text-white transition-colors">Mis pedidos</Link></li>
+              {/* Carrito desactivado: compras directas via Stripe
               <li><Link href="/carrito" className="text-text-secondary hover:text-white transition-colors">Carrito</Link></li>
+              */}
             </ul>
           </div>
 

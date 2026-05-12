@@ -1,8 +1,10 @@
 "use client";
 
-import { useState } from "react";
-import { Minus, Plus, ShoppingCart, ExternalLink } from "lucide-react";
-import { useCart } from "@/lib/cart-store";
+import { ExternalLink } from "lucide-react";
+// Carrito desactivado: compras directas via Stripe
+// import { useState } from "react";
+// import { Minus, Plus, ShoppingCart } from "lucide-react";
+// import { useCart } from "@/lib/cart-store";
 import { toast } from "sonner";
 
 type Props = {
@@ -18,8 +20,9 @@ type Props = {
 };
 
 export function ProductActions({ product }: Props) {
-  const [qty, setQty] = useState(1);
-  const { addItem, setOpen } = useCart();
+  // Carrito desactivado
+  // const [qty, setQty] = useState(1);
+  // const { addItem, setOpen } = useCart();
 
   const handleBuy = () => {
     if (product.stripeLink) {
@@ -29,25 +32,27 @@ export function ProductActions({ product }: Props) {
     }
   };
 
-  const handleAdd = () => {
-    addItem(
-      {
-        id: product.id,
-        slug: product.slug,
-        name: product.name,
-        brand: product.brand,
-        price: product.price,
-        image: product.images[0]?.url,
-        stripeLink: product.stripeLink,
-      },
-      qty
-    );
-    toast.success(`${product.name} añadido al carrito`);
-    setOpen(true);
-  };
+  // Carrito desactivado: compras directas via Stripe
+  // const handleAdd = () => {
+  //   addItem(
+  //     {
+  //       id: product.id,
+  //       slug: product.slug,
+  //       name: product.name,
+  //       brand: product.brand,
+  //       price: product.price,
+  //       image: product.images[0]?.url,
+  //       stripeLink: product.stripeLink,
+  //     },
+  //     qty
+  //   );
+  //   toast.success(`${product.name} añadido al carrito`);
+  //   setOpen(true);
+  // };
 
   return (
     <div className="space-y-4">
+      {/* Cantidad/carrito desactivado: cada compra va directa a Stripe
       <div className="flex items-center gap-3">
         <span className="label-base mb-0">Cantidad</span>
         <div className="inline-flex items-center border border-border rounded-md">
@@ -56,14 +61,17 @@ export function ProductActions({ product }: Props) {
           <button onClick={() => setQty((q) => q + 1)} className="p-2.5 hover:bg-bg-tertiary"><Plus className="w-4 h-4" /></button>
         </div>
       </div>
+      */}
       <button onClick={handleBuy} className="btn-primary w-full text-base py-4">
         Comprar ahora
         <ExternalLink className="w-4 h-4" />
       </button>
+      {/* Carrito desactivado: compras directas via Stripe
       <button onClick={handleAdd} className="btn-outline w-full text-base py-4">
         <ShoppingCart className="w-4 h-4" />
         Añadir al carrito
       </button>
+      */}
     </div>
   );
 }

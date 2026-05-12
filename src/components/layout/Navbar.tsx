@@ -3,8 +3,10 @@
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
-import { ShoppingCart, User, Menu, X } from "lucide-react";
-import { useCart } from "@/lib/cart-store";
+import { User, Menu, X } from "lucide-react";
+// Carrito desactivado: compras directas via Stripe
+// import { ShoppingCart } from "lucide-react";
+// import { useCart } from "@/lib/cart-store";
 import { useSession } from "next-auth/react";
 import { cn } from "@/lib/utils";
 
@@ -20,10 +22,10 @@ export function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
   const pathname = usePathname();
-  const { items, setOpen: openCart } = useCart();
+  // Carrito desactivado
+  // const { items, setOpen: openCart } = useCart();
+  // const totalItems = items.reduce((acc, i) => acc + i.quantity, 0);
   const { data: session } = useSession();
-
-  const totalItems = items.reduce((acc, i) => acc + i.quantity, 0);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 24);
@@ -70,6 +72,7 @@ export function Navbar() {
         </nav>
 
         <div className="flex items-center gap-2">
+          {/* Carrito desactivado: compras directas via Stripe
           <button
             onClick={() => openCart(true)}
             className="relative p-2.5 rounded-md hover:bg-bg-tertiary transition-colors"
@@ -82,6 +85,7 @@ export function Navbar() {
               </span>
             )}
           </button>
+          */}
 
           <Link
             href={session ? "/cuenta" : "/login"}

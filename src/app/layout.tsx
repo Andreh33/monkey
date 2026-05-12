@@ -5,11 +5,13 @@ import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { TopBar } from "@/components/layout/TopBar";
 import { WhatsAppButton } from "@/components/shared/WhatsAppButton";
-import { CartDrawer } from "@/components/shop/CartDrawer";
-import MonkeyWalkerLoader from "@/components/layout/MonkeyWalkerLoader";
+// import { CartDrawer } from "@/components/shop/CartDrawer"; // Carrito desactivado: compras directas via Stripe
 import { Analytics } from "@vercel/analytics/next";
 
+const SITE_URL = "https://monopatinmonkey.com";
+
 export const metadata: Metadata = {
+  metadataBase: new URL(SITE_URL),
   title: {
     default: "MonopatinShop · Venta y Reparación de Patinetes Eléctricos · Tarragona",
     template: "%s · MonopatinShop Tarragona",
@@ -19,9 +21,25 @@ export const metadata: Metadata = {
   keywords: ["patinetes eléctricos", "Tarragona", "reparación", "Xiaomi", "Segway", "Dualtron"],
   openGraph: {
     title: "MonopatinShop · Patinetes Eléctricos Tarragona",
-    description: "Venta y reparación de patinetes eléctricos en Tarragona.",
+    description: "Venta y reparación de patinetes eléctricos en Tarragona. Todas las marcas, diagnóstico gratis y garantía 2 años.",
     type: "website",
     locale: "es_ES",
+    url: SITE_URL,
+    siteName: "MonopatinShop",
+    images: [
+      {
+        url: "/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "MonopatinShop · Tarragona",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "MonopatinShop · Patinetes Eléctricos Tarragona",
+    description: "Venta y reparación de patinetes eléctricos en Tarragona.",
+    images: ["/og-image.jpg"],
   },
 };
 
@@ -30,13 +48,12 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="es" className="dark">
       <body>
         <Providers>
-          <MonkeyWalkerLoader />
           <TopBar />
           <Navbar />
           <main className="min-h-screen">{children}</main>
           <Footer />
           <WhatsAppButton />
-          <CartDrawer />
+          {/* <CartDrawer /> Carrito desactivado: compras directas via Stripe */}
         </Providers>
         <Analytics />
       </body>

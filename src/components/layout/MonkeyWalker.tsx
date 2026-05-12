@@ -6,8 +6,7 @@ import { useGLTF, useAnimations } from "@react-three/drei";
 import * as THREE from "three";
 
 const MODEL_URL = "/modelo1/monkey_dancing.glb";
-
-let alreadyPlayed = false;
+const STORAGE_KEY = "mm_monkey_played";
 
 function Monkey({ onFinish }: { onFinish: () => void }) {
   const group = useRef<THREE.Group>(null);
@@ -57,12 +56,16 @@ export default function MonkeyWalker() {
 
   useEffect(() => {
     if (typeof window === "undefined") return;
-    if (alreadyPlayed) return;
+    try {
+      if (localStorage.getItem(STORAGE_KEY) === "1") return;
+    } catch {}
     setShow(true);
   }, []);
 
   const finish = () => {
-    alreadyPlayed = true;
+    try {
+      localStorage.setItem(STORAGE_KEY, "1");
+    } catch {}
     setShow(false);
   };
 
