@@ -9,9 +9,27 @@ import { Gauge, Battery, Zap, BatteryCharging, Weight, Users, Shield, Truck, Hea
 import { formatPrice } from "@/lib/utils";
 
 export async function generateMetadata({ params }: { params: { slug: string } }) {
-  const p = await prisma.product.findUnique({ where: { slug: params.slug } });
+  const p = await prisma.product.findUnique({
+    where: { slug: params.slug },
+    include: { images: { orderBy: { order: "asc" }, take: 1 } },
+  });
   if (!p) return { title: "Producto" };
-  return { title: p.name, description: p.shortDesc };
+  const img = p.images[0]?.url;
+  return {
+    title: p.name,
+    description: p.shortDesc,
+    openGraph: {
+      title: p.name,
+      description: p.shortDesc,
+      images: img ? [{ url: img, alt: p.name }] : undefined,
+    },
+    twitter: {
+      card: "summary_large_image" as const,
+      title: p.name,
+      description: p.shortDesc,
+      images: img ? [img] : undefined,
+    },
+  };
 }
 
 export default async function ProductPage({ params }: { params: { slug: string } }) {

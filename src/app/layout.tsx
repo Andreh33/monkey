@@ -29,8 +29,8 @@ export const metadata: Metadata = {
     images: [
       {
         url: "/og-image.jpg",
-        width: 1200,
-        height: 630,
+        width: 1417,
+        height: 2047,
         alt: "MonopatinShop · Tarragona",
       },
     ],
