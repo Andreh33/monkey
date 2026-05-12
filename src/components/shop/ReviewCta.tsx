@@ -1,6 +1,6 @@
 import { Youtube, MessageCircle } from "lucide-react";
 
-const WHATSAPP_URL = "https://wa.me/34643274756?text=Hola%2C%20me%20gustar%C3%ADa%20una%20review%20de%20este%20producto";
+const WHATSAPP_URL = "https://wa.me/34616686593?text=Hola%2C%20me%20gustar%C3%ADa%20una%20review%20de%20este%20producto";
 
 export function ReviewCta({ youtubeUrl }: { youtubeUrl?: string | null }) {
   if (youtubeUrl) {

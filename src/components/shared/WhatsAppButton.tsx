@@ -20,7 +20,7 @@ export function WhatsAppButton() {
     <AnimatePresence>
       {show && (
         <motion.a
-          href="https://wa.me/34643274756?text=Hola,%20me%20gustaría%20consultar%20sobre%20mi%20patinete..."
+          href="https://wa.me/34616686593?text=Hola,%20me%20gustaría%20consultar%20sobre%20mi%20patinete..."
           target="_blank"
           rel="noopener noreferrer"
           aria-label="Chatea con nosotros por WhatsApp"

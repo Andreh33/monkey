@@ -59,7 +59,7 @@ export default function ContactoPage() {
               </ContactRow>
 
               <a
-                href="https://wa.me/34643274756"
+                href="https://wa.me/34616686593"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-3 w-full px-5 py-4 rounded-md font-semibold text-white"

@@ -108,7 +108,7 @@ export default function ReparacionesPage() {
               <div className="flex flex-col gap-3">
                 <a href="tel:+34643274756" className="btn-primary text-base py-4 justify-start">📞 643 27 47 56</a>
                 <a href="tel:+34616686593" className="btn-outline text-base py-4 justify-start">📞 616 686 593</a>
-                <a href="https://wa.me/34643274756" target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-start gap-3 px-6 py-4 rounded-md font-semibold text-white" style={{ background: "#25D366" }}>
+                <a href="https://wa.me/34616686593" target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-start gap-3 px-6 py-4 rounded-md font-semibold text-white" style={{ background: "#25D366" }}>
                   💬 Escríbenos por WhatsApp
                 </a>
               </div>

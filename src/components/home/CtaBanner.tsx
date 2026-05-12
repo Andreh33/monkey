@@ -20,7 +20,7 @@ export function CtaBanner() {
             <p className="display-md text-black/80 mt-2">Tarragona</p>
             <div className="mt-10 flex flex-wrap justify-center gap-4">
               <a
-                href="https://wa.me/34643274756"
+                href="https://wa.me/34616686593"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 px-7 py-4 rounded-md font-bold uppercase tracking-wider text-sm bg-black text-white hover:bg-bg-secondary transition-all"
