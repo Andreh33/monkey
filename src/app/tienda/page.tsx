@@ -1,6 +1,7 @@
 import { prisma } from "@/lib/prisma";
 import { ProductCard } from "@/components/shop/ProductCard";
 import { Filters } from "@/components/shop/Filters";
+import { getCategoryTree } from "@/lib/categories";
 
 export const metadata = { title: "Tienda" };
 
@@ -8,6 +9,7 @@ type SearchParams = { [k: string]: string | undefined };
 
 export default async function TiendaPage({ searchParams }: { searchParams: SearchParams }) {
   const cat = searchParams.cat;
+  const sub = searchParams.sub;
   const brand = searchParams.brand;
   const price = searchParams.price;
   const range = searchParams.range;
@@ -15,6 +17,7 @@ export default async function TiendaPage({ searchParams }: { searchParams: Searc
 
   const where: Record<string, unknown> = { active: true };
   if (cat && cat !== "all") where.category = cat;
+  if (sub && sub !== "all") where.subcategory = sub;
   if (brand && brand !== "all") where.brand = brand;
 
   if (price && price !== "all") {
@@ -30,7 +33,7 @@ export default async function TiendaPage({ searchParams }: { searchParams: Searc
       : sort === "name" ? { name: "asc" }
       : { createdAt: "desc" };
 
-  const [products, allBrands] = await Promise.all([
+  const [products, allBrands, categories] = await Promise.all([
     prisma.product.findMany({
       where,
       include: { images: { orderBy: { order: "asc" } } },
@@ -41,6 +44,7 @@ export default async function TiendaPage({ searchParams }: { searchParams: Searc
       select: { brand: true },
       distinct: ["brand"],
     }),
+    getCategoryTree(),
   ]);
 
   const brandList = Array.from(new Set(allBrands.map((b) => b.brand!).filter(Boolean))).sort();
@@ -55,7 +59,7 @@ export default async function TiendaPage({ searchParams }: { searchParams: Searc
         </p>
       </section>
 
-      <Filters brands={brandList} />
+      <Filters brands={brandList} categories={categories} />
 
       <section className="container-custom py-12">
         {products.length === 0 ? (

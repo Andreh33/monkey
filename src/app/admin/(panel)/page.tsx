@@ -1,16 +1,17 @@
 import Link from "next/link";
 import { prisma } from "@/lib/prisma";
-import { Package, ShoppingCart, Wrench, TrendingUp } from "lucide-react";
+import { Package, Wrench, TrendingUp } from "lucide-react"; // ShoppingCart desactivado (Pedidos)
 import { formatPrice } from "@/lib/utils";
 
 export default async function AdminDashboard() {
-  const [productCount, orderCount, repairsPending, recentRepairs, recentOrders, monthIncome] =
+  // Pedidos desactivado: se comentan orderCount y recentOrders.
+  const [productCount, /* orderCount, */ repairsPending, recentRepairs, /* recentOrders, */ monthIncome] =
     await Promise.all([
       prisma.product.count(),
-      prisma.order.count(),
+      // prisma.order.count(),
       prisma.repairRequest.count({ where: { status: "NEW" } }),
       prisma.repairRequest.findMany({ orderBy: { createdAt: "desc" }, take: 5 }),
-      prisma.order.findMany({ orderBy: { createdAt: "desc" }, take: 5 }),
+      // prisma.order.findMany({ orderBy: { createdAt: "desc" }, take: 5 }),
       prisma.order.aggregate({
         where: { createdAt: { gte: new Date(new Date().getFullYear(), new Date().getMonth(), 1) } },
         _sum: { total: true },
@@ -19,7 +20,7 @@ export default async function AdminDashboard() {
 
   const cards = [
     { label: "Productos", value: productCount, icon: Package, color: "text-accent-orange" },
-    { label: "Pedidos", value: orderCount, icon: ShoppingCart, color: "text-accent-orange" },
+    // { label: "Pedidos", value: orderCount, icon: ShoppingCart, color: "text-accent-orange" }, // Pedidos desactivado
     { label: "Reparaciones nuevas", value: repairsPending, icon: Wrench, color: "text-accent-red" },
     { label: "Ingresos mes", value: `${formatPrice(monthIncome._sum.total ?? 0)}€`, icon: TrendingUp, color: "text-success" },
   ];
@@ -52,7 +53,7 @@ export default async function AdminDashboard() {
         })}
       </div>
 
-      <div className="grid lg:grid-cols-2 gap-6">
+      <div className="grid gap-6">
         <div className="card-base p-6">
           <div className="flex items-center justify-between mb-5">
             <h2 className="font-display text-2xl tracking-wider">Últimas reparaciones</h2>
@@ -77,6 +78,7 @@ export default async function AdminDashboard() {
           )}
         </div>
 
+        {/* Pedidos desactivado: sección "Últimos pedidos" comentada.
         <div className="card-base p-6">
           <div className="flex items-center justify-between mb-5">
             <h2 className="font-display text-2xl tracking-wider">Últimos pedidos</h2>
@@ -98,6 +100,7 @@ export default async function AdminDashboard() {
             </ul>
           )}
         </div>
+        */}
       </div>
     </div>
   );

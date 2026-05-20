@@ -3,8 +3,19 @@
 // Se ejecuta en el build de Vercel. Si no hay TURSO_DATABASE_URL, no hace nada
 // (en local Prisma maneja la BD SQLite directamente via `prisma migrate dev`).
 import { readdir, readFile } from "node:fs/promises";
+import { readFileSync } from "node:fs";
 import { join } from "node:path";
 import { createClient } from "@libsql/client";
+
+// Cargar .env si las variables no estan ya en el entorno (uso local).
+// En Vercel las variables vienen inyectadas y .env no existe -> no-op.
+try {
+  const env = readFileSync(join(process.cwd(), ".env"), "utf8");
+  for (const line of env.split(/\r?\n/)) {
+    const m = line.match(/^([A-Z_]+)="?([^"]*)"?$/);
+    if (m && !process.env[m[1]]) process.env[m[1]] = m[2];
+  }
+} catch {}
 
 const url = process.env.TURSO_DATABASE_URL;
 const authToken = process.env.TURSO_AUTH_TOKEN;

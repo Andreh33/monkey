@@ -1,6 +1,9 @@
 import { notFound } from "next/navigation";
 import { prisma } from "@/lib/prisma";
 import { ProductForm } from "@/components/admin/ProductForm";
+import { getCategoryTree } from "@/lib/categories";
+
+export const dynamic = "force-dynamic";
 
 export default async function EditProducto({ params }: { params: { id: string } }) {
   const product = await prisma.product.findUnique({
@@ -9,8 +12,7 @@ export default async function EditProducto({ params }: { params: { id: string } 
   });
   if (!product) notFound();
 
-  const rows = await prisma.product.findMany({ select: { category: true }, distinct: ["category"] });
-  const categories = rows.map((r) => r.category).filter(Boolean);
+  const categories = await getCategoryTree();
 
   return (
     <div>

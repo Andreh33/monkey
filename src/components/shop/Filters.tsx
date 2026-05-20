@@ -3,6 +3,7 @@
 import { useRouter, useSearchParams } from "next/navigation";
 import { useTransition } from "react";
 import { ChevronDown } from "lucide-react";
+import type { CategoryNode } from "@/lib/categories";
 
 const sortOptions = [
   { value: "recent", label: "Más recientes" },
@@ -11,38 +12,59 @@ const sortOptions = [
   { value: "name", label: "Nombre A-Z" },
 ];
 
-export function Filters({ brands }: { brands: string[] }) {
+export function Filters({ brands, categories = [] }: { brands: string[]; categories?: CategoryNode[] }) {
   const router = useRouter();
   const params = useSearchParams();
   const [, startTransition] = useTransition();
+
+  const push = (next: URLSearchParams) => {
+    startTransition(() => {
+      router.replace(`/tienda?${next.toString()}`, { scroll: false });
+    });
+  };
 
   const update = (key: string, value: string) => {
     const next = new URLSearchParams(params.toString());
     if (value && value !== "all") next.set(key, value);
     else next.delete(key);
-    startTransition(() => {
-      router.replace(`/tienda?${next.toString()}`, { scroll: false });
-    });
+    push(next);
   };
+
+  // Al cambiar de categoría limpiamos la subcategoría seleccionada.
+  const updateCategory = (value: string) => {
+    const next = new URLSearchParams(params.toString());
+    if (value && value !== "all") next.set("cat", value);
+    else next.delete("cat");
+    next.delete("sub");
+    push(next);
+  };
+
+  const currentCat = params.get("cat") ?? "all";
+  const subcategories = categories.find((c) => c.slug === currentCat)?.subcategories ?? [];
 
   return (
     <div className="sticky top-[64px] z-30 bg-bg-primary/85 backdrop-blur-xl border-y border-border">
       <div className="container-custom py-4 flex flex-wrap items-center gap-3">
         <Select
           label="Categoría"
-          value={params.get("cat") ?? "all"}
-          onChange={(v) => update("cat", v)}
+          value={currentCat}
+          onChange={updateCategory}
           options={[
             { value: "all", label: "Todas" },
-            { value: "patinete", label: "Patinetes" },
-            { value: "moto", label: "Motos" },
-            { value: "movilidad-reducida", label: "Movilidad reducida" },
-            { value: "vehiculo-electrico", label: "Vehículos eléctricos" },
-            { value: "bicicleta", label: "Bicicletas" },
-            { value: "accesorio", label: "Accesorios" },
-            { value: "recambio", label: "Recambios" },
+            ...categories.map((c) => ({ value: c.slug, label: c.name })),
           ]}
         />
+        {subcategories.length > 0 && (
+          <Select
+            label="Subcategoría"
+            value={params.get("sub") ?? "all"}
+            onChange={(v) => update("sub", v)}
+            options={[
+              { value: "all", label: "Todas" },
+              ...subcategories.map((s) => ({ value: s.slug, label: s.name })),
+            ]}
+          />
+        )}
         <Select
           label="Marca"
           value={params.get("brand") ?? "all"}

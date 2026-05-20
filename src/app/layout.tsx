@@ -7,6 +7,7 @@ import { TopBar } from "@/components/layout/TopBar";
 import { WhatsAppButton } from "@/components/shared/WhatsAppButton";
 // import { CartDrawer } from "@/components/shop/CartDrawer"; // Carrito desactivado: compras directas via Stripe
 import { Analytics } from "@vercel/analytics/next";
+import { getCategoryTree } from "@/lib/categories";
 
 const SITE_URL = "https://monopatinmonkey.com";
 
@@ -43,13 +44,14 @@ export const metadata: Metadata = {
   },
 };
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export default async function RootLayout({ children }: { children: React.ReactNode }) {
+  const categories = await getCategoryTree();
   return (
     <html lang="es" className="dark">
       <body>
         <Providers>
           <TopBar />
-          <Navbar />
+          <Navbar categories={categories} />
           <main className="min-h-screen">{children}</main>
           <Footer />
           <WhatsAppButton />

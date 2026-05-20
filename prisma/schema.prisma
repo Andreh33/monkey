@@ -57,11 +57,35 @@ model Product {
   stripeLink  String
   shippingCost Float?
   youtubeUrl  String?
+  subcategory String?
   featured    Boolean        @default(false)
   active      Boolean        @default(true)
   images      ProductImage[]
   createdAt   DateTime       @default(now())
   updatedAt   DateTime       @updatedAt
+}
+
+model Category {
+  id            String        @id @default(cuid())
+  slug          String        @unique
+  name          String
+  order         Int           @default(0)
+  subcategories Subcategory[]
+  createdAt     DateTime      @default(now())
+  updatedAt     DateTime      @updatedAt
+}
+
+model Subcategory {
+  id         String   @id @default(cuid())
+  categoryId String
+  category   Category @relation(fields: [categoryId], references: [id], onDelete: Cascade)
+  slug       String
+  name       String
+  order      Int      @default(0)
+  createdAt  DateTime @default(now())
+  updatedAt  DateTime @updatedAt
+
+  @@unique([categoryId, slug])
 }
 
 model ProductImage {

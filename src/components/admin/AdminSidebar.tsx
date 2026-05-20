@@ -7,7 +7,8 @@ import {
   LayoutDashboard,
   Package,
   Wrench,
-  ShoppingCart,
+  // ShoppingCart, // Pedidos desactivado
+  FolderTree,
   Users,
   ExternalLink,
   LogOut,
@@ -16,7 +17,8 @@ import {
 const links = [
   { href: "/admin", label: "Dashboard", icon: LayoutDashboard },
   { href: "/admin/productos", label: "Productos", icon: Package },
-  { href: "/admin/pedidos", label: "Pedidos", icon: ShoppingCart },
+  { href: "/admin/categorias", label: "Categorías", icon: FolderTree },
+  // { href: "/admin/pedidos", label: "Pedidos", icon: ShoppingCart }, // Pedidos desactivado
   { href: "/admin/reparaciones", label: "Reparaciones", icon: Wrench },
   { href: "/admin/usuarios", label: "Usuarios", icon: Users },
 ];

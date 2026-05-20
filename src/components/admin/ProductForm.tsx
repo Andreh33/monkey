@@ -5,6 +5,7 @@ import { useState } from "react";
 import { ImageUploader, UploadedImage } from "./ImageUploader";
 import { Loader2, Save } from "lucide-react";
 import { toast } from "sonner";
+import type { CategoryNode } from "@/lib/categories";
 
 type Product = {
   id?: string;
@@ -16,6 +17,7 @@ type Product = {
   sku?: string | null;
   stock: number;
   category: string;
+  subcategory?: string | null;
   brand?: string | null;
   maxSpeed?: number | null;
   range?: number | null;
@@ -31,29 +33,37 @@ type Product = {
   images: { url: string; alt?: string | null }[];
 };
 
-const DEFAULT_CATEGORIES = [
-  "patinete",
-  "moto",
-  "movilidad-reducida",
-  "vehiculo-electrico",
-  "bicicleta",
-  "accesorio",
-  "recambio",
-];
-
-export function ProductForm({ product, categories = [] }: { product?: Product; categories?: string[] }) {
+export function ProductForm({ product, categories = [] }: { product?: Product; categories?: CategoryNode[] }) {
   const router = useRouter();
   const isEdit = !!product?.id;
   const [loading, setLoading] = useState(false);
   const [images, setImages] = useState<UploadedImage[]>(
     (product?.images ?? []).map((img, i) => ({ id: `existing-${i}`, url: img.url, alt: img.alt ?? undefined }))
   );
-  const categorySuggestions = Array.from(
-    new Set([...DEFAULT_CATEGORIES, ...categories, ...(product?.category ? [product.category] : [])].filter(Boolean))
-  );
+
+  // Si el producto guarda una categoría que ya no existe en el árbol, la añadimos
+  // como opción para no perder el dato.
+  const categoryOptions: CategoryNode[] = [...categories];
+  if (product?.category && !categories.some((c) => c.slug === product.category)) {
+    categoryOptions.unshift({ id: "legacy", slug: product.category, name: product.category, order: -1, subcategories: [] });
+  }
+
+  const [cat, setCat] = useState(product?.category ?? categoryOptions[0]?.slug ?? "");
+  const [sub, setSub] = useState(product?.subcategory ?? "");
+
+  const rawSubs = categoryOptions.find((c) => c.slug === cat)?.subcategories ?? [];
+  // Conserva una subcategoría guardada aunque ya no exista en el árbol.
+  const subOptions =
+    sub && !rawSubs.some((s) => s.slug === sub)
+      ? [{ id: "legacy-sub", slug: sub, name: sub, order: -1 }, ...rawSubs]
+      : rawSubs;
 
   async function onSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
+    if (!cat) {
+      toast.error("Selecciona una categoría (créala en Categorías si no hay ninguna)");
+      return;
+    }
     setLoading(true);
     const fd = new FormData(e.currentTarget);
     const payload: Record<string, unknown> = {
@@ -64,7 +74,8 @@ export function ProductForm({ product, categories = [] }: { product?: Product; c
       compareAt: fd.get("compareAt") ? Number(fd.get("compareAt")) : null,
       sku: String(fd.get("sku") ?? "") || null,
       stock: Number(fd.get("stock") ?? 0),
-      category: String(fd.get("category") ?? "patinete").trim().toLowerCase().replace(/\s+/g, "-") || "patinete",
+      category: cat,
+      subcategory: sub || null,
       brand: String(fd.get("brand") ?? "") || null,
       maxSpeed: fd.get("maxSpeed") ? Number(fd.get("maxSpeed")) : null,
       range: fd.get("range") ? Number(fd.get("range")) : null,
@@ -120,20 +131,37 @@ export function ProductForm({ product, categories = [] }: { product?: Product; c
           <div><Label>SKU</Label><input name="sku" defaultValue={product?.sku ?? ""} className="input-base" /></div>
           <div>
             <Label>Categoría *</Label>
-            <input
-              name="category"
-              required
-              list="category-options"
-              defaultValue={product?.category ?? ""}
+            <select
+              value={cat}
+              onChange={(e) => { setCat(e.target.value); setSub(""); }}
               className="input-base"
-              placeholder="Escribe o elige una"
-            />
-            <datalist id="category-options">
-              {categorySuggestions.map((c) => (
-                <option key={c} value={c} />
+            >
+              {categoryOptions.length === 0 && <option value="">Sin categorías — créalas en Categorías</option>}
+              {categoryOptions.map((c) => (
+                <option key={c.slug} value={c.slug}>{c.name}</option>
               ))}
-            </datalist>
-            <p className="text-xs text-text-muted mt-1">Puedes escribir una nueva categoría o elegir una existente.</p>
+            </select>
+            <p className="text-xs text-text-muted mt-1">
+              Gestiona las categorías en{" "}
+              <a href="/admin/categorias" className="text-accent-red hover:underline">Categorías</a>.
+            </p>
+          </div>
+          <div>
+            <Label>Subcategoría</Label>
+            <select
+              value={sub}
+              onChange={(e) => setSub(e.target.value)}
+              className="input-base disabled:opacity-50"
+              disabled={rawSubs.length === 0 && !sub}
+            >
+              <option value="">— Ninguna —</option>
+              {subOptions.map((s) => (
+                <option key={s.slug} value={s.slug}>{s.name}</option>
+              ))}
+            </select>
+            {rawSubs.length === 0 && (
+              <p className="text-xs text-text-muted mt-1">Esta categoría no tiene subcategorías.</p>
+            )}
           </div>
           <div><Label>Marca</Label><input name="brand" defaultValue={product?.brand ?? ""} className="input-base" /></div>
           <div>

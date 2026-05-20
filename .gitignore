@@ -53,6 +53,9 @@ prisma/dev.db-journal
 public/uploads/products/*
 !public/uploads/products/.gitkeep
 
+# backups (locales, no versionar)
+/backups/
+
 .vercel
 
 .env*.local

@@ -1,9 +1,10 @@
 import { ProductForm } from "@/components/admin/ProductForm";
-import { prisma } from "@/lib/prisma";
+import { getCategoryTree } from "@/lib/categories";
+
+export const dynamic = "force-dynamic";
 
 export default async function NuevoProducto() {
-  const rows = await prisma.product.findMany({ select: { category: true }, distinct: ["category"] });
-  const categories = rows.map((r) => r.category).filter(Boolean);
+  const categories = await getCategoryTree();
   return (
     <div>
       <h1 className="display-md mb-2">Nuevo producto</h1>
