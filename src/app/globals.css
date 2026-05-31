@@ -275,3 +275,169 @@ body {
   background: radial-gradient(ellipse at center, transparent 50%, rgba(0,0,0,0.6) 100%);
   pointer-events: none;
 }
+
+/* ── Aniversario · banner sheen ───────────────────────────── */
+.ani-banner__sheen {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 40%;
+  pointer-events: none;
+  background: linear-gradient(
+    100deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.65) 50%,
+    transparent 100%
+  );
+  transform: translateX(-150%) skewX(-18deg);
+  animation: ani-sheen 7s ease-in-out infinite;
+}
+@keyframes ani-sheen {
+  0%, 100% { transform: translateX(-150%) skewX(-18deg); }
+  /* el destello cruza rápido y luego espera al siguiente ciclo */
+  18%, 60% { transform: translateX(350%) skewX(-18deg); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .ani-banner__sheen { animation: none; display: none; }
+}
+
+/* ── Aniversario · overlay festivo ───────────────────────── */
+.ani-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 10000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+  background: radial-gradient(ellipse at center, rgba(20, 6, 6, 0.92) 0%, rgba(10, 10, 12, 0.97) 70%);
+  animation: ani-fade-in 0.35s ease both;
+}
+.ani-overlay__cerrar {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  z-index: 3;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.75rem;
+  height: 2.75rem;
+  border-radius: 9999px;
+  color: rgba(255, 255, 255, 0.85);
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  transition: background 0.2s, transform 0.2s;
+}
+.ani-overlay__cerrar:hover { background: rgba(255, 255, 255, 0.18); transform: scale(1.06); }
+.ani-overlay__contenido {
+  position: relative;
+  z-index: 2;
+  max-width: 42rem;
+  text-align: center;
+}
+
+/* Confeti container */
+.ani-confeti {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 1;
+}
+.ani-confeti i {
+  position: absolute;
+  display: block;
+  border-radius: 2px;
+  will-change: transform, opacity;
+}
+
+/* Confeti cayendo */
+.ani-pieza {
+  top: -12vh;
+  animation-name: ani-caer;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+@keyframes ani-caer {
+  0% { transform: translateY(-12vh) rotateZ(0deg); opacity: 1; }
+  100% { transform: translateY(115vh) rotateZ(var(--rot, 360deg)); opacity: 0.9; }
+}
+
+/* Estallido central (party popper) - una sola vez */
+.ani-estallido {
+  top: 42%;
+  left: 50%;
+  animation-name: ani-estallar;
+  animation-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+@keyframes ani-estallar {
+  0% { transform: translate(-50%, -50%) scale(0.4) rotateZ(0deg); opacity: 1; }
+  70% { opacity: 1; }
+  100% {
+    transform: translate(calc(-50% + var(--tx)), calc(-50% + var(--ty))) scale(1) rotateZ(var(--rot));
+    opacity: 0;
+  }
+}
+
+/* Serpentina */
+.ani-cinta {
+  top: -14vh;
+  width: 5px !important;
+  border-radius: 3px;
+  transform-origin: top center;
+  animation-name: ani-cinta-caer;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+@keyframes ani-cinta-caer {
+  0% { transform: translateY(-14vh) rotateZ(-8deg) skewX(0deg); }
+  50% { transform: translateY(50vh) rotateZ(8deg) skewX(12deg); }
+  100% { transform: translateY(118vh) rotateZ(-8deg) skewX(-12deg); }
+}
+
+/* Globos subiendo */
+.ani-globo {
+  bottom: -16vh;
+  border-radius: 50% 50% 48% 48%;
+  box-shadow: inset -4px -4px 8px rgba(0, 0, 0, 0.25);
+  animation-name: ani-globo-subir;
+  animation-timing-function: ease-in;
+  animation-iteration-count: infinite;
+}
+.ani-globo::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  width: 1px;
+  height: 12px;
+  background: rgba(255, 255, 255, 0.4);
+  transform: translateX(-50%);
+}
+@keyframes ani-globo-subir {
+  0% { transform: translateY(0) translateX(0); opacity: 0; }
+  10% { opacity: 0.95; }
+  50% { transform: translateY(-65vh) translateX(14px); }
+  90% { opacity: 0.95; }
+  100% { transform: translateY(-130vh) translateX(-10px); opacity: 0; }
+}
+
+/* Texto del overlay */
+@keyframes ani-fade-in { from { opacity: 0; } to { opacity: 1; } }
+@keyframes ani-pop {
+  0% { transform: scale(0.5) rotate(-6deg); opacity: 0; }
+  60% { transform: scale(1.12) rotate(2deg); opacity: 1; }
+  100% { transform: scale(1) rotate(0deg); opacity: 1; }
+}
+@keyframes ani-subir-fade { from { transform: translateY(24px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
+.ani-sorpresa { animation: ani-pop 0.6s cubic-bezier(0.16, 1, 0.3, 1) both; }
+.ani-mensaje { animation: ani-subir-fade 0.5s ease both; }
+
+@media (prefers-reduced-motion: reduce) {
+  .ani-confeti { display: none; }
+  .ani-overlay, .ani-sorpresa, .ani-mensaje { animation: none; }
+}

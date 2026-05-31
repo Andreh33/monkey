@@ -4,6 +4,8 @@ import { useEffect, useRef, useState, Suspense } from "react";
 import { Canvas, useFrame } from "@react-three/fiber";
 import { useGLTF, useAnimations } from "@react-three/drei";
 import * as THREE from "three";
+import { ANIVERSARIO } from "@/config/aniversario";
+import { SESSION_KEY_OVERLAY, EVENTO_OVERLAY_CERRADO } from "@/components/aniversario/eventos";
 
 const MODEL_URL = "/modelo1/monkey_dancing.glb";
 const STORAGE_KEY = "mm_monkey_played";
@@ -56,9 +58,25 @@ export default function MonkeyWalker() {
 
   useEffect(() => {
     if (typeof window === "undefined") return;
+    // Una vez por navegador: si ya salió, no repetir.
     try {
       if (localStorage.getItem(STORAGE_KEY) === "1") return;
     } catch {}
+
+    // Durante el aniversario, esperar a que se cierre el overlay de SORPRESA
+    // (solo en la home y si aún no se ha visto en esta sesión).
+    if (ANIVERSARIO.activo && window.location.pathname === "/") {
+      let overlayVisto = false;
+      try {
+        overlayVisto = sessionStorage.getItem(SESSION_KEY_OVERLAY) === "1";
+      } catch {}
+      if (!overlayVisto) {
+        const alCerrar = () => setShow(true);
+        window.addEventListener(EVENTO_OVERLAY_CERRADO, alCerrar, { once: true });
+        return () => window.removeEventListener(EVENTO_OVERLAY_CERRADO, alCerrar);
+      }
+    }
+
     setShow(true);
   }, []);
 
