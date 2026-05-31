@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { ScrollReveal } from "@/components/shared/ScrollReveal";
 import { Award, Zap, HandshakeIcon, MapPin } from "lucide-react";
+import { ANIVERSARIO } from "@/config/aniversario";
 
 export const metadata = { title: "Nosotros" };
 
@@ -59,6 +60,22 @@ export default function NosotrosPage() {
                   Cercanos. Honestos. Y muy, muy enrollados con el patinete.
                 </p>
               </div>
+
+              {ANIVERSARIO.activo && (
+                <div
+                  className="mt-7 rounded-xl border-l-4 p-5"
+                  style={{ borderColor: "#FFD60A", background: "rgba(255, 214, 10, 0.08)" }}
+                >
+                  <p className="font-display text-2xl tracking-wide" style={{ color: "#FFD60A" }}>
+                    🎉 {ANIVERSARIO.anios} años contigo
+                  </p>
+                  <p className="mt-2 text-text-secondary leading-relaxed">
+                    Este {ANIVERSARIO.hasta} cumplimos {ANIVERSARIO.anios} años desde que abrimos
+                    nuestras puertas en {ANIVERSARIO.desde}. Gracias a toda España por confiar en
+                    nosotros patinada tras patinada — y lo mejor es que esto no ha hecho más que empezar.
+                  </p>
+                </div>
+              )}
             </div>
           </ScrollReveal>
 
