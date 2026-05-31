@@ -127,7 +127,7 @@ export function Confeti() {
               left: p.left,
               background: p.bg,
               width: p.size,
-              height: `calc(${p.size} * 1.2)`,
+              height: `calc(${p.size} * 1.35)`,
               animationDelay: p.delay,
               animationDuration: p.dur,
             } as React.CSSProperties
