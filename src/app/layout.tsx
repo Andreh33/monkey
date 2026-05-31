@@ -1,10 +1,11 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import "./globals.css";
 import { Providers } from "@/components/providers";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { TopBar } from "@/components/layout/TopBar";
 import { WhatsAppButton } from "@/components/shared/WhatsAppButton";
+import { InstallPrompt } from "@/components/shared/InstallPrompt";
 // import { CartDrawer } from "@/components/shop/CartDrawer"; // Carrito desactivado: compras directas via Stripe
 import { Analytics } from "@vercel/analytics/next";
 import { getCategoryTree } from "@/lib/categories";
@@ -42,6 +43,15 @@ export const metadata: Metadata = {
     description: "Venta y reparación de patinetes eléctricos en Tarragona.",
     images: ["/og-image.jpg"],
   },
+  appleWebApp: {
+    capable: true,
+    statusBarStyle: "black-translucent",
+    title: "MonopatinShop",
+  },
+};
+
+export const viewport: Viewport = {
+  themeColor: "#0A0A0C",
 };
 
 export default async function RootLayout({ children }: { children: React.ReactNode }) {
@@ -55,6 +65,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
           <main className="min-h-screen">{children}</main>
           <Footer />
           <WhatsAppButton />
+          <InstallPrompt />
           {/* <CartDrawer /> Carrito desactivado: compras directas via Stripe */}
         </Providers>
         <Analytics />
