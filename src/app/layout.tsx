@@ -7,6 +7,7 @@ import { TopBar } from "@/components/layout/TopBar";
 import { WhatsAppButton } from "@/components/shared/WhatsAppButton";
 import { InstallPrompt } from "@/components/shared/InstallPrompt";
 import { BannerAniversario } from "@/components/aniversario/BannerAniversario";
+import { OverlayAniversario } from "@/components/aniversario/OverlayAniversario";
 // import { CartDrawer } from "@/components/shop/CartDrawer"; // Carrito desactivado: compras directas via Stripe
 import { Analytics } from "@vercel/analytics/next";
 import { getCategoryTree } from "@/lib/categories";
@@ -68,6 +69,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
           <Footer />
           <WhatsAppButton />
           <InstallPrompt />
+          <OverlayAniversario />
           {/* <CartDrawer /> Carrito desactivado: compras directas via Stripe */}
         </Providers>
         <Analytics />
