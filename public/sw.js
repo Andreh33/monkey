@@ -2,7 +2,7 @@
 // Necesario para que Chrome considere el sitio instalable (PWA).
 // Estrategia: network-first, con caché de respaldo para navegación offline.
 
-const CACHE = "monopatin-v1";
+const CACHE = "monopatin-v2";
 const OFFLINE_URLS = ["/"];
 
 self.addEventListener("install", (event) => {
