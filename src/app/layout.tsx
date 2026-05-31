@@ -6,6 +6,7 @@ import { Footer } from "@/components/layout/Footer";
 import { TopBar } from "@/components/layout/TopBar";
 import { WhatsAppButton } from "@/components/shared/WhatsAppButton";
 import { InstallPrompt } from "@/components/shared/InstallPrompt";
+import { BannerAniversario } from "@/components/aniversario/BannerAniversario";
 // import { CartDrawer } from "@/components/shop/CartDrawer"; // Carrito desactivado: compras directas via Stripe
 import { Analytics } from "@vercel/analytics/next";
 import { getCategoryTree } from "@/lib/categories";
@@ -60,6 +61,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
     <html lang="es" className="dark">
       <body>
         <Providers>
+          <BannerAniversario />
           <TopBar />
           <Navbar categories={categories} />
           <main className="min-h-screen">{children}</main>

@@ -275,3 +275,29 @@ body {
   background: radial-gradient(ellipse at center, transparent 50%, rgba(0,0,0,0.6) 100%);
   pointer-events: none;
 }
+
+/* ── Aniversario · banner sheen ───────────────────────────── */
+.ani-banner__sheen {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 40%;
+  pointer-events: none;
+  background: linear-gradient(
+    100deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.65) 50%,
+    transparent 100%
+  );
+  transform: translateX(-150%) skewX(-18deg);
+  animation: ani-sheen 7s ease-in-out infinite;
+}
+@keyframes ani-sheen {
+  0%, 100% { transform: translateX(-150%) skewX(-18deg); }
+  /* el destello cruza rápido y luego espera al siguiente ciclo */
+  18%, 60% { transform: translateX(350%) skewX(-18deg); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .ani-banner__sheen { animation: none; display: none; }
+}
