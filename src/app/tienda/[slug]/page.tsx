@@ -40,11 +40,32 @@ export default async function ProductPage({ params }: { params: { slug: string }
 
   if (!product) notFound();
 
-  const related = await prisma.product.findMany({
-    where: { active: true, slug: { not: product.slug } },
+  // Recomendaciones: primero de la misma categoría/marca, completando con otros si faltan.
+  const sameCategory = await prisma.product.findMany({
+    where: {
+      active: true,
+      slug: { not: product.slug },
+      category: product.category,
+    },
     include: { images: { orderBy: { order: "asc" } } },
+    orderBy: [{ featured: "desc" }, { createdAt: "desc" }],
     take: 3,
   });
+
+  let related = sameCategory;
+  if (related.length < 3) {
+    const fillers = await prisma.product.findMany({
+      where: {
+        active: true,
+        slug: { not: product.slug },
+        id: { notIn: related.map((p) => p.id) },
+      },
+      include: { images: { orderBy: { order: "asc" } } },
+      orderBy: [{ featured: "desc" }, { createdAt: "desc" }],
+      take: 3 - related.length,
+    });
+    related = [...related, ...fillers];
+  }
 
   const specs = [
     { icon: Gauge, label: "Velocidad máx.", value: product.maxSpeed ? `${product.maxSpeed} km/h` : "—" },
