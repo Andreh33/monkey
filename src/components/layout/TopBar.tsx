@@ -11,7 +11,7 @@ export function TopBar() {
     "MOTOR",
     "ELECTRÓNICA",
     "DIAGNÓSTICO GRATUITO",
-    "GARANTÍA 2 AÑOS",
+    "GARANTÍA 3 AÑOS",
   ];
   return (
     <div className="w-full text-black font-bold text-[11px] tracking-[0.25em] uppercase" style={{ background: "linear-gradient(135deg, #FF2A2A 0%, #FF003C 100%)" }}>

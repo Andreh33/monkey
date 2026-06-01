@@ -5,7 +5,7 @@ export default function manifest(): MetadataRoute.Manifest {
     name: "MonopatinShop · Patinetes Eléctricos Tarragona",
     short_name: "MonopatinShop",
     description:
-      "Venta y reparación de patinetes eléctricos en Tarragona. Todas las marcas, diagnóstico gratis y garantía 2 años.",
+      "Venta y reparación de patinetes eléctricos en Tarragona. Todas las marcas, diagnóstico gratis y garantía 3 años.",
     start_url: "/",
     scope: "/",
     display: "standalone",

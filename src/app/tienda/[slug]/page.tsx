@@ -119,7 +119,7 @@ export default async function ProductPage({ params }: { params: { slug: string }
             <ProductActions product={product} />
 
             <div className="grid grid-cols-3 gap-3 pt-4 border-t border-border">
-              <Trust icon={Shield} text="Garantía 2 años" />
+              <Trust icon={Shield} text="Garantía 3 años" />
               <Trust icon={Truck} text="Envío 24-48h" />
               <Trust icon={Headphones} text="Soporte técnico" />
             </div>
@@ -168,7 +168,7 @@ export default async function ProductPage({ params }: { params: { slug: string }
               </div>
               <div>
                 <p className="font-semibold text-white mb-1">Garantía oficial</p>
-                <p>2 años de garantía del fabricante. Servicio técnico autorizado en nuestro taller.</p>
+                <p>3 años de garantía del fabricante. Servicio técnico autorizado en nuestro taller.</p>
               </div>
               <div>
                 <p className="font-semibold text-white mb-1">Configuración incluida</p>

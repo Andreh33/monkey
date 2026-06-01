@@ -45,7 +45,7 @@ Su sistema de doble freno (disco y eléctrico regenerativo) garantiza paradas se
 
 Plegable en 3 segundos, ligero (17 kg) y con conectividad Bluetooth para gestionarlo desde la app oficial de Xiaomi. Ideal para trayectos casa-trabajo, paseos por la costa o moverte por el casco antiguo.
 
-En MonkeyMotion lo entregamos montado, ajustado y con prueba previa. Garantía oficial de 2 años incluida.`,
+En MonkeyMotion lo entregamos montado, ajustado y con prueba previa. Garantía oficial de 3 años incluida.`,
     images: ["/imagenes/local-01.jpeg", "/imagenes/local-02.jpeg"],
   },
   {
@@ -91,7 +91,7 @@ Su batería de 36V/7.5Ah ofrece hasta 35 km reales de autonomía urbana, más qu
 
 A solo 14 kg de peso y con sistema de plegado rápido en una pulsación, es el patinete más práctico para combinar con transporte público o subirlo al portal sin esfuerzo. Pantalla LED multifunción y gomas antideslizantes en el reposapiés.
 
-Garantía de 2 años, soporte técnico en castellano y disponibilidad inmediata de recambios. La opción más vendida en MonkeyMotion para quien empieza en el mundo del patinete eléctrico.`,
+Garantía de 3 años, soporte técnico en castellano y disponibilidad inmediata de recambios. La opción más vendida en MonkeyMotion para quien empieza en el mundo del patinete eléctrico.`,
     images: ["/imagenes/local-05.jpeg", "/imagenes/local-06.jpeg"],
   },
   {
