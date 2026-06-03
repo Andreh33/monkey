@@ -3,7 +3,8 @@
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
-import { User, Menu, X, ChevronDown } from "lucide-react";
+import { User, Menu, X, ChevronDown, Search } from "lucide-react";
+import { SearchBox } from "@/components/shop/SearchBox";
 // Carrito desactivado: compras directas via Stripe
 // import { ShoppingCart } from "lucide-react";
 // import { useCart } from "@/lib/cart-store";
@@ -22,6 +23,7 @@ const links = [
 export function Navbar({ categories = [] }: { categories?: CategoryNode[] }) {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
+  const [searchOpen, setSearchOpen] = useState(false);
   const [mobileShopOpen, setMobileShopOpen] = useState(false);
   const pathname = usePathname();
   // Carrito desactivado
@@ -40,6 +42,7 @@ export function Navbar({ categories = [] }: { categories?: CategoryNode[] }) {
   useEffect(() => {
     setOpen(false);
     setMobileShopOpen(false);
+    setSearchOpen(false);
   }, [pathname]);
 
   return (
@@ -96,6 +99,15 @@ export function Navbar({ categories = [] }: { categories?: CategoryNode[] }) {
           </button>
           */}
 
+          <button
+            onClick={() => setSearchOpen((v) => !v)}
+            className="p-2.5 rounded-md hover:bg-bg-tertiary transition-colors"
+            aria-label="Buscar"
+            aria-expanded={searchOpen}
+          >
+            {searchOpen ? <X className="w-5 h-5" /> : <Search className="w-5 h-5" />}
+          </button>
+
           <Link
             href={session ? "/cuenta" : "/login"}
             className="p-2.5 rounded-md hover:bg-bg-tertiary transition-colors hidden sm:inline-flex"
@@ -113,6 +125,15 @@ export function Navbar({ categories = [] }: { categories?: CategoryNode[] }) {
           </button>
         </div>
       </div>
+
+      {/* Panel de búsqueda (lupa) */}
+      {searchOpen && (
+        <div className="border-t border-border bg-bg-primary/95 backdrop-blur-xl">
+          <div className="container-custom py-3">
+            <SearchBox autoFocus onNavigate={() => setSearchOpen(false)} />
+          </div>
+        </div>
+      )}
 
       {/* Mobile menu */}
       {open && (

@@ -4,6 +4,7 @@ import { useRouter, useSearchParams } from "next/navigation";
 import { useTransition } from "react";
 import { ChevronDown } from "lucide-react";
 import type { CategoryNode } from "@/lib/categories";
+import { SearchBox } from "@/components/shop/SearchBox";
 
 const sortOptions = [
   { value: "recent", label: "Más recientes" },
@@ -44,6 +45,11 @@ export function Filters({ brands, categories = [] }: { brands: string[]; categor
 
   return (
     <div className="sticky top-[64px] z-30 bg-bg-primary/85 backdrop-blur-xl border-y border-border">
+      <div className="container-custom pt-4">
+        <div className="max-w-md">
+          <SearchBox placeholder="Buscar producto exacto…" />
+        </div>
+      </div>
       <div className="container-custom py-4 flex flex-wrap items-center gap-3">
         <Select
           label="Categoría"
