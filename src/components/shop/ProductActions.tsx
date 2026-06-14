@@ -1,6 +1,6 @@
 "use client";
 
-import { ExternalLink } from "lucide-react";
+import { ExternalLink, Share2 } from "lucide-react";
 // Carrito desactivado: compras directas via Stripe
 // import { useState } from "react";
 // import { Minus, Plus, ShoppingCart } from "lucide-react";
@@ -29,6 +29,30 @@ export function ProductActions({ product }: Props) {
       window.open(product.stripeLink, "_blank", "noopener,noreferrer");
     } else {
       toast.error("Link de pago no disponible. Contáctanos directamente.");
+    }
+  };
+
+  const handleShare = async () => {
+    const url = window.location.href;
+    // Móvil: hoja de compartir nativa. Escritorio: copiar enlace.
+    if (navigator.share) {
+      try {
+        await navigator.share({
+          title: product.name,
+          text: `Mira el ${product.name} en MonkeyMotion`,
+          url,
+        });
+        return;
+      } catch (err) {
+        // El usuario canceló la hoja de compartir: no mostramos error.
+        if (err instanceof Error && err.name === "AbortError") return;
+      }
+    }
+    try {
+      await navigator.clipboard.writeText(url);
+      toast.success("Enlace copiado al portapapeles");
+    } catch {
+      toast.error("No se pudo copiar el enlace");
     }
   };
 
@@ -65,6 +89,10 @@ export function ProductActions({ product }: Props) {
       <button onClick={handleBuy} className="btn-primary w-full text-base py-4">
         Comprar ahora
         <ExternalLink className="w-4 h-4" />
+      </button>
+      <button onClick={handleShare} className="btn-outline w-full text-base py-4">
+        <Share2 className="w-4 h-4" />
+        Compartir
       </button>
       {/* Carrito desactivado: compras directas via Stripe
       <button onClick={handleAdd} className="btn-outline w-full text-base py-4">
