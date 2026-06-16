@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { MapPin, Phone, Mail, Clock } from "lucide-react";
+import { EMPRESA } from "@/config/empresa";
 
 export function Footer() {
   return (
@@ -39,6 +40,14 @@ export function Footer() {
               {/* Carrito desactivado: compras directas via Stripe
               <li><Link href="/carrito" className="text-text-secondary hover:text-white transition-colors">Carrito</Link></li>
               */}
+            </ul>
+
+            <h4 className="font-heading font-semibold text-xs uppercase tracking-widest mb-4 mt-8 text-text-primary">Legal</h4>
+            <ul className="space-y-2 text-sm">
+              <li><Link href="/aviso-legal" className="text-text-secondary hover:text-white transition-colors">Aviso legal</Link></li>
+              <li><Link href="/privacidad" className="text-text-secondary hover:text-white transition-colors">Privacidad</Link></li>
+              <li><Link href="/cookies" className="text-text-secondary hover:text-white transition-colors">Cookies</Link></li>
+              <li><Link href="/condiciones-compra" className="text-text-secondary hover:text-white transition-colors">Condiciones de compra</Link></li>
             </ul>
           </div>
 
@@ -95,7 +104,9 @@ export function Footer() {
         </div>
 
         <div className="mt-12 pt-6 border-t border-border flex flex-col sm:flex-row items-center justify-between gap-4">
-          <p className="text-xs text-text-muted font-mono">© 2026 MONOPATINSHOP · TARRAGONA · Todos los derechos reservados</p>
+          <p className="text-xs text-text-muted font-mono">
+            © 2026 {EMPRESA.razonSocial} · CIF {EMPRESA.cif} · Todos los derechos reservados
+          </p>
           <p className="text-xs text-text-muted">Hecho en Tarragona con energía urbana ⚡</p>
         </div>
       </div>

@@ -225,6 +225,85 @@ body {
     @apply py-14 sm:py-20;
   }
 
+  /* Tipografía para páginas legales / texto largo */
+  .legal-prose {
+    color: var(--color-text-secondary);
+    line-height: 1.75;
+    font-size: 0.95rem;
+  }
+  .legal-prose h2 {
+    font-family: var(--font-heading);
+    color: var(--color-text-primary);
+    font-weight: 600;
+    font-size: 1.25rem;
+    margin-top: 2.75rem;
+    margin-bottom: 0.9rem;
+    scroll-margin-top: 6rem;
+  }
+  .legal-prose h2:first-child {
+    margin-top: 0;
+  }
+  .legal-prose h3 {
+    font-family: var(--font-heading);
+    color: var(--color-text-primary);
+    font-weight: 600;
+    font-size: 1rem;
+    margin-top: 1.75rem;
+    margin-bottom: 0.6rem;
+  }
+  .legal-prose p {
+    margin-bottom: 1rem;
+  }
+  .legal-prose ul,
+  .legal-prose ol {
+    margin: 0 0 1.25rem 1.25rem;
+    list-style-position: outside;
+  }
+  .legal-prose ul {
+    list-style-type: disc;
+  }
+  .legal-prose ol {
+    list-style-type: decimal;
+  }
+  .legal-prose li {
+    margin-bottom: 0.5rem;
+    padding-left: 0.25rem;
+  }
+  .legal-prose a {
+    color: var(--color-accent-orange);
+    text-decoration: underline;
+    text-underline-offset: 2px;
+  }
+  .legal-prose a:hover {
+    color: var(--color-text-primary);
+  }
+  .legal-prose strong {
+    color: var(--color-text-primary);
+    font-weight: 600;
+  }
+  .legal-prose table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0 0 1.5rem;
+    font-size: 0.85rem;
+  }
+  .legal-prose th,
+  .legal-prose td {
+    border: 1px solid var(--color-border);
+    padding: 0.6rem 0.75rem;
+    text-align: left;
+    vertical-align: top;
+  }
+  .legal-prose th {
+    background: var(--color-bg-secondary);
+    color: var(--color-text-primary);
+    font-family: var(--font-heading);
+    font-weight: 600;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+
   /* Subtle noise overlay */
   .noise::after {
     content: "";

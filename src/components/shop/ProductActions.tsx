@@ -1,8 +1,9 @@
 "use client";
 
+import { useState } from "react";
+import Link from "next/link";
 import { ExternalLink, Share2 } from "lucide-react";
 // Carrito desactivado: compras directas via Stripe
-// import { useState } from "react";
 // import { Minus, Plus, ShoppingCart } from "lucide-react";
 // import { useCart } from "@/lib/cart-store";
 import { toast } from "sonner";
@@ -23,8 +24,13 @@ export function ProductActions({ product }: Props) {
   // Carrito desactivado
   // const [qty, setQty] = useState(1);
   // const { addItem, setOpen } = useCart();
+  const [accepted, setAccepted] = useState(false);
 
   const handleBuy = () => {
+    if (!accepted) {
+      toast.error("Debes aceptar las condiciones de compra para continuar.");
+      return;
+    }
     if (product.stripeLink) {
       window.open(product.stripeLink, "_blank", "noopener,noreferrer");
     } else {
@@ -86,7 +92,29 @@ export function ProductActions({ product }: Props) {
         </div>
       </div>
       */}
-      <button onClick={handleBuy} className="btn-primary w-full text-base py-4">
+      <label className="flex items-start gap-2.5 text-sm text-text-secondary cursor-pointer select-none">
+        <input
+          type="checkbox"
+          checked={accepted}
+          onChange={(e) => setAccepted(e.target.checked)}
+          className="mt-0.5 h-4 w-4 shrink-0 accent-accent-red cursor-pointer"
+        />
+        <span>
+          He leído y acepto las{" "}
+          <Link href="/condiciones-compra" target="_blank" className="text-accent-orange underline underline-offset-2 hover:text-white">
+            Condiciones de compra
+          </Link>{" "}
+          y la{" "}
+          <Link href="/privacidad" target="_blank" className="text-accent-orange underline underline-offset-2 hover:text-white">
+            Política de privacidad
+          </Link>.
+        </span>
+      </label>
+      <button
+        onClick={handleBuy}
+        disabled={!accepted}
+        className="btn-primary w-full text-base py-4 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:translate-y-0 disabled:hover:shadow-none"
+      >
         Comprar ahora
         <ExternalLink className="w-4 h-4" />
       </button>
