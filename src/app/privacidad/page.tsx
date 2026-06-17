@@ -128,20 +128,21 @@ export default function PrivacidadPage() {
         <li>Organismos y entidades oficiales en cumplimiento de las normativas y leyes vigentes.</li>
       </ul>
       <p>
-        Cualquier transferencia internacional de datos al usar aplicaciones americanas, estará
-        adherida al convenio Privacy Shield, que garantiza que las empresas de software americano
-        cumplen las políticas de protección de datos europeas en materia de privacidad.
+        Cualquier transferencia internacional de datos derivada del uso de servicios de proveedores
+        estadounidenses se realizará con las debidas garantías, conforme al marco{" "}
+        <strong>EU-US Data Privacy Framework</strong> y/o a las Cláusulas Contractuales Tipo aprobadas
+        por la Comisión Europea, que garantizan un nivel de protección adecuado de tus datos.
       </p>
       <p>
         Los datos no se comunicarán a ningún tercero ajeno a {EMPRESA.razonSocial}, salvo obligación
         legal.
       </p>
       <p>
-        Al elegir la forma de pago KLARNA, el usuario acepta que todos sus datos de carácter personal
-        sean íntegramente cedidos a KLARNA desde el momento en que el usuario haya iniciado la
-        contratación del servicio de pago aplazado ofrecido por ésta última en el momento de elegir la
-        forma de pago. Esta aceptación se extiende a terceras entidades que tuvieran que acceder a los
-        ficheros para el buen fin del contrato.
+        Para procesar los pagos realizados en el Sitio Web utilizamos la pasarela de pago{" "}
+        <strong>Stripe</strong> (Stripe Payments Europe, Ltd.). Al efectuar un pago, los datos
+        necesarios para completar la transacción son tratados por Stripe en condición de proveedor de
+        servicios de pago, conforme a su propia política de privacidad. {EMPRESA.razonSocial} no
+        almacena los datos completos de tu tarjeta.
       </p>
 
       <h2>6. Derechos</h2>

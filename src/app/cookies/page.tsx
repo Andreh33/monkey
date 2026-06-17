@@ -80,21 +80,27 @@ export default function CookiesPage() {
         de otros servicios relacionados con la actividad del Website y otros servicios de Internet.
       </p>
       <p>
-        En particular, este sitio Web utiliza Google Analytics, un servicio analítico de web prestado
-        por Google, Inc. con domicilio en los Estados Unidos con sede central en 1600 Amphitheatre
-        Parkway, Mountain View, California 94043. Para la prestación de estos servicios, estos utilizan
-        cookies que recopilan la información, incluida la dirección IP del usuario, que será
-        transmitida, tratada y almacenada por Google en los términos fijados en la Web Google.com.
-        Incluyendo la posible transmisión de dicha información a terceros por razones de exigencia
-        legal o cuando dichos terceros procesen la información por cuenta de Google.
+        En particular, este sitio Web utiliza <strong>Vercel Analytics</strong>, un servicio de
+        medición de audiencia prestado por Vercel Inc. (440 N Barranca Ave #4133, Covina, CA 91723,
+        Estados Unidos). Se trata de una solución analítica que <strong>no utiliza cookies ni rastrea
+        a usuarios individuales</strong>: la información se recopila de forma agregada y anónima, sin
+        almacenar datos personales identificables, con la única finalidad de conocer el uso general
+        del Sitio Web y mejorar nuestros productos y servicios. Por este motivo, esta analítica no
+        requiere tu consentimiento previo.
       </p>
       <p>
-        El Usuario acepta expresamente, por la utilización de este Site, el tratamiento de la
-        información recabada en la forma y con los fines anteriormente mencionados. Y asimismo reconoce
-        conocer la posibilidad de rechazar el tratamiento de tales datos o información rechazando el
-        uso de Cookies mediante la selección de la configuración apropiada a tal fin en su navegador.
-        Si bien esta opción de bloqueo de Cookies en su navegador puede no permitirle el uso pleno de
-        todas las funcionalidades del Website.
+        Asimismo, durante el proceso de pago, nuestro proveedor <strong>Stripe</strong> puede
+        establecer cookies propias necesarias para procesar la transacción de forma segura y prevenir
+        el fraude. Puedes consultar más información en la{" "}
+        <a href="https://stripe.com/es/privacy" target="_blank" rel="noopener noreferrer">
+          política de privacidad de Stripe
+        </a>.
+      </p>
+      <p>
+        El Usuario reconoce conocer la posibilidad de rechazar el tratamiento de los datos o
+        información rechazando el uso de cookies mediante la selección de la configuración apropiada a
+        tal fin en su navegador. Si bien esta opción de bloqueo de cookies en su navegador puede no
+        permitirle el uso pleno de todas las funcionalidades del Website.
       </p>
 
       <h2>Cómo configurar las cookies</h2>
