@@ -95,9 +95,20 @@ export default function CondicionesCompraPage() {
 
       <h2>8. Devoluciones y reembolsos</h2>
       <p>
-        El producto deberá devolverse en buen estado, completo y, a ser posible, en su embalaje
-        original. Una vez recibido y comprobado, gestionaremos el reembolso por el mismo medio de
-        pago utilizado en la compra.
+        Para devolver un artículo, este debe encontrarse en las mismas condiciones en las que se
+        entregó: <strong>sin usar, sin abrir y sin que falte ningún componente</strong>. La devolución
+        se aceptará una vez nuestro equipo haya recibido el artículo en sus instalaciones y haya
+        comprobado que se ha devuelto en dichas condiciones.
+      </p>
+      <p>
+        Los gastos de envío no son reembolsables, ya que corresponden a un coste de transporte que no
+        percibe la empresa. Asimismo, los gastos de envío derivados de la devolución correrán por
+        cuenta del cliente. Todo ello sin perjuicio de lo dispuesto en el apartado 7 para el derecho
+        de desistimiento de los consumidores.
+      </p>
+      <p>
+        Una vez recibido y comprobado el artículo, gestionaremos el reembolso del importe que
+        corresponda por el mismo medio de pago utilizado en la compra.
       </p>
 
       <h2>9. Garantía</h2>

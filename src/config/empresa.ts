@@ -9,7 +9,7 @@ export const EMPRESA = {
   cif: "B26765099",
 
   // Domicilio
-  direccion: "C/ Jaume I, 5",
+  direccion: "C/ Jaume I, 5, bajo, local 1",
   cp: "43005",
   ciudad: "Tarragona",
   provincia: "Tarragona",
@@ -28,4 +28,4 @@ export const EMPRESA = {
   actualizado: "16 de junio de 2026",
 } as const;
 
-export const EMPRESA_DIRECCION_COMPLETA = `${EMPRESA.direccion}, ${EMPRESA.cp} ${EMPRESA.ciudad} (${EMPRESA.provincia}), ${EMPRESA.pais}`;
+export const EMPRESA_DIRECCION_COMPLETA = `${EMPRESA.direccion}, ${EMPRESA.cp} ${EMPRESA.ciudad}, ${EMPRESA.pais}`;

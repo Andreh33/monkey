@@ -1,136 +1,191 @@
-import Link from "next/link";
 import { LegalPage } from "@/components/legal/LegalPage";
-import { EMPRESA, EMPRESA_DIRECCION_COMPLETA } from "@/config/empresa";
+import { EMPRESA } from "@/config/empresa";
 
 export const metadata = {
   title: "Política de Privacidad",
-  description: `Cómo trata ${EMPRESA.razonSocial} (${EMPRESA.marca}) tus datos personales, conforme al RGPD y la LOPDGDD.`,
+  description: `Política de privacidad y protección de datos de ${EMPRESA.razonSocial} (${EMPRESA.marca}), conforme al RGPD y la LOPDGDD.`,
 };
 
 export default function PrivacidadPage() {
   return (
-    <LegalPage eyebrow="★ TUS DATOS ★" title="Política de" titleAccent="Privacidad" updated={EMPRESA.actualizado}>
+    <LegalPage
+      eyebrow="★ TUS DATOS ★"
+      title="Política de Privacidad y"
+      titleAccent="Protección de Datos"
+      updated={EMPRESA.actualizado}
+    >
+      <h2>1. Recogida, tratamiento y uso de los datos personales en la web</h2>
       <p>
-        En {EMPRESA.razonSocial} nos tomamos muy en serio la protección de tus datos personales. Esta
-        Política de Privacidad explica qué datos recogemos, con qué finalidad y qué derechos tienes,
-        conforme al Reglamento (UE) 2016/679 (RGPD) y la Ley Orgánica 3/2018, de Protección de Datos
-        Personales y garantía de los derechos digitales (LOPDGDD).
+        En base a lo dispuesto en el Reglamento General de Protección de Datos 2016/679 (RGPD) y en
+        la Ley Orgánica 3/2018, de Protección de Datos Personales y garantía de derechos digitales
+        (LOPDGDD), le informamos que para hacer uso de algunos de los servicios que le ofrece nuestra
+        web, puede ser necesario que nos suministre determinados datos de carácter personal que serán
+        incorporados a ficheros automatizados.
+      </p>
+      <p>
+        Cumpliendo con las nuevas disposiciones del Reglamento (UE) 2016/679 del PE y del Consejo de
+        27 de abril de 2016 y de la Ley Orgánica 3/2018, de 5 de diciembre, de Protección de Datos
+        Personales y garantía de derechos digitales, relativas a la protección de las personas físicas
+        en lo que respecta al tratamiento de datos personales y a la libre circulación de estos datos
+        y por el que se deroga la Directiva 95/46/CE, le informamos que el responsable del tratamiento
+        de los datos es <strong>{EMPRESA.razonSocial}</strong>, con domicilio social en C/ Jaume I, 5,
+        bajo, local 1, 43005 (Tarragona).
+      </p>
+      <p>
+        Para realizar cualquier tipo de observación respecto a posibles incumplimientos de los
+        derechos de propiedad intelectual o industrial, así como sobre cualquiera de los contenidos
+        del sitio web, puede hacerlo a través del correo electrónico{" "}
+        <a href={`mailto:${EMPRESA.email}`}>{EMPRESA.email}</a> o a la siguiente dirección postal:
+        C/ Jaume I, 5, bajo, local 1, 43005 (Tarragona).
+      </p>
+      <p>
+        Con carácter general, los datos recogidos serán tratados con la finalidad de prestar los
+        servicios ofrecidos a través de la web o atender otros tipos de relaciones que puedan surgir
+        con {EMPRESA.razonSocial} como consecuencia de las solicitudes, gestiones o trámites que el
+        Usuario realice mediante la web. Los datos objeto de tratamiento serán aquellos que nos
+        facilite a través de los formularios que en cada momento contenga la página o a través de los
+        correos electrónicos que el Usuario dirija a las direcciones de correo electrónico
+        identificadas en la misma, así como aquellos otros que se generen durante el mantenimiento de
+        la relación correspondiente.
+      </p>
+      <p>
+        Todos los campos que aparecen señalados como obligatorios en cualquiera de los formularios
+        deberán ser cumplimentados necesariamente, de tal modo que la omisión de alguno de ellos podrá
+        comportar la imposibilidad de que podamos atender su solicitud o prestarle los servicios
+        correspondientes.
+      </p>
+      <p>
+        Adicionalmente, durante dicha recogida de datos, es posible que se solicite su consentimiento
+        para otra serie de finalidades que no guardan una relación directa con el servicio o la
+        relación correspondiente. En el caso de que no esté de acuerdo con dichos tratamientos
+        adicionales, marque la casilla destinada al efecto según corresponda.
       </p>
 
-      <h2>1. Responsable del tratamiento</h2>
-      <ul>
-        <li><strong>Responsable:</strong> {EMPRESA.razonSocial}</li>
-        <li><strong>NIF/CIF:</strong> {EMPRESA.cif}</li>
-        <li><strong>Domicilio:</strong> {EMPRESA_DIRECCION_COMPLETA}</li>
-        <li><strong>Correo electrónico:</strong> <a href={`mailto:${EMPRESA.email}`}>{EMPRESA.email}</a></li>
-      </ul>
-
-      <h2>2. Datos que tratamos</h2>
-      <p>Dependiendo de tu relación con nosotros, podemos tratar las siguientes categorías de datos:</p>
-      <ul>
-        <li><strong>Datos de cuenta:</strong> nombre, correo electrónico y contraseña (almacenada cifrada) cuando creas una cuenta.</li>
-        <li><strong>Datos de pedidos:</strong> nombre, dirección de envío y facturación, teléfono y detalle de los productos adquiridos.</li>
-        <li><strong>Datos de pago:</strong> los pagos se procesan a través de Stripe; nosotros <strong>no almacenamos los datos completos de tu tarjeta</strong>.</li>
-        <li><strong>Datos de contacto:</strong> los que nos facilitas al rellenar el formulario de contacto o al escribirnos por correo o WhatsApp.</li>
-        <li><strong>Datos de reparaciones:</strong> datos de contacto y descripción de la avería del patinete cuando solicitas un servicio de reparación.</li>
-        <li><strong>Datos de navegación:</strong> información técnica anónima o agregada sobre el uso del Sitio Web (ver <Link href="/cookies">Política de Cookies</Link>).</li>
-      </ul>
-
-      <h2>3. Finalidades y base legal del tratamiento</h2>
-      <table>
-        <thead>
-          <tr>
-            <th>Finalidad</th>
-            <th>Base legal</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Gestionar tu cuenta de usuario</td>
-            <td>Ejecución de un contrato (art. 6.1.b RGPD)</td>
-          </tr>
-          <tr>
-            <td>Tramitar y entregar tus pedidos, y gestionar pagos</td>
-            <td>Ejecución de un contrato (art. 6.1.b RGPD)</td>
-          </tr>
-          <tr>
-            <td>Gestionar solicitudes de reparación y postventa</td>
-            <td>Ejecución de un contrato / interés legítimo (art. 6.1.b/f RGPD)</td>
-          </tr>
-          <tr>
-            <td>Responder a tus consultas de contacto</td>
-            <td>Consentimiento / interés legítimo (art. 6.1.a/f RGPD)</td>
-          </tr>
-          <tr>
-            <td>Cumplir obligaciones legales (fiscales, contables, garantías)</td>
-            <td>Obligación legal (art. 6.1.c RGPD)</td>
-          </tr>
-        </tbody>
-      </table>
-
-      <h2>4. Plazos de conservación</h2>
+      <h2>2. Finalidad del tratamiento de los datos personales</h2>
+      <h3>2.1. ¿Con qué finalidad trataremos tus datos personales?</h3>
       <p>
-        Conservamos tus datos durante el tiempo necesario para cumplir la finalidad para la que
-        fueron recabados y para atender las responsabilidades que pudieran derivarse. Los datos
-        relativos a pedidos y facturación se conservan durante los plazos legalmente exigidos en
-        materia fiscal y mercantil (por regla general, hasta 6 años). Los datos de cuenta se
-        conservan mientras la mantengas activa.
-      </p>
-
-      <h2>5. Destinatarios y encargados del tratamiento</h2>
-      <p>
-        No cedemos tus datos a terceros salvo obligación legal. Para prestar nuestros servicios
-        trabajamos con proveedores que actúan como encargados del tratamiento, entre ellos:
+        En {EMPRESA.razonSocial} trataremos tus datos personales, recabados a través del Sitio Web
+        con las siguientes finalidades:
       </p>
       <ul>
-        <li><strong>Stripe Payments Europe, Ltd.</strong> — procesamiento de pagos.</li>
-        <li><strong>Vercel Inc.</strong> — alojamiento del Sitio Web y analítica de uso agregada.</li>
-        <li>Empresas de mensajería y transporte, para la entrega de pedidos.</li>
+        <li>Envío de información solicitada a través de los formularios dispuestos en el Sitio Web.</li>
       </ul>
       <p>
-        Algunos de estos proveedores pueden realizar transferencias internacionales de datos; en tal
-        caso, se llevan a cabo con las debidas garantías (cláusulas contractuales tipo u otros
-        mecanismos aprobados por la Comisión Europea).
+        Te recordamos que puedes oponerte al envío de comunicaciones comerciales por cualquier vía y
+        en cualquier momento, remitiendo un correo electrónico a la dirección de correo electrónico
+        indicada anteriormente.
+      </p>
+      <p>
+        Los campos de dichos registros son de cumplimentación obligatoria, siendo imposible realizar
+        las finalidades expresadas si no se aportan esos datos.
+      </p>
+      <h3>2.2. ¿Por cuánto tiempo se conservan los datos personales recabados?</h3>
+      <p>
+        Los datos personales proporcionados se conservarán mientras se mantenga la relación comercial
+        o no solicites su supresión y durante el plazo por el cual pudieran derivarse
+        responsabilidades legales por los servicios prestados.
       </p>
 
-      <h2>6. Tus derechos</h2>
+      <h2>3. Legitimación</h2>
       <p>
-        Puedes ejercer en cualquier momento los siguientes derechos dirigiéndote a{" "}
-        <a href={`mailto:${EMPRESA.email}`}>{EMPRESA.email}</a>, indicando el derecho que deseas
-        ejercer y adjuntando copia de tu documento identificativo:
+        El tratamiento de tus datos se realiza con las siguientes bases jurídicas que legitiman el
+        mismo:
       </p>
       <ul>
-        <li>Derecho de <strong>acceso</strong> a tus datos personales.</li>
-        <li>Derecho de <strong>rectificación</strong> de datos inexactos.</li>
-        <li>Derecho de <strong>supresión</strong> («derecho al olvido»).</li>
-        <li>Derecho a la <strong>limitación</strong> del tratamiento.</li>
-        <li>Derecho a la <strong>portabilidad</strong> de tus datos.</li>
-        <li>Derecho de <strong>oposición</strong> al tratamiento.</li>
+        <li>
+          El consentimiento libre, específico, informado e inequívoco, en tanto que te informamos
+          poniendo a tu disposición la presente política de privacidad, que tras la lectura de la
+          misma, en caso de estar conforme, puedes aceptar mediante una declaración o una clara acción
+          afirmativa, como el marcado de una casilla dispuesta al efecto.
+        </li>
       </ul>
       <p>
-        Si consideras que no hemos atendido correctamente tus derechos, puedes presentar una
-        reclamación ante la <strong>Agencia Española de Protección de Datos (AEPD)</strong>,{" "}
-        <a href="https://www.aepd.es" target="_blank" rel="noopener noreferrer">www.aepd.es</a>.
+        En caso de que no nos facilites tus datos o los hagas de forma errónea o incompleta, no
+        podremos atender tu solicitud, resultando del todo imposible proporcionarte la información
+        solicitada o llevar a cabo la contratación de los servicios.
       </p>
 
-      <h2>7. Seguridad</h2>
+      <h2>4. Conservación de los datos</h2>
       <p>
-        Aplicamos las medidas técnicas y organizativas apropiadas para garantizar un nivel de
-        seguridad adecuado al riesgo, protegiendo tus datos frente a accesos no autorizados,
-        pérdida o alteración. Las contraseñas se almacenan cifradas y las comunicaciones del Sitio
-        Web se realizan mediante conexión segura (HTTPS).
+        Sus datos se conservarán mientras se mantenga la relación o durante los años necesarios para
+        cumplir con las obligaciones legales, mientras no solicite su cese o durante el tiempo
+        necesario para la realización de los fines necesarios para los recabados.
       </p>
 
-      <h2>8. Menores de edad</h2>
+      <h2>5. Destinatarios</h2>
       <p>
-        El Sitio Web no está dirigido a menores de 14 años. Si eres menor de esa edad, no nos
-        facilites tus datos sin el consentimiento de tus padres o tutores.
+        Sus datos serán conservados bajo estrictas medidas de seguridad que garanticen la
+        confidencialidad y la seguridad de los mismos. Del mismo modo, sólo serán cedidos a las
+        entidades y para las finalidades siguientes:
+      </p>
+      <ul>
+        <li>
+          Entidades y proveedores que prestan servicios a {EMPRESA.razonSocial} para la correcta
+          ejecución de la venta de nuestros productos o servicios. Dichas entidades y proveedores se
+          encuentran debidamente acreditados y firman con nosotros el correspondiente contrato de
+          tratamiento de datos en cumplimiento de la normativa de protección de datos vigente.
+        </li>
+        <li>Organismos y entidades oficiales en cumplimiento de las normativas y leyes vigentes.</li>
+      </ul>
+      <p>
+        Cualquier transferencia internacional de datos al usar aplicaciones americanas, estará
+        adherida al convenio Privacy Shield, que garantiza que las empresas de software americano
+        cumplen las políticas de protección de datos europeas en materia de privacidad.
+      </p>
+      <p>
+        Los datos no se comunicarán a ningún tercero ajeno a {EMPRESA.razonSocial}, salvo obligación
+        legal.
+      </p>
+      <p>
+        Al elegir la forma de pago KLARNA, el usuario acepta que todos sus datos de carácter personal
+        sean íntegramente cedidos a KLARNA desde el momento en que el usuario haya iniciado la
+        contratación del servicio de pago aplazado ofrecido por ésta última en el momento de elegir la
+        forma de pago. Esta aceptación se extiende a terceras entidades que tuvieran que acceder a los
+        ficheros para el buen fin del contrato.
       </p>
 
-      <h2>9. Cambios en esta política</h2>
+      <h2>6. Derechos</h2>
       <p>
-        Podemos actualizar esta Política de Privacidad para adaptarla a cambios normativos o a
-        nuevas funcionalidades del Sitio Web. Te recomendamos revisarla periódicamente.
+        Como interesado que nos has proporcionado tus datos personales, tienes pleno derecho a obtener
+        confirmación sobre si en {EMPRESA.razonSocial} estamos tratando tus datos personales, y en
+        concreto estás facultado para ejercitar los siguientes derechos que la normativa en materia de
+        protección de datos te reconoce, conforme a lo previsto en la misma:
+      </p>
+      <ul>
+        <li>Derecho de <strong>ACCESO</strong> a tus datos personales.</li>
+        <li>Derecho a solicitar la <strong>RECTIFICACIÓN</strong> de los datos inexactos.</li>
+        <li>
+          Derecho a solicitar su <strong>SUPRESIÓN</strong> cuando, entre otros motivos, los datos ya
+          no sean necesarios para los fines que fueron recogidos.
+        </li>
+        <li>
+          En determinadas circunstancias, podrás solicitar la <strong>LIMITACIÓN DEL TRATAMIENTO</strong>{" "}
+          de tus datos, en cuyo caso únicamente los conservaremos para el ejercicio o la defensa de
+          reclamaciones.
+        </li>
+        <li>
+          En determinadas circunstancias y por motivos relacionados con su situación particular, los
+          interesados podrán ejercitar su derecho de <strong>OPOSICIÓN</strong> al tratamiento de sus
+          datos. Dejaremos de tratar los datos, salvo por motivos legítimos imperiosos, o el ejercicio
+          o la defensa de posibles reclamaciones.
+        </li>
+        <li>
+          En determinadas circunstancias y por motivos relacionados con tu situación particular,
+          podrás solicitar su derecho a la <strong>PORTABILIDAD</strong> de los datos.
+        </li>
+      </ul>
+      <p>
+        Podrás ejercer tales derechos o solicitar información adicional dirigiendo una comunicación a
+        la dirección postal situada en C/ Jaume I, 5, bajo, local 1, 43005 (Tarragona), o a través de
+        la dirección de correo electrónico <a href={`mailto:${EMPRESA.email}`}>{EMPRESA.email}</a>.
+      </p>
+      <p>
+        Además, en caso de que se haya vulnerado cualquiera de tus derechos, el interesado tiene
+        derecho a presentar una reclamación ante la Agencia Española de Protección de Datos (AEPD), en
+        C/ Jorge Juan, 6, 28001 Madrid, o a través de la sede electrónica de la AEPD:{" "}
+        <a href="https://sedeagpd.gob.es/sede-electronica-web/" target="_blank" rel="noopener noreferrer">
+          https://sedeagpd.gob.es/sede-electronica-web/
+        </a>.
       </p>
     </LegalPage>
   );
