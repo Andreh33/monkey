@@ -9,6 +9,10 @@ import { TestimonialsCarousel } from "@/components/home/TestimonialsCarousel";
 import { CtaBanner } from "@/components/home/CtaBanner";
 import MonkeyWalkerLoader from "@/components/layout/MonkeyWalkerLoader";
 
+export const metadata = {
+  alternates: { canonical: "/" },
+};
+
 export default function HomePage() {
   return (
     <>

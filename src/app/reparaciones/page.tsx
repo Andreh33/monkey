@@ -4,7 +4,12 @@ import { Marquee } from "@/components/layout/Marquee";
 import { ScrollReveal } from "@/components/shared/ScrollReveal";
 import { PhoneButtons } from "@/components/shared/PhoneButtons";
 
-export const metadata = { title: "Reparaciones" };
+export const metadata = {
+  title: "Reparación de patinetes eléctricos en Tarragona",
+  description:
+    "Taller propio de reparación de patinetes eléctricos en Tarragona: baterías, motor, frenos, ruedas y electrónica. Diagnóstico gratis, presupuesto sin compromiso y todas las marcas.",
+  alternates: { canonical: "/reparaciones" },
+};
 
 const types = [
   { icon: Battery, title: "Baterías", problems: ["No carga", "Autonomía baja", "No enciende", "Sustitución de celdas y BMS"] },

@@ -11,6 +11,8 @@ import { OverlayAniversario } from "@/components/aniversario/OverlayAniversario"
 // import { CartDrawer } from "@/components/shop/CartDrawer"; // Carrito desactivado: compras directas via Stripe
 import { Analytics } from "@vercel/analytics/next";
 import { getCategoryTree } from "@/lib/categories";
+import { JsonLd } from "@/components/seo/JsonLd";
+import { localBusinessSchema, webSiteSchema } from "@/lib/schema";
 
 const SITE_URL = "https://monopatinmonkey.com";
 
@@ -22,7 +24,27 @@ export const metadata: Metadata = {
   },
   description:
     "Tienda especializada en venta y reparación de patinetes eléctricos en Tarragona. Todas las marcas. Diagnóstico gratis si reparas con nosotros. Garantía 3 años.",
-  keywords: ["patinetes eléctricos", "Tarragona", "reparación", "Xiaomi", "Segway", "Dualtron"],
+  keywords: [
+    "patinetes eléctricos Tarragona",
+    "reparación patinetes Tarragona",
+    "taller patinetes eléctricos Tarragona",
+    "comprar patinete eléctrico Tarragona",
+    "monopatín eléctrico Tarragona",
+    "Xiaomi",
+    "Segway",
+    "Dualtron",
+  ],
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+      "max-video-preview": -1,
+    },
+  },
   openGraph: {
     title: "MonopatinShop · Patinetes Eléctricos Tarragona",
     description: "Venta y reparación de patinetes eléctricos en Tarragona. Todas las marcas, diagnóstico gratis y garantía 3 años.",
@@ -61,6 +83,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
   return (
     <html lang="es" className="dark">
       <body>
+        <JsonLd data={[localBusinessSchema(), webSiteSchema()]} />
         <Providers>
           <BannerAniversario />
           <TopBar />

@@ -4,7 +4,12 @@ import { ScrollReveal } from "@/components/shared/ScrollReveal";
 import { Award, Zap, HandshakeIcon, MapPin } from "lucide-react";
 import { ANIVERSARIO } from "@/config/aniversario";
 
-export const metadata = { title: "Nosotros" };
+export const metadata = {
+  title: "Nosotros · Especialistas en patinetes eléctricos en Tarragona",
+  description:
+    "Somos MonopatinShop (Monkeymotion), referente en Tarragona para venta y reparación de patinetes eléctricos. Taller propio en C/ Jaume I, 5. Calidad, rapidez y confianza.",
+  alternates: { canonical: "/nosotros" },
+};
 
 const values = [
   { icon: Award, title: "Calidad", text: "Trabajamos con piezas originales o equivalentes certificadas. Nada de chapuzas. Cada reparación pasa control de calidad antes de salir." },

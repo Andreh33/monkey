@@ -3,7 +3,12 @@ import { ProductCard } from "@/components/shop/ProductCard";
 import { Filters } from "@/components/shop/Filters";
 import { getCategoryTree } from "@/lib/categories";
 
-export const metadata = { title: "Tienda" };
+export const metadata = {
+  title: "Tienda · Patinetes eléctricos en Tarragona",
+  description:
+    "Compra patinetes eléctricos en Tarragona: Xiaomi, Segway, Dualtron y más. Montados, configurados y probados por el taller. Envío 24-48h y garantía 3 años.",
+  alternates: { canonical: "/tienda" },
+};
 
 type SearchParams = { [k: string]: string | undefined };
 

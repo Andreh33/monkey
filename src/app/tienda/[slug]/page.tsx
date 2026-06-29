@@ -7,6 +7,8 @@ import { ReviewCta } from "@/components/shop/ReviewCta";
 import { ProductCard } from "@/components/shop/ProductCard";
 import { Gauge, Battery, Zap, BatteryCharging, Weight, Users, Shield, Truck, Headphones } from "lucide-react";
 import { formatPrice } from "@/lib/utils";
+import { JsonLd } from "@/components/seo/JsonLd";
+import { productSchema, breadcrumbSchema } from "@/lib/schema";
 
 export async function generateMetadata({ params }: { params: { slug: string } }) {
   const p = await prisma.product.findUnique({
@@ -18,6 +20,7 @@ export async function generateMetadata({ params }: { params: { slug: string } })
   return {
     title: p.name,
     description: p.shortDesc,
+    alternates: { canonical: `/tienda/${params.slug}` },
     openGraph: {
       title: p.name,
       description: p.shortDesc,
@@ -78,6 +81,16 @@ export default async function ProductPage({ params }: { params: { slug: string }
 
   return (
     <>
+      <JsonLd
+        data={[
+          productSchema(product),
+          breadcrumbSchema([
+            { name: "Inicio", path: "/" },
+            { name: "Tienda", path: "/tienda" },
+            { name: product.name, path: `/tienda/${product.slug}` },
+          ]),
+        ]}
+      />
       <section className="container-custom py-12">
         <div className="grid grid-cols-1 lg:grid-cols-[1.4fr_1fr] gap-10 lg:gap-14">
           <ProductGallery images={product.images} name={product.name} youtubeUrl={product.youtubeUrl} />

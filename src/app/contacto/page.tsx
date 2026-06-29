@@ -4,7 +4,12 @@ import MapLoader from "@/components/shared/MapLoader";
 import { ScrollReveal } from "@/components/shared/ScrollReveal";
 import { Marquee } from "@/components/layout/Marquee";
 
-export const metadata = { title: "Contacto" };
+export const metadata = {
+  title: "Contacto · Tienda y taller en Tarragona",
+  description:
+    "Visítanos en C/ Jaume I, 5, en el centro de Tarragona. Tienda y taller de patinetes eléctricos. Teléfono, WhatsApp, horario y cómo llegar.",
+  alternates: { canonical: "/contacto" },
+};
 
 export default function ContactoPage() {
   return (
