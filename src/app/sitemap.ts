@@ -1,5 +1,6 @@
 import type { MetadataRoute } from "next";
 import { prisma } from "@/lib/prisma";
+import { getAllPosts, BLOG_CATEGORIES, type BlogCategoryKey } from "@/lib/blog";
 
 const SITE_URL = "https://monopatinmonkey.com";
 
@@ -39,5 +40,23 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     console.error("[sitemap] no se pudieron cargar los productos:", err);
   }
 
-  return [...staticRoutes, ...productRoutes];
+  // Blog: índice, categorías y posts (desde los ficheros Markdown).
+  const posts = getAllPosts();
+  const blogRoutes: MetadataRoute.Sitemap = [
+    { url: `${SITE_URL}/blog`, lastModified: now, changeFrequency: "daily", priority: 0.8 },
+    ...(Object.keys(BLOG_CATEGORIES) as BlogCategoryKey[]).map((c) => ({
+      url: `${SITE_URL}/blog/categoria/${c}`,
+      lastModified: now,
+      changeFrequency: "weekly" as const,
+      priority: 0.5,
+    })),
+    ...posts.map((p) => ({
+      url: `${SITE_URL}/blog/${p.slug}`,
+      lastModified: p.updated ? new Date(p.updated) : new Date(p.date),
+      changeFrequency: "monthly" as const,
+      priority: 0.7,
+    })),
+  ];
+
+  return [...staticRoutes, ...blogRoutes, ...productRoutes];
 }

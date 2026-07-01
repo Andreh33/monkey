@@ -143,3 +143,64 @@ export function breadcrumbSchema(items: { name: string; path: string }[]) {
     })),
   };
 }
+
+type BlogPostForSchema = {
+  slug: string;
+  title: string;
+  description: string;
+  date: string;
+  updated?: string;
+  author?: string;
+  keywords?: string[];
+  category: string;
+};
+
+/** Ficha BlogPosting/Article para los posts del blog. */
+export function blogPostingSchema(post: BlogPostForSchema) {
+  const url = `${SITE_URL}/blog/${post.slug}`;
+  return {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "@id": `${url}#article`,
+    headline: post.title,
+    description: post.description,
+    inLanguage: "es-ES",
+    datePublished: post.date,
+    dateModified: post.updated || post.date,
+    author: { "@type": "Organization", name: post.author || EMPRESA.marca, url: SITE_URL },
+    publisher: { "@id": `${SITE_URL}/#store` },
+    mainEntityOfPage: { "@type": "WebPage", "@id": url },
+    image: `${SITE_URL}/og-image.jpg`,
+    articleSection: post.category,
+    ...(post.keywords?.length ? { keywords: post.keywords.join(", ") } : {}),
+    url,
+  };
+}
+
+/** FAQPage a partir de las preguntas del post (resultados enriquecidos). */
+export function faqPageSchema(faqs: { q: string; a: string }[]) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: faqs.map((f) => ({
+      "@type": "Question",
+      name: f.q,
+      acceptedAnswer: { "@type": "Answer", text: f.a },
+    })),
+  };
+}
+
+/** Identidad del propio blog (colección de artículos). */
+export function blogSchema() {
+  return {
+    "@context": "https://schema.org",
+    "@type": "Blog",
+    "@id": `${SITE_URL}/blog#blog`,
+    name: `Blog · ${EMPRESA.marca}`,
+    description:
+      "Guías, normativa DGT, reparación y mantenimiento de patinetes eléctricos por el taller de MonopatinShop en Tarragona.",
+    url: `${SITE_URL}/blog`,
+    inLanguage: "es-ES",
+    publisher: { "@id": `${SITE_URL}/#store` },
+  };
+}
