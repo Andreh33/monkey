@@ -10,6 +10,7 @@ import { BannerAniversario } from "@/components/aniversario/BannerAniversario";
 import { OverlayAniversario } from "@/components/aniversario/OverlayAniversario";
 // import { CartDrawer } from "@/components/shop/CartDrawer"; // Carrito desactivado: compras directas via Stripe
 import { Analytics } from "@vercel/analytics/next";
+import { ClickTracker } from "@/components/shared/ClickTracker";
 import { getCategoryTree } from "@/lib/categories";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { localBusinessSchema, webSiteSchema } from "@/lib/schema";
@@ -95,6 +96,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
           <OverlayAniversario />
           {/* <CartDrawer /> Carrito desactivado: compras directas via Stripe */}
         </Providers>
+        <ClickTracker />
         <Analytics />
       </body>
     </html>

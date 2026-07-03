@@ -4,6 +4,7 @@ import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
 import { toast } from "sonner";
+import { track } from "@vercel/analytics";
 import { Loader2 } from "lucide-react";
 
 const schema = z.object({
@@ -32,6 +33,7 @@ export function ContactForm() {
       });
       if (!res.ok) throw new Error();
       toast.success("¡Mensaje enviado! Te respondemos enseguida.");
+      track("lead_submit", { site: "monopatin" });
       reset();
     } catch {
       toast.error("Error al enviar. Llámanos directamente.");
