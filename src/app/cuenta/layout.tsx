@@ -1,5 +1,12 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import { User, MapPin, Package, ShieldCheck, LayoutDashboard } from "lucide-react";
+
+// Área privada: fuera del índice de Google (noindex rastreable, ver robots.ts).
+export const metadata: Metadata = {
+  title: "Mi cuenta",
+  robots: { index: false, follow: false },
+};
 
 const links = [
   { href: "/cuenta", label: "Inicio", icon: LayoutDashboard },

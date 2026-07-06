@@ -2,5 +2,13 @@
   "framework": "nextjs",
   "buildCommand": "prisma generate && node scripts/migrate-turso.mjs && next build",
   "installCommand": "npm install",
-  "regions": ["fra1"]
+  "regions": ["fra1"],
+  "redirects": [
+    {
+      "source": "/:path*",
+      "has": [{ "type": "host", "value": "www.monopatinmonkey.com" }],
+      "destination": "https://monopatinmonkey.com/:path*",
+      "permanent": true
+    }
+  ]
 }

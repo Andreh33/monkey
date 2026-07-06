@@ -1,5 +1,6 @@
-@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Anton&family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap");
-
+/* Fuentes: se cargan con next/font en src/app/layout.tsx (self-hosted, swap).
+   El antiguo @import de Google Fonts era CSS bloqueante del render (~1,6 s
+   de penalización de LCP/FCP en móvil según Lighthouse). */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -19,10 +20,10 @@
   --color-success: #22C55E;
   --color-warning: #FF1744;
 
-  --font-display: "Bebas Neue", "Anton", Impact, sans-serif;
-  --font-heading: "Space Grotesk", system-ui, sans-serif;
-  --font-sans: "Inter", system-ui, sans-serif;
-  --font-mono: "JetBrains Mono", ui-monospace, monospace;
+  --font-display: var(--font-bebas, "Bebas Neue"), "Anton", Impact, sans-serif;
+  --font-heading: var(--font-space-grotesk, "Space Grotesk"), system-ui, sans-serif;
+  --font-sans: var(--font-inter, "Inter"), system-ui, sans-serif;
+  --font-mono: var(--font-jetbrains-mono, "JetBrains Mono"), ui-monospace, monospace;
 }
 
 * {
@@ -695,8 +696,9 @@ body {
 @keyframes ani-subir-fade { from { transform: translateY(24px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
 .ani-sorpresa { animation: ani-pop 0.6s cubic-bezier(0.16, 1, 0.3, 1) both; }
 .ani-mensaje { animation: ani-subir-fade 0.5s ease both; }
+.ani-toast { animation: ani-subir-fade 0.5s ease both; }
 
 @media (prefers-reduced-motion: reduce) {
   .ani-confeti { display: none; }
-  .ani-overlay, .ani-sorpresa, .ani-mensaje { animation: none; }
+  .ani-overlay, .ani-sorpresa, .ani-mensaje, .ani-toast { animation: none; }
 }

@@ -1,6 +1,7 @@
 import type { MetadataRoute } from "next";
 import { prisma } from "@/lib/prisma";
 import { getAllPosts, BLOG_CATEGORIES, type BlogCategoryKey } from "@/lib/blog";
+import { getCategoryTree } from "@/lib/categories";
 
 const SITE_URL = "https://monopatinmonkey.com";
 
@@ -40,6 +41,21 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     console.error("[sitemap] no se pudieron cargar los productos:", err);
   }
 
+  // Páginas de categoría de la tienda (/tienda?cat=X): aterrizajes indexables
+  // con canonical autorreferente, title/H1 propios y enlazadas desde el megamenú.
+  let categoryRoutes: MetadataRoute.Sitemap = [];
+  try {
+    const categories = await getCategoryTree();
+    categoryRoutes = categories.map((c) => ({
+      url: `${SITE_URL}/tienda?cat=${encodeURIComponent(c.slug)}`,
+      lastModified: now,
+      changeFrequency: "weekly",
+      priority: 0.8,
+    }));
+  } catch (err) {
+    console.error("[sitemap] no se pudieron cargar las categorías:", err);
+  }
+
   // Blog: índice, categorías y posts (desde los ficheros Markdown).
   const posts = getAllPosts();
   const blogRoutes: MetadataRoute.Sitemap = [
@@ -58,5 +74,5 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     })),
   ];
 
-  return [...staticRoutes, ...blogRoutes, ...productRoutes];
+  return [...staticRoutes, ...categoryRoutes, ...blogRoutes, ...productRoutes];
 }

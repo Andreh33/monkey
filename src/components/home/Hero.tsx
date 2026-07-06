@@ -62,7 +62,8 @@ export function Hero() {
           transition={{ duration: 0.7, delay: 0.25 }}
           className="mt-7 max-w-xl text-lg text-text-secondary leading-relaxed"
         >
-          Venta y reparación de patinetes eléctricos de todas las marcas.
+          Venta y reparación de patinetes eléctricos de todas las marcas en Tarragona,
+          con envío 24-48h a toda España.
           <br />
           <span className="text-white font-semibold">Calidad. Rapidez. Confianza.</span>
         </motion.p>

@@ -5,10 +5,12 @@ import { ProductActions } from "@/components/shop/ProductActions";
 import { ProductDescription } from "@/components/shop/ProductDescription";
 import { ReviewCta } from "@/components/shop/ReviewCta";
 import { ProductCard } from "@/components/shop/ProductCard";
-import { Gauge, Battery, Zap, BatteryCharging, Weight, Users, Shield, Truck, Headphones } from "lucide-react";
+import Link from "next/link";
+import { Gauge, Battery, Zap, BatteryCharging, Weight, Users, Shield, Truck, Headphones, BookOpen } from "lucide-react";
 import { formatPrice } from "@/lib/utils";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { productSchema, breadcrumbSchema } from "@/lib/schema";
+import { Breadcrumbs } from "@/components/blog/Breadcrumbs";
 
 export async function generateMetadata({ params }: { params: { slug: string } }) {
   const p = await prisma.product.findUnique({
@@ -17,18 +19,26 @@ export async function generateMetadata({ params }: { params: { slug: string } })
   });
   if (!p) return { title: "Producto" };
   const img = p.images[0]?.url;
+  // Title transaccional: nombre + precio (el precio en el title mejora el CTR
+  // en búsquedas de compra y refuerza el rich result de Merchant listing).
+  const title = `${p.name} — ${formatPrice(p.price)} €`;
+  const envio =
+    p.shippingCost && p.shippingCost > 0
+      ? `envío 24-48h (${formatPrice(p.shippingCost)} €)`
+      : "envío gratis 24-48h";
+  const description = `Compra ${p.name} por ${formatPrice(p.price)} € con ${envio} a toda España. Garantía 3 años y soporte del taller. ${p.shortDesc}`.slice(0, 300);
   return {
-    title: p.name,
-    description: p.shortDesc,
+    title,
+    description,
     alternates: { canonical: `/tienda/${params.slug}` },
     openGraph: {
-      title: p.name,
+      title,
       description: p.shortDesc,
       images: img ? [{ url: img, alt: p.name }] : undefined,
     },
     twitter: {
       card: "summary_large_image" as const,
-      title: p.name,
+      title,
       description: p.shortDesc,
       images: img ? [img] : undefined,
     },
@@ -70,6 +80,9 @@ export default async function ProductPage({ params }: { params: { slug: string }
     related = [...related, ...fillers];
   }
 
+  // Las guías del blog son de patinetes: solo se enlazan cuando encajan con el producto.
+  const esPatinete = /patinete/i.test(product.category) || /patinete/i.test(product.name);
+
   const specs = [
     { icon: Gauge, label: "Velocidad máx.", value: product.maxSpeed ? `${product.maxSpeed} km/h` : "—" },
     { icon: Battery, label: "Autonomía", value: product.range ? `${product.range} km` : "—" },
@@ -92,6 +105,15 @@ export default async function ProductPage({ params }: { params: { slug: string }
         ]}
       />
       <section className="container-custom py-12">
+        <div className="mb-6">
+          <Breadcrumbs
+            items={[
+              { name: "Inicio", href: "/" },
+              { name: "Tienda", href: "/tienda" },
+              { name: product.name },
+            ]}
+          />
+        </div>
         <div className="grid grid-cols-1 lg:grid-cols-[1.4fr_1fr] gap-10 lg:gap-14">
           <ProductGallery images={product.images} name={product.name} youtubeUrl={product.youtubeUrl} />
 
@@ -184,10 +206,52 @@ export default async function ProductPage({ params }: { params: { slug: string }
                 <p>3 años de garantía del fabricante. Servicio técnico autorizado en nuestro taller.</p>
               </div>
               <div>
+                <p className="font-semibold text-white mb-1">Devolución en 14 días</p>
+                <p>
+                  Dispones de 14 días naturales para desistir de la compra.{" "}
+                  <Link href="/condiciones-compra" className="text-accent-orange hover:underline">
+                    Consulta las condiciones de envío y devoluciones
+                  </Link>.
+                </p>
+              </div>
+              <div>
                 <p className="font-semibold text-white mb-1">Configuración incluida</p>
-                <p>Cada patinete sale del taller montado, ajustado a tu peso y probado en pista antes de la entrega.</p>
+                <p>
+                  Cada patinete sale del taller montado, ajustado a tu peso y probado en pista antes de la entrega.
+                  Y si algún día falla, lo arreglamos en nuestro{" "}
+                  <Link href="/reparaciones" className="text-accent-orange hover:underline">
+                    taller de reparación de patinetes eléctricos
+                  </Link>{" "}
+                  de Tarragona.
+                </p>
               </div>
             </div>
+
+            {esPatinete && (
+              <div className="mt-8">
+                <h2 className="font-display text-3xl tracking-wider mb-4">Guías del taller</h2>
+                <ul className="card-base p-5 space-y-3 text-sm">
+                  <li className="flex gap-2.5">
+                    <BookOpen className="w-4 h-4 text-accent-orange shrink-0 mt-0.5" />
+                    <Link href="/blog/normativa-patinetes-electricos-2026" className="text-text-secondary hover:text-white transition-colors">
+                      Normativa DGT de patinetes eléctricos 2026: lo que debes saber antes de circular
+                    </Link>
+                  </li>
+                  <li className="flex gap-2.5">
+                    <BookOpen className="w-4 h-4 text-accent-orange shrink-0 mt-0.5" />
+                    <Link href="/blog/patinetes-homologados-dgt-certificado-vmp" className="text-text-secondary hover:text-white transition-colors">
+                      Patinetes homologados DGT: qué es el certificado VMP y por qué importa
+                    </Link>
+                  </li>
+                  <li className="flex gap-2.5">
+                    <BookOpen className="w-4 h-4 text-accent-orange shrink-0 mt-0.5" />
+                    <Link href="/blog/cuidar-bateria-patinete-electrico" className="text-text-secondary hover:text-white transition-colors">
+                      Cómo cuidar la batería para que dure más años
+                    </Link>
+                  </li>
+                </ul>
+              </div>
+            )}
           </aside>
         </div>
       </section>

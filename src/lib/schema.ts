@@ -28,18 +28,22 @@ export function absoluteUrl(url: string): string {
 export function localBusinessSchema() {
   return {
     "@context": "https://schema.org",
-    "@type": "Store",
+    // Tienda física en Tarragona + e-commerce con envío a toda España.
+    "@type": ["Store", "OnlineStore"],
     "@id": `${SITE_URL}/#store`,
     name: EMPRESA.marca,
     legalName: EMPRESA.razonSocial,
-    alternateName: "Monopatín Monkey",
+    // Variantes reales de la marca (dominio, razón social y redes) unificadas
+    // en una sola entidad para Google: MonopatinShop = Monopatín Monkey = Monkey Motion.
+    alternateName: ["Monopatín Monkey", "Monkey Motion", "MonkeyMotion"],
     description:
-      "Tienda y taller de venta y reparación de patinetes eléctricos en Tarragona. Todas las marcas, diagnóstico gratis y garantía.",
+      "Tienda y taller de venta y reparación de patinetes eléctricos en Tarragona. Envío 24-48h a toda España, todas las marcas, diagnóstico gratis y garantía.",
     url: SITE_URL,
     telephone: `+34 ${EMPRESA.telefonos[0]}`,
     email: EMPRESA.email,
     image: `${SITE_URL}/og-image.jpg`,
     logo: `${SITE_URL}/icons/icon-512.png`,
+    foundingDate: "2017",
     priceRange: "€€",
     currenciesAccepted: "EUR",
     paymentAccepted: "Efectivo, Tarjeta",
@@ -58,7 +62,11 @@ export function localBusinessSchema() {
       longitude: GEO.lng,
     },
     hasMap: `https://www.google.com/maps/search/?api=1&query=${GEO.lat},${GEO.lng}`,
-    areaServed: { "@type": "City", name: "Tarragona" },
+    // Taller local en Tarragona; la tienda online envía a toda España.
+    areaServed: [
+      { "@type": "City", name: "Tarragona" },
+      { "@type": "Country", name: "España" },
+    ],
     openingHoursSpecification: [
       {
         "@type": "OpeningHoursSpecification",
@@ -84,6 +92,7 @@ export function webSiteSchema() {
     "@type": "WebSite",
     "@id": `${SITE_URL}/#website`,
     name: EMPRESA.marca,
+    alternateName: ["Monopatín Monkey", "Monkey Motion"],
     url: SITE_URL,
     inLanguage: "es-ES",
     publisher: { "@id": `${SITE_URL}/#store` },
@@ -100,13 +109,30 @@ type ProductForSchema = {
   sku?: string | null;
   brand?: string | null;
   stock: number;
+  shippingCost?: number | null;
   images: { url: string; alt?: string | null }[];
 };
 
-/** Ficha Product con precio y disponibilidad reales del producto. */
+/** Detecta URLs de vídeo coladas en la galería (datos antiguos) para no
+ *  emitirlas como `image` en el JSON-LD (Google las marca como inválidas). */
+function isVideoUrl(url: string): boolean {
+  return /youtu\.be|youtube\.com|vimeo\.com|\.(mp4|webm|mov)(\?|$)/i.test(url);
+}
+
+/**
+ * Ficha Product con precio y disponibilidad reales del producto.
+ * Incluye envío (coste real + plazo 24-48h anunciado en la web) y la política
+ * de devoluciones de /condiciones-compra (14 días naturales, coste de
+ * devolución a cargo del cliente): son los dos campos que Google exige para
+ * los resultados enriquecidos completos de "listado de comerciante".
+ */
 export function productSchema(product: ProductForSchema) {
   const url = `${SITE_URL}/tienda/${product.slug}`;
-  const images = product.images.map((img) => absoluteUrl(img.url));
+  const currency = product.currency || "EUR";
+  const images = product.images
+    .map((img) => img.url)
+    .filter((u) => u && !isVideoUrl(u))
+    .map(absoluteUrl);
   return {
     "@context": "https://schema.org",
     "@type": "Product",
@@ -119,13 +145,35 @@ export function productSchema(product: ProductForSchema) {
       "@type": "Offer",
       url,
       price: product.price,
-      priceCurrency: product.currency || "EUR",
+      priceCurrency: currency,
       itemCondition: "https://schema.org/NewCondition",
       availability:
         product.stock > 0
           ? "https://schema.org/InStock"
           : "https://schema.org/OutOfStock",
       seller: { "@id": `${SITE_URL}/#store` },
+      shippingDetails: {
+        "@type": "OfferShippingDetails",
+        shippingRate: {
+          "@type": "MonetaryAmount",
+          value: product.shippingCost ?? 0,
+          currency,
+        },
+        shippingDestination: { "@type": "DefinedRegion", addressCountry: "ES" },
+        deliveryTime: {
+          "@type": "ShippingDeliveryTime",
+          handlingTime: { "@type": "QuantitativeValue", minValue: 0, maxValue: 1, unitCode: "DAY" },
+          transitTime: { "@type": "QuantitativeValue", minValue: 1, maxValue: 2, unitCode: "DAY" },
+        },
+      },
+      hasMerchantReturnPolicy: {
+        "@type": "MerchantReturnPolicy",
+        applicableCountry: "ES",
+        returnPolicyCategory: "https://schema.org/MerchantReturnFiniteReturnWindow",
+        merchantReturnDays: 14,
+        returnMethod: "https://schema.org/ReturnByMail",
+        returnFees: "https://schema.org/ReturnFeesCustomerResponsibility",
+      },
     },
   };
 }
