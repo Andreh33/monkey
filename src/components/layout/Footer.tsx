@@ -106,7 +106,15 @@ export function Footer() {
 
         <div className="mt-12 pt-6 border-t border-border flex flex-col sm:flex-row items-center justify-between gap-4">
           <p className="text-xs text-text-muted font-mono">
-            © 2026 {EMPRESA.razonSocial} · CIF {EMPRESA.cif} · Todos los derechos reservados
+            © 2026 {EMPRESA.razonSocial} · CIF {EMPRESA.cif} · Todos los derechos reservados · Diseño web por{" "}
+            <a
+              href="https://serviciosonlineweb.com"
+              target="_blank"
+              rel="noopener"
+              className="hover:text-white transition-colors"
+            >
+              Latech
+            </a>
           </p>
           <p className="text-xs text-text-muted">Hecho en Tarragona con energía urbana ⚡</p>
         </div>
