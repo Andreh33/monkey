@@ -5,6 +5,7 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 import { Gauge, Battery, Zap, ArrowRight } from "lucide-react";
 import { formatPrice } from "@/lib/utils";
+import { publicProductSlug } from "@/lib/slug-aliases";
 
 export type ProductCardData = {
   id: string;
@@ -30,7 +31,7 @@ export function ProductCard({ product }: { product: ProductCardData }) {
       transition={{ type: "spring", stiffness: 250, damping: 20 }}
       className="card-base group relative overflow-hidden"
     >
-      <Link href={`/tienda/${product.slug}`} className="block">
+      <Link href={`/tienda/${publicProductSlug(product.slug)}`} className="block">
         <div className="relative aspect-[4/5] overflow-hidden bg-bg-tertiary">
           <Image
             src={cover}

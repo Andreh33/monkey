@@ -1,5 +1,6 @@
 import { NextResponse } from "next/server";
 import { prisma } from "@/lib/prisma";
+import { publicProductSlug } from "@/lib/slug-aliases";
 
 /**
  * Búsqueda pública y ligera para el desplegable de la lupa.
@@ -27,5 +28,9 @@ export async function GET(req: Request) {
     take: 6,
   });
 
-  return NextResponse.json(products);
+  // Devolvemos el slug público (los slugs heredados se corrigen para que el
+  // buscador navegue directo a la URL canónica, sin pasar por el 308).
+  return NextResponse.json(
+    products.map((p) => ({ ...p, slug: publicProductSlug(p.slug) }))
+  );
 }
