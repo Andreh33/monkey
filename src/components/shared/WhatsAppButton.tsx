@@ -8,6 +8,11 @@ export function WhatsAppButton() {
   const [show, setShow] = useState(false);
   const pathname = usePathname();
   const hide = pathname?.startsWith("/admin");
+  // En las fichas de producto la barra de compra móvil ya lleva WhatsApp: para
+  // no solaparse, el botón flotante se oculta en móvil y solo aparece en
+  // escritorio (donde no hay barra inferior). El slash final acota a
+  // /tienda/[slug] sin afectar al listado /tienda.
+  const isProductPage = pathname?.startsWith("/tienda/");
 
   useEffect(() => {
     const t = setTimeout(() => setShow(true), 2500);
@@ -28,7 +33,7 @@ export function WhatsAppButton() {
           animate={{ opacity: 1, x: 0 }}
           exit={{ opacity: 0, x: 60 }}
           transition={{ type: "spring", stiffness: 300, damping: 24 }}
-          className="fixed bottom-6 right-6 z-50 flex items-center gap-2 group"
+          className={`fixed bottom-6 right-6 z-50 items-center gap-2 group ${isProductPage ? "hidden lg:flex" : "flex"}`}
         >
           <span className="hidden sm:flex bg-bg-secondary border border-border text-xs font-semibold uppercase tracking-wider px-3 py-2 rounded-md opacity-0 group-hover:opacity-100 transition-opacity">
             ¿Hablamos?

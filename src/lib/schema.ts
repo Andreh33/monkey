@@ -320,6 +320,41 @@ export function blogPostingSchema(post: BlogPostForSchema) {
   };
 }
 
+/**
+ * CollectionPage con ItemList de productos para una landing de catálogo
+ * (p. ej. /patinetes-electricos-homologados-dgt). Los productos van con su
+ * slug público y quedan atados a la entidad `#store` como parte del sitio.
+ */
+export function collectionPageSchema(opts: {
+  path: string;
+  name: string;
+  description: string;
+  items: { slug: string; name: string }[];
+}) {
+  const url = `${SITE_URL}${opts.path}`;
+  return {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "@id": `${url}#collection`,
+    name: opts.name,
+    description: opts.description,
+    url,
+    inLanguage: "es-ES",
+    isPartOf: { "@id": `${SITE_URL}/#website` },
+    about: { "@id": `${SITE_URL}/#store` },
+    mainEntity: {
+      "@type": "ItemList",
+      numberOfItems: opts.items.length,
+      itemListElement: opts.items.map((it, i) => ({
+        "@type": "ListItem",
+        position: i + 1,
+        url: `${SITE_URL}/tienda/${publicProductSlug(it.slug)}`,
+        name: it.name,
+      })),
+    },
+  };
+}
+
 /** FAQPage a partir de las preguntas del post (resultados enriquecidos). */
 export function faqPageSchema(faqs: { q: string; a: string }[]) {
   return {

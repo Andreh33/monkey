@@ -6,6 +6,7 @@ import { Filters } from "@/components/shop/Filters";
 import { getCategoryTree, type CategoryNode } from "@/lib/categories";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { SITE_URL } from "@/lib/schema";
+import { publicProductSlug } from "@/lib/slug-aliases";
 
 type SearchParams = { [k: string]: string | undefined };
 
@@ -160,7 +161,7 @@ export default async function TiendaPage({ searchParams }: { searchParams: Searc
     itemListElement: products.slice(0, 24).map((p, i) => ({
       "@type": "ListItem",
       position: i + 1,
-      url: `${SITE_URL}/tienda/${p.slug}`,
+      url: `${SITE_URL}/tienda/${publicProductSlug(p.slug)}`,
       name: p.name,
     })),
   };
@@ -225,9 +226,12 @@ export default async function TiendaPage({ searchParams }: { searchParams: Searc
                 <h3 className="font-semibold text-white">¿Buscas un patinete eléctrico homologado DGT?</h3>
                 <p>
                   Desde enero de 2024 los patinetes nuevos deben contar con certificado VMP para
-                  comercializarse, y a partir de 2027 será imprescindible para circular. En el catálogo
-                  encontrarás modelos homologados listos para cumplir la normativa; si tienes dudas,
-                  nuestra guía de{" "}
+                  comercializarse, y a partir de 2027 será imprescindible para circular. Reunimos
+                  todos los modelos con certificado en nuestra página de{" "}
+                  <Link href="/patinetes-electricos-homologados-dgt" className="text-accent-orange hover:underline">
+                    patinetes eléctricos homologados por la DGT
+                  </Link>
+                  . Si tienes dudas, nuestra guía de{" "}
                   <Link href="/blog/patinetes-homologados-dgt-certificado-vmp" className="text-accent-orange hover:underline">
                     patinetes homologados DGT
                   </Link>{" "}

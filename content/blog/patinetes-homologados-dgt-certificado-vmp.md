@@ -80,7 +80,7 @@ Ojo con un detalle importante: todo esto es **adicional** al certificado, no lo 
 
 ### 22 de enero de 2027: la fecha que lo cambia todo
 
-Es la más importante para ti como usuario. Desde el **22 de enero de 2027**, solo podrán circular por vía pública los patinetes con certificado VMP. Si tu patinete no lo tiene, a partir de esa fecha no podrás usarlo legalmente ni por el carril bici ni por la calzada. Según la información actual no hay un "periodo de gracia" adicional: quien tenga un modelo no homologado tendrá que sustituirlo si quiere seguir moviéndose en patinete.
+Es la más importante para ti como usuario. Desde el **22 de enero de 2027**, solo podrán circular por vía pública los patinetes con certificado VMP. Si tu patinete no lo tiene, a partir de esa fecha no podrás usarlo legalmente ni por el carril bici ni por la calzada. Según la información actual no hay un "periodo de gracia" adicional: quien tenga un modelo no homologado tendrá que sustituirlo si quiere seguir moviéndose en patinete. Si te toca cambiarlo, puedes ver nuestra selección de [patinetes eléctricos homologados por la DGT](/patinetes-electricos-homologados-dgt), todos con certificado VMP y listos para la nueva normativa.
 
 Como siempre, confirma que estas fechas siguen vigentes en dgt.es, porque los plazos normativos a veces se ajustan y no queremos que tomes una decisión basándote en un dato que haya cambiado.
 

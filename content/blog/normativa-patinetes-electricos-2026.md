@@ -64,7 +64,7 @@ Aquí tienes la tabla resumen de obligaciones para que la tengas a mano:
 | **Certificado VMP** | Patinete certificado por la DGT | Venta desde 22/01/2024; circulación obligatoria desde 22/01/2027 |
 | **Límite técnico** | 25 km/h de fábrica (no modificable) y potencia nominal ≤ 1.000 W | Requisito del certificado VMP |
 
-Si tu patinete cumple estos seis puntos, estás en regla. Si le falta alguno, sigue leyendo, porque más abajo te contamos exactamente qué hacer en cada caso. Y si prefieres empezar de cero con un vehículo que ya lo cumple todo, en nuestra [tienda de patinetes homologados](/tienda) tienes modelos listos para circular sin sorpresas.
+Si tu patinete cumple estos seis puntos, estás en regla. Si le falta alguno, sigue leyendo, porque más abajo te contamos exactamente qué hacer en cada caso. Y si prefieres empezar de cero con un vehículo que ya lo cumple todo, en nuestra selección de [patinetes eléctricos homologados por la DGT](/patinetes-electricos-homologados-dgt) tienes modelos con certificado VMP listos para circular sin sorpresas.
 
 ## Qué es un VMP y por qué esta normativa te afecta
 
@@ -165,7 +165,7 @@ Con tanta fecha, es fácil hacerse un lío. Vamos a ordenarlas para que veas la 
 
 La lectura estratégica es sencilla: **2026 es el año de ponerse al día** (registrarte, asegurarte, colocar el identificador y usar casco) y **2027 es la línea roja definitiva** para el certificado. Si tu patinete ya está homologado, vas sobrado y solo tienes que completar los trámites. Si no lo está, cuanto antes lo asumas, mejor, porque en 2027 no habrá margen.
 
-Insistimos en algo que decimos en el mostrador cada semana: **no dejes el certificado para el último momento**. Cuando se acerque enero de 2027, la demanda de modelos homologados se disparará y no querrás estar buscando patinete a contrarreloj.
+Insistimos en algo que decimos en el mostrador cada semana: **no dejes el certificado para el último momento**. Cuando se acerque enero de 2027, la demanda de modelos homologados se disparará y no querrás estar buscando patinete a contrarreloj. Si ya quieres ir sobre seguro, echa un vistazo a los [patinetes homologados DGT](/patinetes-electricos-homologados-dgt) que tenemos montados y probados en el taller.
 
 ## Dónde puedes circular en Tarragona (y dónde no)
 
