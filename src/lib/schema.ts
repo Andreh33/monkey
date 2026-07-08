@@ -5,6 +5,8 @@
  * No se inventa ningún dato.
  */
 import { EMPRESA } from "@/config/empresa";
+import { getYoutubeId, getYoutubeThumbnail } from "@/lib/youtube";
+import { publicProductSlug } from "@/lib/slug-aliases";
 
 export const SITE_URL = EMPRESA.url; // https://monopatinmonkey.com
 
@@ -24,10 +26,9 @@ export function absoluteUrl(url: string): string {
   return `${SITE_URL}${url.startsWith("/") ? "" : "/"}${url}`;
 }
 
-/** Ficha LocalBusiness/Store con NAP real de Tarragona. */
-export function localBusinessSchema() {
+/** Nodo Store/OnlineStore (sin @context; se emite dentro del @graph). */
+function storeNode() {
   return {
-    "@context": "https://schema.org",
     // Tienda física en Tarragona + e-commerce con envío a toda España.
     "@type": ["Store", "OnlineStore"],
     "@id": `${SITE_URL}/#store`,
@@ -85,10 +86,9 @@ export function localBusinessSchema() {
   };
 }
 
-/** Identidad del sitio web. */
-export function webSiteSchema() {
+/** Nodo WebSite (sin @context; se emite dentro del @graph). */
+function webSiteNode() {
   return {
-    "@context": "https://schema.org",
     "@type": "WebSite",
     "@id": `${SITE_URL}/#website`,
     name: EMPRESA.marca,
@@ -96,6 +96,19 @@ export function webSiteSchema() {
     url: SITE_URL,
     inLanguage: "es-ES",
     publisher: { "@id": `${SITE_URL}/#store` },
+  };
+}
+
+/**
+ * Grafo único de entidad del sitio: Store/OnlineStore ↔ WebSite enlazados por
+ * @id en un solo bloque @graph. Los Product (seller) y BlogPosting (publisher)
+ * de cada página referencian `#store`, de modo que Google y los motores de IA
+ * resuelven UNA sola entidad (MonopatinShop = Monopatín Monkey = MonkeyMotion).
+ */
+export function siteGraphSchema() {
+  return {
+    "@context": "https://schema.org",
+    "@graph": [storeNode(), webSiteNode()],
   };
 }
 
@@ -110,6 +123,14 @@ type ProductForSchema = {
   brand?: string | null;
   stock: number;
   shippingCost?: number | null;
+  subcategory?: string | null;
+  motorPower?: number | null;
+  range?: number | null;
+  maxSpeed?: number | null;
+  battery?: string | null;
+  weight?: number | null;
+  maxLoad?: number | null;
+  youtubeUrl?: string | null;
   images: { url: string; alt?: string | null }[];
 };
 
@@ -120,6 +141,70 @@ function isVideoUrl(url: string): boolean {
 }
 
 /**
+ * ¿El producto está homologado DGT (certificado VMP) según SUS PROPIOS datos?
+ * Solo se afirma cuando el nombre, SKU, subcategoría o descripción del
+ * producto lo declaran (p. ej. "Homologado DGT", "Certificado", "VMP").
+ * No se inventa: si la ficha no lo dice, no se marca.
+ */
+export function isDgtCertified(p: {
+  name: string;
+  sku?: string | null;
+  subcategory?: string | null;
+  description?: string | null;
+}): boolean {
+  const hay = [p.name, p.sku, p.subcategory, p.description].filter(Boolean).join(" ");
+  if (/\b(?:no|sin)\s+(?:est[aá]\s+)?homologa/i.test(hay)) return false;
+  return /homologad|certificad|\bDGT\b|\bVMP\b/i.test(hay);
+}
+
+/** URL del vídeo del producto: campo dedicado o URL de vídeo colada en la galería. */
+function productVideoUrl(p: ProductForSchema): string | null {
+  return p.youtubeUrl || p.images.map((i) => i.url).find(isVideoUrl) || null;
+}
+
+/**
+ * VideoObject de la review del producto (antes esas URLs de YouTube iban
+ * coladas en `image[]`, donde invalidaban las imágenes). Emitirlo aparte da
+ * opción al rich result de vídeo y es señal para AI Mode/Shopping.
+ * `uploadDate` se omite a propósito: no consta la fecha real de subida.
+ */
+export function productVideoSchema(product: ProductForSchema): object | null {
+  const raw = productVideoUrl(product);
+  const videoId = raw ? getYoutubeId(raw) : null;
+  if (!videoId) return null;
+  const url = `${SITE_URL}/tienda/${publicProductSlug(product.slug)}`;
+  return {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "@id": `${url}#video`,
+    name: `${product.name} · review en vídeo`,
+    description: product.shortDesc || product.description,
+    thumbnailUrl: [getYoutubeThumbnail(videoId)],
+    contentUrl: `https://www.youtube.com/watch?v=${videoId}`,
+    embedUrl: `https://www.youtube.com/embed/${videoId}`,
+    publisher: { "@id": `${SITE_URL}/#store` },
+  };
+}
+
+/**
+ * Specs máquina-legibles para Shopping/IA. Solo datos reales de la ficha;
+ * "Homologado DGT" únicamente cuando el propio producto lo declara.
+ */
+function productProperties(p: ProductForSchema) {
+  const props: { "@type": "PropertyValue"; name: string; value: string | number; unitText?: string }[] = [];
+  if (isDgtCertified(p)) {
+    props.push({ "@type": "PropertyValue", name: "Homologado DGT (certificado VMP)", value: "Sí" });
+  }
+  if (p.motorPower) props.push({ "@type": "PropertyValue", name: "Potencia del motor", value: p.motorPower, unitText: "W" });
+  if (p.range) props.push({ "@type": "PropertyValue", name: "Autonomía", value: p.range, unitText: "km" });
+  if (p.maxSpeed) props.push({ "@type": "PropertyValue", name: "Velocidad máxima", value: p.maxSpeed, unitText: "km/h" });
+  if (p.battery) props.push({ "@type": "PropertyValue", name: "Batería", value: p.battery });
+  if (p.weight) props.push({ "@type": "PropertyValue", name: "Peso", value: p.weight, unitText: "kg" });
+  if (p.maxLoad) props.push({ "@type": "PropertyValue", name: "Carga máxima", value: p.maxLoad, unitText: "kg" });
+  return props;
+}
+
+/**
  * Ficha Product con precio y disponibilidad reales del producto.
  * Incluye envío (coste real + plazo 24-48h anunciado en la web) y la política
  * de devoluciones de /condiciones-compra (14 días naturales, coste de
@@ -127,20 +212,28 @@ function isVideoUrl(url: string): boolean {
  * los resultados enriquecidos completos de "listado de comerciante".
  */
 export function productSchema(product: ProductForSchema) {
-  const url = `${SITE_URL}/tienda/${product.slug}`;
+  const url = `${SITE_URL}/tienda/${publicProductSlug(product.slug)}`;
   const currency = product.currency || "EUR";
   const images = product.images
     .map((img) => img.url)
     .filter((u) => u && !isVideoUrl(u))
     .map(absoluteUrl);
+  const additionalProperty = productProperties(product);
+  const hasVideo = Boolean(productVideoUrl(product) && getYoutubeId(productVideoUrl(product)!));
   return {
     "@context": "https://schema.org",
     "@type": "Product",
+    "@id": `${url}#product`,
     name: product.name,
     description: product.shortDesc || product.description,
     ...(images.length ? { image: images } : {}),
     ...(product.sku ? { sku: product.sku } : {}),
     ...(product.brand ? { brand: { "@type": "Brand", name: product.brand } } : {}),
+    // GTIN: no consta en los datos actuales (el sku es el nombre del producto),
+    // por eso no se emite. Cuando el admin cargue GTIN reales, añadirlos aquí.
+    ...(additionalProperty.length ? { additionalProperty } : {}),
+    // Vínculo con la review en vídeo (VideoObject aparte en la misma página).
+    ...(hasVideo ? { subjectOf: { "@id": `${url}#video` } } : {}),
     offers: {
       "@type": "Offer",
       url,
@@ -169,6 +262,8 @@ export function productSchema(product: ProductForSchema) {
       hasMerchantReturnPolicy: {
         "@type": "MerchantReturnPolicy",
         applicableCountry: "ES",
+        // Obligatorio para Merchant listings desde 2026: país al que se devuelve.
+        returnPolicyCountry: "ES",
         returnPolicyCategory: "https://schema.org/MerchantReturnFiniteReturnWindow",
         merchantReturnDays: 14,
         returnMethod: "https://schema.org/ReturnByMail",

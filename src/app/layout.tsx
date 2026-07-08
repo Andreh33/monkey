@@ -14,7 +14,7 @@ import { Analytics } from "@vercel/analytics/next";
 import { ClickTracker } from "@/components/shared/ClickTracker";
 import { getCategoryTree } from "@/lib/categories";
 import { JsonLd } from "@/components/seo/JsonLd";
-import { localBusinessSchema, webSiteSchema } from "@/lib/schema";
+import { siteGraphSchema } from "@/lib/schema";
 
 const SITE_URL = "https://monopatinmonkey.com";
 
@@ -109,7 +109,8 @@ export default async function RootLayout({ children }: { children: React.ReactNo
         <link rel="preconnect" href="https://19e3cavvu8vlpeyt.public.blob.vercel-storage.com" />
       </head>
       <body>
-        <JsonLd data={[localBusinessSchema(), webSiteSchema()]} />
+        {/* Grafo único de entidad (Store/OnlineStore ↔ WebSite por @id). */}
+        <JsonLd data={siteGraphSchema()} />
         <Providers>
           <BannerAniversario />
           <TopBar />

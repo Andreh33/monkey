@@ -1,22 +1,44 @@
-import { notFound } from "next/navigation";
+import { notFound, permanentRedirect } from "next/navigation";
 import { prisma } from "@/lib/prisma";
 import { ProductGallery } from "@/components/shop/ProductGallery";
 import { ProductActions } from "@/components/shop/ProductActions";
 import { ProductDescription } from "@/components/shop/ProductDescription";
 import { ReviewCta } from "@/components/shop/ReviewCta";
 import { ProductCard } from "@/components/shop/ProductCard";
+import { MobileBuyBar } from "@/components/shop/MobileBuyBar";
 import Link from "next/link";
-import { Gauge, Battery, Zap, BatteryCharging, Weight, Users, Shield, Truck, Headphones, BookOpen } from "lucide-react";
+import { Gauge, Battery, Zap, BatteryCharging, Weight, Users, Shield, Truck, Headphones, BookOpen, BadgeCheck } from "lucide-react";
 import { formatPrice } from "@/lib/utils";
 import { JsonLd } from "@/components/seo/JsonLd";
-import { productSchema, breadcrumbSchema } from "@/lib/schema";
+import { productSchema, productVideoSchema, breadcrumbSchema, isDgtCertified } from "@/lib/schema";
+import { DB_TO_PUBLIC_SLUG, PUBLIC_TO_DB_SLUG } from "@/lib/slug-aliases";
 import { Breadcrumbs } from "@/components/blog/Breadcrumbs";
 
+/**
+ * Los slugs heredados de la semilla que sirven OTRO producto (p. ej.
+ * `xiaomi-electric-scooter-4-pro` → InMotion CLIMBER DGT) redirigen 308 a su
+ * slug público correcto sin tocar la BD; el slug público se resuelve aquí
+ * contra el slug real de la BD. Ver src/lib/slug-aliases.ts.
+ */
+function redirectLegacySlug(slug: string): void {
+  const publicSlug = DB_TO_PUBLIC_SLUG[slug];
+  if (publicSlug) permanentRedirect(`/tienda/${publicSlug}`);
+}
+
+async function findProduct(slug: string) {
+  const include = { images: { orderBy: { order: "asc" as const } } };
+  // 1º el slug tal cual (si el admin corrige la BD, la BD gana);
+  // 2º el alias público → slug real de la BD.
+  const direct = await prisma.product.findUnique({ where: { slug }, include });
+  if (direct) return direct;
+  const dbSlug = PUBLIC_TO_DB_SLUG[slug];
+  if (!dbSlug) return null;
+  return prisma.product.findUnique({ where: { slug: dbSlug }, include });
+}
+
 export async function generateMetadata({ params }: { params: { slug: string } }) {
-  const p = await prisma.product.findUnique({
-    where: { slug: params.slug },
-    include: { images: { orderBy: { order: "asc" }, take: 1 } },
-  });
+  redirectLegacySlug(params.slug);
+  const p = await findProduct(params.slug);
   if (!p) return { title: "Producto" };
   const img = p.images[0]?.url;
   // Title transaccional: nombre + precio (el precio en el title mejora el CTR
@@ -26,7 +48,9 @@ export async function generateMetadata({ params }: { params: { slug: string } })
     p.shippingCost && p.shippingCost > 0
       ? `envío 24-48h (${formatPrice(p.shippingCost)} €)`
       : "envío gratis 24-48h";
-  const description = `Compra ${p.name} por ${formatPrice(p.price)} € con ${envio} a toda España. Garantía 3 años y soporte del taller. ${p.shortDesc}`.slice(0, 300);
+  const dgt = isDgtCertified(p) ? " Homologado DGT con certificado VMP." : "";
+  const description =
+    `Compra ${p.name} por ${formatPrice(p.price)} € con ${envio} a toda España.${dgt} Garantía 3 años, montado y probado en nuestro taller de Tarragona. ${p.shortDesc}`.slice(0, 300);
   return {
     title,
     description,
@@ -46,10 +70,8 @@ export async function generateMetadata({ params }: { params: { slug: string } })
 }
 
 export default async function ProductPage({ params }: { params: { slug: string } }) {
-  const product = await prisma.product.findUnique({
-    where: { slug: params.slug },
-    include: { images: { orderBy: { order: "asc" } } },
-  });
+  redirectLegacySlug(params.slug);
+  const product = await findProduct(params.slug);
 
   if (!product) notFound();
 
@@ -82,6 +104,12 @@ export default async function ProductPage({ params }: { params: { slug: string }
 
   // Las guías del blog son de patinetes: solo se enlazan cuando encajan con el producto.
   const esPatinete = /patinete/i.test(product.category) || /patinete/i.test(product.name);
+  // Homologación declarada por los propios datos del producto (nombre/sku/descripción).
+  const homologadoDgt = isDgtCertified(product);
+  // URL pública de la ficha (params.slug ya es el slug canónico: los alias
+  // antiguos redirigen 308 antes de llegar aquí).
+  const fichaPath = `/tienda/${params.slug}`;
+  const videoLd = productVideoSchema(product);
 
   const specs = [
     { icon: Gauge, label: "Velocidad máx.", value: product.maxSpeed ? `${product.maxSpeed} km/h` : "—" },
@@ -97,10 +125,12 @@ export default async function ProductPage({ params }: { params: { slug: string }
       <JsonLd
         data={[
           productSchema(product),
+          // Review en vídeo como VideoObject aparte (antes iba colada en image[]).
+          ...(videoLd ? [videoLd] : []),
           breadcrumbSchema([
             { name: "Inicio", path: "/" },
             { name: "Tienda", path: "/tienda" },
-            { name: product.name, path: `/tienda/${product.slug}` },
+            { name: product.name, path: fichaPath },
           ]),
         ]}
       />
@@ -122,6 +152,15 @@ export default async function ProductPage({ params }: { params: { slug: string }
               <p className="text-xs uppercase tracking-widest font-mono text-accent-orange">{product.brand}</p>
             )}
             <h1 className="display-lg leading-[0.95]">{product.name}</h1>
+            {homologadoDgt && (
+              <Link
+                href="/patinetes-electricos-homologados-dgt"
+                className="inline-flex items-center gap-1.5 rounded-full border border-success/40 bg-success/10 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-success hover:bg-success/20 transition-colors"
+              >
+                <BadgeCheck className="w-3.5 h-3.5" />
+                Homologado DGT · Certificado VMP
+              </Link>
+            )}
             <p className="text-text-secondary text-lg leading-relaxed">{product.shortDesc}</p>
             <div className="flex items-end gap-3">
               <p className="price-mono text-5xl">{formatPrice(product.price)}<span className="currency">€</span></p>
@@ -151,7 +190,9 @@ export default async function ProductPage({ params }: { params: { slug: string }
               })}
             </div>
 
-            <ProductActions product={product} />
+            <div id="comprar" className="scroll-mt-28">
+              <ProductActions product={product} />
+            </div>
 
             <div className="grid grid-cols-3 gap-3 pt-4 border-t border-border">
               <Trust icon={Shield} text="Garantía 3 años" />
@@ -181,6 +222,12 @@ export default async function ProductPage({ params }: { params: { slug: string }
                       <tr className="bg-bg-secondary">
                         <td className="px-4 py-3 text-text-muted uppercase text-xs tracking-widest font-mono">Marca</td>
                         <td className="px-4 py-3 font-mono">{product.brand}</td>
+                      </tr>
+                    )}
+                    {homologadoDgt && (
+                      <tr className="bg-bg-primary">
+                        <td className="px-4 py-3 text-text-muted uppercase text-xs tracking-widest font-mono">Homologado DGT</td>
+                        <td className="px-4 py-3 font-mono text-success">Sí · certificado VMP</td>
                       </tr>
                     )}
                   </tbody>
@@ -232,6 +279,12 @@ export default async function ProductPage({ params }: { params: { slug: string }
                 <h2 className="font-display text-3xl tracking-wider mb-4">Guías del taller</h2>
                 <ul className="card-base p-5 space-y-3 text-sm">
                   <li className="flex gap-2.5">
+                    <BadgeCheck className="w-4 h-4 text-accent-orange shrink-0 mt-0.5" />
+                    <Link href="/patinetes-electricos-homologados-dgt" className="text-text-secondary hover:text-white transition-colors">
+                      Ver todos los patinetes eléctricos homologados DGT de la tienda
+                    </Link>
+                  </li>
+                  <li className="flex gap-2.5">
                     <BookOpen className="w-4 h-4 text-accent-orange shrink-0 mt-0.5" />
                     <Link href="/blog/normativa-patinetes-electricos-2026" className="text-text-secondary hover:text-white transition-colors">
                       Normativa DGT de patinetes eléctricos 2026: lo que debes saber antes de circular
@@ -266,6 +319,10 @@ export default async function ProductPage({ params }: { params: { slug: string }
           </div>
         </section>
       )}
+
+      {/* Barra de compra fija en móvil (precio + comprar + WhatsApp pre-rellenado). */}
+      <MobileBuyBar product={product} />
+      <div className="h-20 lg:hidden" aria-hidden="true" />
     </>
   );
 }
