@@ -2,11 +2,12 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import { ExternalLink, Share2 } from "lucide-react";
+import { ExternalLink, MessageCircle, Share2 } from "lucide-react";
 // Carrito desactivado: compras directas via Stripe
 // import { Minus, Plus, ShoppingCart } from "lucide-react";
 // import { useCart } from "@/lib/cart-store";
 import { toast } from "sonner";
+import { productWhatsAppUrl } from "@/lib/whatsapp";
 
 type Props = {
   product: {
@@ -118,6 +119,21 @@ export function ProductActions({ product }: Props) {
         Comprar ahora
         <ExternalLink className="w-4 h-4" />
       </button>
+      <a
+        href={productWhatsAppUrl(product)}
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label={`Reservar ${product.name} por WhatsApp para comprarlo en tienda`}
+        className="group flex w-full items-center justify-center gap-3 rounded-md border border-[#20a95a] bg-[#08783e] px-5 py-3.5 text-white shadow-[0_8px_28px_rgba(8,120,62,0.22)] transition-all duration-300 hover:-translate-y-0.5 hover:border-[#2acb6d] hover:bg-[#096b39] hover:shadow-[0_12px_34px_rgba(8,120,62,0.32)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#45d483] focus-visible:ring-offset-2 focus-visible:ring-offset-bg-primary active:translate-y-0"
+      >
+        <MessageCircle className="h-5 w-5 shrink-0" aria-hidden="true" />
+        <span className="min-w-0 text-left leading-tight">
+          <span className="block text-sm font-bold">¿Quieres comprarlo en tienda?</span>
+          <span className="mt-1 block text-xs font-medium text-white/90">
+            Escríbenos por WhatsApp y te lo reservamos
+          </span>
+        </span>
+      </a>
       <button onClick={handleShare} className="btn-outline w-full text-base py-4">
         <Share2 className="w-4 h-4" />
         Compartir

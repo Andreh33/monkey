@@ -13,14 +13,15 @@ type ProductForWhatsApp = {
 };
 
 /**
- * Mensaje pre-rellenado con el producto concreto (nombre, potencia y precio):
- * el cliente no tiene que escribir nada y el taller sabe al instante de qué
- * ficha viene la consulta. Los clics se registran como `whatsapp_click`
+ * Mensaje de reserva pre-rellenado con el producto concreto (nombre, potencia
+ * y precio): el cliente no tiene que escribir nada y la tienda sabe al instante
+ * qué producto debe apartar. Los clics se registran como `whatsapp_click`
  * (ver ClickTracker), con la ruta de la ficha como dimensión.
  */
 export function productWhatsAppUrl(p: ProductForWhatsApp): string {
+  const nombre = p.name.replace(/\s+/g, " ").trim();
   const potencia = p.motorPower ? ` (${p.motorPower} W)` : "";
   return whatsAppUrl(
-    `Hola, me interesa el ${p.name}${potencia} por ${formatPrice(p.price)} €. ¿Lo tenéis disponible?`
+    `Hola, quiero comprar en tienda y reservar este producto: ${nombre}${potencia}. Lo he visto en la web por ${formatPrice(p.price)} €. ¿Podéis guardármelo?`
   );
 }

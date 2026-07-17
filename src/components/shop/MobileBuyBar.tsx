@@ -12,7 +12,7 @@ type Props = {
 /**
  * Barra de CTA fija inferior SOLO en móvil para la ficha de producto:
  * precio siempre visible + "Comprar" (ancla a las acciones de compra) +
- * WhatsApp con mensaje pre-rellenado (producto, potencia y precio).
+ * reserva por WhatsApp con mensaje pre-rellenado (producto, potencia y precio).
  * En escritorio no se muestra (la columna de compra ya es sticky).
  */
 export function MobileBuyBar({ product }: Props) {
@@ -33,7 +33,7 @@ export function MobileBuyBar({ product }: Props) {
           href={productWhatsAppUrl(product)}
           target="_blank"
           rel="noopener noreferrer"
-          aria-label={`Consultar ${product.name} por WhatsApp`}
+          aria-label={`Reservar ${product.name} por WhatsApp`}
           className="w-11 h-11 shrink-0 rounded-md flex items-center justify-center"
           style={{ background: "#25D366" }}
         >
