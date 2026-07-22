@@ -29,13 +29,14 @@ export function generateStaticParams() {
 export function generateMetadata({ params }: { params: { slug: string } }): Metadata {
   const post = getPostBySlug(params.slug);
   if (!post) return { title: "Artículo no encontrado" };
+  const metaTitle = post.seoTitle ?? post.title;
   return {
-    title: post.title,
+    title: post.seoTitle ? { absolute: post.seoTitle } : post.title,
     description: post.description,
     keywords: post.keywords,
     alternates: { canonical: `/blog/${post.slug}` },
     openGraph: {
-      title: post.title,
+      title: metaTitle,
       description: post.description,
       type: "article",
       url: `/blog/${post.slug}`,
@@ -45,7 +46,7 @@ export function generateMetadata({ params }: { params: { slug: string } }): Meta
     },
     twitter: {
       card: "summary_large_image",
-      title: post.title,
+      title: metaTitle,
       description: post.description,
     },
   };

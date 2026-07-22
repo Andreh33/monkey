@@ -1,10 +1,11 @@
 ---
 title: "Dónde circular con patinete eléctrico en 2026: acera, carril bici y calzada"
-description: "Dónde puedes circular con patinete eléctrico según la DGT: acera no, carril bici y calzada urbana sí. Te explicamos las reglas y la ordenanza de Tarragona."
-excerpt: "¿Acera, carril bici, calzada o carretera? Te contamos dónde puedes y dónde no puedes circular con tu patinete eléctrico en 2026, qué dice la DGT y por qué la ordenanza de Tarragona tiene la última palabra."
+seoTitle: "Patinete eléctrico: dónde circular en 2026 | MonopatinShop"
+description: "¿Acera, carril bici o calzada? Consulta dónde puede circular un patinete eléctrico en 2026 según la DGT y la ordenanza de Tarragona."
+excerpt: "Acera, carril bici, calzada o carretera: consulta la respuesta rápida, las prohibiciones generales y los matices que fija la ordenanza de Tarragona."
 category: normativa
 date: "2026-06-24"
-updated: "2026-07-03"
+updated: "2026-07-22"
 author: "Equipo MonopatinShop"
 featured: false
 keywords:
@@ -40,6 +41,8 @@ Saber **dónde circular con el patinete eléctrico** es, junto con el seguro y e
 En este artículo te explicamos, como lo hacemos en el mostrador de Tarragona, dónde puedes y dónde no puedes circular con tu patinete eléctrico: acera, zonas peatonales, carril bici, calzada, vías interurbanas, autovías, parques y paseos marítimos. Verás que hay reglas generales que marca la DGT y matices locales que fija la **ordenanza municipal**, que es la que tiene la última palabra sobre las calles concretas de tu ciudad.
 
 Un aviso de partida antes de entrar en materia: las reglas de circulación de los VMP combinan normativa estatal y ordenanzas locales, y estas últimas cambian bastante de un municipio a otro. Aquí te damos la base sólida y actualizada, pero para tu recorrido concreto confirma siempre los detalles en [la web oficial de la DGT](https://www.dgt.es) y en la ordenanza de movilidad del Ayuntamiento de Tarragona.
+
+Antes de elegir modelo, puedes consultar nuestra [selección de patinetes eléctricos homologados por la DGT](/patinetes-electricos-homologados-dgt), preparada para comparar VMP certificados.
 
 ## Dónde puedes circular y dónde no: la foto rápida
 

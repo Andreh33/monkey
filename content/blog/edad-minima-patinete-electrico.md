@@ -1,10 +1,11 @@
 ---
 title: "Edad mínima para llevar patinete eléctrico en 2026: qué dice la normativa"
-description: "¿Qué edad mínima hay para el patinete eléctrico? Te explicamos qué marca la DGT, por qué manda la ordenanza de Tarragona y a partir de qué edad orientativa se puede circular."
-excerpt: "¿A partir de qué edad se puede llevar un patinete eléctrico? Te contamos qué dice la normativa de VMP, por qué la edad mínima depende sobre todo de la ordenanza municipal y qué deben saber padres y jóvenes en Tarragona."
+seoTitle: "Edad mínima del patinete eléctrico 2026 | MonopatinShop"
+description: "Edad mínima para usar un patinete eléctrico en 2026: qué fija la DGT, qué decide cada ayuntamiento y qué reglas debes comprobar en Tarragona."
+excerpt: "La edad mínima no es igual en toda España: consulta qué regula la DGT, qué decide cada ayuntamiento y qué debe comprobar una familia antes de circular en Tarragona."
 category: normativa
 date: "2026-06-24"
-updated: "2026-07-03"
+updated: "2026-07-22"
 author: "Equipo MonopatinShop"
 featured: false
 keywords:
@@ -40,6 +41,8 @@ Una de las preguntas que más nos hacen las familias en el taller es sencilla de
 En este artículo te explicamos, como se lo contamos a los padres que vienen a MonopatinShop en Tarragona, qué marca la normativa sobre la **edad mínima del patinete eléctrico**, por qué el número concreto lo pone la ordenanza local, quién es responsable cuando el que circula es un menor y qué debes tener en cuenta si vas a comprar un patinete para un adolescente. La idea es que salgas de aquí sabiendo qué preguntar y dónde confirmarlo, sin medias verdades.
 
 Antes de entrar, el aviso de siempre, que en temas de menores es aún más importante: aquí te damos la base y los criterios generales, pero como la edad exacta y algunos detalles dependen de la ordenanza de cada municipio, confirma siempre la información en [la web oficial de la DGT](https://www.dgt.es) y en la ordenanza de movilidad del Ayuntamiento de Tarragona antes de dejar a un joven circular.
+
+Si la compra es para un adolescente, revisa también qué modelos cuentan con certificado en nuestra [selección de patinetes eléctricos homologados por la DGT](/patinetes-electricos-homologados-dgt).
 
 ## ¿Existe una edad mínima legal? La respuesta corta
 

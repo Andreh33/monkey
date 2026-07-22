@@ -53,6 +53,7 @@ export type BlogFaq = { q: string; a: string };
 
 export type BlogFrontmatter = {
   title: string;
+  seoTitle?: string;
   description: string;
   excerpt?: string;
   category: BlogCategoryKey;
