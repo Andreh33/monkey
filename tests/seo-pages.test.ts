@@ -32,9 +32,10 @@ for (const slug of [
     assert.ok(post.description.length <= 155);
 
     const metadata = generateMetadata({ params: { slug } });
-    assert.equal(typeof metadata.title, "object");
-    assert.ok(metadata.title && "absolute" in metadata.title);
-    assert.ok(metadata.title.absolute.length <= 60);
+    const title = metadata.title;
+    assert.ok(title && typeof title === "object" && "absolute" in title);
+    assert.ok(title.absolute);
+    assert.ok(title.absolute.length <= 60);
     assert.equal(metadata.description, post.description);
   });
 }
