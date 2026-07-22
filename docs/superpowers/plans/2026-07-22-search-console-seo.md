@@ -37,7 +37,7 @@ La prueba debe importar metadata de las cuatro páginas legales y exigir canonic
 
 - [ ] **Step 3: Verificar RED**
 
-Run: `npx prisma generate && npm run test:seo`  
+Run: `npx prisma generate && npm run test:seo`
 Expected: FAIL porque faltan canonicals, `seoTitle` y fecha 2026-07-22.
 
 - [ ] **Step 4: Commit**
@@ -58,7 +58,7 @@ Importar `Metadata` y añadir `alternates: { canonical: "/ruta" }` en cada objet
 
 - [ ] **Step 2: Ejecutar prueba focalizada**
 
-Run: `npm run test:seo`  
+Run: `npm run test:seo`
 Expected: las aserciones legales pasan; las de guías siguen fallando.
 
 - [ ] **Step 3: Commit**
@@ -87,7 +87,7 @@ Usar `seoTitle: "Patinete eléctrico: dónde circular en 2026 | MonopatinShop"`,
 
 - [ ] **Step 4: Verificar GREEN**
 
-Run: `npm run test:seo`  
+Run: `npm run test:seo`
 Expected: PASS.
 
 - [ ] **Step 5: Commit**

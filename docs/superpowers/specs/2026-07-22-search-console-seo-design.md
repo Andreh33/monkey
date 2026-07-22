@@ -1,7 +1,7 @@
 # SEO de crecimiento basado en Search Console — diseño
 
-**Fecha:** 2026-07-22  
-**Sitio:** https://monopatinmonkey.com  
+**Fecha:** 2026-07-22
+**Sitio:** https://monopatinmonkey.com
 **Rama:** `codex/seo-2026-07-22-monopatin`
 
 ## Situación observada
