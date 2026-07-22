@@ -1,10 +1,12 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import { LegalPage } from "@/components/legal/LegalPage";
 import { EMPRESA, EMPRESA_DIRECCION_COMPLETA } from "@/config/empresa";
 
-export const metadata = {
+export const metadata: Metadata = {
   title: "Condiciones de Compra",
   description: `Condiciones generales de venta de ${EMPRESA.razonSocial} (${EMPRESA.marca}): pago, envíos, devoluciones y garantía.`,
+  alternates: { canonical: "/condiciones-compra" },
 };
 
 export default function CondicionesCompraPage() {

@@ -1,9 +1,11 @@
+import type { Metadata } from "next";
 import { LegalPage } from "@/components/legal/LegalPage";
 import { EMPRESA } from "@/config/empresa";
 
-export const metadata = {
+export const metadata: Metadata = {
   title: "Política de Cookies",
   description: `Información sobre el uso de cookies en ${EMPRESA.dominio}.`,
+  alternates: { canonical: "/cookies" },
 };
 
 export default function CookiesPage() {

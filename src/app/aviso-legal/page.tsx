@@ -1,10 +1,12 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import { LegalPage } from "@/components/legal/LegalPage";
 import { EMPRESA, EMPRESA_DIRECCION_COMPLETA } from "@/config/empresa";
 
-export const metadata = {
+export const metadata: Metadata = {
   title: "Aviso Legal",
   description: `Aviso legal e información de ${EMPRESA.razonSocial} (${EMPRESA.marca}), conforme a la LSSI-CE.`,
+  alternates: { canonical: "/aviso-legal" },
 };
 
 export default function AvisoLegalPage() {

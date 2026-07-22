@@ -1,9 +1,11 @@
+import type { Metadata } from "next";
 import { LegalPage } from "@/components/legal/LegalPage";
 import { EMPRESA } from "@/config/empresa";
 
-export const metadata = {
+export const metadata: Metadata = {
   title: "Política de Privacidad",
   description: `Política de privacidad y protección de datos de ${EMPRESA.razonSocial} (${EMPRESA.marca}), conforme al RGPD y la LOPDGDD.`,
+  alternates: { canonical: "/privacidad" },
 };
 
 export default function PrivacidadPage() {
