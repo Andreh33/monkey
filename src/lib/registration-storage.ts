@@ -24,7 +24,9 @@ export class RegistrationStorageNotConfiguredError extends Error {
 }
 
 function getToken(): string {
-  const token = process.env.REGISTRATION_BLOB_READ_WRITE_TOKEN;
+  const token =
+    process.env.REGISTRATION_READ_WRITE_TOKEN ||
+    process.env.REGISTRATION_BLOB_READ_WRITE_TOKEN;
   if (!token) throw new RegistrationStorageNotConfiguredError();
   return token;
 }
