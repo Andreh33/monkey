@@ -71,6 +71,12 @@ export default function PrivacidadPage() {
       </p>
       <ul>
         <li>Envío de información solicitada a través de los formularios dispuestos en el Sitio Web.</li>
+        <li>
+          Gestión de solicitudes de matriculación de patinetes eléctricos, incluyendo la verificación
+          de los datos identificativos del titular y de la copia del certificado aportada. Si el
+          usuario indica que no dispone de certificado, sus datos de contacto se utilizarán para
+          orientarle sobre cómo obtenerlo.
+        </li>
       </ul>
       <p>
         Te recordamos que puedes oponerte al envío de comunicaciones comerciales por cualquier vía y

@@ -4,6 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
+    "test:registration": "tsx --test tests/registration.test.ts",
     "test:seo": "tsx --test tests/seo-pages.test.ts",
     "build": "prisma generate && node scripts/migrate-turso.mjs && next build",
     "db:migrate:turso": "node scripts/migrate-turso.mjs",

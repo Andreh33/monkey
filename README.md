@@ -121,6 +121,7 @@ NEXTAUTH_SECRET=<aleatorio largo>
 NEXTAUTH_URL=https://<tu-dominio>.vercel.app
 ADMIN_EMAIL=admin@monopatinshop.es
 ADMIN_PASSWORD=Monopatin2026!
+REGISTRATION_BLOB_READ_WRITE_TOKEN=<token de un Blob privado para certificados>
 ```
 
 ### ⚠️ Importante: SQLite en Vercel

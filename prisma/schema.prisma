@@ -132,3 +132,33 @@ model ContactMessage {
   message   String
   createdAt DateTime @default(now())
 }
+
+model ScooterRegistrationRequest {
+  id            String                        @id @default(cuid())
+  holderName    String
+  email         String
+  phone         String
+  dni           String
+  noCertificate Boolean                       @default(false)
+  documents     ScooterRegistrationDocument[]
+  createdAt     DateTime                      @default(now())
+}
+
+model ScooterRegistrationDocument {
+  id           String                     @id @default(cuid())
+  requestId    String
+  request      ScooterRegistrationRequest @relation(fields: [requestId], references: [id], onDelete: Cascade)
+  pathname     String
+  originalName String
+  contentType  String
+  size         Int
+  createdAt    DateTime                   @default(now())
+
+  @@index([requestId])
+}
+
+model ScooterRegistrationSettings {
+  id               String   @id @default("default")
+  stripePaymentUrl String?
+  updatedAt        DateTime @updatedAt
+}

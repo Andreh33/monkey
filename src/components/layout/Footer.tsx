@@ -27,6 +27,7 @@ export function Footer() {
               <li><Link href="/tienda" className="text-text-secondary hover:text-white transition-colors">Tienda</Link></li>
               <li><Link href="/patinetes-electricos-homologados-dgt" className="text-text-secondary hover:text-white transition-colors">Homologados DGT</Link></li>
               <li><Link href="/reparaciones" className="text-text-secondary hover:text-white transition-colors">Reparaciones</Link></li>
+              <li><Link href="/matriculaciones" className="text-text-secondary hover:text-white transition-colors">Matriculaciones</Link></li>
               <li><Link href="/blog" className="text-text-secondary hover:text-white transition-colors">Blog</Link></li>
               <li><Link href="/nosotros" className="text-text-secondary hover:text-white transition-colors">Nosotros</Link></li>
               <li><Link href="/contacto" className="text-text-secondary hover:text-white transition-colors">Contacto</Link></li>

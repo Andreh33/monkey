@@ -16,6 +16,7 @@ const links = [
   { href: "/", label: "Inicio" },
   { href: "/tienda", label: "Tienda" },
   { href: "/reparaciones", label: "Reparaciones" },
+  { href: "/matriculaciones", label: "Matriculaciones" },
   { href: "/blog", label: "Blog" },
   { href: "/nosotros", label: "Nosotros" },
   { href: "/contacto", label: "Contacto" },
@@ -62,7 +63,7 @@ export function Navbar({ categories = [] }: { categories?: CategoryNode[] }) {
           </span>
         </Link>
 
-        <nav className="hidden lg:flex items-center gap-1">
+        <nav className="hidden xl:flex items-center gap-1">
           {links.map((l) => {
             if (l.href === "/tienda" && hasMenu) {
               return <MegaMenu key={l.href} active={pathname.startsWith("/tienda")} categories={categories} />;
@@ -119,7 +120,7 @@ export function Navbar({ categories = [] }: { categories?: CategoryNode[] }) {
 
           <button
             onClick={() => setOpen(!open)}
-            className="lg:hidden p-2.5 rounded-md hover:bg-bg-tertiary transition-colors"
+            className="xl:hidden p-2.5 rounded-md hover:bg-bg-tertiary transition-colors"
             aria-label="Menú"
           >
             {open ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
@@ -138,7 +139,7 @@ export function Navbar({ categories = [] }: { categories?: CategoryNode[] }) {
 
       {/* Mobile menu */}
       {open && (
-        <nav className="lg:hidden border-t border-border bg-bg-primary/95 backdrop-blur-xl">
+        <nav className="xl:hidden border-t border-border bg-bg-primary/95 backdrop-blur-xl">
           <div className="container-custom py-4 flex flex-col gap-1">
             {links.map((l) => {
               if (l.href === "/tienda" && hasMenu) {

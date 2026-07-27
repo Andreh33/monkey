@@ -18,6 +18,7 @@ export const revalidate = 3600;
  * REAL de cambio (updatedAt del producto, date/updated del post).
  */
 const STATIC_LASTMOD = new Date("2026-07-08");
+const REGISTRATION_LASTMOD = new Date("2026-07-27");
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   // Fichas de producto desde Prisma. Envuelto en try/catch por si la BD no está
@@ -47,15 +48,16 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   }
 
   const staticRoutes: MetadataRoute.Sitemap = [
-    { url: `${SITE_URL}/`, lastModified: STATIC_LASTMOD, changeFrequency: "weekly", priority: 1 },
+    { url: `${SITE_URL}/`, lastModified: REGISTRATION_LASTMOD, changeFrequency: "weekly", priority: 1 },
     { url: `${SITE_URL}/tienda`, lastModified: catalogLastmod, changeFrequency: "daily", priority: 0.9 },
     // Landing de la ola DGT (RD 52/2026): catálogo de homologados + cluster normativa.
     { url: `${SITE_URL}/patinetes-electricos-homologados-dgt`, lastModified: catalogLastmod, changeFrequency: "weekly", priority: 0.9 },
     { url: `${SITE_URL}/reparaciones`, lastModified: STATIC_LASTMOD, changeFrequency: "monthly", priority: 0.9 },
+    { url: `${SITE_URL}/matriculaciones`, lastModified: REGISTRATION_LASTMOD, changeFrequency: "monthly", priority: 0.8 },
     { url: `${SITE_URL}/contacto`, lastModified: STATIC_LASTMOD, changeFrequency: "yearly", priority: 0.7 },
     { url: `${SITE_URL}/nosotros`, lastModified: STATIC_LASTMOD, changeFrequency: "yearly", priority: 0.6 },
     { url: `${SITE_URL}/aviso-legal`, lastModified: STATIC_LASTMOD, changeFrequency: "yearly", priority: 0.3 },
-    { url: `${SITE_URL}/privacidad`, lastModified: STATIC_LASTMOD, changeFrequency: "yearly", priority: 0.3 },
+    { url: `${SITE_URL}/privacidad`, lastModified: REGISTRATION_LASTMOD, changeFrequency: "yearly", priority: 0.3 },
     { url: `${SITE_URL}/cookies`, lastModified: STATIC_LASTMOD, changeFrequency: "yearly", priority: 0.3 },
     { url: `${SITE_URL}/condiciones-compra`, lastModified: STATIC_LASTMOD, changeFrequency: "yearly", priority: 0.3 },
   ];

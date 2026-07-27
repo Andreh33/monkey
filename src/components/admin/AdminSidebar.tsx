@@ -10,6 +10,7 @@ import {
   // ShoppingCart, // Pedidos desactivado
   FolderTree,
   Users,
+  BadgeCheck,
   ExternalLink,
   LogOut,
 } from "lucide-react";
@@ -20,6 +21,7 @@ const links = [
   { href: "/admin/categorias", label: "Categorías", icon: FolderTree },
   // { href: "/admin/pedidos", label: "Pedidos", icon: ShoppingCart }, // Pedidos desactivado
   { href: "/admin/reparaciones", label: "Reparaciones", icon: Wrench },
+  { href: "/admin/matriculaciones", label: "Matriculaciones", icon: BadgeCheck },
   { href: "/admin/usuarios", label: "Usuarios", icon: Users },
 ];
 

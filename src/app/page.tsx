@@ -7,6 +7,7 @@ import { BrandsTicker } from "@/components/home/BrandsTicker";
 import { TikTokSection } from "@/components/home/TikTokSection";
 import { TestimonialsCarousel } from "@/components/home/TestimonialsCarousel";
 import { CtaBanner } from "@/components/home/CtaBanner";
+import { RegistrationCta } from "@/components/home/RegistrationCta";
 import MonkeyWalkerLoader from "@/components/layout/MonkeyWalkerLoader";
 
 export const metadata = {
@@ -19,6 +20,7 @@ export default function HomePage() {
       <MonkeyWalkerLoader />
       <Hero />
       <ServicesSplit />
+      <RegistrationCta />
       <FeaturedScooters />
       <RepairProcess />
       <RepairTypesBento />
