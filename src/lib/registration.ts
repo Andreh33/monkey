@@ -91,13 +91,14 @@ export const scooterRegistrationPaymentUrlSchema = z
       return (
         url.protocol === "https:" &&
         url.hostname === "buy.stripe.com" &&
+        url.pathname.split("/").filter(Boolean).length > 0 &&
         !url.username &&
         !url.password
       );
     } catch {
       return false;
     }
-  }, "Pega un Payment Link válido de https://buy.stripe.com");
+  }, "Pega el enlace completo de Stripe, incluido el código después de buy.stripe.com/");
 
 export function formatFileSize(bytes: number): string {
   if (bytes < 1024 * 1024) return `${Math.max(1, Math.round(bytes / 1024))} KB`;

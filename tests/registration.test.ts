@@ -70,6 +70,12 @@ test("solo acepta Payment Links HTTPS de Stripe o un valor vacío", () => {
   assert.equal(scooterRegistrationPaymentUrlSchema.safeParse("").success, true);
   assert.equal(
     scooterRegistrationPaymentUrlSchema.safeParse(
+      "https://buy.stripe.com/"
+    ).success,
+    false
+  );
+  assert.equal(
+    scooterRegistrationPaymentUrlSchema.safeParse(
       "https://buy.stripe.com.evil.example/test_123"
     ).success,
     false

@@ -45,6 +45,15 @@ type ApiResponse = {
   paymentUrl?: string | null;
 };
 
+async function fetchConfiguredPaymentUrl(): Promise<string | null> {
+  const response = await fetch(`/api/matriculaciones/pago?t=${Date.now()}`, {
+    cache: "no-store",
+  });
+  const data = (await response.json().catch(() => ({}))) as ApiResponse;
+
+  return response.ok && data.ok ? data.paymentUrl ?? null : null;
+}
+
 async function canvasToBlob(
   canvas: HTMLCanvasElement,
   quality: number
@@ -224,15 +233,23 @@ export function ScooterRegistrationForm() {
         throw new Error(data.error || "No se ha podido enviar la solicitud");
       }
 
+      const paymentUrl =
+        data.paymentUrl ||
+        (await fetchConfiguredPaymentUrl().catch(() => null));
+
       setResult({
         reference: data.reference ?? null,
-        paymentUrl: data.paymentUrl ?? null,
+        paymentUrl,
         noCertificate: values.noCertificate,
       });
-      track("registration_submit", {
-        site: "monopatin",
-        certificate: values.noCertificate ? "missing" : "attached",
-      });
+      try {
+        track("registration_submit", {
+          site: "monopatin",
+          certificate: values.noCertificate ? "missing" : "attached",
+        });
+      } catch {
+        // Analytics no debe convertir un envío correcto en un error visible.
+      }
       toast.success("Solicitud de matriculación recibida");
       reset();
       setFiles([]);

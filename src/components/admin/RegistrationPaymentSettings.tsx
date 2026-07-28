@@ -79,7 +79,9 @@ export function RegistrationPaymentSettings({
             autoComplete="off"
           />
           <p className="mt-2 text-xs text-text-muted">
-            Déjalo vacío para ocultar temporalmente el botón de pago.
+            Debe incluir el código que aparece después de
+            <span className="font-mono"> buy.stripe.com/</span>. Déjalo vacío
+            para ocultar temporalmente el botón de pago.
           </p>
         </div>
 

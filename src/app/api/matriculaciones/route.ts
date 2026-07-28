@@ -4,8 +4,8 @@ import {
   SCOOTER_REGISTRATION_MAX_FILES,
   SCOOTER_REGISTRATION_MAX_TOTAL_BYTES,
   scooterRegistrationFormSchema,
-  scooterRegistrationPaymentUrlSchema,
 } from "@/lib/registration";
+import { getRegistrationPaymentUrl } from "@/lib/registration-payment";
 import {
   deleteRegistrationDocuments,
   RegistrationStorageNotConfiguredError,
@@ -145,23 +145,7 @@ export async function POST(request: Request) {
     // Desde este punto los blobs pertenecen a una solicitud persistida.
     uploadedPathnames = [];
 
-    let paymentUrl: string | null = null;
-    try {
-      const settings = await prisma.scooterRegistrationSettings.findUnique({
-        where: { id: "default" },
-        select: { stripePaymentUrl: true },
-      });
-      const safePaymentUrl = scooterRegistrationPaymentUrlSchema.safeParse(
-        settings?.stripePaymentUrl ?? ""
-      );
-      paymentUrl =
-        safePaymentUrl.success && safePaymentUrl.data
-          ? safePaymentUrl.data
-          : null;
-    } catch {
-      // La solicitud está guardada: la falta temporal del ajuste de pago no debe
-      // convertirla en un error ni provocar un reenvío duplicado.
-    }
+    const paymentUrl = await getRegistrationPaymentUrl();
 
     return NextResponse.json({
       ok: true,
