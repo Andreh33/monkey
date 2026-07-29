@@ -23,7 +23,10 @@ export function InstallPrompt() {
   // Registrar el service worker (necesario para que sea instalable).
   useEffect(() => {
     if ("serviceWorker" in navigator) {
-      navigator.serviceWorker.register("/sw.js").catch(() => {});
+      navigator.serviceWorker
+        .register("/sw.js", { updateViaCache: "none" })
+        .then((registration) => registration.update())
+        .catch(() => {});
     }
   }, []);
 
@@ -37,8 +40,11 @@ export function InstallPrompt() {
       (window.navigator as unknown as { standalone?: boolean }).standalone === true;
     if (standalone) return;
 
-    // No insistir si el usuario ya lo descartó.
-    if (localStorage.getItem(DISMISS_KEY) === "1") return;
+    // Algunos navegadores móviles bloquean Storage (p. ej. privacidad
+    // estricta). La invitación es opcional y nunca debe romper la página.
+    try {
+      if (localStorage.getItem(DISMISS_KEY) === "1") return;
+    } catch {}
 
     // Detección de iOS (Safari no dispara beforeinstallprompt).
     const ua = window.navigator.userAgent.toLowerCase();
