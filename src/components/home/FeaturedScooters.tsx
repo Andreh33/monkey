@@ -4,12 +4,45 @@ import { prisma } from "@/lib/prisma";
 import { ProductCard } from "@/components/shop/ProductCard";
 import { ScrollReveal } from "@/components/shared/ScrollReveal";
 
+const HOME_FEATURED_PRODUCT_SLUGS = [
+  "patinete-electrico-bison-homologado-dgt",
+  "patinete-electrico-adasmart-tank-dual-48v-23-4ah",
+  "patinete-electrico-joyor-t-pro-dgt-motor-dual-1000w-hasta-90km-de-autonomia",
+] as const;
+
 export async function FeaturedScooters() {
-  const products = await prisma.product.findMany({
-    where: { featured: true, active: true },
+  const preferredProductsUnordered = await prisma.product.findMany({
+    where: {
+      active: true,
+      stock: { gt: 0 },
+      category: "patinete",
+      slug: { in: [...HOME_FEATURED_PRODUCT_SLUGS] },
+    },
     include: { images: { orderBy: { order: "asc" } } },
-    take: 3,
   });
+
+  const productsBySlug = new Map(
+    preferredProductsUnordered.map((product) => [product.slug, product])
+  );
+  const preferredProducts = HOME_FEATURED_PRODUCT_SLUGS.flatMap((slug) => {
+    const product = productsBySlug.get(slug);
+    return product ? [product] : [];
+  });
+  const fallbackProducts =
+    preferredProducts.length < 3
+      ? await prisma.product.findMany({
+          where: {
+            active: true,
+            stock: { gt: 0 },
+            category: "patinete",
+            slug: { notIn: [...HOME_FEATURED_PRODUCT_SLUGS] },
+          },
+          include: { images: { orderBy: { order: "asc" } } },
+          orderBy: [{ featured: "desc" }, { updatedAt: "desc" }],
+          take: 3 - preferredProducts.length,
+        })
+      : [];
+  const featuredProducts = [...preferredProducts, ...fallbackProducts];
 
   return (
     <section className="section-pad container-custom">
@@ -28,9 +61,9 @@ export async function FeaturedScooters() {
       </ScrollReveal>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-        {products.map((p, i) => (
+        {featuredProducts.map((p, i) => (
           <ScrollReveal key={p.id} delay={i * 0.1}>
-            <ProductCard product={p} />
+            <ProductCard product={{ ...p, featured: true }} />
           </ScrollReveal>
         ))}
       </div>

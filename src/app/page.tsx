@@ -14,6 +14,9 @@ export const metadata = {
   alternates: { canonical: "/" },
 };
 
+// Refresca el escaparate aunque los productos se cambien desde el panel admin.
+export const revalidate = 300;
+
 export default function HomePage() {
   return (
     <>
