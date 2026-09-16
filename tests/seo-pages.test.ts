@@ -39,3 +39,23 @@ for (const slug of [
     assert.equal(metadata.description, post.description);
   });
 }
+
+test("el artículo de patinetes en transporte público conserva SEO y fuentes", () => {
+  const slug = "patinete-electrico-tren-autobus-2026";
+  const post = getPostBySlug(slug);
+  assert.ok(post);
+  assert.equal(post.updated, "2026-09-16");
+  assert.ok(post.description.length >= 120);
+  assert.ok(post.description.length <= 155);
+  assert.match(post.content, /grupo\.renfe\.com/);
+  assert.match(post.content, /rodalies\.gencat\.cat/);
+  assert.match(post.content, /tarragona\.cat/);
+
+  const metadata = generateMetadata({ params: { slug } });
+  const title = metadata.title;
+  assert.ok(title && typeof title === "object" && "absolute" in title);
+  assert.ok(title.absolute);
+  assert.ok(title.absolute.length <= 60);
+  assert.equal(metadata.description, post.description);
+  assert.equal(metadata.alternates?.canonical, `/blog/${slug}`);
+});
