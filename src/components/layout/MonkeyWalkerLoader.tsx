@@ -20,6 +20,7 @@ export default function MonkeyWalkerLoader() {
   const [ready, setReady] = useState(false);
 
   useEffect(() => {
+    if (window.matchMedia("(max-width: 767px)").matches) return;
     let done = false;
     const timeouts: ReturnType<typeof setTimeout>[] = [];
     const events: (keyof WindowEventMap)[] = ["pointerdown", "keydown", "touchstart", "scroll"];

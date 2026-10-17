@@ -20,6 +20,7 @@ export function OverlayAniversario() {
 
   // Solo home, una vez por sesión, tras el primer render (no toca el LCP).
   useEffect(() => {
+    if (window.matchMedia("(max-width: 767px)").matches) return;
     if (!ANIVERSARIO.activo || pathname !== "/") return;
     try {
       if (sessionStorage.getItem(SESSION_KEY) === "1") return;

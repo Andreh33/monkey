@@ -702,3 +702,8 @@ body {
   .ani-confeti { display: none; }
   .ani-overlay, .ani-sorpresa, .ani-mensaje, .ani-toast { animation: none; }
 }
+
+@media (max-width: 767px) {
+  [data-mobile-arrival] { opacity: 1 !important; transform: none !important; }
+  [data-mobile-arrival-cue] { opacity: 1 !important; }
+}

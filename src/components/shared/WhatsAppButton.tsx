@@ -15,7 +15,7 @@ export function WhatsAppButton() {
   const isProductPage = pathname?.startsWith("/tienda/");
 
   useEffect(() => {
-    const t = setTimeout(() => setShow(true), 2500);
+    const t = setTimeout(() => setShow(true), window.matchMedia("(max-width: 767px)").matches ? 0 : 2500);
     return () => clearTimeout(t);
   }, []);
 
@@ -25,6 +25,7 @@ export function WhatsAppButton() {
     <AnimatePresence>
       {show && (
         <motion.a
+          data-mobile-arrival=""
           href="https://wa.me/34616686593?text=Hola,%20me%20gustaría%20consultar%20sobre%20mi%20patinete..."
           target="_blank"
           rel="noopener noreferrer"

@@ -26,6 +26,7 @@ export function Hero() {
       <div className="container-custom relative z-10 py-24">
         {ANIVERSARIO.activo && (
           <motion.div
+            data-mobile-arrival=""
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
@@ -37,7 +38,8 @@ export function Hero() {
         )}
 
         <motion.p
-          initial={{ opacity: 0, y: 20 }}
+          data-mobile-arrival=""
+            initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           className="eyebrow mb-5"
@@ -46,7 +48,8 @@ export function Hero() {
         </motion.p>
 
         <motion.h1
-          initial={{ opacity: 0, y: 30 }}
+          data-mobile-arrival=""
+            initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.1 }}
           className="display-xl max-w-5xl"
@@ -57,7 +60,8 @@ export function Hero() {
         </motion.h1>
 
         <motion.p
-          initial={{ opacity: 0, y: 20 }}
+          data-mobile-arrival=""
+            initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.25 }}
           className="mt-7 max-w-xl text-lg text-text-secondary leading-relaxed"
@@ -69,7 +73,8 @@ export function Hero() {
         </motion.p>
 
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
+          data-mobile-arrival=""
+            initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.4 }}
           className="mt-9 flex flex-wrap items-center gap-4"
@@ -85,7 +90,8 @@ export function Hero() {
         </motion.div>
 
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
+          data-mobile-arrival=""
+            initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.55 }}
           className="mt-10"
@@ -96,7 +102,7 @@ export function Hero() {
       </div>
 
       <motion.div
-        initial={{ opacity: 0 }}
+        data-mobile-arrival-cue="" initial={{ opacity: 0 }}
         animate={{ opacity: 1, y: [0, 8, 0] }}
         transition={{
           opacity: { delay: 1.2, duration: 1 },
