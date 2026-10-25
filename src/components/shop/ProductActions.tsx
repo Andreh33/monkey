@@ -8,6 +8,7 @@ import { ExternalLink, MessageCircle, Share2 } from "lucide-react";
 // import { useCart } from "@/lib/cart-store";
 import { toast } from "sonner";
 import { productWhatsAppUrl } from "@/lib/whatsapp";
+import { purchaseEligible } from "@/lib/purchase";
 
 type Props = {
   product: {
@@ -17,6 +18,8 @@ type Props = {
     brand?: string | null;
     price: number;
     stripeLink: string;
+    active: boolean;
+    stock: number;
     images: { url: string }[];
   };
 };
@@ -28,6 +31,7 @@ export function ProductActions({ product }: Props) {
   const [accepted, setAccepted] = useState(false);
 
   const handleBuy = () => {
+    if (!purchaseEligible(product, accepted)) return;
     if (!accepted) {
       toast.error("Debes aceptar las condiciones de compra para continuar.");
       return;
@@ -113,12 +117,13 @@ export function ProductActions({ product }: Props) {
       </label>
       <button
         onClick={handleBuy}
-        disabled={!accepted}
+        disabled={!purchaseEligible(product, accepted)}
         className="btn-primary w-full text-base py-4 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:translate-y-0 disabled:hover:shadow-none"
       >
-        Comprar ahora
+        {product.stock <= 0 ? 'Sin stock' : 'Comprar ahora'}
         <ExternalLink className="w-4 h-4" />
       </button>
+      {!purchaseEligible(product, true) && <p className="text-sm text-text-secondary">{product.stock <= 0 ? 'Producto sin stock.' : 'Enlace de pago no disponible.'} <Link href="/contacto" className="text-accent-orange underline">Contacta con nosotros</Link>.</p>}
       <a
         href={productWhatsAppUrl(product)}
         target="_blank"

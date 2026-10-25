@@ -12,10 +12,12 @@ export function ProductGallery({
   images,
   name,
   youtubeUrl,
+  locale = 'es',
 }: {
   images: Img[];
   name: string;
   youtubeUrl?: string | null;
+  locale?: 'es' | 'fr' | 'it' | 'pt';
 }) {
   const [active, setActive] = useState(0);
   const baseList: Img[] = images.length ? images : [{ url: "/imagenes/local-01.jpeg", alt: name }];
@@ -42,7 +44,7 @@ export function ProductGallery({
   const current = slides[active] ?? slides[0];
 
   return (
-    <div className="flex flex-col-reverse gap-4 md:grid md:grid-cols-[80px_1fr]">
+    <div className="min-w-0 w-full flex flex-col-reverse gap-4 md:grid md:grid-cols-[80px_minmax(0,1fr)]">
       <div className="flex gap-2 overflow-x-auto snap-x snap-mandatory no-scrollbar px-1 md:px-0 md:flex-col md:gap-3 md:max-h-[600px] md:overflow-x-visible md:overflow-y-auto md:snap-none">
         {slides.map((s, i) => (
           <button
@@ -51,7 +53,7 @@ export function ProductGallery({
             className={`relative w-16 h-16 shrink-0 snap-start md:w-auto md:h-auto md:aspect-square rounded-md overflow-hidden border-2 transition-all ${
               active === i ? "border-accent-red ring-2 ring-accent-red/40" : "border-border opacity-70 hover:opacity-100"
             }`}
-            aria-label={s.kind === "video" ? "Video" : `Imagen ${i + 1}`}
+            aria-label={s.kind === "video" ? "Video" : `${{es:'Imagen',fr:'Image',it:'Immagine',pt:'Imagem'}[locale]} ${i + 1}`}
           >
             <Image
               src={s.kind === "image" ? s.url : s.thumb}

@@ -1,10 +1,10 @@
 import assert from "node:assert/strict";
 import test from "node:test";
-import { metadata as aviso } from "../src/app/aviso-legal/page";
-import { metadata as privacidad } from "../src/app/privacidad/page";
-import { metadata as cookies } from "../src/app/cookies/page";
-import { metadata as condiciones } from "../src/app/condiciones-compra/page";
-import { generateMetadata } from "../src/app/blog/[slug]/page";
+import { metadata as aviso } from "../src/app/(es)/aviso-legal/page";
+import { metadata as privacidad } from "../src/app/(es)/privacidad/page";
+import { metadata as cookies } from "../src/app/(es)/cookies/page";
+import { metadata as condiciones } from "../src/app/(es)/condiciones-compra/page";
+import { generateMetadata } from "../src/app/(es)/blog/[slug]/page";
 import { getPostBySlug } from "../src/lib/blog";
 
 const legalCases = [
