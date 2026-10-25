@@ -38,7 +38,12 @@ async function resolveCatalogMetadata(
     sort: "recent",
   };
   const title =
-    (category ? categoryLabel(category.slug, category.name, locale) : d.shop) +
+    (category ? categoryLabel(category.slug, category.name, locale) : {
+      es: 'Patinetes eléctricos, bicicletas y accesorios',
+      fr: 'Trottinettes électriques, vélos et accessoires',
+      it: 'Monopattini elettrici, biciclette e accessori',
+      pt: 'Trotinetes elétricas, bicicletas e acessórios',
+    }[locale]) +
     (query.page > 1 ? ` · ${d.page} ${query.page}` : "");
   return {
     title: { absolute: `${title} · Monkey` },
@@ -156,6 +161,7 @@ export async function Catalog({
         <p className="text-text-secondary mt-4 max-w-2xl">{d.intro}</p>
       </section>
       <form
+        key={catalogPath(locale, query)}
         action={localePath(locale, "/tienda")}
         className="border-y border-border bg-bg-secondary"
       >
@@ -234,9 +240,9 @@ export async function Catalog({
           <button type="submit" className="btn-primary">
             {d.apply}
           </button>
-          <Link className="btn-outline" href={localePath(locale, "/tienda")}>
+          <a className="btn-outline" href={localePath(locale, "/tienda")}>
             {d.clear}
-          </Link>
+          </a>
         </div>
       </form>
       <section className="container-custom py-12">

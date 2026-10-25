@@ -19,6 +19,7 @@ import { money } from "@/components/storefront/Catalog";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { isDgtCertified } from "@/lib/schema";
 import { safeMetadata } from "@/lib/not-found-metadata";
+import { productPageTitle } from "@/lib/product-title";
 export const revalidate = 300;
 type Props = { params: { locale: string; slug: string } };
 async function productFor(params: Props["params"]) {
@@ -39,7 +40,7 @@ async function pageMetadata({ params }: Props): Promise<Metadata> {
   const t = translatedProduct(p, locale);
   const path = "/tienda/" + params.slug;
   return {
-    title: { absolute: t.name.length < 61 ? `${t.name} · Monkey` : t.name },
+    title: { absolute: productPageTitle(p, t.name, locale) },
     description: t.shortDesc.slice(0, 160),
     robots: { index: t.translated, follow: true },
     alternates: {

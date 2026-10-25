@@ -16,6 +16,7 @@ import { Breadcrumbs } from "@/components/blog/Breadcrumbs";
 import { equivalentLanguages, productLanguages } from "@/lib/storefront";
 import { cardSelect } from "@/lib/catalog";
 import { safeMetadata } from '@/lib/not-found-metadata';
+import { productPageTitle } from '@/lib/product-title';
 
 /**
  * Los slugs heredados de la semilla que sirven OTRO producto (p. ej.
@@ -45,9 +46,7 @@ async function pageMetadata({ params }: { params: { slug: string } }) {
   const p = await findProduct(params.slug);
   if (!p || !p.active) notFound();
   const img = p.images[0]?.url;
-  // Title transaccional: nombre + precio (el precio en el title mejora el CTR
-  // en búsquedas de compra y refuerza el rich result de Merchant listing).
-  const title = { absolute: p.name.length < 61 ? `${p.name} · Monkey` : p.name };
+  const title = { absolute: productPageTitle(p, p.name, 'es') };
   const envio =
     p.shippingCost && p.shippingCost > 0
       ? `envío 24-48h (${formatPrice(p.shippingCost)} €)`

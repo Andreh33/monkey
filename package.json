@@ -6,7 +6,7 @@
     "dev": "next dev",
     "test:registration": "tsx --test tests/registration.test.ts",
     "test:seo": "tsx --test tests/seo-pages.test.ts",
-    "test:storefront": "tsx --test tests/storefront.test.ts",
+    "test:storefront": "tsx --test tests/storefront.test.ts tests/product-titles.test.ts",
     "build": "prisma generate && next build",
     "db:migrate:turso": "node scripts/migrate-turso.mjs",
     "start": "next start",
