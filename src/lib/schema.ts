@@ -162,16 +162,20 @@ function productVideoUrl(p: ProductForSchema): string | null {
   return p.youtubeUrl || p.images.map((i) => i.url).find(isVideoUrl) || null;
 }
 
-/**
- * VideoObject de la review del producto (antes esas URLs de YouTube iban
- * coladas en `image[]`, donde invalidaban las imágenes). Emitirlo aparte da
- * opción al rich result de vídeo y es señal para AI Mode/Shopping.
- * `uploadDate` se omite a propósito: no consta la fecha real de subida.
- */
+// Verified against datePublished/uploadDate on each original YouTube watch
+// page on 2026-10-28. These are video publication dates, never product dates.
+const VIDEO_UPLOAD_DATES: Record<string, string> = {
+  PRnabWrVOBg: "2023-06-06T02:01:29-07:00",
+  mIlPirZU_lo: "2025-08-06T06:10:11-07:00",
+  ANVAuzyyFCU: "2024-07-01T06:20:58-07:00",
+};
+
+/** Emit video rich-result markup only when its required real data is known. */
 export function productVideoSchema(product: ProductForSchema): object | null {
   const raw = productVideoUrl(product);
   const videoId = raw ? getYoutubeId(raw) : null;
-  if (!videoId) return null;
+  const uploadDate = videoId ? VIDEO_UPLOAD_DATES[videoId] : undefined;
+  if (!videoId || !uploadDate) return null;
   const url = `${SITE_URL}/tienda/${publicProductSlug(product.slug)}`;
   return {
     "@context": "https://schema.org",
@@ -180,9 +184,8 @@ export function productVideoSchema(product: ProductForSchema): object | null {
     name: `${product.name} · review en vídeo`,
     description: product.shortDesc || product.description,
     thumbnailUrl: [getYoutubeThumbnail(videoId)],
-    contentUrl: `https://www.youtube.com/watch?v=${videoId}`,
+    uploadDate,
     embedUrl: `https://www.youtube.com/embed/${videoId}`,
-    publisher: { "@id": `${SITE_URL}/#store` },
   };
 }
 
@@ -219,7 +222,7 @@ export function productSchema(product: ProductForSchema) {
     .filter((u) => u && !isVideoUrl(u))
     .map(absoluteUrl);
   const additionalProperty = productProperties(product);
-  const hasVideo = Boolean(productVideoUrl(product) && getYoutubeId(productVideoUrl(product)!));
+  const hasVideo = Boolean(productVideoSchema(product));
   return {
     "@context": "https://schema.org",
     "@type": "Product",

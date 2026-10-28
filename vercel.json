@@ -5,6 +5,16 @@
   "regions": ["fra1"],
   "redirects": [
     {
+      "source": "/tienda/taller",
+      "destination": "/reparaciones",
+      "permanent": true
+    },
+    {
+      "source": "/tienda/patinete-electrico-etric-vortex",
+      "destination": "/tienda/patinete-electrico-etric-vortex-un-motor",
+      "permanent": true
+    },
+    {
       "source": "/:path*",
       "has": [{ "type": "host", "value": "www.monopatinmonkey.com" }],
       "destination": "https://monopatinmonkey.com/:path*",
