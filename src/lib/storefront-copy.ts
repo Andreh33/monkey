@@ -17,7 +17,7 @@ const es = {
   discover: "Descubre el catálogo",
   selection: "Nuestra selección",
   delivery:
-    "Los destinos disponibles, las opciones de entrega, los gastos de envío y el total final se muestran en la página de pago de cada producto. Revísalos antes de pagar.",
+    "Añade los productos al carrito y elige el destino de entrega. Verás los gastos de envío y el total antes de continuar al pago.",
   search: "Buscar",
   query: "Marca, modelo o referencia",
   category: "Categoría",
@@ -62,7 +62,7 @@ const es = {
   reference: "Referencia",
   purchase: "Cómo comprar",
   guide:
-    "Cada producto se compra por separado desde su ficha. Selecciona un producto disponible, consulta sus condiciones y acepta las condiciones de compra y privacidad para continuar al enlace de pago original.",
+    "Añade los productos disponibles al carrito, revisa las cantidades y completa tus datos de entrega. Después podrás pagar el pedido de forma segura.",
   legal: "Aviso legal",
   cookies: "Política de cookies",
   support: "Nuestro taller en Tarragona",
@@ -111,7 +111,7 @@ export const copy: Record<Locale, StoreCopy> = {
     discover: "Découvrir le catalogue",
     selection: "Notre sélection",
     delivery:
-      "Les destinations disponibles, les options de livraison, les frais de port et le montant final figurent sur la page de paiement de chaque produit. Vérifiez-les avant de payer.",
+      "Ajoutez les produits au panier et choisissez la destination de livraison. Les frais de port et le total s’affichent avant de passer au paiement.",
     search: "Rechercher",
     query: "Marque, modèle ou référence",
     category: "Catégorie",
@@ -156,7 +156,7 @@ export const copy: Record<Locale, StoreCopy> = {
     reference: "Référence",
     purchase: "Comment acheter",
     guide:
-      "Chaque produit s’achète séparément depuis sa fiche. Choisissez un produit disponible, consultez ses conditions et acceptez les conditions d’achat et de confidentialité pour accéder au lien de paiement original.",
+      "Ajoutez les produits disponibles au panier, vérifiez les quantités et renseignez votre adresse de livraison. Vous pourrez ensuite payer la commande en toute sécurité.",
     legal: "Mentions légales",
     cookies: "Politique de cookies",
     support: "Notre atelier à Tarragone",
@@ -202,7 +202,7 @@ export const copy: Record<Locale, StoreCopy> = {
     discover: "Scopri il catalogo",
     selection: "La nostra selezione",
     delivery:
-      "Le destinazioni disponibili, le opzioni di consegna, le spese di spedizione e l’importo finale sono indicati nella pagina di pagamento di ogni prodotto. Verificali prima di pagare.",
+      "Aggiungi i prodotti al carrello e scegli la destinazione della consegna. Le spese di spedizione e il totale sono visibili prima di procedere al pagamento.",
     search: "Cerca",
     query: "Marca, modello o riferimento",
     category: "Categoria",
@@ -247,7 +247,7 @@ export const copy: Record<Locale, StoreCopy> = {
     reference: "Riferimento",
     purchase: "Come acquistare",
     guide:
-      "Ogni prodotto si acquista separatamente dalla sua scheda. Scegli un prodotto disponibile, consulta le sue condizioni e accetta le condizioni di acquisto e privacy per accedere al link di pagamento originale.",
+      "Aggiungi i prodotti disponibili al carrello, controlla le quantità e inserisci i dati di consegna. Potrai poi pagare l’ordine in modo sicuro.",
     legal: "Note legali",
     cookies: "Informativa sui cookie",
     support: "La nostra officina a Tarragona",
@@ -293,7 +293,7 @@ export const copy: Record<Locale, StoreCopy> = {
     discover: "Descobrir o catálogo",
     selection: "A nossa seleção",
     delivery:
-      "Os destinos disponíveis, as opções de entrega, os portes e o valor final são apresentados na página de pagamento de cada produto. Verifique-os antes de pagar.",
+      "Adicione os produtos ao carrinho e escolha o destino da entrega. Os portes e o total são apresentados antes de continuar para o pagamento.",
     search: "Pesquisar",
     query: "Marca, modelo ou referência",
     category: "Categoria",
@@ -338,7 +338,7 @@ export const copy: Record<Locale, StoreCopy> = {
     reference: "Referência",
     purchase: "Como comprar",
     guide:
-      "Cada produto é comprado separadamente na respetiva ficha. Escolha um produto disponível, consulte as condições e aceite as condições de compra e privacidade para aceder à ligação de pagamento original.",
+      "Adicione os produtos disponíveis ao carrinho, verifique as quantidades e preencha os dados de entrega. Depois poderá pagar a encomenda de forma segura.",
     legal: "Aviso legal",
     cookies: "Política de cookies",
     support: "A nossa oficina em Tarragona",

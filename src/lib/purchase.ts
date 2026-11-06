@@ -1,18 +1,6 @@
 export function purchaseEligible(
-  product: { active: boolean; stock: number; stripeLink: string },
-  consent: boolean,
+  product: { active: boolean; stock: number },
+  consent = true,
 ) {
-  if (!consent || !product.active || product.stock <= 0) return false;
-  try {
-    const url = new URL(product.stripeLink);
-    return (
-      url.protocol === "https:" &&
-      url.hostname === "buy.stripe.com" &&
-      url.pathname.length > 1 &&
-      !url.username &&
-      !url.password
-    );
-  } catch {
-    return false;
-  }
+  return consent && product.active && Number.isFinite(product.stock) && product.stock > 0;
 }

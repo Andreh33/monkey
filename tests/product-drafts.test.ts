@@ -9,7 +9,7 @@ const active = { id: "live", active: true, name: "Live product", images: [] };
 const draft = { id: "draft", active: false, name: "Draft product", images: [] };
 
 // Execute the actual route handlers, replacing only external auth/database I/O.
-function route(single: boolean, role?: string) {
+function route(single: boolean, role?: string, invalidations: string[] = []) {
   const path = single ? "src/app/api/productos/[id]/route.ts" : "src/app/api/productos/route.ts";
   const code = ts.transpileModule(readFileSync(path, "utf8"), {
     compilerOptions: { module: ts.ModuleKind.CommonJS, target: ts.ScriptTarget.ES2022 },
@@ -20,6 +20,7 @@ function route(single: boolean, role?: string) {
       findUnique: async ({ where }: any) => [active, draft].find(p => p.id === where.id) ?? null,
       create: async ({ data }: any) => ({ id: "created", ...data }),
       update: async ({ data }: any) => ({ id: "draft", ...data }),
+      delete: async () => draft,
     },
     productImage: { deleteMany: async () => ({ count: 0 }) },
   };
@@ -27,6 +28,7 @@ function route(single: boolean, role?: string) {
     "next-auth": { getServerSession: async () => role ? { user: { role } } : null },
     "@/lib/auth": { authOptions: {} },
     "@/lib/prisma": { prisma },
+    "@/lib/catalog-cache": { revalidateCatalog: () => invalidations.push("catalog") },
     "@/lib/utils": { slugify: (s: string) => s.toLowerCase().replaceAll(" ", "-") },
   };
   const module = { exports: {} as any };
@@ -82,15 +84,52 @@ test("administrators can create and edit drafts before a payment link exists", a
   assert.equal((await edited.json()).active, false);
 });
 
-test("creating or activating a product still requires a payment URL", async () => {
+test("creating or activating a product uses the admin price without requiring a payment URL", async () => {
   const created = await route(false, "ADMIN").POST(request({ ...payload, active: true }));
-  assert.equal(created.status, 400);
+  assert.equal(created.status, 200);
+  assert.equal((await created.json()).price, 110);
   const edited = await route(true, "ADMIN").PATCH(request({ ...payload, active: true }, "PATCH"), { params: { id: "draft" } });
-  assert.equal(edited.status, 400);
+  assert.equal(edited.status, 200);
+  assert.equal((await edited.json()).stripeLink, "");
 });
 
 test("drafts reject malformed nonempty payment URLs and unauthorized writes", async () => {
   assert.equal((await route(false, "ADMIN").POST(request({ ...payload, stripeLink: "not-a-url" }))).status, 400);
   assert.equal((await route(false).POST(request(payload))).status, 403);
   assert.equal((await route(true, "CLIENT").PATCH(request(payload, "PATCH"), { params: { id: "draft" } })).status, 403);
+});
+
+test("product mutations invalidate public catalog only after an authorized successful write", async () => {
+  const invalidations: string[] = [];
+  const create = route(false, "ADMIN", invalidations);
+  const edit = route(true, "ADMIN", invalidations);
+  assert.equal((await create.POST(request({ ...payload, price: -1 }))).status, 400);
+  assert.equal((await route(false, undefined, invalidations).POST(request(payload))).status, 403);
+  assert.deepEqual(invalidations, []);
+  assert.equal((await create.POST(request(payload))).status, 200);
+  assert.equal((await edit.PATCH(request({ ...payload, price: 125 }, "PATCH"), { params: { id: "draft" } })).status, 200);
+  assert.equal((await edit.DELETE(new Request("https://example.test/api/productos/draft", { method: "DELETE" }), { params: { id: "draft" } })).status, 200);
+  assert.equal(invalidations.length, 3);
+});
+
+test("catalog invalidation matches Next 14 route-group tags in every locale without purging admin layouts", () => {
+  const paths: [string, string | undefined][] = [];
+  const code = ts.transpileModule(readFileSync("src/lib/catalog-cache.ts", "utf8"), { compilerOptions: { module: ts.ModuleKind.CommonJS, target: ts.ScriptTarget.ES2022 } }).outputText;
+  const module = { exports: {} as any };
+  new Function("require", "module", "exports", code)((name: string) => name === "next/cache" ? { revalidatePath: (path: string, type?: string) => paths.push([path, type]) } : require("../src/lib/storefront-routes"), module, module.exports);
+  module.exports.revalidateCatalog();
+  const { addImplicitTags } = require("next/dist/server/lib/patch-fetch");
+  const invalidated = paths.map(([path, type]) => "_N_T_" + path + (type ? "/" + type : ""));
+  for (const locale of ["es", "fr", "it", "pt"]) {
+    const prefix = locale === "es" ? "" : "/" + locale;
+    const group = locale === "es" ? "/(es)" : "/(international)/[locale]/(pages)";
+    for (const suffix of ["/tienda/page", "/tienda/[slug]/page", "/page"]) {
+      const urlPathname = suffix === "/page" ? prefix || "/" : prefix + (suffix.includes("[slug]") ? "/tienda/producto" : "/tienda");
+      const tags: string[] = addImplicitTags({ pagePath: group + suffix, urlPathname });
+      assert.ok(tags.some(tag => invalidated.includes(tag)), `${locale} ${suffix} must refresh`);
+    }
+  }
+  const adminTags: string[] = addImplicitTags({ pagePath: "/(es)/admin/(panel)/productos/page", urlPathname: "/admin/productos" });
+  assert.equal(adminTags.some(tag => invalidated.includes(tag)), false);
+  assert.ok(paths.some(([path]) => path === "/sitemap.xml"));
 });

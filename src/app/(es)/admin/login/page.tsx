@@ -47,10 +47,6 @@ export default function AdminLoginPage() {
             {loading ? (<><Loader2 className="w-4 h-4 animate-spin" /> Entrando...</>) : "Entrar"}
           </button>
         </form>
-
-        <p className="mt-8 text-xs text-text-muted text-center font-mono">
-          Demo: admin@monopatinshop.es / Monopatin2026!
-        </p>
       </div>
     </section>
   );

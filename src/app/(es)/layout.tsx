@@ -9,7 +9,7 @@ import { WhatsAppButton } from "@/components/shared/WhatsAppButton";
 import { InstallPrompt } from "@/components/shared/InstallPrompt";
 import { BannerAniversario } from "@/components/aniversario/BannerAniversario";
 import { OverlayAniversario } from "@/components/aniversario/OverlayAniversario";
-// import { CartDrawer } from "@/components/shop/CartDrawer"; // Carrito desactivado: compras directas via Stripe
+import { CartDrawer } from "@/components/shop/CartDrawer";
 import { Analytics } from "@vercel/analytics/next";
 import { ClickTracker } from "@/components/shared/ClickTracker";
 import { getCategoryTree } from "@/lib/categories";
@@ -123,7 +123,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
           <WhatsAppButton />
           <InstallPrompt />
           <OverlayAniversario />
-          {/* <CartDrawer /> Carrito desactivado: compras directas via Stripe */}
+          <CartDrawer />
         </Providers>
         <ClickTracker />
         <Analytics />

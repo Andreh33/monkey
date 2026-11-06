@@ -9,7 +9,8 @@ export default async function CuentaInicio() {
   const session = await getServerSession(authOptions);
   if (!session?.user) redirect("/login");
 
-  const userId = (session.user as { id: string }).id;
+  const userId = (session.user as { id?: string }).id;
+  if (!userId) redirect("/login");
   const [orders, addresses] = await Promise.all([
     prisma.order.count({ where: { userId } }),
     prisma.address.count({ where: { userId } }),

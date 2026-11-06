@@ -11,6 +11,7 @@ import { StoreHeader, StoreFooter } from "@/components/storefront/StoreShell";
 import { isLocale, SITE } from "@/lib/storefront-routes";
 import { copy } from "@/lib/storefront-copy";
 import { Analytics } from "@vercel/analytics/next";
+import { CartDrawer } from "@/components/shop/CartDrawer";
 import { LocaleProvider } from "@/components/storefront/NotFound";
 const bebas = Bebas_Neue({
   weight: "400",
@@ -73,6 +74,7 @@ export default function InternationalLayout({
             <StoreHeader locale={locale} />
             <main className="min-h-screen">{children}</main>
             <StoreFooter locale={locale} />
+            <CartDrawer locale={locale} />
           </LocaleProvider>
         </Providers>
         <Analytics />

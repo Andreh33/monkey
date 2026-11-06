@@ -113,22 +113,8 @@ export default async function Page({ params }: Props) {
             </p>
             <Purchase
               locale={locale}
-              product={{
-                active: p.active,
-                stock: p.stock,
-                stripeLink: p.stripeLink,
-              }}
-              labels={{
-                buy: d.buy,
-                accept: d.accept,
-                conditions: d.conditions,
-                privacy: d.privacy,
-                and: d.and,
-                delivery: d.delivery,
-                soldOut: d.soldOut,
-                unavailable: d.unavailable,
-                contact: d.contact,
-              }}
+              product={{ id: p.id, slug: params.slug, name: t.name, brand: p.brand, price: p.price, active: p.active, stock: p.stock, images: p.images }}
+              labels={{ delivery: d.delivery }}
             />
           </div>
         </div>

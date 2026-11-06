@@ -8,7 +8,7 @@ export function LanguageSwitcher({ locale }: { locale: Locale }) {
   const params = useSearchParams();
   // Editorial and account routes have no translated counterpart.
   const supported =
-    /^\/(?:fr\/|it\/|pt\/)?(?:tienda(?:\/|$)|contacto$|nosotros$|reparaciones$|matriculaciones$|aviso-legal$|privacidad$|cookies$|condiciones-compra$|carrito$|checkout$)/.test(
+    /^\/(?:fr\/|it\/|pt\/)?(?:tienda(?:\/|$)|contacto$|nosotros$|reparaciones$|matriculaciones$|aviso-legal$|privacidad$|cookies$|condiciones-compra$|carrito$|checkout(?:\/confirmacion)?$)/.test(
       path,
     ) || /^\/(fr|it|pt)?$/.test(path);
   const target = supported

@@ -87,22 +87,14 @@ test("campaign attribution does not break the catalogue or pollute canonicals", 
   assert.equal(query.filtered, false);
   assert.equal(catalogPath("fr", query), "/fr/tienda?cat=patinete");
 });
-test("purchase requires stock, active record, valid original Stripe link and consent", () => {
-  const p = {
-    active: true,
-    stock: 1,
-    stripeLink: "https://buy.stripe.com/test_abc",
-  };
+test("purchase requires stock, an active record and consent, without legacy payment links", () => {
+  const p = { active: true, stock: 1 };
   assert.equal(purchaseEligible(p, true), true);
-  for (const change of [
-    { stock: 0 },
-    { active: false },
-    { stripeLink: "javascript:alert(1)" },
-    { stripeLink: "https://buy.stripe.com.evil.example/x" },
-  ])
-    assert.equal(purchaseEligible({ ...p, ...change }, true), false);
+  assert.equal(purchaseEligible({ ...p, stock: 0 }, true), false);
+  assert.equal(purchaseEligible({ ...p, active: false }, true), false);
   assert.equal(purchaseEligible(p, false), false);
 });
+
 test("translations require an exact current source hash and complete fields", () => {
   const p = {
     id: "one",

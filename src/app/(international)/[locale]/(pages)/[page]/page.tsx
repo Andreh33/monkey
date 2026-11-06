@@ -1,4 +1,7 @@
 import type { Metadata } from "next";
+import { CartPage } from "@/components/shop/CartPage";
+import { CheckoutPage } from "@/components/shop/CheckoutPage";
+import { checkoutCopy } from "@/lib/checkout-copy";
 import { notFound } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
@@ -44,8 +47,8 @@ function titleFor(locale: Locale, slug: string) {
       nosotros: d.about,
       reparaciones: d.repairs,
       matriculaciones: d.registration,
-      carrito: d.purchase,
-      checkout: d.purchase,
+      carrito: checkoutCopy[locale].cart,
+      checkout: checkoutCopy[locale].checkout,
       "aviso-legal": d.legal,
       privacidad: d.privacy,
       cookies: d.cookies,
@@ -132,17 +135,8 @@ export default function Page({ params }: Props) {
       </>
     );
   }
-  if (["carrito", "checkout"].includes(slug))
-    return (
-      <section className="container-custom py-16 max-w-3xl">
-        <h1 className="display-lg mb-8">{title}</h1>
-        <p className="text-lg text-text-secondary leading-relaxed">{d.guide}</p>
-        <p className="text-text-secondary leading-relaxed mt-5">{d.delivery}</p>
-        <Link href={localePath(locale, "/tienda")} className="btn-primary mt-8">
-          {d.back}
-        </Link>
-      </section>
-    );
+  if (slug === "carrito") return <CartPage locale={locale} />;
+  if (slug === "checkout") return <CheckoutPage locale={locale} />;
   if (slug === "contacto")
     return (
       <section className="container-custom py-16">

@@ -1,154 +1,23 @@
 "use client";
-
-import { useState } from "react";
-import Link from "next/link";
-import { ExternalLink, MessageCircle, Share2 } from "lucide-react";
-// Carrito desactivado: compras directas via Stripe
-// import { Minus, Plus, ShoppingCart } from "lucide-react";
-// import { useCart } from "@/lib/cart-store";
+import { MessageCircle, Share2 } from "lucide-react";
 import { toast } from "sonner";
 import { productWhatsAppUrl } from "@/lib/whatsapp";
-import { purchaseEligible } from "@/lib/purchase";
-
-type Props = {
-  product: {
-    id: string;
-    slug: string;
-    name: string;
-    brand?: string | null;
-    price: number;
-    stripeLink: string;
-    active: boolean;
-    stock: number;
-    images: { url: string }[];
-  };
-};
-
-export function ProductActions({ product }: Props) {
-  // Carrito desactivado
-  // const [qty, setQty] = useState(1);
-  // const { addItem, setOpen } = useCart();
-  const [accepted, setAccepted] = useState(false);
-
-  const handleBuy = () => {
-    if (!purchaseEligible(product, accepted)) return;
-    if (!accepted) {
-      toast.error("Debes aceptar las condiciones de compra para continuar.");
-      return;
-    }
-    if (product.stripeLink) {
-      window.open(product.stripeLink, "_blank", "noopener,noreferrer");
-    } else {
-      toast.error("Link de pago no disponible. Contáctanos directamente.");
-    }
-  };
-
-  const handleShare = async () => {
-    const url = window.location.href;
-    // Móvil: hoja de compartir nativa. Escritorio: copiar enlace.
+import { AddToCart, type BuyableProduct } from "./AddToCart";
+export function ProductActions({ product }: { product: BuyableProduct }) {
+  async function share() {
     if (navigator.share) {
-      try {
-        await navigator.share({
-          title: product.name,
-          text: `Mira el ${product.name} en MonkeyMotion`,
-          url,
-        });
-        return;
-      } catch (err) {
-        // El usuario canceló la hoja de compartir: no mostramos error.
-        if (err instanceof Error && err.name === "AbortError") return;
-      }
+      try { await navigator.share({ title: product.name, url: window.location.href }); return; }
+      catch (error) { if (error instanceof Error && error.name === "AbortError") return; }
     }
-    try {
-      await navigator.clipboard.writeText(url);
-      toast.success("Enlace copiado al portapapeles");
-    } catch {
-      toast.error("No se pudo copiar el enlace");
-    }
-  };
-
-  // Carrito desactivado: compras directas via Stripe
-  // const handleAdd = () => {
-  //   addItem(
-  //     {
-  //       id: product.id,
-  //       slug: product.slug,
-  //       name: product.name,
-  //       brand: product.brand,
-  //       price: product.price,
-  //       image: product.images[0]?.url,
-  //       stripeLink: product.stripeLink,
-  //     },
-  //     qty
-  //   );
-  //   toast.success(`${product.name} añadido al carrito`);
-  //   setOpen(true);
-  // };
-
-  return (
-    <div className="space-y-4">
-      {/* Cantidad/carrito desactivado: cada compra va directa a Stripe
-      <div className="flex items-center gap-3">
-        <span className="label-base mb-0">Cantidad</span>
-        <div className="inline-flex items-center border border-border rounded-md">
-          <button onClick={() => setQty((q) => Math.max(1, q - 1))} className="p-2.5 hover:bg-bg-tertiary"><Minus className="w-4 h-4" /></button>
-          <span className="px-5 font-mono font-semibold">{qty}</span>
-          <button onClick={() => setQty((q) => q + 1)} className="p-2.5 hover:bg-bg-tertiary"><Plus className="w-4 h-4" /></button>
-        </div>
-      </div>
-      */}
-      <label className="flex items-start gap-2.5 text-sm text-text-secondary cursor-pointer select-none">
-        <input
-          type="checkbox"
-          checked={accepted}
-          onChange={(e) => setAccepted(e.target.checked)}
-          className="mt-0.5 h-4 w-4 shrink-0 accent-accent-red cursor-pointer"
-        />
-        <span>
-          He leído y acepto las{" "}
-          <Link href="/condiciones-compra" target="_blank" className="text-accent-orange underline underline-offset-2 hover:text-white">
-            Condiciones de compra
-          </Link>{" "}
-          y la{" "}
-          <Link href="/privacidad" target="_blank" className="text-accent-orange underline underline-offset-2 hover:text-white">
-            Política de privacidad
-          </Link>.
-        </span>
-      </label>
-      <button
-        onClick={handleBuy}
-        disabled={!purchaseEligible(product, accepted)}
-        className="btn-primary w-full text-base py-4 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:translate-y-0 disabled:hover:shadow-none"
-      >
-        {product.stock <= 0 ? 'Sin stock' : 'Comprar ahora'}
-        <ExternalLink className="w-4 h-4" />
-      </button>
-      {!purchaseEligible(product, true) && <p className="text-sm text-text-secondary">{product.stock <= 0 ? 'Producto sin stock.' : 'Enlace de pago no disponible.'} <Link href="/contacto" className="text-accent-orange underline">Contacta con nosotros</Link>.</p>}
-      <a
-        href={productWhatsAppUrl(product)}
-        target="_blank"
-        rel="noopener noreferrer"
-        aria-label={`Reservar ${product.name} por WhatsApp para comprarlo en tienda`}
-        className="group flex w-full items-center justify-center gap-3 rounded-md border border-[#20a95a] bg-[#08783e] px-5 py-3.5 text-white shadow-[0_8px_28px_rgba(8,120,62,0.22)] transition-all duration-300 hover:-translate-y-0.5 hover:border-[#2acb6d] hover:bg-[#096b39] hover:shadow-[0_12px_34px_rgba(8,120,62,0.32)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#45d483] focus-visible:ring-offset-2 focus-visible:ring-offset-bg-primary active:translate-y-0"
-      >
-        <MessageCircle className="h-5 w-5 shrink-0" aria-hidden="true" />
-        <span className="min-w-0 text-left leading-tight">
-          <span className="block text-sm font-bold">¿Quieres comprarlo en tienda?</span>
-          <span className="mt-1 block text-xs font-medium text-white/90">
-            Escríbenos por WhatsApp y te lo reservamos
-          </span>
-        </span>
-      </a>
-      <button onClick={handleShare} className="btn-outline w-full text-base py-4">
-        <Share2 className="w-4 h-4" />
-        Compartir
-      </button>
-      {/* Carrito desactivado: compras directas via Stripe
-      <button onClick={handleAdd} className="btn-outline w-full text-base py-4">
-        <ShoppingCart className="w-4 h-4" />
-        Añadir al carrito
-      </button>
-      */}
-    </div>
-  );
+    try { await navigator.clipboard.writeText(window.location.href); toast.success("Enlace copiado al portapapeles"); }
+    catch { toast.error("No se pudo copiar el enlace"); }
+  }
+  return <div className="space-y-4">
+    <AddToCart product={product} />
+    <a href={productWhatsAppUrl(product)} target="_blank" rel="noopener noreferrer" className="flex w-full items-center justify-center gap-3 rounded-md border border-[#20a95a] bg-[#08783e] px-5 py-3.5 text-white hover:bg-[#096b39]">
+      <MessageCircle className="h-5 w-5 shrink-0" aria-hidden="true" />
+      <span className="min-w-0 text-left leading-tight"><span className="block text-sm font-bold">¿Quieres comprarlo en tienda?</span><span className="mt-1 block text-xs text-white/90">Escríbenos por WhatsApp y te lo reservamos</span></span>
+    </a>
+    <button type="button" onClick={share} className="btn-outline w-full py-4"><Share2 size={16} />Compartir</button>
+  </div>;
 }

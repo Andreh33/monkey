@@ -19,6 +19,7 @@ export default async function AdminProductos() {
           <p className="text-text-secondary">{products.length} productos en catálogo</p>
         </div>
         <div className="flex gap-3 flex-wrap">
+          <Link href="/admin/productos/publicar" className="btn-outline">Publicar ocultos</Link>
           <Link href="/admin/productos/importar" className="btn-outline">Importar borradores</Link>
           <Link href="/admin/productos/nuevo" className="btn-primary">
             <Plus className="w-4 h-4" /> Nuevo producto

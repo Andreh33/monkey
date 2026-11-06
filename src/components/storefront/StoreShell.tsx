@@ -2,6 +2,8 @@ import Link from "next/link";
 import { Suspense } from "react";
 import { copy, countryName } from "@/lib/storefront-copy";
 import { localePath, type Locale } from "@/lib/storefront-routes";
+import { CartButton } from "@/components/shop/CartButton";
+import { checkoutCopy } from "@/lib/checkout-copy";
 import { LanguageSwitcher } from "./LanguageSwitcher";
 export function StoreHeader({ locale }: { locale: Locale }) {
   const d = copy[locale];
@@ -15,7 +17,7 @@ export function StoreHeader({ locale }: { locale: Locale }) {
           >
             MONOPATÍN <span className="text-accent-orange">MONKEY</span>
           </Link>
-          <span className="text-xs font-mono text-text-muted">TARRAGONA</span>
+          <div className="flex items-center gap-3"><span className="hidden sm:block text-xs font-mono text-text-muted">TARRAGONA</span><CartButton locale={locale} /></div>
         </div>
         <nav
           aria-label={d.shop}
@@ -62,7 +64,7 @@ export function StoreFooter({ locale }: { locale: Locale }) {
             ["/privacidad", d.privacy],
             ["/aviso-legal", d.legal],
             ["/cookies", d.cookies],
-            ["/carrito", d.purchase],
+            ["/carrito", checkoutCopy[locale].cart],
             ["/contacto", d.contact],
           ].map(([url, label]) => (
             <Link

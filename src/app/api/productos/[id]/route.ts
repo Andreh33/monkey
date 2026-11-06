@@ -3,6 +3,7 @@ import { z } from "zod";
 import { getServerSession } from "next-auth";
 import { authOptions } from "@/lib/auth";
 import { prisma } from "@/lib/prisma";
+import { revalidateCatalog } from "@/lib/catalog-cache";
 
 export const dynamic = "force-dynamic";
 
@@ -23,15 +24,12 @@ const updateSchema = z.object({
   battery: z.string().optional().nullable(),
   weight: z.coerce.number().optional().nullable(),
   maxLoad: z.coerce.number().int().optional().nullable(),
-  stripeLink: z.union([z.string().url(), z.literal("")]),
+  stripeLink: z.union([z.string().url(), z.literal("")]).optional().default(""),
   shippingCost: z.coerce.number().nonnegative().nullable().optional(),
   youtubeUrl: z.string().url().nullable().optional().or(z.literal("").transform(() => null)),
   featured: z.boolean(),
   active: z.boolean(),
   images: z.array(z.object({ url: z.string(), alt: z.string().optional().nullable() })).default([]),
-}).refine((product) => !product.active || product.stripeLink.length > 0, {
-  path: ["stripeLink"],
-  message: "Añade el enlace de pago antes de activar el producto.",
 });
 
 async function requireAdmin() {
@@ -55,8 +53,6 @@ export async function PATCH(req: Request, { params }: { params: { id: string } }
   try {
     const body = await req.json();
     const data = updateSchema.parse(body);
-
-    await prisma.productImage.deleteMany({ where: { productId: params.id } });
 
     const updated = await prisma.product.update({
       where: { id: params.id },
@@ -83,10 +79,12 @@ export async function PATCH(req: Request, { params }: { params: { id: string } }
         featured: data.featured,
         active: data.active,
         images: {
+          deleteMany: {},
           create: data.images.map((img, idx) => ({ url: img.url, alt: img.alt || data.name, order: idx })),
         },
       },
     });
+    revalidateCatalog();
     return NextResponse.json(updated);
   } catch (err) {
     if (err instanceof z.ZodError) return NextResponse.json({ ok: false, errors: err.errors }, { status: 400 });
@@ -97,5 +95,6 @@ export async function PATCH(req: Request, { params }: { params: { id: string } }
 export async function DELETE(_req: Request, { params }: { params: { id: string } }) {
   if (!(await requireAdmin())) return NextResponse.json({ ok: false }, { status: 403 });
   await prisma.product.delete({ where: { id: params.id } });
+  revalidateCatalog();
   return NextResponse.json({ ok: true });
 }

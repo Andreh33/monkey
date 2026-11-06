@@ -84,7 +84,7 @@ export function ProductForm({ product, categories = [] }: { product?: Product; c
       battery: String(fd.get("battery") ?? "") || null,
       weight: fd.get("weight") ? Number(fd.get("weight")) : null,
       maxLoad: fd.get("maxLoad") ? Number(fd.get("maxLoad")) : null,
-      stripeLink: String(fd.get("stripeLink") ?? ""),
+      stripeLink: product?.stripeLink ?? "",
       shippingCost: fd.get("shippingCost") !== null && fd.get("shippingCost") !== "" ? Number(fd.get("shippingCost")) : null,
       youtubeUrl: String(fd.get("youtubeUrl") ?? "").trim() || null,
       featured: fd.get("featured") === "on",
@@ -126,9 +126,9 @@ export function ProductForm({ product, categories = [] }: { product?: Product; c
 
       <Section title="Precio y stock">
         <div className="grid sm:grid-cols-3 gap-4">
-          <div><Label>Precio (€) *</Label><input name="price" type="number" step="0.01" required defaultValue={product?.price} className="input-base" /></div>
+          <div><Label>Precio (€) *</Label><input name="price" type="number" step="0.01" min="0.01" required defaultValue={product?.price} className="input-base" /><p className="text-xs text-text-muted mt-1">Este es el precio que se cobrará en el carrito, IVA incluido.</p></div>
           <div><Label>Precio anterior</Label><input name="compareAt" type="number" step="0.01" defaultValue={product?.compareAt ?? ""} className="input-base" /></div>
-          <div><Label>Stock</Label><input name="stock" type="number" defaultValue={product?.stock ?? 0} className="input-base" /></div>
+          <div><Label>Stock</Label><input name="stock" type="number" min="0" step="1" defaultValue={product?.stock ?? 0} className="input-base" /></div>
           <div><Label>SKU</Label><input name="sku" defaultValue={product?.sku ?? ""} className="input-base" /></div>
           <div>
             <Label>Categoría *</Label>
@@ -166,7 +166,7 @@ export function ProductForm({ product, categories = [] }: { product?: Product; c
           </div>
           <div><Label>Marca</Label><input name="brand" defaultValue={product?.brand ?? ""} className="input-base" /></div>
           <div>
-            <Label>Coste de envío (€)</Label>
+            <Label>Envío por unidad (€)</Label>
             <input
               name="shippingCost"
               type="number"
@@ -176,6 +176,7 @@ export function ProductForm({ product, categories = [] }: { product?: Product; c
               className="input-base"
               placeholder="Vacío = envío gratis"
             />
+            <p className="text-xs text-text-muted mt-1">Se suma por cada unidad del carrito. Vacío o cero significa envío gratis.</p>
           </div>
         </div>
       </Section>
@@ -189,12 +190,6 @@ export function ProductForm({ product, categories = [] }: { product?: Product; c
           <div><Label>Peso (kg)</Label><input name="weight" type="number" step="0.1" defaultValue={product?.weight ?? ""} className="input-base" /></div>
           <div><Label>Carga máx. (kg)</Label><input name="maxLoad" type="number" defaultValue={product?.maxLoad ?? ""} className="input-base" /></div>
         </div>
-      </Section>
-
-      <Section title="🔗 Link de Stripe" className="border-2 border-accent-orange/40 bg-accent-orange/5">
-        <Label>URL de Payment Link de Stripe{active ? " *" : " (opcional en borrador)"}</Label>
-        <input name="stripeLink" required={active} type="url" defaultValue={product?.stripeLink} className="input-base" placeholder="https://buy.stripe.com/..." />
-        <p className="text-xs text-text-muted mt-2">Puedes guardar un borrador sin enlace de pago. Añádelo antes de activar el producto.</p>
       </Section>
 
       <Section title="🎬 Video de YouTube">

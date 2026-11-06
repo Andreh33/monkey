@@ -5,9 +5,7 @@ import { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
 import { User, Menu, X, ChevronDown, Search } from "lucide-react";
 import { SearchBox } from "@/components/shop/SearchBox";
-// Carrito desactivado: compras directas via Stripe
-// import { ShoppingCart } from "lucide-react";
-// import { useCart } from "@/lib/cart-store";
+import { CartButton } from "@/components/shop/CartButton";
 import { useSession } from "next-auth/react";
 import { cn } from "@/lib/utils";
 import type { CategoryNode } from "@/lib/categories";
@@ -28,9 +26,6 @@ export function Navbar({ categories = [] }: { categories?: CategoryNode[] }) {
   const [searchOpen, setSearchOpen] = useState(false);
   const [mobileShopOpen, setMobileShopOpen] = useState(false);
   const pathname = usePathname();
-  // Carrito desactivado
-  // const { items, setOpen: openCart } = useCart();
-  // const totalItems = items.reduce((acc, i) => acc + i.quantity, 0);
   const { data: session } = useSession();
   const hasMenu = categories.length > 0;
 
@@ -86,20 +81,7 @@ export function Navbar({ categories = [] }: { categories?: CategoryNode[] }) {
         </nav>
 
         <div className="flex items-center gap-2">
-          {/* Carrito desactivado: compras directas via Stripe
-          <button
-            onClick={() => openCart(true)}
-            className="relative p-2.5 rounded-md hover:bg-bg-tertiary transition-colors"
-            aria-label="Carrito"
-          >
-            <ShoppingCart className="w-5 h-5" />
-            {totalItems > 0 && (
-              <span className="absolute -top-1 -right-1 min-w-[18px] h-[18px] px-1 rounded-full text-[10px] font-bold flex items-center justify-center bg-accent-red text-white">
-                {totalItems}
-              </span>
-            )}
-          </button>
-          */}
+          <CartButton />
 
           <button
             onClick={() => setSearchOpen((v) => !v)}

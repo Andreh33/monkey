@@ -1,0 +1,11 @@
+# Carrito, pagos y pedidos Monkey
+
+Descripción aprobada por Andrés en el chat: todos los productos, antiguos y nuevos, se pagan mediante carrito y Stripe dinámico; precio editable desde admin, sin enlaces manuales. Recoger nombre, apellidos, correo, teléfono y dirección completa; guardar el pedido y sus datos en admin; confirmar únicamente un pago verificado. Publicar todos los ocultos con stock y precio correcto después de comprobar integración.
+
+Decisiones: mantener Next.js14/Prisma/libSQL y diseño existente, Checkout alojado por Stripe y métodos dinámicos. El servidor consulta precios/stock/actividad y calcula céntimos, snapshots y total. IVA ya incluido; no sumar impuestos por segunda vez. Cada unidad suma su tarifa de envío, expresamente indicado por Andrés. Conservar tarifas de122antiguos, incluidos vacíos tratados como gratis en el admin actual. Nuevos artículos mínimo5EUR; vehículos usar equivalentes existentes, no tarifa100general. Root prepara tabla de tarifas revisable antesdepublicar. Países según condiciones existentes; verificar ES/FR/IT/PT antesactivación.
+
+Pedido invitado permitido. Token aleatorio256bits del navegador, sólohashalmacenado y protección bearer paraestado; nuncaPIIporIDpúblico. Guardar datos servidor antesdeirStripe; no persistir PII en localStorage. Separar statusfinanciero PENDING/PAID/FAILED/EXPIRED de fulfillmentStatus UNFULFILLED/PREPARING/SHIPPED/DELIVERED. Logística sólo tras pago. Mantener histórico existente.
+
+Reserva stock transaccional y atómica al crear pedido. Reintentos idempotentes mismo token/payload y parámetrosStripe; snapshot inmutable. Webhook firmado marca pagado sólo payment_status paid yimporte/moneda coincidentes; eventosduplicados no repiten stock. Expiración/fallo autoritativo libera reserva exactamenteuna vez; no liberar sólo por reloj antesdeconsultarStripe. Éxito de URL nunca prueba pago.
+
+Scope: catálogo completo y cuatro idiomas; conservar servicio independiente de matriculaciones. No cobrar tarjetas reales en pruebas. Secretos sólo variables servidorprotegidas; no repositorio/logs. Publicar sólo despuéspruebas/configuración. No prometer ausenciaabsoluta de fallos, sí verificar comportamientoscríticos ydocumentarlímites.

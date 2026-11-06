@@ -1,26 +1,36 @@
 import Link from "next/link";
 import { prisma } from "@/lib/prisma";
-import { Package, Wrench, TrendingUp } from "lucide-react"; // ShoppingCart desactivado (Pedidos)
+import { Package, Wrench, TrendingUp, ShoppingCart } from "lucide-react";
 import { formatPrice } from "@/lib/utils";
+import { formatOrderMoney, orderReference, orderTotalCents, paidOrderStates, paymentLabel } from "@/lib/order-display";
+import { getServerSession } from "next-auth";
+import { redirect } from "next/navigation";
+import { authOptions } from "@/lib/auth";
+
+export const dynamic = "force-dynamic";
 
 export default async function AdminDashboard() {
-  // Pedidos desactivado: se comentan orderCount y recentOrders.
-  const [productCount, /* orderCount, */ repairsPending, recentRepairs, /* recentOrders, */ monthIncome] =
+  const session = await getServerSession(authOptions);
+  if (!session?.user || (session.user as { role?: string }).role !== "ADMIN") redirect("/admin/login");
+  const [productCount, orderCount, repairsPending, recentRepairs, recentOrders, monthIncome] =
     await Promise.all([
       prisma.product.count(),
-      // prisma.order.count(),
+      prisma.order.count(),
       prisma.repairRequest.count({ where: { status: "NEW" } }),
       prisma.repairRequest.findMany({ orderBy: { createdAt: "desc" }, take: 5 }),
-      // prisma.order.findMany({ orderBy: { createdAt: "desc" }, take: 5 }),
+      prisma.order.findMany({ orderBy: { createdAt: "desc" }, take: 5 }),
       prisma.order.aggregate({
-        where: { createdAt: { gte: new Date(new Date().getFullYear(), new Date().getMonth(), 1) } },
+        where: { status: { in: paidOrderStates }, OR: [
+          { paidAt: { gte: new Date(new Date().getFullYear(), new Date().getMonth(), 1) } },
+          { paidAt: null, createdAt: { gte: new Date(new Date().getFullYear(), new Date().getMonth(), 1) } },
+        ] },
         _sum: { total: true },
       }),
     ]);
 
   const cards = [
     { label: "Productos", value: productCount, icon: Package, color: "text-accent-orange" },
-    // { label: "Pedidos", value: orderCount, icon: ShoppingCart, color: "text-accent-orange" }, // Pedidos desactivado
+    { label: "Pedidos", value: orderCount, icon: ShoppingCart, color: "text-accent-orange" },
     { label: "Reparaciones nuevas", value: repairsPending, icon: Wrench, color: "text-accent-red" },
     { label: "Ingresos mes", value: `${formatPrice(monthIncome._sum.total ?? 0)}€`, icon: TrendingUp, color: "text-success" },
   ];
@@ -36,7 +46,7 @@ export default async function AdminDashboard() {
   return (
     <div>
       <h1 className="display-md mb-2">Dashboard</h1>
-      <p className="text-text-secondary mb-8">Resumen de actividad del taller</p>
+      <p className="text-text-secondary mb-8">Resumen de pedidos y actividad del taller</p>
 
       <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 mb-10">
         {cards.map((c) => {
@@ -78,7 +88,6 @@ export default async function AdminDashboard() {
           )}
         </div>
 
-        {/* Pedidos desactivado: sección "Últimos pedidos" comentada.
         <div className="card-base p-6">
           <div className="flex items-center justify-between mb-5">
             <h2 className="font-display text-2xl tracking-wider">Últimos pedidos</h2>
@@ -91,16 +100,17 @@ export default async function AdminDashboard() {
               {recentOrders.map((o) => (
                 <li key={o.id} className="py-3 flex items-center justify-between">
                   <div>
-                    <p className="font-mono text-sm">#{o.id.slice(-6).toUpperCase()}</p>
+                    <Link href={`/admin/pedidos/${o.id}`} className="font-mono text-sm text-accent-orange hover:underline">{orderReference(o.id)}</Link>
                     <p className="text-xs text-text-muted">{o.email}</p>
+                    <p className="text-xs text-text-muted">{paymentLabel(o.status)}</p>
+                    {o.stockIssue && <p className="text-xs font-semibold text-accent-orange">Revisar stock</p>}
                   </div>
-                  <p className="price-mono">{formatPrice(o.total)}€</p>
+                  <p className="price-mono">{formatOrderMoney(orderTotalCents(o))}</p>
                 </li>
               ))}
             </ul>
           )}
         </div>
-        */}
       </div>
     </div>
   );

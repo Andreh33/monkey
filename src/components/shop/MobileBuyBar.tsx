@@ -8,7 +8,6 @@ type Props = {
     price: number;
     active: boolean;
     stock: number;
-    stripeLink: string;
     motorPower?: number | null;
   };
 };

@@ -3,14 +3,19 @@ import { authOptions } from "@/lib/auth";
 import { prisma } from "@/lib/prisma";
 import { redirect } from "next/navigation";
 import { Package } from "lucide-react";
-import { formatPrice } from "@/lib/utils";
+import Link from "next/link";
+import { formatOrderMoney, fulfillmentLabels, fulfillmentValue, orderReference, orderTotalCents, paymentLabel } from "@/lib/order-display";
+
+export const dynamic = "force-dynamic";
 
 export default async function PedidosPage() {
   const session = await getServerSession(authOptions);
   if (!session?.user) redirect("/login");
+  const userId = (session.user as { id?: string }).id;
+  if (!userId) redirect("/login");
 
   const orders = await prisma.order.findMany({
-    where: { userId: (session.user as { id: string }).id },
+    where: { userId },
     orderBy: { createdAt: "desc" },
   });
 
@@ -38,10 +43,10 @@ export default async function PedidosPage() {
             <tbody>
               {orders.map((o) => (
                 <tr key={o.id} className="border-t border-border">
-                  <td className="px-4 py-3 font-mono">#{o.id.slice(-6).toUpperCase()}</td>
+                  <td className="px-4 py-3 font-mono"><Link className="text-accent-orange hover:underline" href={`/cuenta/pedidos/${o.id}`}>{orderReference(o.id)}</Link></td>
                   <td className="px-4 py-3 text-text-secondary">{new Date(o.createdAt).toLocaleDateString("es-ES")}</td>
-                  <td className="px-4 py-3"><span className="px-2 py-1 text-xs rounded-full bg-bg-tertiary text-text-secondary uppercase tracking-wider font-mono">{o.status}</span></td>
-                  <td className="px-4 py-3 font-mono text-right">{formatPrice(o.total)}€</td>
+                  <td className="px-4 py-3"><span className="px-2 py-1 text-xs rounded-full bg-bg-tertiary text-text-secondary font-mono">{paymentLabel(o.status)}</span><p className="text-xs text-text-muted mt-2">{fulfillmentLabels[fulfillmentValue(o)]}</p></td>
+                  <td className="px-4 py-3 font-mono text-right">{formatOrderMoney(orderTotalCents(o))}</td>
                 </tr>
               ))}
             </tbody>

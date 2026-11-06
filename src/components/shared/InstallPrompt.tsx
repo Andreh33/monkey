@@ -14,7 +14,7 @@ const DISMISS_KEY = "pwa-install-dismissed";
 
 export function InstallPrompt() {
   const pathname = usePathname();
-  const hide = pathname?.startsWith("/admin");
+  const hide = pathname?.startsWith("/admin") || /^\/(?:(?:es|fr|it|pt)\/)?(?:carrito|checkout)(?:\/|$)/.test(pathname ?? "");
 
   const [deferred, setDeferred] = useState<BeforeInstallPromptEvent | null>(null);
   const [show, setShow] = useState(false);
