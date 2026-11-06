@@ -38,7 +38,7 @@ const load = cache(async (key: string) => {
   };
   const query = catalogQuery(input);
   if (!query.valid) notFound();
-  const categories = await getCategoryTree();
+  const categories = await getCategoryTree({ onlyWithActiveProducts: true });
   const category = categories.find((c) => c.slug === query.cat);
   if (query.cat && !category) notFound();
   if (

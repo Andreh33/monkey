@@ -37,6 +37,7 @@ export function ProductForm({ product, categories = [] }: { product?: Product; c
   const router = useRouter();
   const isEdit = !!product?.id;
   const [loading, setLoading] = useState(false);
+  const [active, setActive] = useState(product?.active ?? true);
   const [images, setImages] = useState<UploadedImage[]>(
     (product?.images ?? []).map((img, i) => ({ id: `existing-${i}`, url: img.url, alt: img.alt ?? undefined }))
   );
@@ -191,9 +192,9 @@ export function ProductForm({ product, categories = [] }: { product?: Product; c
       </Section>
 
       <Section title="🔗 Link de Stripe" className="border-2 border-accent-orange/40 bg-accent-orange/5">
-        <Label>URL de Payment Link de Stripe *</Label>
-        <input name="stripeLink" required type="url" defaultValue={product?.stripeLink} className="input-base" placeholder="https://buy.stripe.com/..." />
-        <p className="text-xs text-text-muted mt-2">El botón "Comprar ahora" del cliente redirigirá a este link en una nueva pestaña.</p>
+        <Label>URL de Payment Link de Stripe{active ? " *" : " (opcional en borrador)"}</Label>
+        <input name="stripeLink" required={active} type="url" defaultValue={product?.stripeLink} className="input-base" placeholder="https://buy.stripe.com/..." />
+        <p className="text-xs text-text-muted mt-2">Puedes guardar un borrador sin enlace de pago. Añádelo antes de activar el producto.</p>
       </Section>
 
       <Section title="🎬 Video de YouTube">
@@ -219,7 +220,7 @@ export function ProductForm({ product, categories = [] }: { product?: Product; c
             <span>Producto destacado</span>
           </label>
           <label className="flex items-center gap-2 text-sm">
-            <input type="checkbox" name="active" defaultChecked={product?.active ?? true} className="accent-accent-red w-4 h-4" />
+            <input type="checkbox" name="active" checked={active} onChange={(e) => setActive(e.target.checked)} className="accent-accent-red w-4 h-4" />
             <span>Activo (visible en tienda)</span>
           </label>
         </div>

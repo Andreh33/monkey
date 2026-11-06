@@ -20,7 +20,7 @@ export type CategoryNode = {
  * `order` y luego alfabéticamente. Se usa en la navbar (megamenú), la tienda
  * (filtros), el formulario de productos y el panel de admin.
  */
-export async function getCategoryTree(): Promise<CategoryNode[]> {
+export async function getCategoryTree(options: { onlyWithActiveProducts?: boolean } = {}): Promise<CategoryNode[]> {
   const cats = await prisma.category.findMany({
     orderBy: [{ order: "asc" }, { name: "asc" }],
     include: {
@@ -28,12 +28,20 @@ export async function getCategoryTree(): Promise<CategoryNode[]> {
     },
   });
 
-  return cats.map((c) => ({
+  const activeProducts = options.onlyWithActiveProducts ? await prisma.product.findMany({
+    where: { active: true },
+    select: { category: true, subcategory: true },
+    distinct: ["category", "subcategory"],
+  }) : null;
+  const visibleCategories = activeProducts ? new Set(activeProducts.map(p => p.category)) : null;
+  const visibleSubcategories = activeProducts ? new Set(activeProducts.map(p => `${p.category}\u0000${p.subcategory}`)) : null;
+
+  return cats.filter(c => !visibleCategories || visibleCategories.has(c.slug)).map((c) => ({
     id: c.id,
     slug: c.slug,
     name: c.name,
     order: c.order,
-    subcategories: c.subcategories.map((s) => ({
+    subcategories: c.subcategories.filter(s => !visibleSubcategories || visibleSubcategories.has(`${c.slug}\u0000${s.slug}`)).map((s) => ({
       id: s.id,
       slug: s.slug,
       name: s.name,

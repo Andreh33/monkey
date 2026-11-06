@@ -35,7 +35,7 @@ export default async function Page({ params }: { params: { locale: string } }) {
       orderBy: [{ createdAt: "desc" }, { id: "asc" }],
       take: 6,
     }),
-    getCategoryTree(),
+    getCategoryTree({ onlyWithActiveProducts: true }),
   ]);
   const cards = await localizeCards(products, locale);
   return (

@@ -100,7 +100,7 @@ export const viewport: Viewport = {
 };
 
 export default async function RootLayout({ children }: { children: React.ReactNode }) {
-  const categories = await getCategoryTree();
+  const categories = await getCategoryTree({ onlyWithActiveProducts: true });
   return (
     <html
       lang="es"

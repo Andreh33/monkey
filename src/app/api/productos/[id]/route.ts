@@ -4,6 +4,8 @@ import { getServerSession } from "next-auth";
 import { authOptions } from "@/lib/auth";
 import { prisma } from "@/lib/prisma";
 
+export const dynamic = "force-dynamic";
+
 const updateSchema = z.object({
   name: z.string().min(2),
   shortDesc: z.string(),
@@ -21,12 +23,15 @@ const updateSchema = z.object({
   battery: z.string().optional().nullable(),
   weight: z.coerce.number().optional().nullable(),
   maxLoad: z.coerce.number().int().optional().nullable(),
-  stripeLink: z.string().url(),
+  stripeLink: z.union([z.string().url(), z.literal("")]),
   shippingCost: z.coerce.number().nonnegative().nullable().optional(),
   youtubeUrl: z.string().url().nullable().optional().or(z.literal("").transform(() => null)),
   featured: z.boolean(),
   active: z.boolean(),
   images: z.array(z.object({ url: z.string(), alt: z.string().optional().nullable() })).default([]),
+}).refine((product) => !product.active || product.stripeLink.length > 0, {
+  path: ["stripeLink"],
+  message: "Añade el enlace de pago antes de activar el producto.",
 });
 
 async function requireAdmin() {
@@ -36,12 +41,13 @@ async function requireAdmin() {
 }
 
 export async function GET(_req: Request, { params }: { params: { id: string } }) {
+  const admin = await requireAdmin();
   const product = await prisma.product.findUnique({
     where: { id: params.id },
     include: { images: { orderBy: { order: "asc" } } },
   });
-  if (!product) return NextResponse.json({ ok: false }, { status: 404 });
-  return NextResponse.json(product);
+  if (!product || (!product.active && !admin)) return NextResponse.json({ ok: false }, { status: 404, headers: { "Cache-Control": "private, no-store" } });
+  return NextResponse.json(product, { headers: { "Cache-Control": "private, no-store" } });
 }
 
 export async function PATCH(req: Request, { params }: { params: { id: string } }) {
