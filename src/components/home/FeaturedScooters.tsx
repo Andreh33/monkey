@@ -3,6 +3,7 @@ import { ArrowRight } from "lucide-react";
 import { prisma } from "@/lib/prisma";
 import { ProductCard } from "@/components/shop/ProductCard";
 import { ScrollReveal } from "@/components/shared/ScrollReveal";
+import { PriceMatchBanner } from "@/components/home/PriceMatchBanner";
 
 const HOME_FEATURED_PRODUCT_SLUGS = [
   "patinete-electrico-bison-homologado-dgt",
@@ -66,6 +67,9 @@ export async function FeaturedScooters() {
             <ProductCard product={{ ...p, featured: true }} />
           </ScrollReveal>
         ))}
+      </div>
+      <div className="mt-8">
+        <PriceMatchBanner />
       </div>
     </section>
   );

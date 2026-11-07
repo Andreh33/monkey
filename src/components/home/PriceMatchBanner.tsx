@@ -1,4 +1,4 @@
-import { BadgePercent, MessageCircle } from "lucide-react";
+import { MessageCircle } from "lucide-react";
 import type { Locale } from "@/lib/storefront-routes";
 
 const messages = {
@@ -35,17 +35,14 @@ const messages = {
 export function PriceMatchBanner({ locale = "es" }: { locale?: Locale }) {
   const text = messages[locale];
   return (
-    <aside aria-label={`${text.question} ${text.promise}`} className="border-y border-accent-red/30 bg-bg-secondary">
-      <div className="container-custom flex flex-col gap-4 py-5 lg:flex-row lg:items-center lg:justify-between lg:gap-8">
-        <div className="flex items-start gap-3 sm:gap-4">
-          <span aria-hidden="true" className="mt-0.5 rounded-xl border border-accent-red/30 bg-accent-red/10 p-2.5 text-accent-orange"><BadgePercent className="h-6 w-6" /></span>
-          <div>
-            <p className="font-heading text-lg font-bold leading-snug text-white sm:text-xl">{text.question} <span className="text-accent-orange">{text.promise}</span></p>
-            <p className="mt-1.5 text-sm leading-relaxed text-text-secondary">{text.detail}</p>
-          </div>
+    <aside aria-label={`${text.question} ${text.promise}`} className="rounded-xl border border-border bg-bg-secondary">
+      <div className="flex flex-col gap-3 p-4 sm:p-5 lg:flex-row lg:items-center lg:justify-between lg:gap-6">
+        <div className="min-w-0">
+          <p className="text-base font-semibold leading-snug text-white">{text.question} {text.promise}</p>
+          <p className="mt-1 text-sm leading-relaxed text-text-secondary">{text.detail}</p>
         </div>
-        <a href={`https://wa.me/34616686593?text=${encodeURIComponent(text.message)}`} target="_blank" rel="noopener noreferrer" aria-label={`${text.button} — WhatsApp`} className="inline-flex min-h-11 shrink-0 items-center justify-center gap-2 rounded-lg bg-[#25D366] px-5 py-3 text-sm font-bold text-black transition-colors hover:bg-[#40e27e] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#25D366]">
-          <MessageCircle aria-hidden="true" className="h-5 w-5" />{text.button}
+        <a href={`https://wa.me/34616686593?text=${encodeURIComponent(text.message)}`} target="_blank" rel="noopener noreferrer" aria-label={`${text.button} — WhatsApp`} className="inline-flex min-h-11 shrink-0 self-start items-center justify-center gap-2 rounded-lg border border-[#25D366]/40 px-4 py-2 text-sm font-semibold text-[#25D366] transition-colors hover:bg-[#25D366]/10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#25D366] lg:self-center">
+          <MessageCircle aria-hidden="true" className="h-4 w-4" />{text.button}
         </a>
       </div>
     </aside>

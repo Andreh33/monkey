@@ -41,7 +41,6 @@ export default async function Page({ params }: { params: { locale: string } }) {
   const cards = await localizeCards(products, locale);
   return (
     <>
-      <PriceMatchBanner locale={locale} />
       <section className="relative min-h-[500px] flex items-center overflow-hidden">
         <Image
           priority
@@ -83,16 +82,21 @@ export default async function Page({ params }: { params: { locale: string } }) {
           ))}
         </nav>
       </section>
-      {cards.length > 0 && (
-        <section className="container-custom pb-16">
-          <h2 className="display-md mb-8">{d.selection}</h2>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {cards.map((p) => (
-              <ProductTile key={p.id} product={p} locale={locale} />
-            ))}
-          </div>
-        </section>
-      )}
+      <section className="container-custom pb-16">
+        {cards.length > 0 && (
+          <>
+            <h2 className="display-md mb-8">{d.selection}</h2>
+            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+              {cards.map((p) => (
+                <ProductTile key={p.id} product={p} locale={locale} />
+              ))}
+            </div>
+          </>
+        )}
+        <div className="mt-8">
+          <PriceMatchBanner locale={locale} />
+        </div>
+      </section>
       <section className="border-y border-border bg-bg-secondary">
         <div className="container-custom py-16 grid md:grid-cols-2 gap-12">
           <div>
