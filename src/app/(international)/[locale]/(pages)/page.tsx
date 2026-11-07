@@ -83,6 +83,9 @@ export default async function Page({ params }: { params: { locale: string } }) {
         </nav>
       </section>
       <section className="container-custom pb-16">
+        <div className="mb-10 sm:mb-12">
+          <PriceMatchBanner locale={locale} />
+        </div>
         {cards.length > 0 && (
           <>
             <h2 className="display-md mb-8">{d.selection}</h2>
@@ -93,9 +96,6 @@ export default async function Page({ params }: { params: { locale: string } }) {
             </div>
           </>
         )}
-        <div className="mt-8">
-          <PriceMatchBanner locale={locale} />
-        </div>
       </section>
       <section className="border-y border-border bg-bg-secondary">
         <div className="container-custom py-16 grid md:grid-cols-2 gap-12">

@@ -47,6 +47,9 @@ export async function FeaturedScooters() {
 
   return (
     <section className="section-pad container-custom">
+      <div className="mb-10 sm:mb-12">
+        <PriceMatchBanner />
+      </div>
       <ScrollReveal>
         <div className="flex items-end justify-between flex-wrap gap-4 mb-12">
           <div>
@@ -67,9 +70,6 @@ export async function FeaturedScooters() {
             <ProductCard product={{ ...p, featured: true }} />
           </ScrollReveal>
         ))}
-      </div>
-      <div className="mt-8">
-        <PriceMatchBanner />
       </div>
     </section>
   );
