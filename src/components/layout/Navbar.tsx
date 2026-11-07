@@ -182,13 +182,13 @@ function MegaMenu({ active, categories }: { active: boolean; categories: Categor
 
       {/* El pt-3 crea un puente invisible para que el hover no se corte. */}
       <div className="absolute left-0 top-full pt-3 z-50 hidden group-hover:block group-focus-within:block">
-        <div className="w-[min(92vw,640px)] rounded-xl border border-border bg-[rgba(40,40,47,0.6)] backdrop-blur-xl shadow-2xl p-5">
+        <div className="w-[min(92vw,640px)] max-h-[70vh] overflow-y-auto overscroll-contain rounded-xl border border-border bg-[rgba(40,40,47,0.6)] backdrop-blur-xl shadow-2xl p-5">
           <div className="grid grid-cols-2 sm:grid-cols-3 gap-x-6 gap-y-5">
             {categories.map((c) => (
               <div key={c.id} className="min-w-0">
                 <Link
                   href={`/tienda?cat=${c.slug}`}
-                  className="block text-sm font-semibold text-white hover:text-accent-red transition-colors truncate"
+                  className="block text-sm font-semibold text-white hover:text-accent-red transition-colors"
                 >
                   {c.name}
                 </Link>

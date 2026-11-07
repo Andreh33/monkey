@@ -1,6 +1,6 @@
 {
   "framework": "nextjs",
-  "buildCommand": "prisma generate && node scripts/migrate-checkout.mjs && next build",
+  "buildCommand": "prisma generate && node scripts/migrate-checkout.mjs && node scripts/migrate-vehicle-categories.mjs && next build",
   "installCommand": "npm install",
   "regions": ["fra1"],
   "redirects": [

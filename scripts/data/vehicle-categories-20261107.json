@@ -1,0 +1,2392 @@
+{
+  "migration": "20261107010000_split_vehicle_categories",
+  "source": {
+    "id": "cmpl958uw0000lw8i4k4at0zg",
+    "slug": "vehiculos",
+    "subcategories": [
+      {
+        "id": "cmw5eszjg00be14a4egmhdpoi",
+        "slug": "coches-electricos-infantiles"
+      },
+      {
+        "id": "cmpl9o4qk0004lw8iei3flcae",
+        "slug": "minimotos-gasolina"
+      },
+      {
+        "id": "cmpl9oj740006lw8i9pcca7pt",
+        "slug": "minimotos-electricas"
+      },
+      {
+        "id": "cmpl9pf40000alw8ipn8hsemq",
+        "slug": "mini-quads-gasolina"
+      },
+      {
+        "id": "cmpl9pqwk000clw8ipbne8me6",
+        "slug": "mini-quads-electricos"
+      },
+      {
+        "id": "cmr6jsn5s000skx5v9uuocvin",
+        "slug": "motos-matriculables"
+      },
+      {
+        "id": "cmpl9qjkp000glw8i1b1qcpfq",
+        "slug": "pit-bikes-de-gasolina"
+      },
+      {
+        "id": "cmr9baoab000ll8hxcv7v4cuv",
+        "slug": "hoverboard"
+      },
+      {
+        "id": "cmpl9qvcs000ilw8ifbaq1ems",
+        "slug": "pit-bikes-electricas"
+      },
+      {
+        "id": "cmpl9r9mz000klw8ix9tsrkej",
+        "slug": "buggies"
+      }
+    ]
+  },
+  "categories": [
+    {
+      "id": "taxonomy20261107_pit-bikes",
+      "slug": "pit-bikes",
+      "name": "Pit bikes y motocross",
+      "order": 3,
+      "subcategories": [
+        {
+          "id": "cmpl9qjkp000glw8i1b1qcpfq",
+          "slug": "pit-bikes-de-gasolina",
+          "name": "Gasolina",
+          "order": 0,
+          "moveExisting": true
+        },
+        {
+          "id": "cmpl9qvcs000ilw8ifbaq1ems",
+          "slug": "pit-bikes-electricas",
+          "name": "Eléctricas",
+          "order": 1,
+          "moveExisting": true
+        }
+      ]
+    },
+    {
+      "id": "taxonomy20261107_minimotos",
+      "slug": "minimotos",
+      "name": "Minimotos y minicross",
+      "order": 3,
+      "subcategories": [
+        {
+          "id": "cmpl9o4qk0004lw8iei3flcae",
+          "slug": "minimotos-gasolina",
+          "name": "Gasolina",
+          "order": 0,
+          "moveExisting": true
+        },
+        {
+          "id": "cmpl9oj740006lw8i9pcca7pt",
+          "slug": "minimotos-electricas",
+          "name": "Eléctricas",
+          "order": 1,
+          "moveExisting": true
+        }
+      ]
+    },
+    {
+      "id": "taxonomy20261107_quads",
+      "slug": "quads",
+      "name": "Quads",
+      "order": 3,
+      "subcategories": [
+        {
+          "id": "cmpl9pf40000alw8ipn8hsemq",
+          "slug": "mini-quads-gasolina",
+          "name": "Gasolina",
+          "order": 0,
+          "moveExisting": true
+        },
+        {
+          "id": "cmpl9pqwk000clw8ipbne8me6",
+          "slug": "mini-quads-electricos",
+          "name": "Eléctricos",
+          "order": 1,
+          "moveExisting": true
+        }
+      ]
+    },
+    {
+      "id": "taxonomy20261107_buggies",
+      "slug": "buggies",
+      "name": "Buggies",
+      "order": 3,
+      "subcategories": [
+        {
+          "id": "taxonomy20261107_buggies-gasolina",
+          "slug": "buggies-gasolina",
+          "name": "Gasolina",
+          "order": 0,
+          "moveExisting": false
+        },
+        {
+          "id": "taxonomy20261107_buggies-electricos",
+          "slug": "buggies-electricos",
+          "name": "Eléctricos",
+          "order": 1,
+          "moveExisting": false
+        }
+      ]
+    },
+    {
+      "id": "taxonomy20261107_coches-electricos-infantiles",
+      "slug": "coches-electricos-infantiles",
+      "name": "Coches eléctricos infantiles",
+      "order": 3,
+      "subcategories": []
+    },
+    {
+      "id": "taxonomy20261107_motos-matriculables",
+      "slug": "motos-matriculables",
+      "name": "Motos matriculables",
+      "order": 3,
+      "subcategories": []
+    },
+    {
+      "id": "taxonomy20261107_hoverboard",
+      "slug": "hoverboard",
+      "name": "Hoverboards",
+      "order": 3,
+      "subcategories": []
+    }
+  ],
+  "existingTargets": [
+    {
+      "categoryId": "f63e7e9a-bf64-4947-b401-2f5c345d7789",
+      "category": "patinete",
+      "subcategoryId": "cmr6aueto0001ph7xpq3jyzhh",
+      "subcategory": "ecoxtrem"
+    }
+  ],
+  "products": [
+    {
+      "id": "imp20261106_v56318123966838",
+      "from": {
+        "category": "vehiculos",
+        "subcategory": "pit-bikes-de-gasolina"
+      },
+      "to": {
+        "category": "pit-bikes",
+        "subcategory": "pit-bikes-de-gasolina"
+      }
+    },
+    {
+      "id": "imp20261106_v59086398390646",
+      "from": {
+        "category": "vehiculos",
+        "subcategory": "mini-quads-gasolina"
+      },
+      "to": {
+        "category": "quads",
+        "subcategory": "mini-quads-gasolina"
+      }
+    },
+    {
+      "id": "imp20261106_v56315083358582",
+      "from": {
+        "category": "vehiculos",
+        "subcategory": "mini-quads-gasolina"
+      },
+      "to": {
+        "category": "quads",
+        "subcategory": "mini-quads-gasolina"
+      }
+    },
+    {
+      "id": "imp20261106_v59086398325110",
+      "from": {
+        "category": "vehiculos",
+        "subcategory": "mini-quads-gasolina"
+      },
+      "to": {
+        "category": "quads",
+        "subcategory": "mini-quads-gasolina"
+      }
+    },
+    {
+      "id": "imp20261106_v58480576168310",
+      "from": {
+        "category": "vehiculos",
+        "subcategory": "mini-quads-gasolina"
+      },
+      "to": {
+        "category": "quads",
+        "subcategory": "mini-quads-gasolina"
+      }
+    },
+    {
+      "id": "imp20261106_v56315094663542",
+      "from": {
+        "category": "vehiculos",
+        "subcategory": "mini-quads-gasolina"
+      },
+      "to": {
+        "category": "quads",
+        "subcategory": "mini-quads-gasolina"
+      }
+    },
+    {
+      "id": "imp20261106_v56318133141878",
+      "from": {
+        "category": "vehiculos",
+        "subcategory": "mini-quads-gasolina"
+      },
+      "to": {
+        "category": "quads",
+        "subcategory": "mini-quads-gasolina"
+      }
+    },
+    {
+      "id": "imp20261106_v56318133174646",
+      "from": {
+        "category": "vehiculos",
+        "subcategory": "mini-quads-gasolina"
+      },
+      "to": {
+        "category": "quads",
+        "subcategory": "mini-quads-gasolina"
+      }
+    },
+    {
+      "id": "imp20261106_v59029683896694",
+      "from": {
+        "category": "vehiculos",
+        "subcategory": "mini-quads-gasolina"
+      },
+      "to": {
+        "category": "quads",
+        "subcategory": "mini-quads-gasolina"
+      }
+    },
+    {
+      "id": "imp20261106_v59029683831158",
+      "from": {
+        "category": "vehiculos",
+        "subcategory": "mini-quads-gasolina"
+      },
+      "to": {
+        "category": "quads",
+        "subcategory": "mini-quads-gasolina"
+      }
+    },
+    {
+      "id": "imp20261106_v59029683863926",
+      "from": {
+        "category": "vehiculos",
+        "subcategory": "mini-quads-gasolina"
+      },
+      "to": {
+        "category": "quads",
+        "subcategory": "mini-quads-gasolina"
+      }
+    },
+    {
+      "id": "imp20261106_v56369857233270",
+      "from": {
+        "category": "vehiculos",
+        "subcategory": "mini-quads-gasolina"
+      },
+      "to": {
+        "category": "quads",
+        "subcategory": "mini-quads-gasolina"
+      }
+    },
+    {
+      "id": "imp20261106_v59085570703734",
+      "from": {
+        "category": "vehiculos",
+        "subcategory": "mini-quads-gasolina"
+      },
+      "to": {
+        "category": "quads",
+        "subcategory": "mini-quads-gasolina"
+      }
+    },
+    {
+      "id": "imp20261106_v59085570670966",
+      "from": {
+        "category": "vehiculos",
+        "subcategory": "mini-quads-gasolina"
+      },
+      "to": {
+        "category": "quads",
+        "subcategory": "mini-quads-gasolina"
+      }
+    },
+    {
+      "id": "imp20261106_v59086576943478",
+      "from": {
+        "category": "vehiculos",
+        "subcategory": "mini-quads-gasolina"
+      },
+      "to": {
+        "category": "quads",
+        "subcategory": "mini-quads-gasolina"
+      }
+    },
+    {
+      "id": "imp20261106_v59086576910710",
+      "from": {
+        "category": "vehiculos",
+        "subcategory": "mini-quads-gasolina"
+      },
+      "to": {
+        "category": "quads",
+        "subcategory": "mini-quads-gasolina"
+      }
+    },
+    {
+      "id": "imp20261106_v56318129439094",
+      "from": {
+        "category": "vehiculos",
+        "subcategory": "mini-quads-gasolina"
+      },
+      "to": {
+        "category": "quads",
+        "subcategory": "mini-quads-gasolina"
+      }
+    },
+    {
+      "id": "imp20261106_v56318121574774",
+      "from": {
+        "category": "vehiculos",
+        "subcategory": "mini-quads-gasolina"
+      },
+      "to": {
+        "category": "quads",
+        "subcategory": "mini-quads-gasolina"
+      }
+    },
+    {
+      "id": "imp20261106_v56318121542006",
+      "from": {
+        "category": "vehiculos",
+        "subcategory": "mini-quads-gasolina"
+      },
+      "to": {
+        "category": "quads",
+        "subcategory": "mini-quads-gasolina"
+      }
+    },
+    {
+      "id": "imp20261106_v56318121509238",
+      "from": {
+        "category": "vehiculos",
+        "subcategory": "mini-quads-gasolina"
+      },
+      "to": {
+        "category": "quads",
+        "subcategory": "mini-quads-gasolina"
+      }
+    },
+    {
+      "id": "imp20261106_v56315128611190",
+      "from": {
+        "category": "vehiculos",
+        "subcategory": "mini-quads-gasolina"
+      },
+      "to": {
+        "category": "quads",
+        "subcategory": "mini-quads-gasolina"
+      }
+    },
+    {
+      "id": "imp20261106_v58565474517366",
+      "from": {
+        "category": "vehiculos",
+        "subcategory": "pit-bikes-de-gasolina"
+      },
+      "to": {
+        "category": "pit-bikes",
+        "subcategory": "pit-bikes-de-gasolina"
+      }
+    },
+    {
+      "id": "imp20261106_v58565474484598",
+      "from": {
+        "category": "vehiculos",
+        "subcategory": "pit-bikes-de-gasolina"
+      },
+      "to": {
+        "category": "pit-bikes",
+        "subcategory": "pit-bikes-de-gasolina"
+      }
+    },
+    {
+      "id": "imp20261106_v58565474451830",
+      "from": {
+        "category": "vehiculos",
+        "subcategory": "pit-bikes-de-gasolina"
+      },
+      "to": {
+        "category": "pit-bikes",
+        "subcategory": "pit-bikes-de-gasolina"
+      }
+    },
+    {
+      "id": "imp20261106_v58565474419062",
+      "from": {
+        "category": "vehiculos",
+        "subcategory": "pit-bikes-de-gasolina"
+      },
+      "to": {
+        "category": "pit-bikes",
+        "subcategory": "pit-bikes-de-gasolina"
+      }
+    },
+    {
+      "id": "imp20261106_v58979652108662",
+      "from": {
+        "category": "vehiculos",
+        "subcategory": "pit-bikes-electricas"
+      },
+      "to": {
+        "category": "pit-bikes",
+        "subcategory": "pit-bikes-electricas"
+      }
+    },
+    {
+      "id": "imp20261106_v58979652075894",
+      "from": {
+        "category": "vehiculos",
+        "subcategory": "pit-bikes-electricas"
+      },
+      "to": {
+        "category": "pit-bikes",
+        "subcategory": "pit-bikes-electricas"
+      }
+    },
+    {
+      "id": "imp20261106_v58979652043126",
+      "from": {
+        "category": "vehiculos",
+        "subcategory": "pit-bikes-electricas"
+      },
+      "to": {
+        "category": "pit-bikes",
+        "subcategory": "pit-bikes-electricas"
+      }
+    },
+    {
+      "id": "imp20261106_v58979558228342",
+      "from": {
+        "category": "vehiculos",
+        "subcategory": "pit-bikes-de-gasolina"
+      },
+      "to": {
+        "category": "pit-bikes",
+        "subcategory": "pit-bikes-de-gasolina"
+      }
+    },
+    {
+      "id": "imp20261106_v58979558195574",
+      "from": {
+        "category": "vehiculos",
+        "subcategory": "pit-bikes-de-gasolina"
+      },
+      "to": {
+        "category": "pit-bikes",
+        "subcategory": "pit-bikes-de-gasolina"
+      }
+    },
+    {
+      "id": "imp20261106_v56315168162166",
+      "from": {
+        "category": "vehiculos",
+        "subcategory": "pit-bikes-de-gasolina"
+      },
+      "to": {
+        "category": "pit-bikes",
+        "subcategory": "pit-bikes-de-gasolina"
+      }
+    },
+    {
+      "id": "imp20261106_v58979558162806",
+      "from": {
+        "category": "vehiculos",
+        "subcategory": "pit-bikes-de-gasolina"
+      },
+      "to": {
+        "category": "pit-bikes",
+        "subcategory": "pit-bikes-de-gasolina"
+      }
+    },
+    {
+      "id": "imp20261106_v58480077734262",
+      "from": {
+        "category": "vehiculos",
+        "subcategory": "pit-bikes-de-gasolina"
+      },
+      "to": {
+        "category": "pit-bikes",
+        "subcategory": "pit-bikes-de-gasolina"
+      }
+    },
+    {
+      "id": "imp20261106_v58480077701494",
+      "from": {
+        "category": "vehiculos",
+        "subcategory": "pit-bikes-de-gasolina"
+      },
+      "to": {
+        "category": "pit-bikes",
+        "subcategory": "pit-bikes-de-gasolina"
+      }
+    },
+    {
+      "id": "imp20261106_v58480077668726",
+      "from": {
+        "category": "vehiculos",
+        "subcategory": "pit-bikes-de-gasolina"
+      },
+      "to": {
+        "category": "pit-bikes",
+        "subcategory": "pit-bikes-de-gasolina"
+      }
+    },
+    {
+      "id": "imp20261106_v58480077635958",
+      "from": {
+        "category": "vehiculos",
+        "subcategory": "pit-bikes-de-gasolina"
+      },
+      "to": {
+        "category": "pit-bikes",
+        "subcategory": "pit-bikes-de-gasolina"
+      }
+    },
+    {
+      "id": "imp20261106_v56315158102390",
+      "from": {
+        "category": "vehiculos",
+        "subcategory": "pit-bikes-de-gasolina"
+      },
+      "to": {
+        "category": "pit-bikes",
+        "subcategory": "pit-bikes-de-gasolina"
+      }
+    },
+    {
+      "id": "imp20261106_v56315278492022",
+      "from": {
+        "category": "vehiculos",
+        "subcategory": "pit-bikes-de-gasolina"
+      },
+      "to": {
+        "category": "pit-bikes",
+        "subcategory": "pit-bikes-de-gasolina"
+      }
+    },
+    {
+      "id": "imp20261106_v59021154091382",
+      "from": {
+        "category": "vehiculos",
+        "subcategory": "pit-bikes-de-gasolina"
+      },
+      "to": {
+        "category": "pit-bikes",
+        "subcategory": "pit-bikes-de-gasolina"
+      }
+    },
+    {
+      "id": "imp20261106_v59021154124150",
+      "from": {
+        "category": "vehiculos",
+        "subcategory": "pit-bikes-de-gasolina"
+      },
+      "to": {
+        "category": "pit-bikes",
+        "subcategory": "pit-bikes-de-gasolina"
+      }
+    },
+    {
+      "id": "imp20261106_v58630979354998",
+      "from": {
+        "category": "vehiculos",
+        "subcategory": "pit-bikes-de-gasolina"
+      },
+      "to": {
+        "category": "pit-bikes",
+        "subcategory": "pit-bikes-de-gasolina"
+      }
+    },
+    {
+      "id": "imp20261106_v56315244216694",
+      "from": {
+        "category": "vehiculos",
+        "subcategory": "pit-bikes-de-gasolina"
+      },
+      "to": {
+        "category": "pit-bikes",
+        "subcategory": "pit-bikes-de-gasolina"
+      }
+    },
+    {
+      "id": "imp20261106_v56315244249462",
+      "from": {
+        "category": "vehiculos",
+        "subcategory": "pit-bikes-de-gasolina"
+      },
+      "to": {
+        "category": "pit-bikes",
+        "subcategory": "pit-bikes-de-gasolina"
+      }
+    },
+    {
+      "id": "imp20261106_v58593015464310",
+      "from": {
+        "category": "vehiculos",
+        "subcategory": "pit-bikes-de-gasolina"
+      },
+      "to": {
+        "category": "pit-bikes",
+        "subcategory": "pit-bikes-de-gasolina"
+      }
+    },
+    {
+      "id": "imp20261106_v58593015431542",
+      "from": {
+        "category": "vehiculos",
+        "subcategory": "pit-bikes-de-gasolina"
+      },
+      "to": {
+        "category": "pit-bikes",
+        "subcategory": "pit-bikes-de-gasolina"
+      }
+    },
+    {
+      "id": "imp20261106_v58599772488054",
+      "from": {
+        "category": "vehiculos",
+        "subcategory": "pit-bikes-de-gasolina"
+      },
+      "to": {
+        "category": "pit-bikes",
+        "subcategory": "pit-bikes-de-gasolina"
+      }
+    },
+    {
+      "id": "imp20261106_v56315228619126",
+      "from": {
+        "category": "vehiculos",
+        "subcategory": "pit-bikes-de-gasolina"
+      },
+      "to": {
+        "category": "pit-bikes",
+        "subcategory": "pit-bikes-de-gasolina"
+      }
+    },
+    {
+      "id": "imp20261106_v56315228586358",
+      "from": {
+        "category": "vehiculos",
+        "subcategory": "pit-bikes-de-gasolina"
+      },
+      "to": {
+        "category": "pit-bikes",
+        "subcategory": "pit-bikes-de-gasolina"
+      }
+    },
+    {
+      "id": "imp20261106_v58591561548150",
+      "from": {
+        "category": "vehiculos",
+        "subcategory": "pit-bikes-de-gasolina"
+      },
+      "to": {
+        "category": "pit-bikes",
+        "subcategory": "pit-bikes-de-gasolina"
+      }
+    },
+    {
+      "id": "imp20261106_v58591561515382",
+      "from": {
+        "category": "vehiculos",
+        "subcategory": "pit-bikes-de-gasolina"
+      },
+      "to": {
+        "category": "pit-bikes",
+        "subcategory": "pit-bikes-de-gasolina"
+      }
+    },
+    {
+      "id": "imp20261106_v58591561482614",
+      "from": {
+        "category": "vehiculos",
+        "subcategory": "pit-bikes-de-gasolina"
+      },
+      "to": {
+        "category": "pit-bikes",
+        "subcategory": "pit-bikes-de-gasolina"
+      }
+    },
+    {
+      "id": "imp20261106_v58591561449846",
+      "from": {
+        "category": "vehiculos",
+        "subcategory": "pit-bikes-de-gasolina"
+      },
+      "to": {
+        "category": "pit-bikes",
+        "subcategory": "pit-bikes-de-gasolina"
+      }
+    },
+    {
+      "id": "imp20261106_v58607651815798",
+      "from": {
+        "category": "vehiculos",
+        "subcategory": "pit-bikes-de-gasolina"
+      },
+      "to": {
+        "category": "pit-bikes",
+        "subcategory": "pit-bikes-de-gasolina"
+      }
+    },
+    {
+      "id": "imp20261106_v56315219313014",
+      "from": {
+        "category": "vehiculos",
+        "subcategory": "pit-bikes-de-gasolina"
+      },
+      "to": {
+        "category": "pit-bikes",
+        "subcategory": "pit-bikes-de-gasolina"
+      }
+    },
+    {
+      "id": "imp20261106_v56315219280246",
+      "from": {
+        "category": "vehiculos",
+        "subcategory": "pit-bikes-de-gasolina"
+      },
+      "to": {
+        "category": "pit-bikes",
+        "subcategory": "pit-bikes-de-gasolina"
+      }
+    },
+    {
+      "id": "imp20261106_v58591592350070",
+      "from": {
+        "category": "vehiculos",
+        "subcategory": "pit-bikes-de-gasolina"
+      },
+      "to": {
+        "category": "pit-bikes",
+        "subcategory": "pit-bikes-de-gasolina"
+      }
+    },
+    {
+      "id": "imp20261106_v58591592284534",
+      "from": {
+        "category": "vehiculos",
+        "subcategory": "pit-bikes-de-gasolina"
+      },
+      "to": {
+        "category": "pit-bikes",
+        "subcategory": "pit-bikes-de-gasolina"
+      }
+    },
+    {
+      "id": "imp20261106_v58591592251766",
+      "from": {
+        "category": "vehiculos",
+        "subcategory": "pit-bikes-de-gasolina"
+      },
+      "to": {
+        "category": "pit-bikes",
+        "subcategory": "pit-bikes-de-gasolina"
+      }
+    },
+    {
+      "id": "imp20261106_v58591592317302",
+      "from": {
+        "category": "vehiculos",
+        "subcategory": "pit-bikes-de-gasolina"
+      },
+      "to": {
+        "category": "pit-bikes",
+        "subcategory": "pit-bikes-de-gasolina"
+      }
+    },
+    {
+      "id": "imp20261106_v58632831467894",
+      "from": {
+        "category": "vehiculos",
+        "subcategory": "pit-bikes-de-gasolina"
+      },
+      "to": {
+        "category": "pit-bikes",
+        "subcategory": "pit-bikes-de-gasolina"
+      }
+    },
+    {
+      "id": "imp20261106_v58632831402358",
+      "from": {
+        "category": "vehiculos",
+        "subcategory": "pit-bikes-de-gasolina"
+      },
+      "to": {
+        "category": "pit-bikes",
+        "subcategory": "pit-bikes-de-gasolina"
+      }
+    },
+    {
+      "id": "imp20261106_v56315191132534",
+      "from": {
+        "category": "vehiculos",
+        "subcategory": "pit-bikes-de-gasolina"
+      },
+      "to": {
+        "category": "pit-bikes",
+        "subcategory": "pit-bikes-de-gasolina"
+      }
+    },
+    {
+      "id": "imp20261106_v58632831435126",
+      "from": {
+        "category": "vehiculos",
+        "subcategory": "pit-bikes-de-gasolina"
+      },
+      "to": {
+        "category": "pit-bikes",
+        "subcategory": "pit-bikes-de-gasolina"
+      }
+    },
+    {
+      "id": "imp20261106_v58979623436662",
+      "from": {
+        "category": "vehiculos",
+        "subcategory": "pit-bikes-electricas"
+      },
+      "to": {
+        "category": "pit-bikes",
+        "subcategory": "pit-bikes-electricas"
+      }
+    },
+    {
+      "id": "imp20261106_v58545168417142",
+      "from": {
+        "category": "vehiculos",
+        "subcategory": "minimotos-electricas"
+      },
+      "to": {
+        "category": "pit-bikes",
+        "subcategory": "pit-bikes-electricas"
+      }
+    },
+    {
+      "id": "imp20261106_v58545168384374",
+      "from": {
+        "category": "vehiculos",
+        "subcategory": "minimotos-electricas"
+      },
+      "to": {
+        "category": "pit-bikes",
+        "subcategory": "pit-bikes-electricas"
+      }
+    },
+    {
+      "id": "imp20261106_v56315267907958",
+      "from": {
+        "category": "vehiculos",
+        "subcategory": "pit-bikes-de-gasolina"
+      },
+      "to": {
+        "category": "pit-bikes",
+        "subcategory": "pit-bikes-de-gasolina"
+      }
+    },
+    {
+      "id": "imp20261106_v59038427578742",
+      "from": {
+        "category": "vehiculos",
+        "subcategory": "pit-bikes-electricas"
+      },
+      "to": {
+        "category": "pit-bikes",
+        "subcategory": "pit-bikes-electricas"
+      }
+    },
+    {
+      "id": "imp20261106_v59038427513206",
+      "from": {
+        "category": "vehiculos",
+        "subcategory": "pit-bikes-electricas"
+      },
+      "to": {
+        "category": "pit-bikes",
+        "subcategory": "pit-bikes-electricas"
+      }
+    },
+    {
+      "id": "imp20261106_v59038427545974",
+      "from": {
+        "category": "vehiculos",
+        "subcategory": "pit-bikes-electricas"
+      },
+      "to": {
+        "category": "pit-bikes",
+        "subcategory": "pit-bikes-electricas"
+      }
+    },
+    {
+      "id": "imp20261106_v56853929525622",
+      "from": {
+        "category": "vehiculos",
+        "subcategory": "pit-bikes-electricas"
+      },
+      "to": {
+        "category": "pit-bikes",
+        "subcategory": "pit-bikes-electricas"
+      }
+    },
+    {
+      "id": "imp20261106_v59112652112246",
+      "from": {
+        "category": "vehiculos",
+        "subcategory": "pit-bikes-electricas"
+      },
+      "to": {
+        "category": "pit-bikes",
+        "subcategory": "pit-bikes-electricas"
+      }
+    },
+    {
+      "id": "imp20261106_v56853929492854",
+      "from": {
+        "category": "vehiculos",
+        "subcategory": "pit-bikes-electricas"
+      },
+      "to": {
+        "category": "pit-bikes",
+        "subcategory": "pit-bikes-electricas"
+      }
+    },
+    {
+      "id": "imp20261106_v58011156775286",
+      "from": {
+        "category": "vehiculos",
+        "subcategory": "minimotos-electricas"
+      },
+      "to": {
+        "category": "pit-bikes",
+        "subcategory": "pit-bikes-electricas"
+      }
+    },
+    {
+      "id": "imp20261106_v59106348237174",
+      "from": {
+        "category": "vehiculos",
+        "subcategory": "minimotos-electricas"
+      },
+      "to": {
+        "category": "minimotos",
+        "subcategory": "minimotos-electricas"
+      }
+    },
+    {
+      "id": "imp20261106_v56762654785910",
+      "from": {
+        "category": "vehiculos",
+        "subcategory": "minimotos-electricas"
+      },
+      "to": {
+        "category": "minimotos",
+        "subcategory": "minimotos-electricas"
+      }
+    },
+    {
+      "id": "imp20261106_v56762654753142",
+      "from": {
+        "category": "vehiculos",
+        "subcategory": "minimotos-electricas"
+      },
+      "to": {
+        "category": "minimotos",
+        "subcategory": "minimotos-electricas"
+      }
+    },
+    {
+      "id": "imp20261106_v58943796412790",
+      "from": {
+        "category": "vehiculos",
+        "subcategory": "minimotos-gasolina"
+      },
+      "to": {
+        "category": "minimotos",
+        "subcategory": "minimotos-gasolina"
+      }
+    },
+    {
+      "id": "imp20261106_v59038976803190",
+      "from": {
+        "category": "vehiculos",
+        "subcategory": "minimotos-electricas"
+      },
+      "to": {
+        "category": "minimotos",
+        "subcategory": "minimotos-electricas"
+      }
+    },
+    {
+      "id": "imp20261106_v59038976770422",
+      "from": {
+        "category": "vehiculos",
+        "subcategory": "minimotos-electricas"
+      },
+      "to": {
+        "category": "minimotos",
+        "subcategory": "minimotos-electricas"
+      }
+    },
+    {
+      "id": "imp20261106_v59038976704886",
+      "from": {
+        "category": "vehiculos",
+        "subcategory": "minimotos-electricas"
+      },
+      "to": {
+        "category": "minimotos",
+        "subcategory": "minimotos-electricas"
+      }
+    },
+    {
+      "id": "imp20261106_v56315421688182",
+      "from": {
+        "category": "vehiculos",
+        "subcategory": "minimotos-electricas"
+      },
+      "to": {
+        "category": "minimotos",
+        "subcategory": "minimotos-electricas"
+      }
+    },
+    {
+      "id": "imp20261106_v56315051737462",
+      "from": {
+        "category": "vehiculos",
+        "subcategory": "mini-quads-gasolina"
+      },
+      "to": {
+        "category": "quads",
+        "subcategory": "mini-quads-gasolina"
+      }
+    },
+    {
+      "id": "imp20261106_v58773301592438",
+      "from": {
+        "category": "vehiculos",
+        "subcategory": "mini-quads-gasolina"
+      },
+      "to": {
+        "category": "quads",
+        "subcategory": "mini-quads-gasolina"
+      }
+    },
+    {
+      "id": "imp20261106_v56315051704694",
+      "from": {
+        "category": "vehiculos",
+        "subcategory": "mini-quads-gasolina"
+      },
+      "to": {
+        "category": "quads",
+        "subcategory": "mini-quads-gasolina"
+      }
+    },
+    {
+      "id": "imp20261106_v56315051770230",
+      "from": {
+        "category": "vehiculos",
+        "subcategory": "mini-quads-gasolina"
+      },
+      "to": {
+        "category": "quads",
+        "subcategory": "mini-quads-gasolina"
+      }
+    },
+    {
+      "id": "imp20261106_v59037559456118",
+      "from": {
+        "category": "vehiculos",
+        "subcategory": "mini-quads-gasolina"
+      },
+      "to": {
+        "category": "quads",
+        "subcategory": "mini-quads-gasolina"
+      }
+    },
+    {
+      "id": "imp20261106_v59037559488886",
+      "from": {
+        "category": "vehiculos",
+        "subcategory": "mini-quads-gasolina"
+      },
+      "to": {
+        "category": "quads",
+        "subcategory": "mini-quads-gasolina"
+      }
+    },
+    {
+      "id": "imp20261106_v56315068481910",
+      "from": {
+        "category": "vehiculos",
+        "subcategory": "mini-quads-gasolina"
+      },
+      "to": {
+        "category": "quads",
+        "subcategory": "mini-quads-gasolina"
+      }
+    },
+    {
+      "id": "imp20261106_v59014636994934",
+      "from": {
+        "category": "vehiculos",
+        "subcategory": "mini-quads-gasolina"
+      },
+      "to": {
+        "category": "quads",
+        "subcategory": "mini-quads-gasolina"
+      }
+    },
+    {
+      "id": "imp20261106_v56315311260022",
+      "from": {
+        "category": "vehiculos",
+        "subcategory": "mini-quads-gasolina"
+      },
+      "to": {
+        "category": "quads",
+        "subcategory": "mini-quads-gasolina"
+      }
+    },
+    {
+      "id": "imp20261106_v56315311194486",
+      "from": {
+        "category": "vehiculos",
+        "subcategory": "mini-quads-gasolina"
+      },
+      "to": {
+        "category": "quads",
+        "subcategory": "mini-quads-gasolina"
+      }
+    },
+    {
+      "id": "imp20261106_v56315289895286",
+      "from": {
+        "category": "vehiculos",
+        "subcategory": "mini-quads-electricos"
+      },
+      "to": {
+        "category": "quads",
+        "subcategory": "mini-quads-electricos"
+      }
+    },
+    {
+      "id": "imp20261106_v59086572781942",
+      "from": {
+        "category": "vehiculos",
+        "subcategory": "mini-quads-electricos"
+      },
+      "to": {
+        "category": "quads",
+        "subcategory": "mini-quads-electricos"
+      }
+    },
+    {
+      "id": "imp20261106_v56315289928054",
+      "from": {
+        "category": "vehiculos",
+        "subcategory": "mini-quads-electricos"
+      },
+      "to": {
+        "category": "quads",
+        "subcategory": "mini-quads-electricos"
+      }
+    },
+    {
+      "id": "imp20261106_v56315289829750",
+      "from": {
+        "category": "vehiculos",
+        "subcategory": "mini-quads-electricos"
+      },
+      "to": {
+        "category": "quads",
+        "subcategory": "mini-quads-electricos"
+      }
+    },
+    {
+      "id": "imp20261106_v59086487159158",
+      "from": {
+        "category": "vehiculos",
+        "subcategory": "mini-quads-electricos"
+      },
+      "to": {
+        "category": "quads",
+        "subcategory": "mini-quads-electricos"
+      }
+    },
+    {
+      "id": "imp20261106_v59086444691830",
+      "from": {
+        "category": "vehiculos",
+        "subcategory": "mini-quads-electricos"
+      },
+      "to": {
+        "category": "quads",
+        "subcategory": "mini-quads-electricos"
+      }
+    },
+    {
+      "id": "imp20261106_v59086487126390",
+      "from": {
+        "category": "vehiculos",
+        "subcategory": "mini-quads-electricos"
+      },
+      "to": {
+        "category": "quads",
+        "subcategory": "mini-quads-electricos"
+      }
+    },
+    {
+      "id": "imp20261106_v56315303428470",
+      "from": {
+        "category": "vehiculos",
+        "subcategory": "mini-quads-electricos"
+      },
+      "to": {
+        "category": "quads",
+        "subcategory": "mini-quads-electricos"
+      }
+    },
+    {
+      "id": "imp20261106_v56315303395702",
+      "from": {
+        "category": "vehiculos",
+        "subcategory": "mini-quads-electricos"
+      },
+      "to": {
+        "category": "quads",
+        "subcategory": "mini-quads-electricos"
+      }
+    },
+    {
+      "id": "imp20261106_v58641781490038",
+      "from": {
+        "category": "vehiculos",
+        "subcategory": "minimotos-gasolina"
+      },
+      "to": {
+        "category": "minimotos",
+        "subcategory": "minimotos-gasolina"
+      }
+    },
+    {
+      "id": "imp20261106_v58641781457270",
+      "from": {
+        "category": "vehiculos",
+        "subcategory": "minimotos-gasolina"
+      },
+      "to": {
+        "category": "minimotos",
+        "subcategory": "minimotos-gasolina"
+      }
+    },
+    {
+      "id": "imp20261106_v58641781555574",
+      "from": {
+        "category": "vehiculos",
+        "subcategory": "minimotos-gasolina"
+      },
+      "to": {
+        "category": "minimotos",
+        "subcategory": "minimotos-gasolina"
+      }
+    },
+    {
+      "id": "imp20261106_v58641781522806",
+      "from": {
+        "category": "vehiculos",
+        "subcategory": "minimotos-gasolina"
+      },
+      "to": {
+        "category": "minimotos",
+        "subcategory": "minimotos-gasolina"
+      }
+    },
+    {
+      "id": "imp20261106_v58641781424502",
+      "from": {
+        "category": "vehiculos",
+        "subcategory": "minimotos-gasolina"
+      },
+      "to": {
+        "category": "minimotos",
+        "subcategory": "minimotos-gasolina"
+      }
+    },
+    {
+      "id": "imp20261106_v58641781391734",
+      "from": {
+        "category": "vehiculos",
+        "subcategory": "minimotos-gasolina"
+      },
+      "to": {
+        "category": "minimotos",
+        "subcategory": "minimotos-gasolina"
+      }
+    },
+    {
+      "id": "imp20261106_v58641781358966",
+      "from": {
+        "category": "vehiculos",
+        "subcategory": "minimotos-gasolina"
+      },
+      "to": {
+        "category": "minimotos",
+        "subcategory": "minimotos-gasolina"
+      }
+    },
+    {
+      "id": "imp20261106_v58641781326198",
+      "from": {
+        "category": "vehiculos",
+        "subcategory": "minimotos-gasolina"
+      },
+      "to": {
+        "category": "minimotos",
+        "subcategory": "minimotos-gasolina"
+      }
+    },
+    {
+      "id": "imp20261106_v58641781293430",
+      "from": {
+        "category": "vehiculos",
+        "subcategory": "minimotos-gasolina"
+      },
+      "to": {
+        "category": "minimotos",
+        "subcategory": "minimotos-gasolina"
+      }
+    },
+    {
+      "id": "imp20261106_v58641781260662",
+      "from": {
+        "category": "vehiculos",
+        "subcategory": "minimotos-gasolina"
+      },
+      "to": {
+        "category": "minimotos",
+        "subcategory": "minimotos-gasolina"
+      }
+    },
+    {
+      "id": "imp20261106_v56318146281846",
+      "from": {
+        "category": "vehiculos",
+        "subcategory": "minimotos-gasolina"
+      },
+      "to": {
+        "category": "minimotos",
+        "subcategory": "minimotos-gasolina"
+      }
+    },
+    {
+      "id": "imp20261106_v56318146249078",
+      "from": {
+        "category": "vehiculos",
+        "subcategory": "minimotos-gasolina"
+      },
+      "to": {
+        "category": "minimotos",
+        "subcategory": "minimotos-gasolina"
+      }
+    },
+    {
+      "id": "imp20261106_v56318146216310",
+      "from": {
+        "category": "vehiculos",
+        "subcategory": "minimotos-gasolina"
+      },
+      "to": {
+        "category": "minimotos",
+        "subcategory": "minimotos-gasolina"
+      }
+    },
+    {
+      "id": "imp20261106_v56318146183542",
+      "from": {
+        "category": "vehiculos",
+        "subcategory": "minimotos-gasolina"
+      },
+      "to": {
+        "category": "minimotos",
+        "subcategory": "minimotos-gasolina"
+      }
+    },
+    {
+      "id": "imp20261106_v56318146150774",
+      "from": {
+        "category": "vehiculos",
+        "subcategory": "minimotos-gasolina"
+      },
+      "to": {
+        "category": "minimotos",
+        "subcategory": "minimotos-gasolina"
+      }
+    },
+    {
+      "id": "imp20261106_v56315015102838",
+      "from": {
+        "category": "vehiculos",
+        "subcategory": "minimotos-gasolina"
+      },
+      "to": {
+        "category": "minimotos",
+        "subcategory": "minimotos-gasolina"
+      }
+    },
+    {
+      "id": "imp20261106_v56315015201142",
+      "from": {
+        "category": "vehiculos",
+        "subcategory": "minimotos-gasolina"
+      },
+      "to": {
+        "category": "minimotos",
+        "subcategory": "minimotos-gasolina"
+      }
+    },
+    {
+      "id": "imp20261106_v56315015168374",
+      "from": {
+        "category": "vehiculos",
+        "subcategory": "minimotos-gasolina"
+      },
+      "to": {
+        "category": "minimotos",
+        "subcategory": "minimotos-gasolina"
+      }
+    },
+    {
+      "id": "imp20261106_v56318117085558",
+      "from": {
+        "category": "vehiculos",
+        "subcategory": "buggies"
+      },
+      "to": {
+        "category": "buggies",
+        "subcategory": "buggies-gasolina"
+      }
+    },
+    {
+      "id": "imp20261106_v56318116856182",
+      "from": {
+        "category": "vehiculos",
+        "subcategory": "minimotos-electricas"
+      },
+      "to": {
+        "category": "minimotos",
+        "subcategory": "minimotos-electricas"
+      }
+    },
+    {
+      "id": "imp20261106_v56318116823414",
+      "from": {
+        "category": "vehiculos",
+        "subcategory": "minimotos-electricas"
+      },
+      "to": {
+        "category": "minimotos",
+        "subcategory": "minimotos-electricas"
+      }
+    },
+    {
+      "id": "imp20261106_v56318116888950",
+      "from": {
+        "category": "vehiculos",
+        "subcategory": "minimotos-electricas"
+      },
+      "to": {
+        "category": "minimotos",
+        "subcategory": "minimotos-electricas"
+      }
+    },
+    {
+      "id": "imp20261106_v58773320204662",
+      "from": {
+        "category": "vehiculos",
+        "subcategory": "buggies"
+      },
+      "to": {
+        "category": "coches-electricos-infantiles",
+        "subcategory": null
+      }
+    },
+    {
+      "id": "imp20261106_v56318118068598",
+      "from": {
+        "category": "vehiculos",
+        "subcategory": "buggies"
+      },
+      "to": {
+        "category": "coches-electricos-infantiles",
+        "subcategory": null
+      }
+    },
+    {
+      "id": "imp20261106_v56318118134134",
+      "from": {
+        "category": "vehiculos",
+        "subcategory": "buggies"
+      },
+      "to": {
+        "category": "coches-electricos-infantiles",
+        "subcategory": null
+      }
+    },
+    {
+      "id": "imp20261106_v56318813405558",
+      "from": {
+        "category": "vehiculos",
+        "subcategory": "buggies"
+      },
+      "to": {
+        "category": "buggies",
+        "subcategory": "buggies-gasolina"
+      }
+    },
+    {
+      "id": "imp20261106_v56318813372790",
+      "from": {
+        "category": "vehiculos",
+        "subcategory": "buggies"
+      },
+      "to": {
+        "category": "buggies",
+        "subcategory": "buggies-gasolina"
+      }
+    },
+    {
+      "id": "imp20261106_v58648560173430",
+      "from": {
+        "category": "vehiculos",
+        "subcategory": "buggies"
+      },
+      "to": {
+        "category": "buggies",
+        "subcategory": "buggies-gasolina"
+      }
+    },
+    {
+      "id": "imp20261106_v56318835589494",
+      "from": {
+        "category": "vehiculos",
+        "subcategory": "buggies"
+      },
+      "to": {
+        "category": "buggies",
+        "subcategory": "buggies-gasolina"
+      }
+    },
+    {
+      "id": "imp20261106_v56318835556726",
+      "from": {
+        "category": "vehiculos",
+        "subcategory": "buggies"
+      },
+      "to": {
+        "category": "buggies",
+        "subcategory": "buggies-gasolina"
+      }
+    },
+    {
+      "id": "imp20261106_v59231022612854",
+      "from": {
+        "category": "vehiculos",
+        "subcategory": "buggies"
+      },
+      "to": {
+        "category": "buggies",
+        "subcategory": "buggies-gasolina"
+      }
+    },
+    {
+      "id": "imp20261106_v58739165692278",
+      "from": {
+        "category": "vehiculos",
+        "subcategory": "buggies"
+      },
+      "to": {
+        "category": "buggies",
+        "subcategory": "buggies-electricos"
+      }
+    },
+    {
+      "id": "imp20261106_v56363063345526",
+      "from": {
+        "category": "vehiculos",
+        "subcategory": "buggies"
+      },
+      "to": {
+        "category": "buggies",
+        "subcategory": "buggies-electricos"
+      }
+    },
+    {
+      "id": "imp20261106_v56363063378294",
+      "from": {
+        "category": "vehiculos",
+        "subcategory": "buggies"
+      },
+      "to": {
+        "category": "buggies",
+        "subcategory": "buggies-electricos"
+      }
+    },
+    {
+      "id": "imp20261106_v56317272785270",
+      "from": {
+        "category": "vehiculos",
+        "subcategory": "buggies"
+      },
+      "to": {
+        "category": "buggies",
+        "subcategory": "buggies-electricos"
+      }
+    },
+    {
+      "id": "imp20261106_v56315418640758",
+      "from": {
+        "category": "vehiculos",
+        "subcategory": "coches-electricos-infantiles"
+      },
+      "to": {
+        "category": "coches-electricos-infantiles",
+        "subcategory": null
+      }
+    },
+    {
+      "id": "imp20261106_v56315418607990",
+      "from": {
+        "category": "vehiculos",
+        "subcategory": "coches-electricos-infantiles"
+      },
+      "to": {
+        "category": "coches-electricos-infantiles",
+        "subcategory": null
+      }
+    },
+    {
+      "id": "imp20261106_v56315418575222",
+      "from": {
+        "category": "vehiculos",
+        "subcategory": "coches-electricos-infantiles"
+      },
+      "to": {
+        "category": "coches-electricos-infantiles",
+        "subcategory": null
+      }
+    },
+    {
+      "id": "cmvwdn4lg000012tu8zymql3j",
+      "from": {
+        "category": "vehiculos",
+        "subcategory": "mini-quads-electricos"
+      },
+      "to": {
+        "category": "quads",
+        "subcategory": "mini-quads-electricos"
+      }
+    },
+    {
+      "id": "cmvwd7mmb0000yjvcwimvuclc",
+      "from": {
+        "category": "vehiculos",
+        "subcategory": "mini-quads-electricos"
+      },
+      "to": {
+        "category": "quads",
+        "subcategory": "mini-quads-electricos"
+      }
+    },
+    {
+      "id": "cmtaa08mh0000ycuvmchbluph",
+      "from": {
+        "category": "vehiculos",
+        "subcategory": "minimotos-electricas"
+      },
+      "to": {
+        "category": "minimotos",
+        "subcategory": "minimotos-electricas"
+      }
+    },
+    {
+      "id": "cmsyo2577000az1o33sldoi3d",
+      "from": {
+        "category": "vehiculos",
+        "subcategory": "mini-quads-electricos"
+      },
+      "to": {
+        "category": "quads",
+        "subcategory": "mini-quads-electricos"
+      }
+    },
+    {
+      "id": "cmsymrxqd0000z1o30p6rcj3r",
+      "from": {
+        "category": "vehiculos",
+        "subcategory": "minimotos-electricas"
+      },
+      "to": {
+        "category": "minimotos",
+        "subcategory": "minimotos-electricas"
+      }
+    },
+    {
+      "id": "cmsym0a6c0000x3y72w0qtt9r",
+      "from": {
+        "category": "vehiculos",
+        "subcategory": "minimotos-electricas"
+      },
+      "to": {
+        "category": "minimotos",
+        "subcategory": "minimotos-electricas"
+      }
+    },
+    {
+      "id": "cmsdkm4xj000svjv9c8yv34k0",
+      "from": {
+        "category": "vehiculos",
+        "subcategory": "hoverboard"
+      },
+      "to": {
+        "category": "patinete",
+        "subcategory": "ecoxtrem"
+      }
+    },
+    {
+      "id": "cmsdkbkql000pvjv9zr2u5u9e",
+      "from": {
+        "category": "vehiculos",
+        "subcategory": "hoverboard"
+      },
+      "to": {
+        "category": "patinete",
+        "subcategory": "ecoxtrem"
+      }
+    },
+    {
+      "id": "cmsaduoqh000qghqmbmwk9bkh",
+      "from": {
+        "category": "vehiculos",
+        "subcategory": "mini-quads-electricos"
+      },
+      "to": {
+        "category": "quads",
+        "subcategory": "mini-quads-electricos"
+      }
+    },
+    {
+      "id": "cmsacs7dl0000ghqm0objry42",
+      "from": {
+        "category": "vehiculos",
+        "subcategory": "motos-matriculables"
+      },
+      "to": {
+        "category": "motos-matriculables",
+        "subcategory": null
+      }
+    },
+    {
+      "id": "cmsa8wkty0000ky592ra24s3w",
+      "from": {
+        "category": "vehiculos",
+        "subcategory": "motos-matriculables"
+      },
+      "to": {
+        "category": "motos-matriculables",
+        "subcategory": null
+      }
+    },
+    {
+      "id": "cms9aq2nd00008aowh3a0q85v",
+      "from": {
+        "category": "vehiculos",
+        "subcategory": "mini-quads-gasolina"
+      },
+      "to": {
+        "category": "quads",
+        "subcategory": "mini-quads-gasolina"
+      }
+    },
+    {
+      "id": "cms8wwnwn000hkdu184eu19p1",
+      "from": {
+        "category": "vehiculos",
+        "subcategory": "mini-quads-gasolina"
+      },
+      "to": {
+        "category": "quads",
+        "subcategory": "mini-quads-gasolina"
+      }
+    },
+    {
+      "id": "cms8wbri20000kdu1zti3x96x",
+      "from": {
+        "category": "vehiculos",
+        "subcategory": "mini-quads-gasolina"
+      },
+      "to": {
+        "category": "quads",
+        "subcategory": "mini-quads-gasolina"
+      }
+    },
+    {
+      "id": "cmrwa8r4s000029pzpto2s60t",
+      "from": {
+        "category": "vehiculos",
+        "subcategory": "mini-quads-electricos"
+      },
+      "to": {
+        "category": "quads",
+        "subcategory": "mini-quads-electricos"
+      }
+    },
+    {
+      "id": "cmrf8veco00183vgwltnv88qy",
+      "from": {
+        "category": "vehiculos",
+        "subcategory": "minimotos-electricas"
+      },
+      "to": {
+        "category": "minimotos",
+        "subcategory": "minimotos-electricas"
+      }
+    },
+    {
+      "id": "cmrdqiqtw000qhuen17esjiey",
+      "from": {
+        "category": "vehiculos",
+        "subcategory": "mini-quads-gasolina"
+      },
+      "to": {
+        "category": "quads",
+        "subcategory": "mini-quads-gasolina"
+      }
+    },
+    {
+      "id": "cmrdprcwj0000huenqi36somj",
+      "from": {
+        "category": "vehiculos",
+        "subcategory": "mini-quads-gasolina"
+      },
+      "to": {
+        "category": "quads",
+        "subcategory": "mini-quads-gasolina"
+      }
+    },
+    {
+      "id": "cmraz5kpd0007u7bckfps9wvw",
+      "from": {
+        "category": "vehiculos",
+        "subcategory": "minimotos-electricas"
+      },
+      "to": {
+        "category": "minimotos",
+        "subcategory": "minimotos-electricas"
+      }
+    },
+    {
+      "id": "cmrayvkze0000u7bcoubxyum1",
+      "from": {
+        "category": "vehiculos",
+        "subcategory": "mini-quads-electricos"
+      },
+      "to": {
+        "category": "quads",
+        "subcategory": "mini-quads-electricos"
+      }
+    },
+    {
+      "id": "cmratll7f0000fp1l8694b1io",
+      "from": {
+        "category": "vehiculos",
+        "subcategory": "minimotos-electricas"
+      },
+      "to": {
+        "category": "minimotos",
+        "subcategory": "minimotos-electricas"
+      }
+    },
+    {
+      "id": "cmr9ebyxv000pl8hxnuz085j5",
+      "from": {
+        "category": "vehiculos",
+        "subcategory": "buggies"
+      },
+      "to": {
+        "category": "buggies",
+        "subcategory": "buggies-electricos"
+      }
+    },
+    {
+      "id": "cmr9babcj000gl8hxmwaf5x42",
+      "from": {
+        "category": "vehiculos",
+        "subcategory": "hoverboard"
+      },
+      "to": {
+        "category": "hoverboard",
+        "subcategory": null
+      }
+    },
+    {
+      "id": "cmr6lgv0500058b9tuutw8zmn",
+      "from": {
+        "category": "vehiculos",
+        "subcategory": "motos-matriculables"
+      },
+      "to": {
+        "category": "motos-matriculables",
+        "subcategory": null
+      }
+    },
+    {
+      "id": "cmr6kvv3a00008b9tz2l47ahy",
+      "from": {
+        "category": "vehiculos",
+        "subcategory": "motos-matriculables"
+      },
+      "to": {
+        "category": "motos-matriculables",
+        "subcategory": null
+      }
+    },
+    {
+      "id": "cmr6k5gf5000tkx5v1n7syk91",
+      "from": {
+        "category": "vehiculos",
+        "subcategory": "motos-matriculables"
+      },
+      "to": {
+        "category": "motos-matriculables",
+        "subcategory": null
+      }
+    },
+    {
+      "id": "cmqpj29z90000qu4uhnaym0kf",
+      "from": {
+        "category": "vehiculos",
+        "subcategory": "buggies"
+      },
+      "to": {
+        "category": "buggies",
+        "subcategory": "buggies-gasolina"
+      }
+    },
+    {
+      "id": "cmqpfgknv001113dw5pp4f0q1",
+      "from": {
+        "category": "vehiculos",
+        "subcategory": "buggies"
+      },
+      "to": {
+        "category": "buggies",
+        "subcategory": "buggies-electricos"
+      }
+    },
+    {
+      "id": "cmqpeac0y000013dwjp7kkc76",
+      "from": {
+        "category": "vehiculos",
+        "subcategory": "buggies"
+      },
+      "to": {
+        "category": "buggies",
+        "subcategory": "buggies-gasolina"
+      }
+    },
+    {
+      "id": "cmqfl62px0000h7kb8sye7vxa",
+      "from": {
+        "category": "vehiculos",
+        "subcategory": "pit-bikes-electricas"
+      },
+      "to": {
+        "category": "pit-bikes",
+        "subcategory": "pit-bikes-electricas"
+      }
+    },
+    {
+      "id": "cmqfjmk3c002pu20laz8pi87x",
+      "from": {
+        "category": "vehiculos",
+        "subcategory": "pit-bikes-electricas"
+      },
+      "to": {
+        "category": "pit-bikes",
+        "subcategory": "pit-bikes-electricas"
+      }
+    },
+    {
+      "id": "cmqfivih1001eu20l2tlo7xm0",
+      "from": {
+        "category": "vehiculos",
+        "subcategory": "pit-bikes-electricas"
+      },
+      "to": {
+        "category": "pit-bikes",
+        "subcategory": "pit-bikes-electricas"
+      }
+    },
+    {
+      "id": "cmqfgzh7w000iu20lv48b8j9b",
+      "from": {
+        "category": "vehiculos",
+        "subcategory": "pit-bikes-electricas"
+      },
+      "to": {
+        "category": "pit-bikes",
+        "subcategory": "pit-bikes-electricas"
+      }
+    },
+    {
+      "id": "cmqfgra6p0000u20ldfprr4v5",
+      "from": {
+        "category": "vehiculos",
+        "subcategory": "pit-bikes-electricas"
+      },
+      "to": {
+        "category": "pit-bikes",
+        "subcategory": "pit-bikes-electricas"
+      }
+    },
+    {
+      "id": "cmqffepi10020y7bt337bxund",
+      "from": {
+        "category": "vehiculos",
+        "subcategory": "pit-bikes-electricas"
+      },
+      "to": {
+        "category": "pit-bikes",
+        "subcategory": "pit-bikes-electricas"
+      }
+    },
+    {
+      "id": "cmqfetpt8001ky7btrh0y7hhb",
+      "from": {
+        "category": "vehiculos",
+        "subcategory": "pit-bikes-electricas"
+      },
+      "to": {
+        "category": "pit-bikes",
+        "subcategory": "pit-bikes-electricas"
+      }
+    },
+    {
+      "id": "cmqfca8c00012y7btxjnjz6d8",
+      "from": {
+        "category": "vehiculos",
+        "subcategory": "minimotos-electricas"
+      },
+      "to": {
+        "category": "pit-bikes",
+        "subcategory": "pit-bikes-electricas"
+      }
+    },
+    {
+      "id": "cmqfbr0kw000cy7bt55f8h8p2",
+      "from": {
+        "category": "vehiculos",
+        "subcategory": "minimotos-electricas"
+      },
+      "to": {
+        "category": "pit-bikes",
+        "subcategory": "pit-bikes-electricas"
+      }
+    },
+    {
+      "id": "cmqfb6z2i0000y7bt7k2iv9ho",
+      "from": {
+        "category": "vehiculos",
+        "subcategory": "minimotos-electricas"
+      },
+      "to": {
+        "category": "minimotos",
+        "subcategory": "minimotos-electricas"
+      }
+    },
+    {
+      "id": "cmq8jhry00000ufi9jrqmzn5b",
+      "from": {
+        "category": "vehiculos",
+        "subcategory": "pit-bikes-de-gasolina"
+      },
+      "to": {
+        "category": "pit-bikes",
+        "subcategory": "pit-bikes-de-gasolina"
+      }
+    },
+    {
+      "id": "cmq8gpdme000ev88jhfpm42s6",
+      "from": {
+        "category": "vehiculos",
+        "subcategory": "pit-bikes-de-gasolina"
+      },
+      "to": {
+        "category": "pit-bikes",
+        "subcategory": "pit-bikes-de-gasolina"
+      }
+    },
+    {
+      "id": "cmq8fpc8g0000v88jsx5rej9k",
+      "from": {
+        "category": "vehiculos",
+        "subcategory": "pit-bikes-de-gasolina"
+      },
+      "to": {
+        "category": "pit-bikes",
+        "subcategory": "pit-bikes-de-gasolina"
+      }
+    },
+    {
+      "id": "cmq8dq8gf00413mapr9fz8tds",
+      "from": {
+        "category": "vehiculos",
+        "subcategory": "pit-bikes-de-gasolina"
+      },
+      "to": {
+        "category": "pit-bikes",
+        "subcategory": "pit-bikes-de-gasolina"
+      }
+    },
+    {
+      "id": "cmq8d3ns6003r3mapjkp23lc4",
+      "from": {
+        "category": "vehiculos",
+        "subcategory": "pit-bikes-de-gasolina"
+      },
+      "to": {
+        "category": "pit-bikes",
+        "subcategory": "pit-bikes-de-gasolina"
+      }
+    },
+    {
+      "id": "cmq8bowv600393mapvcmtc888",
+      "from": {
+        "category": "vehiculos",
+        "subcategory": "minimotos-gasolina"
+      },
+      "to": {
+        "category": "pit-bikes",
+        "subcategory": "pit-bikes-de-gasolina"
+      }
+    },
+    {
+      "id": "cmq8asf7a000e3map3ctwmcal",
+      "from": {
+        "category": "vehiculos",
+        "subcategory": "minimotos-gasolina"
+      },
+      "to": {
+        "category": "minimotos",
+        "subcategory": "minimotos-gasolina"
+      }
+    },
+    {
+      "id": "cmq89vgb800003mapj2cf116q",
+      "from": {
+        "category": "vehiculos",
+        "subcategory": "minimotos-gasolina"
+      },
+      "to": {
+        "category": "minimotos",
+        "subcategory": "minimotos-gasolina"
+      }
+    },
+    {
+      "id": "cmq1ghoj7001f12e2wjstpjsm",
+      "from": {
+        "category": "vehiculos",
+        "subcategory": "pit-bikes-de-gasolina"
+      },
+      "to": {
+        "category": "pit-bikes",
+        "subcategory": "pit-bikes-de-gasolina"
+      }
+    },
+    {
+      "id": "cmq1flq6a000q12e20pxsrfl2",
+      "from": {
+        "category": "vehiculos",
+        "subcategory": "pit-bikes-de-gasolina"
+      },
+      "to": {
+        "category": "pit-bikes",
+        "subcategory": "pit-bikes-de-gasolina"
+      }
+    },
+    {
+      "id": "cmq1f01xz000c12e2hncv1jzv",
+      "from": {
+        "category": "vehiculos",
+        "subcategory": "pit-bikes-de-gasolina"
+      },
+      "to": {
+        "category": "pit-bikes",
+        "subcategory": "pit-bikes-de-gasolina"
+      }
+    },
+    {
+      "id": "cmq1eff4l000012e25jh1j3k4",
+      "from": {
+        "category": "vehiculos",
+        "subcategory": "pit-bikes-de-gasolina"
+      },
+      "to": {
+        "category": "pit-bikes",
+        "subcategory": "pit-bikes-de-gasolina"
+      }
+    },
+    {
+      "id": "cmq1a3hdz0000wo7ivupdxj9w",
+      "from": {
+        "category": "vehiculos",
+        "subcategory": "pit-bikes-de-gasolina"
+      },
+      "to": {
+        "category": "pit-bikes",
+        "subcategory": "pit-bikes-de-gasolina"
+      }
+    },
+    {
+      "id": "cmpwyoxh7000xdpdsshrtqu5k",
+      "from": {
+        "category": "vehiculos",
+        "subcategory": "minimotos-gasolina"
+      },
+      "to": {
+        "category": "pit-bikes",
+        "subcategory": "pit-bikes-de-gasolina"
+      }
+    },
+    {
+      "id": "cmpwxkw7h000kdpdsi4ziev8q",
+      "from": {
+        "category": "vehiculos",
+        "subcategory": "minimotos-gasolina"
+      },
+      "to": {
+        "category": "pit-bikes",
+        "subcategory": "pit-bikes-de-gasolina"
+      }
+    },
+    {
+      "id": "cmpwwnrwr0000dpds89ct0c08",
+      "from": {
+        "category": "vehiculos",
+        "subcategory": "pit-bikes-de-gasolina"
+      },
+      "to": {
+        "category": "pit-bikes",
+        "subcategory": "pit-bikes-de-gasolina"
+      }
+    },
+    {
+      "id": "cmpvjrdgj000ztqfss5k6g669",
+      "from": {
+        "category": "vehiculos",
+        "subcategory": "mini-quads-gasolina"
+      },
+      "to": {
+        "category": "quads",
+        "subcategory": "mini-quads-gasolina"
+      }
+    },
+    {
+      "id": "cmpvj62k0000ctqfszel3l58k",
+      "from": {
+        "category": "vehiculos",
+        "subcategory": "mini-quads-gasolina"
+      },
+      "to": {
+        "category": "quads",
+        "subcategory": "mini-quads-gasolina"
+      }
+    },
+    {
+      "id": "cmpvikdud0000tqfsc09h50qy",
+      "from": {
+        "category": "vehiculos",
+        "subcategory": "mini-quads-gasolina"
+      },
+      "to": {
+        "category": "quads",
+        "subcategory": "mini-quads-gasolina"
+      }
+    },
+    {
+      "id": "cmpshdbeh00003xmssv06831p",
+      "from": {
+        "category": "vehiculos",
+        "subcategory": "mini-quads-gasolina"
+      },
+      "to": {
+        "category": "quads",
+        "subcategory": "mini-quads-gasolina"
+      }
+    },
+    {
+      "id": "cmplaabfo003ilw8iaj2nbc4h",
+      "from": {
+        "category": "vehiculos",
+        "subcategory": "minimotos-gasolina"
+      },
+      "to": {
+        "category": "minimotos",
+        "subcategory": "minimotos-gasolina"
+      }
+    },
+    {
+      "id": "cmph8l45g000qcqj0vi11g7gl",
+      "from": {
+        "category": "vehiculos",
+        "subcategory": "minimotos-gasolina"
+      },
+      "to": {
+        "category": "minimotos",
+        "subcategory": "minimotos-gasolina"
+      }
+    },
+    {
+      "id": "cmph7tx310000cqj0yqhghsst",
+      "from": {
+        "category": "vehiculos",
+        "subcategory": "minimotos-gasolina"
+      },
+      "to": {
+        "category": "minimotos",
+        "subcategory": "minimotos-gasolina"
+      }
+    },
+    {
+      "id": "cmpec7kpj00003ax6jlcld2lh",
+      "from": {
+        "category": "vehiculos",
+        "subcategory": "minimotos-gasolina"
+      },
+      "to": {
+        "category": "pit-bikes",
+        "subcategory": "pit-bikes-de-gasolina"
+      }
+    }
+  ]
+}

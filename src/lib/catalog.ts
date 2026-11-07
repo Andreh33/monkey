@@ -1,6 +1,6 @@
 import { cache } from "react";
 import type { Prisma } from "@prisma/client";
-import { notFound } from "next/navigation";
+import { notFound, permanentRedirect } from "next/navigation";
 import { prisma } from "./prisma";
 import { getCategoryTree } from "./categories";
 import {
@@ -11,6 +11,7 @@ import {
   localizedSearchIds,
 } from "./storefront";
 import { PUBLIC_TO_DB_SLUG } from "./slug-aliases";
+import { legacyVehicleCategoryPath } from "./legacy-vehicle-categories";
 
 export const cardSelect = {
   id: true,
@@ -38,6 +39,8 @@ const load = cache(async (key: string) => {
   };
   const query = catalogQuery(input);
   if (!query.valid) notFound();
+  const legacyPath = legacyVehicleCategoryPath(input, locale);
+  if (legacyPath) permanentRedirect(legacyPath);
   const categories = await getCategoryTree({ onlyWithActiveProducts: true });
   const category = categories.find((c) => c.slug === query.cat);
   if (query.cat && !category) notFound();
