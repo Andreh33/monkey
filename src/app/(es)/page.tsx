@@ -1,4 +1,5 @@
 import { Hero } from "@/components/home/Hero";
+import { PriceMatchBanner } from "@/components/home/PriceMatchBanner";
 import { ServicesSplit } from "@/components/home/ServicesSplit";
 import { FeaturedScooters } from "@/components/home/FeaturedScooters";
 import { RepairProcess } from "@/components/home/RepairProcess";
@@ -22,6 +23,7 @@ export default function HomePage() {
   return (
     <>
       <MonkeyWalkerLoader />
+      <PriceMatchBanner />
       <Hero />
       <ServicesSplit />
       <RegistrationCta />

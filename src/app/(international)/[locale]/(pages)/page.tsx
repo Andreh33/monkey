@@ -9,6 +9,7 @@ import { copy, categoryLabel } from "@/lib/storefront-copy";
 import { staticMetadata } from "@/lib/storefront-legal";
 import { ProductTile } from "@/components/storefront/Catalog";
 import { missingMetadata } from "@/lib/not-found-metadata";
+import { PriceMatchBanner } from "@/components/home/PriceMatchBanner";
 export const revalidate = 300;
 export function generateMetadata({ params }: { params: { locale: string } }) {
   if (!isLocale(params.locale) || params.locale === "es")
@@ -40,6 +41,7 @@ export default async function Page({ params }: { params: { locale: string } }) {
   const cards = await localizeCards(products, locale);
   return (
     <>
+      <PriceMatchBanner locale={locale} />
       <section className="relative min-h-[500px] flex items-center overflow-hidden">
         <Image
           priority
