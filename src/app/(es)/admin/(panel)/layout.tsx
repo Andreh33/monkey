@@ -1,4 +1,5 @@
 import { AdminSidebar } from "@/components/admin/AdminSidebar";
+import { OrderAlerts } from "@/components/admin/OrderAlerts";
 import { getServerSession } from "next-auth";
 import { authOptions } from "@/lib/auth";
 import { redirect } from "next/navigation";
@@ -12,7 +13,7 @@ export default async function AdminPanelLayout({ children }: { children: React.R
     <div className="flex min-h-screen bg-bg-primary">
       <AdminSidebar />
       <div className="flex-1 overflow-x-hidden">
-        <div className="p-6 lg:p-10 max-w-[1280px]">{children}</div>
+        <div className="p-6 lg:p-10 max-w-[1280px]"><OrderAlerts />{children}</div>
       </div>
     </div>
   );

@@ -6,7 +6,7 @@
     "dev": "next dev",
     "test:registration": "tsx --test tests/registration.test.ts",
     "test:checkout": "tsx --test tests/checkout.test.ts tests/checkout-http.test.ts tests/checkout-sqlite.test.ts tests/checkout-migration.test.ts tests/cart.test.ts",
-    "test:admin-commerce": "tsx --test tests/admin-orders.test.ts tests/order-access.test.ts tests/order-display.test.ts tests/order-whatsapp.test.ts tests/product-publication.test.ts tests/product-edit-sqlite.test.ts tests/product-drafts.test.ts",
+    "test:admin-commerce": "tsx --test tests/admin-orders.test.ts tests/order-access.test.ts tests/order-display.test.ts tests/order-whatsapp.test.ts tests/product-publication.test.ts tests/product-edit-sqlite.test.ts tests/product-drafts.test.ts tests/order-alert-feed.test.ts tests/order-alert-state.test.ts tests/order-alarm-audio.test.ts",
     "test:seo": "tsx --test tests/seo-pages.test.ts tests/sitemap.test.ts tests/video-schema.test.ts tests/legacy-redirects.test.ts",
     "test:storefront": "tsx --test tests/storefront.test.ts tests/product-titles.test.ts tests/product-drafts.test.ts tests/product-import.test.ts tests/product-import-sqlite.test.ts tests/public-categories.test.ts tests/legacy-vehicle-categories.test.ts tests/vehicle-categories-migration.test.mjs",
     "build": "prisma generate && next build",
