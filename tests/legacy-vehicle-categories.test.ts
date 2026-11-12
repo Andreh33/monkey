@@ -70,6 +70,8 @@ test("catalogue redirects legacy queries before reading the category tree or dat
   }).outputText;
   const module = { exports: {} as any };
   const requireMock = (name: string) => {
+    if (name === "next/cache") return { unstable_cache: (fn: unknown) => fn };
+    if (name === "./catalog-cache-policy") return { catalogCacheOptions: {} };
     if (name === "react") return { cache: (fn: unknown) => fn };
     if (name === "next/navigation") return {
       permanentRedirect: (path: string) => { throw new Error(`308:${path}`); },

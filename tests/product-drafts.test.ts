@@ -114,10 +114,12 @@ test("product mutations invalidate public catalog only after an authorized succe
 
 test("catalog invalidation matches Next 14 route-group tags in every locale without purging admin layouts", () => {
   const paths: [string, string | undefined][] = [];
+  const dataTags: string[] = [];
   const code = ts.transpileModule(readFileSync("src/lib/catalog-cache.ts", "utf8"), { compilerOptions: { module: ts.ModuleKind.CommonJS, target: ts.ScriptTarget.ES2022 } }).outputText;
   const module = { exports: {} as any };
-  new Function("require", "module", "exports", code)((name: string) => name === "next/cache" ? { revalidatePath: (path: string, type?: string) => paths.push([path, type]) } : require("../src/lib/storefront-routes"), module, module.exports);
+  new Function("require", "module", "exports", code)((name: string) => name === "next/cache" ? { revalidatePath: (path: string, type?: string) => paths.push([path, type]), revalidateTag: (tag: string) => dataTags.push(tag) } : require(name === "./catalog-cache-policy" ? "../src/lib/catalog-cache-policy" : "../src/lib/storefront-routes"), module, module.exports);
   module.exports.revalidateCatalog();
+  assert.deepEqual(dataTags, [require('../src/lib/catalog-cache-policy').CATALOG_CACHE_TAG]);
   const { addImplicitTags } = require("next/dist/server/lib/patch-fetch");
   const invalidated = paths.map(([path, type]) => "_N_T_" + path + (type ? "/" + type : ""));
   for (const locale of ["es", "fr", "it", "pt"]) {

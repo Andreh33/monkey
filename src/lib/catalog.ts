@@ -1,4 +1,6 @@
 import { cache } from "react";
+import { unstable_cache } from "next/cache";
+import { catalogCacheOptions } from "./catalog-cache-policy";
 import type { Prisma } from "@prisma/client";
 import { notFound, permanentRedirect } from "next/navigation";
 import { prisma } from "./prisma";
@@ -32,6 +34,20 @@ export const cardSelect = {
     take: 2,
   },
 } satisfies Prisma.ProductSelect;
+
+// Cache only data, leaving redirects and validation outside the cache callback.
+const readCatalogPage = unstable_cache(async (where: Prisma.ProductWhereInput, orderBy: Prisma.ProductOrderByWithRelationInput[], skip: number) => {
+  const [products, total] = await Promise.all([
+    prisma.product.findMany({ where, select: cardSelect, orderBy, take: 24, skip }),
+    prisma.product.count({ where }),
+  ]);
+  return { products, total };
+}, ["public-catalog-page-v1"], catalogCacheOptions);
+
+const readBrands = unstable_cache(() => prisma.product.groupBy({
+  by: ["brand"], where: { active: true, brand: { not: null } }, orderBy: { brand: "asc" },
+}), ["public-catalog-brands-v1"], catalogCacheOptions);
+
 const load = cache(async (key: string) => {
   const { input, locale } = JSON.parse(key) as {
     input: QueryInput;
@@ -72,21 +88,9 @@ const load = cache(async (key: string) => {
         : query.sort === "name"
           ? [{ name: "asc" }, { id: "asc" }]
           : [{ createdAt: "desc" }, { id: "asc" }];
-  const [products, total, brands] = await Promise.all([
-    prisma.product.findMany({
-      where,
-      select: cardSelect,
-      orderBy,
-      take: 24,
-      skip: query.skip,
-    }),
-    prisma.product.count({ where }),
-    prisma.product.findMany({
-      where: { active: true, brand: { not: null } },
-      select: { brand: true },
-      distinct: ["brand"],
-      orderBy: { brand: "asc" },
-    }),
+  const [{ products, total }, brands] = await Promise.all([
+    readCatalogPage(where, orderBy, query.skip),
+    readBrands(),
   ]);
   if (query.page > Math.max(1, Math.ceil(total / 24))) notFound();
   if (query.brand && !brands.some((b) => b.brand === query.brand)) notFound();
@@ -102,7 +106,7 @@ const load = cache(async (key: string) => {
 export function loadCatalog(input: QueryInput, locale: Locale = "es") {
   return load(JSON.stringify({ input, locale }));
 }
-export const findPublicProduct = cache(async (slug: string) => {
+const readPublicProduct = unstable_cache(async (slug: string) => {
   const include = { images: { orderBy: { order: "asc" as const } } };
   const direct = await prisma.product.findUnique({ where: { slug }, include });
   const product =
@@ -114,7 +118,30 @@ export const findPublicProduct = cache(async (slug: string) => {
         })
       : null);
   return product?.active ? product : null;
+}, ["public-product-v1"], catalogCacheOptions);
+
+export const findPublicProduct = cache(async (slug: string) => {
+  const product = await readPublicProduct(slug);
+  // The Next data cache serializes to JSON, including Date fields.
+  return product ? { ...product, createdAt: new Date(product.createdAt), updatedAt: new Date(product.updatedAt) } : null;
 });
+
+export const relatedProductCards = unstable_cache(async (id: string, category: string) => {
+  const related = await prisma.product.findMany({
+    where: { active: true, id: { not: id }, category }, select: cardSelect,
+    orderBy: [{ featured: "desc" }, { createdAt: "desc" }], take: 3,
+  });
+  if (related.length < 3) related.push(...await prisma.product.findMany({
+    where: { active: true, id: { notIn: [id, ...related.map(p => p.id)] } }, select: cardSelect,
+    orderBy: [{ featured: "desc" }, { createdAt: "desc" }], take: 3 - related.length,
+  }));
+  return related;
+}, ["public-related-cards-v1"], catalogCacheOptions);
+
+const readTranslationSources = unstable_cache((ids: string[]) => prisma.product.findMany({
+  where: { id: { in: ids }, active: true },
+  select: { id: true, name: true, shortDesc: true, description: true },
+}), ["public-card-translations-v1"], catalogCacheOptions);
 /** Only the current page's source text is read to validate editorial hashes.
  * These server-only strings never cross a client component boundary. */
 export async function localizeCards<T extends { id: string; name: string }>(
@@ -123,10 +150,7 @@ export async function localizeCards<T extends { id: string; name: string }>(
 ) {
   if (locale === "es" || !products.length)
     return products.map((p) => ({ ...p, translated: true }));
-  const sources = await prisma.product.findMany({
-    where: { id: { in: products.map((p) => p.id) }, active: true },
-    select: { id: true, name: true, shortDesc: true, description: true },
-  });
+  const sources = await readTranslationSources(products.map(p => p.id).sort());
   const names = new Map(
     sources.map((p) => [p.id, translatedProduct(p, locale)]),
   );

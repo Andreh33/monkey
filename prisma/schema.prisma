@@ -64,6 +64,14 @@ model Product {
   images      ProductImage[]
   createdAt   DateTime       @default(now())
   updatedAt   DateTime       @updatedAt
+
+  @@index([active, createdAt(sort: Desc), id])
+  @@index([active, category, createdAt(sort: Desc), id])
+  @@index([active, category, featured(sort: Desc), createdAt(sort: Desc)])
+  @@index([active, category, subcategory])
+  @@index([active, brand])
+  @@index([active, price, id])
+  @@index([active, name, id])
 }
 
 model Category {
@@ -96,6 +104,8 @@ model ProductImage {
   url       String
   alt       String?
   order     Int     @default(0)
+
+  @@index([productId, order])
 }
 
 model Order {
@@ -137,6 +147,7 @@ model Order {
   createdAt DateTime @default(now())
 
   @@index([status, expiresAt])
+  @@index([status, paidAt, id])
   @@index([reservationOwnerHash, status])
 }
 

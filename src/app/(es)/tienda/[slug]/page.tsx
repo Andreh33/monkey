@@ -1,5 +1,4 @@
 import { notFound, permanentRedirect } from "next/navigation";
-import { prisma } from "@/lib/prisma";
 import { ProductGallery } from "@/components/shop/ProductGallery";
 import { ProductActions } from "@/components/shop/ProductActions";
 import { ProductDescription } from "@/components/shop/ProductDescription";
@@ -11,10 +10,10 @@ import { Gauge, Battery, Zap, BatteryCharging, Weight, Users, Shield, Truck, Hea
 import { formatPrice } from "@/lib/utils";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { productSchema, productVideoSchema, breadcrumbSchema, isDgtCertified } from "@/lib/schema";
-import { DB_TO_PUBLIC_SLUG, PUBLIC_TO_DB_SLUG } from "@/lib/slug-aliases";
+import { DB_TO_PUBLIC_SLUG } from "@/lib/slug-aliases";
 import { Breadcrumbs } from "@/components/blog/Breadcrumbs";
 import { equivalentLanguages, productLanguages } from "@/lib/storefront";
-import { cardSelect } from "@/lib/catalog";
+import { findPublicProduct as findProduct, relatedProductCards } from "@/lib/catalog";
 import { safeMetadata } from '@/lib/not-found-metadata';
 import { productPageTitle } from '@/lib/product-title';
 
@@ -27,17 +26,6 @@ import { productPageTitle } from '@/lib/product-title';
 function redirectLegacySlug(slug: string): void {
   const publicSlug = DB_TO_PUBLIC_SLUG[slug];
   if (publicSlug) permanentRedirect(`/tienda/${publicSlug}`);
-}
-
-async function findProduct(slug: string) {
-  const include = { images: { orderBy: { order: "asc" as const } } };
-  // 1º el slug tal cual (si el admin corrige la BD, la BD gana);
-  // 2º el alias público → slug real de la BD.
-  const direct = await prisma.product.findUnique({ where: { slug }, include });
-  if (direct) return direct;
-  const dbSlug = PUBLIC_TO_DB_SLUG[slug];
-  if (!dbSlug) return null;
-  return prisma.product.findUnique({ where: { slug: dbSlug }, include });
 }
 
 export function generateMetadata(props:{params:{slug:string}}){return safeMetadata(()=>pageMetadata(props));}
@@ -79,31 +67,7 @@ export default async function ProductPage({ params }: { params: { slug: string }
   if (!product || !product.active) notFound();
 
   // Recomendaciones: primero de la misma categoría/marca, completando con otros si faltan.
-  const sameCategory = await prisma.product.findMany({
-    where: {
-      active: true,
-      slug: { not: product.slug },
-      category: product.category,
-    },
-    select: cardSelect,
-    orderBy: [{ featured: "desc" }, { createdAt: "desc" }],
-    take: 3,
-  });
-
-  let related = sameCategory;
-  if (related.length < 3) {
-    const fillers = await prisma.product.findMany({
-      where: {
-        active: true,
-        slug: { not: product.slug },
-        id: { notIn: related.map((p) => p.id) },
-      },
-      select: cardSelect,
-      orderBy: [{ featured: "desc" }, { createdAt: "desc" }],
-      take: 3 - related.length,
-    });
-    related = [...related, ...fillers];
-  }
+  const related = await relatedProductCards(product.id, product.category);
 
   // Las guías del blog son de patinetes: solo se enlazan cuando encajan con el producto.
   const esPatinete = /patinete/i.test(product.category) || /patinete/i.test(product.name);

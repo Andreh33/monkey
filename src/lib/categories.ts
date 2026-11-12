@@ -1,4 +1,6 @@
 import { prisma } from "@/lib/prisma";
+import { unstable_cache } from "next/cache";
+import { catalogCacheOptions } from "./catalog-cache-policy";
 
 export type SubcategoryNode = {
   id: string;
@@ -20,7 +22,7 @@ export type CategoryNode = {
  * `order` y luego alfabéticamente. Se usa en la navbar (megamenú), la tienda
  * (filtros), el formulario de productos y el panel de admin.
  */
-export async function getCategoryTree(options: { onlyWithActiveProducts?: boolean } = {}): Promise<CategoryNode[]> {
+async function readCategoryTree(onlyWithActiveProducts: boolean): Promise<CategoryNode[]> {
   const cats = await prisma.category.findMany({
     orderBy: [{ order: "asc" }, { name: "asc" }],
     include: {
@@ -28,10 +30,9 @@ export async function getCategoryTree(options: { onlyWithActiveProducts?: boolea
     },
   });
 
-  const activeProducts = options.onlyWithActiveProducts ? await prisma.product.findMany({
+  const activeProducts = onlyWithActiveProducts ? await prisma.product.groupBy({
+    by: ["category", "subcategory"],
     where: { active: true },
-    select: { category: true, subcategory: true },
-    distinct: ["category", "subcategory"],
   }) : null;
   const visibleCategories = activeProducts ? new Set(activeProducts.map(p => p.category)) : null;
   const visibleSubcategories = activeProducts ? new Set(activeProducts.map(p => `${p.category}\u0000${p.subcategory}`)) : null;
@@ -48,4 +49,9 @@ export async function getCategoryTree(options: { onlyWithActiveProducts?: boolea
       order: s.order,
     })),
   }));
+}
+
+const publicCategoryTree = unstable_cache(() => readCategoryTree(true), ["public-category-tree-v1"], catalogCacheOptions);
+export function getCategoryTree(options: { onlyWithActiveProducts?: boolean } = {}): Promise<CategoryNode[]> {
+  return options.onlyWithActiveProducts ? publicCategoryTree() : readCategoryTree(false);
 }

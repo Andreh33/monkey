@@ -55,10 +55,25 @@ export function buildStripeSessionParams(order: Order, token: string, origin: st
   };
 }
 
-export function createCheckoutService({ db, gateway, origin, encryptionSecret, now = () => new Date() }: { db: PrismaClient; gateway: CheckoutGateway; origin: string; encryptionSecret: string; now?: () => Date }) {
+export function createCheckoutService({ db, gateway, origin, encryptionSecret, now = () => new Date(), onStockChange }: { db: PrismaClient; gateway: CheckoutGateway; origin: string; encryptionSecret: string; now?: () => Date; onStockChange?: () => void }) {
+  const stockChanges = new WeakSet<Prisma.TransactionClient>();
   async function transaction<T>(work: (tx: Prisma.TransactionClient) => Promise<T>): Promise<T> {
     for (let attempt = 0; ; attempt++) {
-      try { return await db.$transaction(work, { maxWait: 10000, timeout: 15000 }); }
+      try {
+        let changed = false;
+        const result = await db.$transaction(async tx => {
+          const value = await work(tx);
+          changed = stockChanges.has(tx);
+          return value;
+        }, { maxWait: 10000, timeout: 15000 });
+        // Invalidate only committed stock changes, never ordinary order polls.
+        // A cache outage must not turn a committed order into a failed payment.
+        if (changed && onStockChange) {
+          try { onStockChange(); }
+          catch { console.error('[checkout] Public stock cache invalidation failed; TTL remains active.'); }
+        }
+        return result;
+      }
       catch (error) {
         const code = (error as { code?: string }).code;
         if (attempt >= 2 || !["P2034", "P2028", "SQLITE_BUSY"].includes(code ?? "")) throw error;
@@ -71,6 +86,7 @@ export function createCheckoutService({ db, gateway, origin, encryptionSecret, n
     const updated = await tx.order.updateMany({ where: { id: order.id, status: "PENDING", stockReleased: false }, data: { status, stockReleased: true } });
     if (updated.count) {
       for (const item of orderItems(order)) await tx.product.updateMany({ where: { id: item.productId }, data: { stock: { increment: item.quantity } } });
+      stockChanges.add(tx);
     }
   }
 
@@ -81,6 +97,7 @@ export function createCheckoutService({ db, gateway, origin, encryptionSecret, n
     for (const item of items) {
       const reserved = await tx.product.updateMany({ where: { id: item.productId, stock: { gte: item.quantity } }, data: { stock: { decrement: item.quantity } } });
       if (reserved.count !== 1) throw Object.assign(new Error("Concurrent stock change"), { code: "P2034" });
+      stockChanges.add(tx);
     }
     return true;
   }
@@ -167,6 +184,7 @@ export function createCheckoutService({ db, gateway, origin, encryptionSecret, n
         for (const item of priced.items) {
           const reserved = await tx.product.updateMany({ where: { id: item.productId, active: true, stock: { gte: item.quantity } }, data: { stock: { decrement: item.quantity } } });
           if (reserved.count !== 1) throw new CheckoutError("INSUFFICIENT_STOCK", `No hay unidades suficientes de ${item.name}.`, 409, item.productId);
+          stockChanges.add(tx);
         }
         const created = await tx.order.create({ data: {
           ...(userId ? { userId } : {}), ...input.customer, locale: input.locale, status: "PENDING", fulfillmentStatus: "UNFULFILLED",

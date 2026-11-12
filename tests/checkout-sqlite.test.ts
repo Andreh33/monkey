@@ -54,6 +54,38 @@ async function fixture(run: (db: PrismaClient, gateway: FakeStripe, service: Ret
   }
 }
 
+test("stock invalidation runs after committed reservations/releases and not read-only payment polls", () => fixture(async (db, gateway) => {
+  let invalidations = 0;
+  const service = createCheckoutService({ db, gateway, origin: 'https://shop.example.test', encryptionSecret: 'local-only', onStockChange: () => { invalidations++; } });
+  const order = await service.create(input('1'));
+  assert.equal(invalidations, 1, 'reserve invalidates public stock');
+  await service.create(input('1'));
+  await service.status(input('1').checkoutToken);
+  assert.equal(invalidations, 1, 'idempotent create and pending status must not flush the catalog');
+  await service.cancel(input('1').checkoutToken);
+  assert.equal(invalidations, 2, 'release invalidates public stock');
+  assert.equal((await db.product.findUniqueOrThrow({ where: { id: 'p1' } })).stock, 5);
+  assert.equal((await db.order.findUniqueOrThrow({ where: { id: order.orderId } })).status, 'EXPIRED');
+}));
+
+test("a new French order uses an edited price and preserves address, phone and immutable paid totals", () => fixture(async (db, gateway, service) => {
+  await db.product.update({ where: { id: 'p1' }, data: { price: 29.95, shippingCountries: '["ES","FR","IT","PT"]' } });
+  const french = { ...input('2'), locale: 'fr' as const, customer: { ...customer, country: 'FR' as const, phone: '+33612345678', postalCode: '75001', city: 'Paris', region: 'Paris', addressLine1: '1 Rue de Test' } };
+  const created = await service.create(french);
+  assert.equal(gateway.params[0].line_items[0].price_data.unit_amount, 2995);
+  assert.equal(gateway.params[0].shipping_options[0].shipping_rate_data.fixed_amount.amount, 1000);
+  const session = [...gateway.sessions.values()][0];
+  session.status = 'complete'; session.payment_status = 'paid';
+  await service.processEvent({ id: 'evt_price_fr', type: 'checkout.session.completed', session });
+  const paid = await db.order.findUniqueOrThrow({ where: { id: created.orderId } });
+  assert.equal(paid.status, 'PAID'); assert.equal(paid.totalCents, 6990);
+  assert.equal(paid.addressLine1, french.customer.addressLine1); assert.equal(paid.phone, french.customer.phone);
+  assert.equal(paid.email, french.customer.email); assert.equal(paid.country, 'FR');
+  await db.product.update({ where: { id: 'p1' }, data: { price: 35 } });
+  assert.equal((await db.order.findUniqueOrThrow({ where: { id: created.orderId } })).totalCents, 6990);
+  assert.equal((await service.quote({ items: [{ productId: 'p1', quantity: 1 }], country: 'FR', postalCode: '75001' })).totalCents, 4000);
+}));
+
 test("checkout reserves once, retries the same Stripe request and rejects a reused token with different delivery data", () => fixture(async (db, gateway, service) => {
   gateway.nextError = "timeout";
   await assert.rejects(service.create(input("a")), (error: any) => error.code === "PAYMENT_UNAVAILABLE");

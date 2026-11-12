@@ -20,11 +20,11 @@ function loadTree() {
   ];
   const prisma = {
     category: { findMany: async () => categories },
-    product: { findMany: async ({ where }: any) => products.filter(p => !where?.active || p.active) },
+    product: { groupBy: async ({ where }: any) => products.filter(p => !where?.active || p.active) },
   };
   const code = ts.transpileModule(readFileSync("src/lib/categories.ts", "utf8"), { compilerOptions: { module: ts.ModuleKind.CommonJS, target: ts.ScriptTarget.ES2022 } }).outputText;
   const module = { exports: {} as any };
-  new Function("require", "module", "exports", code)(() => ({ prisma }), module, module.exports);
+  new Function("require", "module", "exports", code)((name: string) => name === "next/cache" ? { unstable_cache: (fn: any) => fn } : name === "./catalog-cache-policy" ? { catalogCacheOptions: {} } : { prisma }, module, module.exports);
   return module.exports.getCategoryTree;
 }
 
