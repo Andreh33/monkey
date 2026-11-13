@@ -2,6 +2,7 @@ import assert from "node:assert/strict";
 import { readFileSync } from "node:fs";
 import test from "node:test";
 import ts from "typescript";
+import { isVehicleCategory } from "../src/lib/vehicle-categories";
 
 function loadTree() {
   const categories = [
@@ -24,7 +25,7 @@ function loadTree() {
   };
   const code = ts.transpileModule(readFileSync("src/lib/categories.ts", "utf8"), { compilerOptions: { module: ts.ModuleKind.CommonJS, target: ts.ScriptTarget.ES2022 } }).outputText;
   const module = { exports: {} as any };
-  new Function("require", "module", "exports", code)((name: string) => name === "next/cache" ? { unstable_cache: (fn: any) => fn } : name === "./catalog-cache-policy" ? { catalogCacheOptions: {} } : { prisma }, module, module.exports);
+  new Function("require", "module", "exports", code)((name: string) => name === "next/cache" ? { unstable_cache: (fn: any) => fn } : name === "./catalog-cache-policy" ? { catalogCacheOptions: {} } : name === "./vehicle-categories" ? { isVehicleCategory } : { prisma }, module, module.exports);
   return module.exports.getCategoryTree;
 }
 

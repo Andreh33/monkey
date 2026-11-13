@@ -101,6 +101,24 @@ test('public reads reuse Next data cache; admin edits invalidate prices and chec
     await request(() => load('src/lib/catalog-cache.ts').revalidateCatalog());
     assert.equal(await request(() => catalog.findPublicProduct('pieza')), null, 'unpublished products disappear after invalidation');
     assert.equal((await request(() => categories.getCategoryTree({ onlyWithActiveProducts: true })) as any[]).length, 0);
+    await db.category.create({ data: { name: 'Quads', slug: 'quads', order: 99 } });
+    for (let i = 0; i < 55; i++) await db.product.create({ data: {
+      ...original, id: `priority-${i}`, slug: `priority-${i}`, name: `Producto ${i}`,
+      category: i < 26 ? 'quads' : 'recambio', price: i < 26 ? 200 : 10,
+      createdAt: new Date(i < 26 ? '2025-01-01' : '2026-01-01'),
+    } });
+    await request(() => load('src/lib/catalog-cache.ts').revalidateCatalog());
+    const pages: any[] = [];
+    for (const page of ['1', '2', '3']) pages.push(await request(() => catalog.loadCatalog({ page }, 'es')));
+    const ids = pages.flatMap(p => p.products.map((product: any) => product.id));
+    assert.equal(ids.length, 55);
+    assert.equal(new Set(ids).size, 55, 'partition boundary must neither repeat nor omit products');
+    assert.ok(ids.slice(0, 26).every(id => Number(id.split('-')[1]) < 26), 'older vehicles precede newer parts across pages');
+    assert.equal(pages[0].categories[0].slug, 'quads', 'public navigation prioritizes vehicles over the stored category order');
+    const cheapest: any = await request(() => catalog.loadCatalog({ sort: 'price-asc' }, 'es'));
+    assert.equal(cheapest.products[0].price, 10, 'explicit price sorting remains global');
+    const parts: any = await request(() => catalog.loadCatalog({ cat: 'recambio' }, 'es'));
+    assert.equal(parts.total, 29, 'category filters retain their own pagination');
   } finally {
     (globalThis as any).__incrementalCache = previous;
     await db.$disconnect();

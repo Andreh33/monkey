@@ -14,6 +14,7 @@ import {
 } from "./storefront";
 import { PUBLIC_TO_DB_SLUG } from "./slug-aliases";
 import { legacyVehicleCategoryPath } from "./legacy-vehicle-categories";
+import { VEHICLE_CATEGORIES } from "./vehicle-categories";
 
 export const cardSelect = {
   id: true,
@@ -36,13 +37,27 @@ export const cardSelect = {
 } satisfies Prisma.ProductSelect;
 
 // Cache only data, leaving redirects and validation outside the cache callback.
-const readCatalogPage = unstable_cache(async (where: Prisma.ProductWhereInput, orderBy: Prisma.ProductOrderByWithRelationInput[], skip: number) => {
+const readCatalogPage = unstable_cache(async (where: Prisma.ProductWhereInput, orderBy: Prisma.ProductOrderByWithRelationInput[], skip: number, vehiclesFirst: boolean) => {
+  if (vehiclesFirst) {
+    // Two indexed partitions preserve pagination without loading the whole catalog.
+    const vehicles = { AND: [where, { category: { in: [...VEHICLE_CATEGORIES] } }] };
+    const other = { AND: [where, { category: { notIn: [...VEHICLE_CATEGORIES] } }] };
+    const [vehicleCount, otherCount] = await Promise.all([
+      prisma.product.count({ where: vehicles }), prisma.product.count({ where: other }),
+    ]);
+    const takeVehicles = Math.min(24, Math.max(0, vehicleCount - skip));
+    const [first, rest] = await Promise.all([
+      takeVehicles ? prisma.product.findMany({ where: vehicles, select: cardSelect, orderBy, skip, take: takeVehicles }) : [],
+      takeVehicles < 24 ? prisma.product.findMany({ where: other, select: cardSelect, orderBy, skip: Math.max(0, skip - vehicleCount), take: 24 - takeVehicles }) : [],
+    ]);
+    return { products: [...first, ...rest], total: vehicleCount + otherCount };
+  }
   const [products, total] = await Promise.all([
     prisma.product.findMany({ where, select: cardSelect, orderBy, take: 24, skip }),
     prisma.product.count({ where }),
   ]);
   return { products, total };
-}, ["public-catalog-page-v1"], catalogCacheOptions);
+}, ["public-catalog-page-v2"], catalogCacheOptions);
 
 const readBrands = unstable_cache(() => prisma.product.groupBy({
   by: ["brand"], where: { active: true, brand: { not: null } }, orderBy: { brand: "asc" },
@@ -89,7 +104,7 @@ const load = cache(async (key: string) => {
           ? [{ name: "asc" }, { id: "asc" }]
           : [{ createdAt: "desc" }, { id: "asc" }];
   const [{ products, total }, brands] = await Promise.all([
-    readCatalogPage(where, orderBy, query.skip),
+    readCatalogPage(where, orderBy, query.skip, !query.cat && !["price-asc", "price-desc", "name"].includes(query.sort)),
     readBrands(),
   ]);
   if (query.page > Math.max(1, Math.ceil(total / 24))) notFound();

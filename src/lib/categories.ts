@@ -1,6 +1,7 @@
 import { prisma } from "@/lib/prisma";
 import { unstable_cache } from "next/cache";
 import { catalogCacheOptions } from "./catalog-cache-policy";
+import { isVehicleCategory } from "./vehicle-categories";
 
 export type SubcategoryNode = {
   id: string;
@@ -37,7 +38,9 @@ async function readCategoryTree(onlyWithActiveProducts: boolean): Promise<Catego
   const visibleCategories = activeProducts ? new Set(activeProducts.map(p => p.category)) : null;
   const visibleSubcategories = activeProducts ? new Set(activeProducts.map(p => `${p.category}\u0000${p.subcategory}`)) : null;
 
-  return cats.filter(c => !visibleCategories || visibleCategories.has(c.slug)).map((c) => ({
+  const visible = cats.filter(c => !visibleCategories || visibleCategories.has(c.slug));
+  if (onlyWithActiveProducts) visible.sort((a, b) => Number(isVehicleCategory(b.slug)) - Number(isVehicleCategory(a.slug)));
+  return visible.map((c) => ({
     id: c.id,
     slug: c.slug,
     name: c.name,
@@ -51,7 +54,7 @@ async function readCategoryTree(onlyWithActiveProducts: boolean): Promise<Catego
   }));
 }
 
-const publicCategoryTree = unstable_cache(() => readCategoryTree(true), ["public-category-tree-v1"], catalogCacheOptions);
+const publicCategoryTree = unstable_cache(() => readCategoryTree(true), ["public-category-tree-v2"], catalogCacheOptions);
 export function getCategoryTree(options: { onlyWithActiveProducts?: boolean } = {}): Promise<CategoryNode[]> {
   return options.onlyWithActiveProducts ? publicCategoryTree() : readCategoryTree(false);
 }
