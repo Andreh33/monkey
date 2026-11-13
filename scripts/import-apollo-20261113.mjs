@@ -42,10 +42,11 @@ export function validateApolloManifest(manifest, { bicycleStockOverride = false 
 }
 
 /** Additive, resumable batches. Never updates an existing product, price, stock or order. */
-export async function importApolloCatalog(client, manifest, { batchSize = 25, onProgress = () => {}, bicycleStockOverride = false } = {}) {
+export async function importApolloCatalog(client, manifest, { batchSize = 25, onProgress = () => {}, bicycleStockOverride = false, bicycleImportGroup = 'bicycles' } = {}) {
   validateApolloManifest(manifest, { bicycleStockOverride });
   // Separate, explicit follow-up authorized by the user; the original import stays strict.
-  const prefix = bicycleStockOverride ? '20261113_apollo_bicycles_' : PREFIX;
+  assert(/^[a-z]+$/.test(bicycleImportGroup) && bicycleImportGroup !== 'catalog', 'invalid bicycle import group');
+  const prefix = bicycleStockOverride ? `20261113_apollo_${bicycleImportGroup}_` : PREFIX;
   assert(Number.isInteger(batchSize) && batchSize > 0 && batchSize <= 25, 'invalid batch size');
   const digest = createHash('sha256').update(JSON.stringify(manifest)).digest('hex');
   const marker = prefix + digest.slice(0, 20);

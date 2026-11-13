@@ -1,0 +1,87 @@
+{
+  "version": 1,
+  "products": [
+    {
+      "id": "imp20261113_ap1135_v0",
+      "sku": "MA-1135-0",
+      "slug": "bicicleta-electrica-plegable-robstep-x1-300w-36v-imp20261113_ap1135_v0",
+      "name": "Bicicleta eléctrica plegable Robstep X1 300W 36V",
+      "shortDesc": "Robstep X1 plegable con motor de 300 W, batería extraíble de 36 V y frenos de disco.",
+      "description": "La Robstep X1 combina un cuadro plegable de aluminio con motor eléctrico de 300 W y batería de litio extraíble de 36 V y 10,4 Ah. El formato compacto facilita guardarla y transportarla.\n\nIncluye frenos de disco delante y detrás, iluminación LED, bocina y mando a distancia con alarma antirrobo. El panel permite consultar la carga de la batería.\n\nCaracterísticas de esta versión:\n- Potencia nominal: 300 W.\n- Batería: litio, 36 V y 10,4 Ah.\n- Autonomía indicada: entre 12 y 15 km, según uso y condiciones.\n- Velocidad máxima aproximada: 20 km/h.\n- Tiempo de carga aproximado: de 2 a 3 horas.\n- Peso: 15 kg.\n- Carga máxima: 120 kg.\n- Plegado: sí.\n\nComprueba las condiciones de uso y la normativa aplicable antes de circular por espacios públicos.",
+      "price": 742.81,
+      "currency": "EUR",
+      "stock": 5,
+      "category": "bicicleta",
+      "categoryName": "Bicicletas eléctricas",
+      "subcategory": null,
+      "subcategoryName": null,
+      "brand": "Robstep",
+      "shippingCost": 50,
+      "shippingCountries": "[\"ES\",\"FR\",\"IT\",\"PT\"]",
+      "stripeLink": "",
+      "active": true,
+      "featured": false,
+      "maxSpeed": 20,
+      "motorPower": 300,
+      "battery": "Litio, 36 V y 10,4 Ah",
+      "weight": 15,
+      "maxLoad": 120,
+      "images": [
+        {
+          "url": "https://19e3cavvu8vlpeyt.public.blob.vercel-storage.com/products/import-apollo-20261113/3b746f276de999f0b919bd286148089ba7f9656eb7af6f1d8aeaa3c26d7ea6fb.png",
+          "alt": "Bicicleta eléctrica plegable Robstep X1 300W 36V"
+        },
+        {
+          "url": "https://19e3cavvu8vlpeyt.public.blob.vercel-storage.com/products/import-apollo-20261113/dde526bc7b4bed8d473d76c5e2d4eb8789b685471bb702028a7054540851b03b.png",
+          "alt": "Bicicleta eléctrica plegable Robstep X1 300W 36V"
+        },
+        {
+          "url": "https://19e3cavvu8vlpeyt.public.blob.vercel-storage.com/products/import-apollo-20261113/eaae86768cd26d42e52aeaec30da4dea7655183817424a1263a24e79d038be66.png",
+          "alt": "Bicicleta eléctrica plegable Robstep X1 300W 36V"
+        },
+        {
+          "url": "https://19e3cavvu8vlpeyt.public.blob.vercel-storage.com/products/import-apollo-20261113/0e04c1f53c605609b2d3f021f51d45a93659b5b4520cd2aa23b4cbaf6f2bbf65.png",
+          "alt": "Bicicleta eléctrica plegable Robstep X1 300W 36V"
+        },
+        {
+          "url": "https://19e3cavvu8vlpeyt.public.blob.vercel-storage.com/products/import-apollo-20261113/8495bd0f04c09f7ce005f1dc3af49a7306a6a668c7107da442136dbc0adc970e.png",
+          "alt": "Bicicleta eléctrica plegable Robstep X1 300W 36V"
+        },
+        {
+          "url": "https://19e3cavvu8vlpeyt.public.blob.vercel-storage.com/products/import-apollo-20261113/b636ffde7e5d5eb07a02edb8a3a58ce9d5bf44320e4e52fe14beba9da1310711.png",
+          "alt": "Bicicleta eléctrica plegable Robstep X1 300W 36V"
+        },
+        {
+          "url": "https://19e3cavvu8vlpeyt.public.blob.vercel-storage.com/products/import-apollo-20261113/9de3c5ee33691ef453a644f7f91eae866008a8fce48179ecb997b80aadc27936.png",
+          "alt": "Bicicleta eléctrica plegable Robstep X1 300W 36V"
+        },
+        {
+          "url": "https://19e3cavvu8vlpeyt.public.blob.vercel-storage.com/products/import-apollo-20261113/08a789d9801635d4a0677fbb494fd96ea385bfd0a1cb65adb4d1453ba6b33705.png",
+          "alt": "Bicicleta eléctrica plegable Robstep X1 300W 36V"
+        },
+        {
+          "url": "https://19e3cavvu8vlpeyt.public.blob.vercel-storage.com/products/import-apollo-20261113/1ed5c8ce750be9f72bf69896281594725abc5b9f1166ec3ea7297378746998b4.png",
+          "alt": "Bicicleta eléctrica plegable Robstep X1 300W 36V"
+        },
+        {
+          "url": "https://19e3cavvu8vlpeyt.public.blob.vercel-storage.com/products/import-apollo-20261113/f8d0329923c3cf82928912051bba8806861a12897df785dfd9670fd9d2f27a79.png",
+          "alt": "Bicicleta eléctrica plegable Robstep X1 300W 36V"
+        },
+        {
+          "url": "https://19e3cavvu8vlpeyt.public.blob.vercel-storage.com/products/import-apollo-20261113/f35be525c705607334cba8cbf09e9dd49faa00166840606d35e3e887ea842583.png",
+          "alt": "Bicicleta eléctrica plegable Robstep X1 300W 36V"
+        }
+      ],
+      "source": {
+        "url": "https://www.motosapollo.com/vehiculos-especiales/bicicleta-electrica-plegable",
+        "productId": 1135,
+        "variantId": 0,
+        "reference": "2229",
+        "priceCents": 61901,
+        "quantity": 0,
+        "availableForOrder": true,
+        "checkedAt": "2026-11-13T17:50:35.229538+00:00"
+      }
+    }
+  ]
+}

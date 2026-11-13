@@ -36,6 +36,11 @@ test('authorized bicycle follow-up accepts unavailable source stock only for bic
     await client.execute({ sql: 'UPDATE Product SET stock=4,price=999 WHERE id=?', args: [bicycles.products[0].id] });
     assert.equal((await importApolloCatalog(client, bicycles, { bicycleStockOverride: true })).status, 'already-applied');
     assert.deepEqual((await client.execute({ sql: 'SELECT stock,price FROM Product WHERE id=?', args: [bicycles.products[0].id] })).rows[0], { stock: 4, price: 999 });
+    const specialBicycle = JSON.parse(readFileSync('scripts/data/apollo-special-bicycle-20261113.json', 'utf8'));
+    assert.deepEqual(await importApolloCatalog(client, specialBicycle, { bicycleStockOverride: true, bicycleImportGroup: 'specialbicycle' }), { status: 'applied', inserted: 1, skipped: 0 });
+    assert.equal((await importApolloCatalog(client, bicycles, { bicycleStockOverride: true })).status, 'already-applied');
+    assert.equal((await importApolloCatalog(client, specialBicycle, { bicycleStockOverride: true, bicycleImportGroup: 'specialbicycle' })).status, 'already-applied');
+    assert.deepEqual((await client.execute({ sql: 'SELECT stock,price FROM Product WHERE id=?', args: [specialBicycle.products[0].id] })).rows[0], { stock: 5, price: 742.81 });
   } finally { client.close(); }
 });
 
