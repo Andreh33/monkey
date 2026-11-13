@@ -9,7 +9,7 @@ const IMAGE_HOST = '19e3cavvu8vlpeyt.public.blob.vercel-storage.com';
 const assert = (ok, message) => { if (!ok) throw new Error(`Apollo import: ${message}`); };
 export const normalizedName = name => name.normalize('NFKD').replace(/[\u0300-\u036f]/g, '').toLowerCase().replace(/[^a-z0-9]+/g, ' ').trim();
 
-export function validateApolloManifest(manifest) {
+export function validateApolloManifest(manifest, { bicycleStockOverride = false } = {}) {
   assert(manifest.version === 1 && Array.isArray(manifest.products) && manifest.products.length > 0, 'invalid manifest');
   const ids = new Set(), skus = new Set(), slugs = new Set(), names = new Set();
   for (const p of manifest.products) {
@@ -22,7 +22,8 @@ export function validateApolloManifest(manifest) {
     assert(Number.isInteger(p.source.priceCents) && p.source.priceCents > 0 && Number.isFinite(p.price), 'invalid price');
     const expected = Math.floor((p.source.priceCents * 120 + 50) / 100);
     assert(Math.abs(p.price * 100 - expected) < 0.000001, 'price must be exactly source plus 20 percent');
-    assert(Number.isInteger(p.source.quantity) && p.source.quantity > 0 && p.source.availableForOrder === true, 'source must have stock and allow purchases');
+    assert(!bicycleStockOverride || p.category === 'bicicleta', 'stock override is limited to bicycles');
+    assert(Number.isInteger(p.source.quantity) && (p.source.quantity > 0 || bicycleStockOverride) && p.source.availableForOrder === true, 'source must have stock and allow purchases');
     assert(p.stock === 5 && p.active === true && p.featured === false && p.currency === 'EUR' && p.stripeLink === '', 'invalid publication defaults');
     assert(Number.isFinite(p.shippingCost) && p.shippingCost >= 5 && p.shippingCost <= 75, 'invalid shipping');
     assert(p.shippingCountries === '["ES","FR","IT","PT"]', 'invalid destinations');
@@ -41,13 +42,15 @@ export function validateApolloManifest(manifest) {
 }
 
 /** Additive, resumable batches. Never updates an existing product, price, stock or order. */
-export async function importApolloCatalog(client, manifest, { batchSize = 25, onProgress = () => {} } = {}) {
-  validateApolloManifest(manifest);
+export async function importApolloCatalog(client, manifest, { batchSize = 25, onProgress = () => {}, bicycleStockOverride = false } = {}) {
+  validateApolloManifest(manifest, { bicycleStockOverride });
+  // Separate, explicit follow-up authorized by the user; the original import stays strict.
+  const prefix = bicycleStockOverride ? '20261113_apollo_bicycles_' : PREFIX;
   assert(Number.isInteger(batchSize) && batchSize > 0 && batchSize <= 25, 'invalid batch size');
   const digest = createHash('sha256').update(JSON.stringify(manifest)).digest('hex');
-  const marker = PREFIX + digest.slice(0, 20);
+  const marker = prefix + digest.slice(0, 20);
   await client.execute('CREATE TABLE IF NOT EXISTS "_app_migrations" (name TEXT PRIMARY KEY, applied_at DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP)');
-  const applied = await client.execute({ sql: 'SELECT name FROM "_app_migrations" WHERE name LIKE ?', args: [PREFIX + '%'] });
+  const applied = await client.execute({ sql: 'SELECT name FROM "_app_migrations" WHERE name LIKE ?', args: [prefix + '%'] });
   if (applied.rows.length) {
     assert(applied.rows.length === 1 && applied.rows[0].name === marker, 'a different manifest was already imported');
     return { status: 'already-applied', inserted: 0, skipped: manifest.products.length };

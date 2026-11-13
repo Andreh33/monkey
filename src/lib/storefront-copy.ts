@@ -383,6 +383,12 @@ const categories: Record<string, Record<Locale, string>> = {
     it: "Biciclette elettriche",
     pt: "Bicicletas elétricas",
   },
+  drift: {
+    es: "Drift",
+    fr: "Drift",
+    it: "Drift",
+    pt: "Drift",
+  },
   "pit-bikes": {
     es: "Pit bikes y motocross",
     fr: "Pit bikes et motocross",

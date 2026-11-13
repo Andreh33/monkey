@@ -1,0 +1,65 @@
+{
+  "migration": "20261113_drift_category",
+  "products": [
+    {
+      "id": "imp20261113_ap6431_v2144",
+      "name": "Triciclo Eléctrico ROAN RK26 250W 36V Litio - Negro carbono",
+      "category": "patinete",
+      "subcategory": null
+    },
+    {
+      "id": "imp20261113_ap6431_v2295",
+      "name": "Triciclo Eléctrico ROAN RK26 250W 36V Litio - ROSA-24",
+      "category": "patinete",
+      "subcategory": null
+    },
+    {
+      "id": "imp20261113_ap6431_v2296",
+      "name": "Triciclo Eléctrico ROAN RK26 250W 36V Litio - Graffiti 24",
+      "category": "patinete",
+      "subcategory": null
+    },
+    {
+      "id": "imp20261113_ap6431_v4324",
+      "name": "Triciclo Eléctrico ROAN RK26 250W 36V Litio - Spider Rojo",
+      "category": "patinete",
+      "subcategory": null
+    },
+    {
+      "id": "imp20261106_v56318850400630",
+      "name": "TRICICLO ELECTRICO NEON 18-01 350W 36V — AZUL PINTURAS SALPICADAS",
+      "category": "bicicleta",
+      "subcategory": "bicicletas-electricas"
+    },
+    {
+      "id": "imp20261106_v56318850367862",
+      "name": "TRICICLO ELECTRICO NEON 18-01 350W 36V — AZUL FUEGO",
+      "category": "bicicleta",
+      "subcategory": "bicicletas-electricas"
+    },
+    {
+      "id": "imp20261106_v56318850335094",
+      "name": "TRICICLO ELECTRICO NEON 18-01 350W 36V — AMARILLO GRAFFITI",
+      "category": "bicicleta",
+      "subcategory": "bicicletas-electricas"
+    },
+    {
+      "id": "imp20261106_v56318850302326",
+      "name": "TRICICLO ELECTRICO NEON 18-01 350W 36V — ROJO SPIDER",
+      "category": "bicicleta",
+      "subcategory": "bicicletas-electricas"
+    },
+    {
+      "id": "imp20261106_v56318850269558",
+      "name": "TRICICLO ELECTRICO NEON 18-01 350W 36V — AZUL SPIDER",
+      "category": "bicicleta",
+      "subcategory": "bicicletas-electricas"
+    },
+    {
+      "id": "imp20261106_v56318850236790",
+      "name": "TRICICLO ELECTRICO NEON 18-01 350W 36V — NEGRO GRAFFITI",
+      "category": "bicicleta",
+      "subcategory": "bicicletas-electricas"
+    }
+  ]
+}

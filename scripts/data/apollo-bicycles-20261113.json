@@ -1,0 +1,1523 @@
+{
+  "version": 1,
+  "products": [
+    {
+      "id": "imp20261113_ap6209_v3086",
+      "sku": "MA-6209-3086",
+      "slug": "bicicleta-electrica-rexo-rx24-1500w-48v-24-blanco-imp20261113_ap6209_v3086",
+      "name": "Bicicleta eléctrica REXO RX24 1500W 48V 24” - Blanco",
+      "shortDesc": "Bicicleta eléctrica REXO RX24 1500W 48V 24” - Blanco",
+      "description": "Bicicleta eléctrica REXO RX24 1500W 48V 24” - Blanco.\n\nUn modelo de la gama de bicicletas eléctricas con la configuración indicada en esta ficha. Revisa el tamaño de las ruedas y las características del motor para elegir la versión que necesitas.\n\nCaracterísticas de esta versión:\n- Modelo del producto: REX24\n- Marca: REXO\n- Tipo Motor: Motor eléctrico sin escobillas \"Brushless\"\n- Potencia Nominal: 1500W\n- Batería: 48V 10Ah\n- Autonomia: 20-30 km aprox.\n- Velocidad Máxima: 50 km/h\n- Limitador de velocidad: 15 km/h - 35km/h - 50km/h\n- Tiempo de carga de la batería: 120–240 min\n- Frenos: Frenos Hidráulicos TIM (delantero y trasero)\n- Suspensión delantera: Horquilla delantera Hidráulica doble TIM 80 mm regulable\n- Suspensión trasera: FASTACE/DNM de aire 200 mm ajustable\n- Neumáticos: 24x2.80\" Kenda off-road\n- Altura del suelo al asiento: 74–84 cm regulable\n- Pantalla: LCD Wuxing de 22 mm\n- Carga máxima: 120 kg\n- Distancia entre ejes: 123 cm\n- Dimensiones del producto: 1850 x 680 x 1200 mm\n- Peso del producto: 23 kg\n- Dimensiones del embalaje: 1550 x 270 x 700 mm\n- Peso producto embalado: 27 kg\n\nConfiguración: Color: Blanco.",
+      "price": 1558.84,
+      "currency": "EUR",
+      "stock": 5,
+      "category": "bicicleta",
+      "subcategory": null,
+      "categoryName": "Bicicletas eléctricas",
+      "subcategoryName": null,
+      "brand": "REXO",
+      "shippingCost": 50,
+      "shippingCountries": "[\"ES\",\"FR\",\"IT\",\"PT\"]",
+      "stripeLink": "",
+      "active": true,
+      "featured": false,
+      "images": [
+        {
+          "url": "https://19e3cavvu8vlpeyt.public.blob.vercel-storage.com/products/import-apollo-20261113/fcb09cb3e8294d1448fe3e6c4d5c8eac4ece11d37cfd2897bbe0ea6c21cbe89c.jpg",
+          "alt": "Bicicleta eléctrica REXO RX24 1500W 48V 24” - Blanco"
+        },
+        {
+          "url": "https://19e3cavvu8vlpeyt.public.blob.vercel-storage.com/products/import-apollo-20261113/98e76db91fa30b9a8ae31f5b803b0681bcb1301511c058dda25d03c3fb391d41.jpg",
+          "alt": "Bicicleta eléctrica REXO RX24 1500W 48V 24” - Blanco"
+        },
+        {
+          "url": "https://19e3cavvu8vlpeyt.public.blob.vercel-storage.com/products/import-apollo-20261113/2616611530b8c75ce9c3facf7d002dba329c9993139f40e8cea7a4f8a9187a80.jpg",
+          "alt": "Bicicleta eléctrica REXO RX24 1500W 48V 24” - Blanco"
+        },
+        {
+          "url": "https://19e3cavvu8vlpeyt.public.blob.vercel-storage.com/products/import-apollo-20261113/7fe71a7893cd7e835ad24e3da545611445744ba68f5c1443c9a88631c67e30d3.jpg",
+          "alt": "Bicicleta eléctrica REXO RX24 1500W 48V 24” - Blanco"
+        },
+        {
+          "url": "https://19e3cavvu8vlpeyt.public.blob.vercel-storage.com/products/import-apollo-20261113/c528f6a54fb3cc3ebf056a53e16c6611bb69e5dac23bcc1ba8de58a00e33c63c.jpg",
+          "alt": "Bicicleta eléctrica REXO RX24 1500W 48V 24” - Blanco"
+        },
+        {
+          "url": "https://19e3cavvu8vlpeyt.public.blob.vercel-storage.com/products/import-apollo-20261113/7185678c065e985c0a7d55a08dce91295d2008393bc349ee35fa539e43b018e4.jpg",
+          "alt": "Bicicleta eléctrica REXO RX24 1500W 48V 24” - Blanco"
+        },
+        {
+          "url": "https://19e3cavvu8vlpeyt.public.blob.vercel-storage.com/products/import-apollo-20261113/8b020e7dbc8d5f0afd77345c8a122ca1a88324218c503a75c0144df14d5a40d7.jpg",
+          "alt": "Bicicleta eléctrica REXO RX24 1500W 48V 24” - Blanco"
+        },
+        {
+          "url": "https://19e3cavvu8vlpeyt.public.blob.vercel-storage.com/products/import-apollo-20261113/442a626f0e0da6053708b5d7b30d2a42acea5044e0da8c791074c57f8d733b38.jpg",
+          "alt": "Bicicleta eléctrica REXO RX24 1500W 48V 24” - Blanco"
+        },
+        {
+          "url": "https://19e3cavvu8vlpeyt.public.blob.vercel-storage.com/products/import-apollo-20261113/98268439288b1dd0973989b6f2f1f5d4297bdbd4bc06bf65dbe681474ec085bb.jpg",
+          "alt": "Bicicleta eléctrica REXO RX24 1500W 48V 24” - Blanco"
+        },
+        {
+          "url": "https://19e3cavvu8vlpeyt.public.blob.vercel-storage.com/products/import-apollo-20261113/20d4b6c9776bdacddce6511e9e14644f72f66765f3a488bc823d349674992782.jpg",
+          "alt": "Bicicleta eléctrica REXO RX24 1500W 48V 24” - Blanco"
+        },
+        {
+          "url": "https://19e3cavvu8vlpeyt.public.blob.vercel-storage.com/products/import-apollo-20261113/3b2669b95527130bf90e52283b87dfbe2c3290b6382cb57ef03cc43f8fcf895a.jpg",
+          "alt": "Bicicleta eléctrica REXO RX24 1500W 48V 24” - Blanco"
+        },
+        {
+          "url": "https://19e3cavvu8vlpeyt.public.blob.vercel-storage.com/products/import-apollo-20261113/444d75c06e4505ac4eba2aaa6be10b4205afb18bfdd4c6196225b9e661171b70.jpg",
+          "alt": "Bicicleta eléctrica REXO RX24 1500W 48V 24” - Blanco"
+        },
+        {
+          "url": "https://19e3cavvu8vlpeyt.public.blob.vercel-storage.com/products/import-apollo-20261113/6affa05d0381ec5fd29e842fa4520fe9c3a109b2e7b337b82eba9a61fcdbb4d0.jpg",
+          "alt": "Bicicleta eléctrica REXO RX24 1500W 48V 24” - Blanco"
+        },
+        {
+          "url": "https://19e3cavvu8vlpeyt.public.blob.vercel-storage.com/products/import-apollo-20261113/e0ce61bd71b938bb6c587abdf307beedd9f88accc24e3daec92ee106c7178997.jpg",
+          "alt": "Bicicleta eléctrica REXO RX24 1500W 48V 24” - Blanco"
+        }
+      ],
+      "source": {
+        "url": "https://www.motosapollo.com/bicicletas-electricas/bicicleta-electrica-rexo-rx24-1500w-48v-24?group%5B13%5D=392",
+        "productId": 6209,
+        "variantId": 3086,
+        "reference": "5743",
+        "priceCents": 129903,
+        "quantity": 0,
+        "availableForOrder": true,
+        "checkedAt": "2026-11-13T17:21:17.754821+00:00"
+      },
+      "motorPower": 1500,
+      "battery": "48V 10Ah",
+      "maxSpeed": 50,
+      "maxLoad": 120,
+      "weight": 23.0
+    },
+    {
+      "id": "imp20261113_ap6209_v3087",
+      "sku": "MA-6209-3087",
+      "slug": "bicicleta-electrica-rexo-rx24-1500w-48v-24-rojo-imp20261113_ap6209_v3087",
+      "name": "Bicicleta eléctrica REXO RX24 1500W 48V 24” - Rojo",
+      "shortDesc": "Bicicleta eléctrica REXO RX24 1500W 48V 24” - Rojo",
+      "description": "Bicicleta eléctrica REXO RX24 1500W 48V 24” - Rojo.\n\nUn modelo de la gama de bicicletas eléctricas con la configuración indicada en esta ficha. Revisa el tamaño de las ruedas y las características del motor para elegir la versión que necesitas.\n\nCaracterísticas de esta versión:\n- Modelo del producto: REX24\n- Marca: REXO\n- Tipo Motor: Motor eléctrico sin escobillas \"Brushless\"\n- Potencia Nominal: 1500W\n- Batería: 48V 10Ah\n- Autonomia: 20-30 km aprox.\n- Velocidad Máxima: 50 km/h\n- Limitador de velocidad: 15 km/h - 35km/h - 50km/h\n- Tiempo de carga de la batería: 120–240 min\n- Frenos: Frenos Hidráulicos TIM (delantero y trasero)\n- Suspensión delantera: Horquilla delantera Hidráulica doble TIM 80 mm regulable\n- Suspensión trasera: FASTACE/DNM de aire 200 mm ajustable\n- Neumáticos: 24x2.80\" Kenda off-road\n- Altura del suelo al asiento: 74–84 cm regulable\n- Pantalla: LCD Wuxing de 22 mm\n- Carga máxima: 120 kg\n- Distancia entre ejes: 123 cm\n- Dimensiones del producto: 1850 x 680 x 1200 mm\n- Peso del producto: 23 kg\n- Dimensiones del embalaje: 1550 x 270 x 700 mm\n- Peso producto embalado: 27 kg\n\nConfiguración: Color: Rojo.",
+      "price": 1558.84,
+      "currency": "EUR",
+      "stock": 5,
+      "category": "bicicleta",
+      "subcategory": null,
+      "categoryName": "Bicicletas eléctricas",
+      "subcategoryName": null,
+      "brand": "REXO",
+      "shippingCost": 50,
+      "shippingCountries": "[\"ES\",\"FR\",\"IT\",\"PT\"]",
+      "stripeLink": "",
+      "active": true,
+      "featured": false,
+      "images": [
+        {
+          "url": "https://19e3cavvu8vlpeyt.public.blob.vercel-storage.com/products/import-apollo-20261113/96ea4f77b54b44e5b7bee74fa18edcdce8acd7051d4999d7330bb81a55791e28.jpg",
+          "alt": "Bicicleta eléctrica REXO RX24 1500W 48V 24” - Rojo"
+        },
+        {
+          "url": "https://19e3cavvu8vlpeyt.public.blob.vercel-storage.com/products/import-apollo-20261113/d19a412051ed4415b07f91fba662264415375c4dadb4df6439012086dff6d202.jpg",
+          "alt": "Bicicleta eléctrica REXO RX24 1500W 48V 24” - Rojo"
+        },
+        {
+          "url": "https://19e3cavvu8vlpeyt.public.blob.vercel-storage.com/products/import-apollo-20261113/a7c7a1ce60ee9880f88c75deb6ac42dc03c4543614567e1895127f01b9da1626.jpg",
+          "alt": "Bicicleta eléctrica REXO RX24 1500W 48V 24” - Rojo"
+        },
+        {
+          "url": "https://19e3cavvu8vlpeyt.public.blob.vercel-storage.com/products/import-apollo-20261113/55613fe46fd2f7a85d7af50d90e1d39e962b81b10d088882ead39f314e152ea9.jpg",
+          "alt": "Bicicleta eléctrica REXO RX24 1500W 48V 24” - Rojo"
+        }
+      ],
+      "source": {
+        "url": "https://www.motosapollo.com/bicicletas-electricas/bicicleta-electrica-rexo-rx24-1500w-48v-24?group%5B13%5D=422",
+        "productId": 6209,
+        "variantId": 3087,
+        "reference": "5743",
+        "priceCents": 129903,
+        "quantity": 0,
+        "availableForOrder": true,
+        "checkedAt": "2026-11-13T17:21:17.762399+00:00"
+      },
+      "motorPower": 1500,
+      "battery": "48V 10Ah",
+      "maxSpeed": 50,
+      "maxLoad": 120,
+      "weight": 23.0
+    },
+    {
+      "id": "imp20261113_ap2774_v2562",
+      "sku": "MA-2774-2562",
+      "slug": "bicicleta-electrica-nino-250w-16-plus-rfn-dna-horquilla-negro-dorado-imp20261113_ap2774_v2562",
+      "name": "Bicicleta eléctrica niño 250W 16\" Plus RFN DNA horquilla - Negro-Dorado",
+      "shortDesc": "Bicicleta eléctrica niño 250W 16\" Plus RFN DNA horquilla - Negro-Dorado",
+      "description": "Bicicleta eléctrica niño 250W 16\" Plus RFN DNA horquilla - Negro-Dorado.\n\nUn modelo de la gama de bicicletas eléctricas con la configuración indicada en esta ficha. Revisa el tamaño de las ruedas y las características del motor para elegir la versión que necesitas.\n\nCaracterísticas de esta versión:\n- Modelo del producto: DNA\n- Marca: RFN\n- Tipo Motor: Motor eléctrico sin escobillas \"Brushless\"\n- Potencia Nominal: 250 W\n- Potencia Máxima: 375W\n- Batería: De litio extraible 24V 5.2 Ah\n- Cargador de Batería: 24.9 V 1Ah\n- Autonomia: 10 a 15 km\n- Velocidad Máxima: Hasta 20km/h ( según peso del conductor y terreno)\n- Limitador de velocidad: 3 posiciones ( 20 - 15 - 10 km/h)\n- Tiempo de carga de la batería: 1-2 horas\n- Frenos: Disco\n- Chasis: Aleación de aluminio\n- Suspensión delantera: Horquilla de Suspensión\n- Neumáticos: Del. 16\"x2.40\" y Tra. 16\"x2.40\"\n- Llantas: 16 pulgadas\n- Transmisión: Por cadena\n- Altura del suelo al asiento: Regulable 43,5cm a 48,5cm\n- Manillar: Aluminio\n- Asiento: SU-V5169 / cojín de asiento integrado al vacío con logotipo Apollo Motors\n- Carga máxima: 50 kg\n- Dimensiones del producto: 118 cm x 75 cm x 57.5 cm (Largo x Ancho x Alto)\n- Peso del producto: 13 kg\n- Dimensiones del embalaje: 107 cm x 25 cm x 59 cm (Largo x Ancho x Alto)\n\nConfiguración: Color: Negro-Dorado.",
+      "price": 598.8,
+      "currency": "EUR",
+      "stock": 5,
+      "category": "bicicleta",
+      "subcategory": null,
+      "categoryName": "Bicicletas eléctricas",
+      "subcategoryName": null,
+      "brand": "ROAN racing",
+      "shippingCost": 50,
+      "shippingCountries": "[\"ES\",\"FR\",\"IT\",\"PT\"]",
+      "stripeLink": "",
+      "active": true,
+      "featured": false,
+      "images": [
+        {
+          "url": "https://19e3cavvu8vlpeyt.public.blob.vercel-storage.com/products/import-apollo-20261113/ef184b31a94bed19c75f1b0f74d7da841204e5efb9895c8b28e783dd35f4cf47.jpg",
+          "alt": "Bicicleta eléctrica niño 250W 16\" Plus RFN DNA horquilla - Negro-Dorado"
+        },
+        {
+          "url": "https://19e3cavvu8vlpeyt.public.blob.vercel-storage.com/products/import-apollo-20261113/22d479cd6098ec4741520d57c9d473ac13bd01f2a2732e3280876d7647ab9887.jpg",
+          "alt": "Bicicleta eléctrica niño 250W 16\" Plus RFN DNA horquilla - Negro-Dorado"
+        },
+        {
+          "url": "https://19e3cavvu8vlpeyt.public.blob.vercel-storage.com/products/import-apollo-20261113/1c6ebce4ea9448d9cd328c1ea84bd50b0e32947680690f91151c07550d54a7a0.jpg",
+          "alt": "Bicicleta eléctrica niño 250W 16\" Plus RFN DNA horquilla - Negro-Dorado"
+        },
+        {
+          "url": "https://19e3cavvu8vlpeyt.public.blob.vercel-storage.com/products/import-apollo-20261113/f8ae61a71a1f20d0bd71a904b453617295d247c689aef5cd2bb1aa02d5378118.jpg",
+          "alt": "Bicicleta eléctrica niño 250W 16\" Plus RFN DNA horquilla - Negro-Dorado"
+        },
+        {
+          "url": "https://19e3cavvu8vlpeyt.public.blob.vercel-storage.com/products/import-apollo-20261113/a4f55b64e4a6822c47795f9b6a151cdf5977ce35860ef19ad44f05c259f44562.jpg",
+          "alt": "Bicicleta eléctrica niño 250W 16\" Plus RFN DNA horquilla - Negro-Dorado"
+        },
+        {
+          "url": "https://19e3cavvu8vlpeyt.public.blob.vercel-storage.com/products/import-apollo-20261113/e6cefa059db4f5fb8d4f422448eaf89fcc6dca3b4ccf0c803cf5da09d84fbaff.jpg",
+          "alt": "Bicicleta eléctrica niño 250W 16\" Plus RFN DNA horquilla - Negro-Dorado"
+        }
+      ],
+      "source": {
+        "url": "https://www.motosapollo.com/bicicletas-electricas/bicicleta-electrica-nino-250w-16-plus-rfn-dna-horquilla?group%5B13%5D=2336",
+        "productId": 2774,
+        "variantId": 2562,
+        "reference": "5150",
+        "priceCents": 49900,
+        "quantity": -4,
+        "availableForOrder": true,
+        "checkedAt": "2026-11-13T17:21:17.854121+00:00"
+      },
+      "motorPower": 250,
+      "battery": "De litio extraible 24V 5.2 Ah",
+      "maxSpeed": 20,
+      "maxLoad": 50,
+      "weight": 13.0
+    },
+    {
+      "id": "imp20261113_ap6378_v3255",
+      "sku": "MA-6378-3255",
+      "slug": "bicicleta-electrica-koolux-x7-250w-48v-25ah-20-fat-bike-negro-imp20261113_ap6378_v3255",
+      "name": "Bicicleta eléctrica KOOLUX X7 250W 48V 25Ah 20” fat bike - Negro",
+      "shortDesc": "Bicicleta eléctrica KOOLUX X7 250W 48V 25Ah 20” fat bike - Negro",
+      "description": "Bicicleta eléctrica KOOLUX X7 250W 48V 25Ah 20” fat bike - Negro.\n\nUn modelo de la gama de bicicletas eléctricas con la configuración indicada en esta ficha. Revisa el tamaño de las ruedas y las características del motor para elegir la versión que necesitas.\n\nCaracterísticas de esta versión:\n- Modelo del producto: X7\n- Marca: Koolux\n- Tipo Motor: Motor eléctrico sin escobillas \"Brushless\"\n- Potencia Nominal: 250W\n- Potencia Máxima: 750W\n- Batería: 48V 25Ah LITIO\n- Autonomia: 80-120 KM\n- Velocidad Máxima: 25 km/h (hasta 45 km/h desbloqueada)\n- Tiempo de carga de la batería: 5-6 horas\n- Frenos: De disco hidráulicos delanteros y traseros\n- Neumáticos: 20\" x 40 (fat bike)\n- Pantalla: 4G con APP\n- Carga máxima: 120 kg\n- Dimensiones del producto: 1770x700x1220 mm\n- Peso del producto: 52 kg\n- Dimensiones del embalaje: 1450x280x790 mm\n\nConfiguración: Color: Negro.",
+      "price": 1438.8,
+      "currency": "EUR",
+      "stock": 5,
+      "category": "bicicleta",
+      "subcategory": null,
+      "categoryName": "Bicicletas eléctricas",
+      "subcategoryName": null,
+      "brand": "Koolux",
+      "shippingCost": 50,
+      "shippingCountries": "[\"ES\",\"FR\",\"IT\",\"PT\"]",
+      "stripeLink": "",
+      "active": true,
+      "featured": false,
+      "images": [
+        {
+          "url": "https://19e3cavvu8vlpeyt.public.blob.vercel-storage.com/products/import-apollo-20261113/7a0f168c28a362e6ef3cf77cac46f5a3b408d02d5f5a214f2c642f00ec0a819e.jpg",
+          "alt": "Bicicleta eléctrica KOOLUX X7 250W 48V 25Ah 20” fat bike - Negro"
+        },
+        {
+          "url": "https://19e3cavvu8vlpeyt.public.blob.vercel-storage.com/products/import-apollo-20261113/c0c45b966ed58d466f511bfd4498b44dcd81243f195dccc820f08683b6793de2.jpg",
+          "alt": "Bicicleta eléctrica KOOLUX X7 250W 48V 25Ah 20” fat bike - Negro"
+        },
+        {
+          "url": "https://19e3cavvu8vlpeyt.public.blob.vercel-storage.com/products/import-apollo-20261113/9ff045be5cd2bd7950d1799f3e5b8d4b423cedd61813f326a677773d1c9ecd1e.jpg",
+          "alt": "Bicicleta eléctrica KOOLUX X7 250W 48V 25Ah 20” fat bike - Negro"
+        },
+        {
+          "url": "https://19e3cavvu8vlpeyt.public.blob.vercel-storage.com/products/import-apollo-20261113/c4c0b11a2b66f02c702d60b2faebec9c7a044d281ddda96a3c8ae3ee4faa9c0a.jpg",
+          "alt": "Bicicleta eléctrica KOOLUX X7 250W 48V 25Ah 20” fat bike - Negro"
+        },
+        {
+          "url": "https://19e3cavvu8vlpeyt.public.blob.vercel-storage.com/products/import-apollo-20261113/e5832cf6725b03072622eaac458fd5a2fa7489c3e34b2968cb225877f1786cd4.jpg",
+          "alt": "Bicicleta eléctrica KOOLUX X7 250W 48V 25Ah 20” fat bike - Negro"
+        },
+        {
+          "url": "https://19e3cavvu8vlpeyt.public.blob.vercel-storage.com/products/import-apollo-20261113/8c9025ed1ab5ff9238aabee816e17965fc90478643edb19c62fdc9677585d2ba.jpg",
+          "alt": "Bicicleta eléctrica KOOLUX X7 250W 48V 25Ah 20” fat bike - Negro"
+        },
+        {
+          "url": "https://19e3cavvu8vlpeyt.public.blob.vercel-storage.com/products/import-apollo-20261113/21bc1e369c834123b663fb6d9eafd38aacf1de408d304b488aaa6a5f48d2765c.jpg",
+          "alt": "Bicicleta eléctrica KOOLUX X7 250W 48V 25Ah 20” fat bike - Negro"
+        },
+        {
+          "url": "https://19e3cavvu8vlpeyt.public.blob.vercel-storage.com/products/import-apollo-20261113/311be38be5080511738f2f4b5e8650c08e95835e6b39e06bb3f87a3bb1ab6a00.jpg",
+          "alt": "Bicicleta eléctrica KOOLUX X7 250W 48V 25Ah 20” fat bike - Negro"
+        },
+        {
+          "url": "https://19e3cavvu8vlpeyt.public.blob.vercel-storage.com/products/import-apollo-20261113/c11fbd81490df47c5ffd92ff8cdb1ff596baa9e2c6395ff7698400d3f54d6a48.jpg",
+          "alt": "Bicicleta eléctrica KOOLUX X7 250W 48V 25Ah 20” fat bike - Negro"
+        },
+        {
+          "url": "https://19e3cavvu8vlpeyt.public.blob.vercel-storage.com/products/import-apollo-20261113/3736f1615d09c50bf83aaae06eb3ff5454dbe14760718a9ec0d3d0535c5015c7.jpg",
+          "alt": "Bicicleta eléctrica KOOLUX X7 250W 48V 25Ah 20” fat bike - Negro"
+        }
+      ],
+      "source": {
+        "url": "https://www.motosapollo.com/bicicletas-electricas/bicicleta-electrica-koolux-x7-250w-48v-25ah-20-fat-bike?group%5B13%5D=411",
+        "productId": 6378,
+        "variantId": 3255,
+        "reference": "5995",
+        "priceCents": 119900,
+        "quantity": 0,
+        "availableForOrder": true,
+        "checkedAt": "2026-11-13T17:21:18.460466+00:00"
+      },
+      "motorPower": 250,
+      "battery": "48V 25Ah LITIO",
+      "maxSpeed": 25,
+      "maxLoad": 120,
+      "weight": 52.0
+    },
+    {
+      "id": "imp20261113_ap6271_v3132",
+      "sku": "MA-6271-3132",
+      "slug": "bicicleta-electrica-sin-pedales-1000w-48v-rfn-zip-pro-24-negro-imp20261113_ap6271_v3132",
+      "name": "Bicicleta eléctrica sin pedales 1000W 48V RFN ZIP PRO 24” - Negro",
+      "shortDesc": "Bicicleta eléctrica sin pedales 1000W 48V RFN ZIP PRO 24” - Negro",
+      "description": "Bicicleta eléctrica sin pedales 1000W 48V RFN ZIP PRO 24” - Negro.\n\nUn modelo de la gama de bicicletas eléctricas con la configuración indicada en esta ficha. Revisa el tamaño de las ruedas y las características del motor para elegir la versión que necesitas.\n\nCaracterísticas de esta versión:\n- Modelo del producto: RFN PRO\n- Marca: RFN\n- Tipo Motor: Motor eléctrico sin escobillas \"Brushless\"\n- Potencia Nominal: 1000 W\n- Potencia Máxima: 1500W / 132 Nm\n- Batería: 48V 15Ah Litio (Extraíble)\n- Cargador de Batería: 54V 3A\n- Autonomia: Hasta 45 km aprox. por carga (según variación en modos de conducción, estado/carga de la batería y peso del piloto).\n- Velocidad Máxima: 45 km/h\n- Limitador de velocidad: En 3 posiciones/etapas\n- Tiempo de carga de la batería: 3-5 horas\n- Freno delantero: Hidráulicos de 4 pistones con disco (rotor) de 203 mm\n- Freno trasero: Hidráulicos de 4 pistones con disco (rotor) de 180 mm.\n- Chasis: Aleación de Aluminio\n- Suspensión delantera: Horquilla RST ajustable en compresión y rebote con 140 mm de recorrido.\n- Suspensión trasera: Amortiguador RST de estructura mixta aire-aceite, ajustable en rebote con 50 mm de carrera.\n- Neumáticos: 24\" x 2.5\"\n- Llantas: 24\" con eje de motor ampliado\n- Altura del suelo al asiento: Ajustable 78cm a 97 cm\n- Pantalla: TFT a color integrada en el tubo del chasis\n- Carga máxima: 75 kg\n- Dimensiones del producto: 1840 x 752 x 1040 mm\n- Peso del producto: 30.8 kg\n- Dimensiones del embalaje: 151 x 26 x 85 cm\n- Peso producto embalado: 36.6 kg\n\nConfiguración: Color: Negro.",
+      "price": 2100.0,
+      "currency": "EUR",
+      "stock": 5,
+      "category": "bicicleta",
+      "subcategory": null,
+      "categoryName": "Bicicletas eléctricas",
+      "subcategoryName": null,
+      "brand": "RFN",
+      "shippingCost": 50,
+      "shippingCountries": "[\"ES\",\"FR\",\"IT\",\"PT\"]",
+      "stripeLink": "",
+      "active": true,
+      "featured": false,
+      "images": [
+        {
+          "url": "https://19e3cavvu8vlpeyt.public.blob.vercel-storage.com/products/import-apollo-20261113/9690d90a5b6ec5979530053b622104a96cb3167f2302ba364a182b5600f5475a.jpg",
+          "alt": "Bicicleta eléctrica sin pedales 1000W 48V RFN ZIP PRO 24” - Negro"
+        },
+        {
+          "url": "https://19e3cavvu8vlpeyt.public.blob.vercel-storage.com/products/import-apollo-20261113/5c580f7d8f28bf938398922d991794322df2c3a94654fcc61937fa1ed0b785c3.jpg",
+          "alt": "Bicicleta eléctrica sin pedales 1000W 48V RFN ZIP PRO 24” - Negro"
+        },
+        {
+          "url": "https://19e3cavvu8vlpeyt.public.blob.vercel-storage.com/products/import-apollo-20261113/8f255b8c9b3727e71ea49a65c66679447603759ecc9b35da568064ef7b7a7729.jpg",
+          "alt": "Bicicleta eléctrica sin pedales 1000W 48V RFN ZIP PRO 24” - Negro"
+        },
+        {
+          "url": "https://19e3cavvu8vlpeyt.public.blob.vercel-storage.com/products/import-apollo-20261113/67bce41fd114e7ee48709e8c4832218c623d830d34a07d56592829b09bfad8c7.jpg",
+          "alt": "Bicicleta eléctrica sin pedales 1000W 48V RFN ZIP PRO 24” - Negro"
+        },
+        {
+          "url": "https://19e3cavvu8vlpeyt.public.blob.vercel-storage.com/products/import-apollo-20261113/64a9f12ea99db73db7acd121cca84097136b7e4683e0f174e672b6157d5c634a.jpg",
+          "alt": "Bicicleta eléctrica sin pedales 1000W 48V RFN ZIP PRO 24” - Negro"
+        },
+        {
+          "url": "https://19e3cavvu8vlpeyt.public.blob.vercel-storage.com/products/import-apollo-20261113/98155040416d4ff0d4f10b79a2e7b0dda6635d20535cf41f8cd1dd00326912a3.jpg",
+          "alt": "Bicicleta eléctrica sin pedales 1000W 48V RFN ZIP PRO 24” - Negro"
+        },
+        {
+          "url": "https://19e3cavvu8vlpeyt.public.blob.vercel-storage.com/products/import-apollo-20261113/446b4c111a6758121e221e2073ffa4bbb757ec7f53f981bde7baee2422fe955a.jpg",
+          "alt": "Bicicleta eléctrica sin pedales 1000W 48V RFN ZIP PRO 24” - Negro"
+        },
+        {
+          "url": "https://19e3cavvu8vlpeyt.public.blob.vercel-storage.com/products/import-apollo-20261113/772e057a900cff85fced33a9b1624eea5f6e231f37fd648dcdd1271800bcf9e0.jpg",
+          "alt": "Bicicleta eléctrica sin pedales 1000W 48V RFN ZIP PRO 24” - Negro"
+        },
+        {
+          "url": "https://19e3cavvu8vlpeyt.public.blob.vercel-storage.com/products/import-apollo-20261113/68be807e0837bbb4cbba0a0524fdf3c021ba37cb731b121760a40e291f6c8844.jpg",
+          "alt": "Bicicleta eléctrica sin pedales 1000W 48V RFN ZIP PRO 24” - Negro"
+        },
+        {
+          "url": "https://19e3cavvu8vlpeyt.public.blob.vercel-storage.com/products/import-apollo-20261113/35a02b015192443f51eb71017884b5c079930ba1241d699bc5e4d4779d79c843.jpg",
+          "alt": "Bicicleta eléctrica sin pedales 1000W 48V RFN ZIP PRO 24” - Negro"
+        },
+        {
+          "url": "https://19e3cavvu8vlpeyt.public.blob.vercel-storage.com/products/import-apollo-20261113/df450237f987f6eeb29cbf70b9ca3abff9ae835833fc31ea1c9fd6fadf7c8690.jpg",
+          "alt": "Bicicleta eléctrica sin pedales 1000W 48V RFN ZIP PRO 24” - Negro"
+        },
+        {
+          "url": "https://19e3cavvu8vlpeyt.public.blob.vercel-storage.com/products/import-apollo-20261113/2c32cf84c4558ebb58715a06ae9a280bd2bd7b35ba17cbb030d3d96ff9a6ec80.jpg",
+          "alt": "Bicicleta eléctrica sin pedales 1000W 48V RFN ZIP PRO 24” - Negro"
+        },
+        {
+          "url": "https://19e3cavvu8vlpeyt.public.blob.vercel-storage.com/products/import-apollo-20261113/beb7e88d3e19727bc4b4773a24de0f9288c7af341f93ded88fdbf31653ec422c.jpg",
+          "alt": "Bicicleta eléctrica sin pedales 1000W 48V RFN ZIP PRO 24” - Negro"
+        },
+        {
+          "url": "https://19e3cavvu8vlpeyt.public.blob.vercel-storage.com/products/import-apollo-20261113/7ad5ddcf470a788a41ef768d888dc5e9f3d9f4a7d9cde8f174bd61cb7c00665f.jpg",
+          "alt": "Bicicleta eléctrica sin pedales 1000W 48V RFN ZIP PRO 24” - Negro"
+        },
+        {
+          "url": "https://19e3cavvu8vlpeyt.public.blob.vercel-storage.com/products/import-apollo-20261113/87c692401b5b914a77a3ccfe24c5acaf2493f479bfd3ed33412c98bbcd4875fa.jpg",
+          "alt": "Bicicleta eléctrica sin pedales 1000W 48V RFN ZIP PRO 24” - Negro"
+        },
+        {
+          "url": "https://19e3cavvu8vlpeyt.public.blob.vercel-storage.com/products/import-apollo-20261113/c1b2fb891f4ee1aed431a1eb7bf92183376e101aaa0b4d3c7089050be9067697.jpg",
+          "alt": "Bicicleta eléctrica sin pedales 1000W 48V RFN ZIP PRO 24” - Negro"
+        }
+      ],
+      "source": {
+        "url": "https://www.motosapollo.com/bicicletas-electricas/bicicleta-electrica-sin-pedales-1000w-48v-rfn-zip-pro-24?group%5B13%5D=411",
+        "productId": 6271,
+        "variantId": 3132,
+        "reference": "5924",
+        "priceCents": 175000,
+        "quantity": -9,
+        "availableForOrder": true,
+        "checkedAt": "2026-11-13T17:21:18.519291+00:00"
+      },
+      "motorPower": 1000,
+      "battery": "48V 15Ah Litio (Extraíble)",
+      "range": 45,
+      "maxSpeed": 45,
+      "maxLoad": 75,
+      "weight": 30.8
+    },
+    {
+      "id": "imp20261113_ap6130_v2437",
+      "sku": "MA-6130-2437",
+      "slug": "bicicleta-electrica-koolux-x11-250w-dos-baterias-48v-11-7ah-negro-imp20261113_ap6130_v2437",
+      "name": "Bicicleta Eléctrica Koolux X11 250w Dos baterías 48v 11,7Ah - Negro",
+      "shortDesc": "Bicicleta Eléctrica Koolux X11 250w Dos baterías 48v 11,7Ah - Negro",
+      "description": "Bicicleta Eléctrica Koolux X11 250w Dos baterías 48v 11,7Ah - Negro.\n\nUn modelo de la gama de bicicletas eléctricas con la configuración indicada en esta ficha. Revisa el tamaño de las ruedas y las características del motor para elegir la versión que necesitas.\n\nCaracterísticas de esta versión:\n- Motor: 250W sin escobillas\n- Potencia Nominal: 250 W\n- Potencia Máxima: 375W\n- Batería: Dos baterías de 48 V y 11,7 Ah\n- Autonomia: 150 km (observar detalle en descripción)\n- Velocidad Máxima: 25 km/h aprox. (según peso de la persona, estado/carga de la batería, estado del terreno)\n- Limitador de velocidad: En 3 posiciones/etapas\n- Tiempo de carga de la batería: 4-6 horas\n- Cambio: Shimano 7 velocidades\n- Frenos: Disco\n- Chasis: Reforzado\n- Suspensión delantera: Suspensión Horquilla Delantera\n- Suspensión trasera: Incorporado en la barra del sillín\n- Neumáticos: Neumáticos anchos de 20\"x 4.0\n- Llantas: 20 pulgadas\n- Altura del suelo al asiento: 76-99 cm\n- Iluminación: Luz delantera y trasera de LED.\n- Pantalla: Pantalla LCD con toda la información\n- Carga máxima: 120 kg\n- Dimensiones del producto: 139x53x104 cm\n- Peso del producto: 25 kg\n- Tamaño producto plegado: 80x50x68 cm\n- Altura Manillar Regulable: 74-98 CM\n- Dimensiones del embalaje: 86x37x66 cm\n- Peso producto embalado: 30KG\n\nConfiguración: Color: Negro.",
+      "price": 1438.8,
+      "currency": "EUR",
+      "stock": 5,
+      "category": "bicicleta",
+      "subcategory": null,
+      "categoryName": "Bicicletas eléctricas",
+      "subcategoryName": null,
+      "brand": null,
+      "shippingCost": 50,
+      "shippingCountries": "[\"ES\",\"FR\",\"IT\",\"PT\"]",
+      "stripeLink": "",
+      "active": true,
+      "featured": false,
+      "images": [
+        {
+          "url": "https://19e3cavvu8vlpeyt.public.blob.vercel-storage.com/products/import-apollo-20261113/749659208ae1f38379cde9998279ac8ae371b25d1fcf1d293d79a8900206940a.jpg",
+          "alt": "Bicicleta Eléctrica Koolux X11 250w Dos baterías 48v 11,7Ah - Negro"
+        },
+        {
+          "url": "https://19e3cavvu8vlpeyt.public.blob.vercel-storage.com/products/import-apollo-20261113/ae4357bc7456c7e98a1932c98392391cf59f295155dac7873a399b782fff84e4.jpg",
+          "alt": "Bicicleta Eléctrica Koolux X11 250w Dos baterías 48v 11,7Ah - Negro"
+        },
+        {
+          "url": "https://19e3cavvu8vlpeyt.public.blob.vercel-storage.com/products/import-apollo-20261113/e5f1763035e1f5ec551f3dc1f0db5df0e995f0ad21aa2887bebe543c14123dba.jpg",
+          "alt": "Bicicleta Eléctrica Koolux X11 250w Dos baterías 48v 11,7Ah - Negro"
+        },
+        {
+          "url": "https://19e3cavvu8vlpeyt.public.blob.vercel-storage.com/products/import-apollo-20261113/ff46c5e16bad0be4ca50ceca3d307a13cbb2ff54a519576b8bc3df7b67ee6b6f.jpg",
+          "alt": "Bicicleta Eléctrica Koolux X11 250w Dos baterías 48v 11,7Ah - Negro"
+        },
+        {
+          "url": "https://19e3cavvu8vlpeyt.public.blob.vercel-storage.com/products/import-apollo-20261113/8e00a527060e830cc763ae45910e339a9378aea980f795a8ed4c2f0768a7a415.jpg",
+          "alt": "Bicicleta Eléctrica Koolux X11 250w Dos baterías 48v 11,7Ah - Negro"
+        },
+        {
+          "url": "https://19e3cavvu8vlpeyt.public.blob.vercel-storage.com/products/import-apollo-20261113/822db559e250e31f909d73c0c47c983a084f15ddb02763a9ed34e029bb932a34.jpg",
+          "alt": "Bicicleta Eléctrica Koolux X11 250w Dos baterías 48v 11,7Ah - Negro"
+        },
+        {
+          "url": "https://19e3cavvu8vlpeyt.public.blob.vercel-storage.com/products/import-apollo-20261113/73aae23cae3c5bd01f690bca83b0e3fbfeae13df4bfaed8ba9778f75abadc388.jpg",
+          "alt": "Bicicleta Eléctrica Koolux X11 250w Dos baterías 48v 11,7Ah - Negro"
+        },
+        {
+          "url": "https://19e3cavvu8vlpeyt.public.blob.vercel-storage.com/products/import-apollo-20261113/fc9b77845eac611b406d9338bcec6ec0b3a20be5dc4e2880a58208e43c4350b9.jpg",
+          "alt": "Bicicleta Eléctrica Koolux X11 250w Dos baterías 48v 11,7Ah - Negro"
+        },
+        {
+          "url": "https://19e3cavvu8vlpeyt.public.blob.vercel-storage.com/products/import-apollo-20261113/be6ddfce917ba1accb14d5de0a9928e12f0c67be3bb7067f6989e4ccdedb24e7.jpg",
+          "alt": "Bicicleta Eléctrica Koolux X11 250w Dos baterías 48v 11,7Ah - Negro"
+        },
+        {
+          "url": "https://19e3cavvu8vlpeyt.public.blob.vercel-storage.com/products/import-apollo-20261113/f1a48a2c3c52dfbca3fc6d0c8272f098e6f1e2266f5902f802c7b81d8f446842.jpg",
+          "alt": "Bicicleta Eléctrica Koolux X11 250w Dos baterías 48v 11,7Ah - Negro"
+        },
+        {
+          "url": "https://19e3cavvu8vlpeyt.public.blob.vercel-storage.com/products/import-apollo-20261113/970304092c790a51b0ef44f18285e8bf7364e38e1efc3c223065420d66ba639c.jpg",
+          "alt": "Bicicleta Eléctrica Koolux X11 250w Dos baterías 48v 11,7Ah - Negro"
+        },
+        {
+          "url": "https://19e3cavvu8vlpeyt.public.blob.vercel-storage.com/products/import-apollo-20261113/bfd0f78d1a7fa346f4ab0b8b23b3511a4765889e2c368eccfc5c4e8f37a2499e.jpg",
+          "alt": "Bicicleta Eléctrica Koolux X11 250w Dos baterías 48v 11,7Ah - Negro"
+        },
+        {
+          "url": "https://19e3cavvu8vlpeyt.public.blob.vercel-storage.com/products/import-apollo-20261113/a3eb57a84426edd9ab5f0bbc886df68512029ea467594f2a362e00142604be38.jpg",
+          "alt": "Bicicleta Eléctrica Koolux X11 250w Dos baterías 48v 11,7Ah - Negro"
+        },
+        {
+          "url": "https://19e3cavvu8vlpeyt.public.blob.vercel-storage.com/products/import-apollo-20261113/7d2b82b023575aeed87d4febdc556a6b8f2b4cc69bbbb9eb0e0ffa5568421649.jpg",
+          "alt": "Bicicleta Eléctrica Koolux X11 250w Dos baterías 48v 11,7Ah - Negro"
+        }
+      ],
+      "source": {
+        "url": "https://www.motosapollo.com/bicicletas-electricas/bicicleta-electrica-koolux-x11-250w-dos-baterias-48v-117ah?group%5B13%5D=411",
+        "productId": 6130,
+        "variantId": 2437,
+        "reference": "5748",
+        "priceCents": 119900,
+        "quantity": 0,
+        "availableForOrder": true,
+        "checkedAt": "2026-11-13T17:21:18.616452+00:00"
+      },
+      "motorPower": 250,
+      "battery": "Dos baterías de 48 V y 11,7 Ah",
+      "range": 150,
+      "maxSpeed": 25,
+      "maxLoad": 120,
+      "weight": 25.0
+    },
+    {
+      "id": "imp20261113_ap6131_v2431",
+      "sku": "MA-6131-2431",
+      "slug": "bicicleta-electrica-koolux-x9-250w-48v-15-6ah-negro-imp20261113_ap6131_v2431",
+      "name": "Bicicleta eléctrica KOOLUX X9 250W 48V 15,6AH - Negro",
+      "shortDesc": "Bicicleta eléctrica KOOLUX X9 250W 48V 15,6AH - Negro",
+      "description": "Bicicleta eléctrica KOOLUX X9 250W 48V 15,6AH - Negro.\n\nUn modelo de la gama de bicicletas eléctricas con la configuración indicada en esta ficha. Revisa el tamaño de las ruedas y las características del motor para elegir la versión que necesitas.\n\nCaracterísticas de esta versión:\n- Motor: 250W sin escobillas\n- Potencia Nominal: 250 W\n- Potencia Máxima: 375 W\n- Batería: Batería extraíble 48V 15.6Ah\n- Autonomia: 80 km (observar detalle en descripción)\n- Limitador de velocidad: En 3 posiciones/etapas\n- Tiempo de carga de la batería: 7.5-8,5 horas\n- Cambio: Shimano 7 velocidades\n- Frenos: Disco\n- Chasis: Reforzado\n- Suspensión delantera: Suspensión Horquilla Delantera\n- Neumáticos: Neumáticos anchos de 20\"x 4.0\n- Llantas: 20 pulgadas\n- Altura del suelo al asiento: 65 cm\n- Asiento: Esponja Gruesa Suave con Absorción de Impactos\n- Iluminación: Luz delantera y trasera de LED.\n- Pantalla: Pantalla LCD con toda la información\n- Carga máxima: 120 Kg\n- Dimensiones del producto: 1630x660x1110 mm\n- Peso del producto: 44 kg\n- Dimensiones del embalaje: 1360x300x850 mm\n- Peso producto embalado: 51.5 kg\n\nConfiguración: Color: Negro.",
+      "price": 1318.81,
+      "currency": "EUR",
+      "stock": 5,
+      "category": "bicicleta",
+      "subcategory": null,
+      "categoryName": "Bicicletas eléctricas",
+      "subcategoryName": null,
+      "brand": null,
+      "shippingCost": 50,
+      "shippingCountries": "[\"ES\",\"FR\",\"IT\",\"PT\"]",
+      "stripeLink": "",
+      "active": true,
+      "featured": false,
+      "images": [
+        {
+          "url": "https://19e3cavvu8vlpeyt.public.blob.vercel-storage.com/products/import-apollo-20261113/4fe5dca822ffc974900e987955db3822c129009ddeb4c38a2b41fafb26773bc5.jpg",
+          "alt": "Bicicleta eléctrica KOOLUX X9 250W 48V 15,6AH - Negro"
+        },
+        {
+          "url": "https://19e3cavvu8vlpeyt.public.blob.vercel-storage.com/products/import-apollo-20261113/3d181a2d56524e828b3c88aa92017f5b5fada74eea0b2c8f7bf2147ba621841d.jpg",
+          "alt": "Bicicleta eléctrica KOOLUX X9 250W 48V 15,6AH - Negro"
+        },
+        {
+          "url": "https://19e3cavvu8vlpeyt.public.blob.vercel-storage.com/products/import-apollo-20261113/dad424c731ccfc192961c723a5e1adda352fcb61f778657311e626ec6e4e6a4d.jpg",
+          "alt": "Bicicleta eléctrica KOOLUX X9 250W 48V 15,6AH - Negro"
+        },
+        {
+          "url": "https://19e3cavvu8vlpeyt.public.blob.vercel-storage.com/products/import-apollo-20261113/7502733899816ea61d450c7b002ba6d2495a5a5e9a44b39ce106bc1c0e9a3183.jpg",
+          "alt": "Bicicleta eléctrica KOOLUX X9 250W 48V 15,6AH - Negro"
+        },
+        {
+          "url": "https://19e3cavvu8vlpeyt.public.blob.vercel-storage.com/products/import-apollo-20261113/e499889ac46583ea5895cd783c8c872402a2b1a331d09c1cc2e1e3c47a0b5efd.jpg",
+          "alt": "Bicicleta eléctrica KOOLUX X9 250W 48V 15,6AH - Negro"
+        },
+        {
+          "url": "https://19e3cavvu8vlpeyt.public.blob.vercel-storage.com/products/import-apollo-20261113/7a0ea5ff7568d6a33643d30d346900dbeec53ba827b5f9e46f775b9f9c2c8532.jpg",
+          "alt": "Bicicleta eléctrica KOOLUX X9 250W 48V 15,6AH - Negro"
+        }
+      ],
+      "source": {
+        "url": "https://www.motosapollo.com/bicicletas-electricas/bicicleta-electrica-koolux-x9-250w-48v-156ah?group%5B13%5D=411",
+        "productId": 6131,
+        "variantId": 2431,
+        "reference": "5746",
+        "priceCents": 109901,
+        "quantity": 0,
+        "availableForOrder": true,
+        "checkedAt": "2026-11-13T17:21:18.599021+00:00"
+      },
+      "motorPower": 250,
+      "battery": "Batería extraíble 48V 15.6Ah",
+      "range": 80,
+      "maxLoad": 120,
+      "weight": 44.0
+    },
+    {
+      "id": "imp20261113_ap6081_v2268",
+      "sku": "MA-6081-2268",
+      "slug": "bicicleta-electrica-plegable-koolux-bk6s-250w-48v-15-6ah-negro-imp20261113_ap6081_v2268",
+      "name": "Bicicleta eléctrica plegable Koolux BK6S 250W 48V 15.6AH - Negro",
+      "shortDesc": "Bicicleta eléctrica plegable Koolux BK6S 250W 48V 15.6AH - Negro",
+      "description": "Bicicleta eléctrica plegable Koolux BK6S 250W 48V 15.6AH - Negro.\n\nUn modelo de la gama de bicicletas eléctricas con la configuración indicada en esta ficha. Revisa el tamaño de las ruedas y las características del motor para elegir la versión que necesitas.\n\nCaracterísticas de esta versión:\n- Motor: 250W sin escobillas\n- Potencia Nominal: 250 W\n- Potencia Máxima: 375W\n- Batería: Batería extraíble 48V 15.6Ah\n- Autonomia: 60 km (observar detalle en descripción)\n- Limitador de velocidad: En 3 posiciones/etapas\n- Tiempo de carga de la batería: 4-6 horas\n- Cambio: Shimano 7 velocidades\n- Frenos: Disco\n- Chasis: Reforzado\n- Suspensión delantera: Suspensión Horquilla Delantera\n- Suspensión trasera: Incorporado en la barra del sillín\n- Neumáticos: Neumáticos anchos de 20\"x 4.0\n- Llantas: 20 pulgadas\n- Altura del suelo al asiento: 83-106 cm\n- Iluminación: Luz delantera y trasera de LED.\n- Pantalla: Pantalla LCD con toda la información\n- Carga máxima: 120 Kg\n- Dimensiones del producto: 165x58x116 cm\n- Peso del producto: 33 kg\n- Tamaño producto plegado: 90 cm x 63 cm x 77 cm\n- Altura Manillar Regulable: 115-128 cm\n- Dimensiones del embalaje: 96x38x75 cm\n- Peso producto embalado: 40 kg\n\nConfiguración: Color: Negro.",
+      "price": 1078.81,
+      "currency": "EUR",
+      "stock": 5,
+      "category": "bicicleta",
+      "subcategory": null,
+      "categoryName": "Bicicletas eléctricas",
+      "subcategoryName": null,
+      "brand": null,
+      "shippingCost": 50,
+      "shippingCountries": "[\"ES\",\"FR\",\"IT\",\"PT\"]",
+      "stripeLink": "",
+      "active": true,
+      "featured": false,
+      "images": [
+        {
+          "url": "https://19e3cavvu8vlpeyt.public.blob.vercel-storage.com/products/import-apollo-20261113/d631dd02470d7576d3b7570000e79065f7665c96ad26343cf421814055d0c8af.jpg",
+          "alt": "Bicicleta eléctrica plegable Koolux BK6S 250W 48V 15.6AH - Negro"
+        },
+        {
+          "url": "https://19e3cavvu8vlpeyt.public.blob.vercel-storage.com/products/import-apollo-20261113/20ae3e976c6bfa5bc7d02ebd1f652545a28b223f88c38998988d0efb84e3276c.jpg",
+          "alt": "Bicicleta eléctrica plegable Koolux BK6S 250W 48V 15.6AH - Negro"
+        },
+        {
+          "url": "https://19e3cavvu8vlpeyt.public.blob.vercel-storage.com/products/import-apollo-20261113/25c1e34be71fda1438108320c529a4bfb7a0aea977a23e3c6e2e2c7a87780061.jpg",
+          "alt": "Bicicleta eléctrica plegable Koolux BK6S 250W 48V 15.6AH - Negro"
+        },
+        {
+          "url": "https://19e3cavvu8vlpeyt.public.blob.vercel-storage.com/products/import-apollo-20261113/a6cdfb5180b3778e70afb46c3f3b6bd83c175811f1c296c85b0d200d4cd506f2.jpg",
+          "alt": "Bicicleta eléctrica plegable Koolux BK6S 250W 48V 15.6AH - Negro"
+        },
+        {
+          "url": "https://19e3cavvu8vlpeyt.public.blob.vercel-storage.com/products/import-apollo-20261113/60490714870af1b5fbf41e7f96c1189fd8cfdc36d2e59cf0b042a6f31613f5f5.jpg",
+          "alt": "Bicicleta eléctrica plegable Koolux BK6S 250W 48V 15.6AH - Negro"
+        },
+        {
+          "url": "https://19e3cavvu8vlpeyt.public.blob.vercel-storage.com/products/import-apollo-20261113/b61b0bdfd00855e0616e3d61474bc0f28d3a8e2af9e77c259c913faa23eeb2f0.jpg",
+          "alt": "Bicicleta eléctrica plegable Koolux BK6S 250W 48V 15.6AH - Negro"
+        },
+        {
+          "url": "https://19e3cavvu8vlpeyt.public.blob.vercel-storage.com/products/import-apollo-20261113/e6251050ff2e039f038ef2a01a22d3ee4c3bd71bf959b17e808f144245de80bc.jpg",
+          "alt": "Bicicleta eléctrica plegable Koolux BK6S 250W 48V 15.6AH - Negro"
+        },
+        {
+          "url": "https://19e3cavvu8vlpeyt.public.blob.vercel-storage.com/products/import-apollo-20261113/9f63ae8e7faf59c9070ddffe4007e01e432b71a9e7d33932320cb6d768906472.jpg",
+          "alt": "Bicicleta eléctrica plegable Koolux BK6S 250W 48V 15.6AH - Negro"
+        },
+        {
+          "url": "https://19e3cavvu8vlpeyt.public.blob.vercel-storage.com/products/import-apollo-20261113/16efb9588b652c53eba1254f0d051b4cd74831169d4f43532a7ad570cdad8db4.jpg",
+          "alt": "Bicicleta eléctrica plegable Koolux BK6S 250W 48V 15.6AH - Negro"
+        }
+      ],
+      "source": {
+        "url": "https://www.motosapollo.com/bicicletas-electricas/bicicleta-electrica-plegable-koolux-bk6s-250w-48v-156ah?group%5B13%5D=411",
+        "productId": 6081,
+        "variantId": 2268,
+        "reference": "5523",
+        "priceCents": 89901,
+        "quantity": 0,
+        "availableForOrder": true,
+        "checkedAt": "2026-11-13T17:21:19.256114+00:00"
+      },
+      "motorPower": 250,
+      "battery": "Batería extraíble 48V 15.6Ah",
+      "range": 60,
+      "maxLoad": 120,
+      "weight": 33.0
+    },
+    {
+      "id": "imp20261113_ap6081_v2409",
+      "sku": "MA-6081-2409",
+      "slug": "bicicleta-electrica-plegable-koolux-bk6s-250w-48v-15-6ah-azul-imp20261113_ap6081_v2409",
+      "name": "Bicicleta eléctrica plegable Koolux BK6S 250W 48V 15.6AH - Azul",
+      "shortDesc": "Bicicleta eléctrica plegable Koolux BK6S 250W 48V 15.6AH - Azul",
+      "description": "Bicicleta eléctrica plegable Koolux BK6S 250W 48V 15.6AH - Azul.\n\nUn modelo de la gama de bicicletas eléctricas con la configuración indicada en esta ficha. Revisa el tamaño de las ruedas y las características del motor para elegir la versión que necesitas.\n\nCaracterísticas de esta versión:\n- Motor: 250W sin escobillas\n- Potencia Nominal: 250 W\n- Potencia Máxima: 375W\n- Batería: Batería extraíble 48V 15.6Ah\n- Autonomia: 60 km (observar detalle en descripción)\n- Limitador de velocidad: En 3 posiciones/etapas\n- Tiempo de carga de la batería: 4-6 horas\n- Cambio: Shimano 7 velocidades\n- Frenos: Disco\n- Chasis: Reforzado\n- Suspensión delantera: Suspensión Horquilla Delantera\n- Suspensión trasera: Incorporado en la barra del sillín\n- Neumáticos: Neumáticos anchos de 20\"x 4.0\n- Llantas: 20 pulgadas\n- Altura del suelo al asiento: 83-106 cm\n- Iluminación: Luz delantera y trasera de LED.\n- Pantalla: Pantalla LCD con toda la información\n- Carga máxima: 120 Kg\n- Dimensiones del producto: 165x58x116 cm\n- Peso del producto: 33 kg\n- Tamaño producto plegado: 90 cm x 63 cm x 77 cm\n- Altura Manillar Regulable: 115-128 cm\n- Dimensiones del embalaje: 96x38x75 cm\n- Peso producto embalado: 40 kg\n\nConfiguración: Color: Azul.",
+      "price": 1078.81,
+      "currency": "EUR",
+      "stock": 5,
+      "category": "bicicleta",
+      "subcategory": null,
+      "categoryName": "Bicicletas eléctricas",
+      "subcategoryName": null,
+      "brand": null,
+      "shippingCost": 50,
+      "shippingCountries": "[\"ES\",\"FR\",\"IT\",\"PT\"]",
+      "stripeLink": "",
+      "active": true,
+      "featured": false,
+      "images": [
+        {
+          "url": "https://19e3cavvu8vlpeyt.public.blob.vercel-storage.com/products/import-apollo-20261113/a4178fb6fd5c13523ccbe32243602bb20d8aa79b095095d92330f7f71e291260.jpg",
+          "alt": "Bicicleta eléctrica plegable Koolux BK6S 250W 48V 15.6AH - Azul"
+        }
+      ],
+      "source": {
+        "url": "https://www.motosapollo.com/bicicletas-electricas/bicicleta-electrica-plegable-koolux-bk6s-250w-48v-156ah?group%5B13%5D=391",
+        "productId": 6081,
+        "variantId": 2409,
+        "reference": "5523",
+        "priceCents": 89901,
+        "quantity": 0,
+        "availableForOrder": true,
+        "checkedAt": "2026-11-13T17:21:19.264217+00:00"
+      },
+      "motorPower": 250,
+      "battery": "Batería extraíble 48V 15.6Ah",
+      "range": 60,
+      "maxLoad": 120,
+      "weight": 33.0
+    },
+    {
+      "id": "imp20261113_ap6081_v2267",
+      "sku": "MA-6081-2267",
+      "slug": "bicicleta-electrica-plegable-koolux-bk6s-250w-48v-15-6ah-gris-imp20261113_ap6081_v2267",
+      "name": "Bicicleta eléctrica plegable Koolux BK6S 250W 48V 15.6AH - Gris",
+      "shortDesc": "Bicicleta eléctrica plegable Koolux BK6S 250W 48V 15.6AH - Gris",
+      "description": "Bicicleta eléctrica plegable Koolux BK6S 250W 48V 15.6AH - Gris.\n\nUn modelo de la gama de bicicletas eléctricas con la configuración indicada en esta ficha. Revisa el tamaño de las ruedas y las características del motor para elegir la versión que necesitas.\n\nCaracterísticas de esta versión:\n- Motor: 250W sin escobillas\n- Potencia Nominal: 250 W\n- Potencia Máxima: 375W\n- Batería: Batería extraíble 48V 15.6Ah\n- Autonomia: 60 km (observar detalle en descripción)\n- Limitador de velocidad: En 3 posiciones/etapas\n- Tiempo de carga de la batería: 4-6 horas\n- Cambio: Shimano 7 velocidades\n- Frenos: Disco\n- Chasis: Reforzado\n- Suspensión delantera: Suspensión Horquilla Delantera\n- Suspensión trasera: Incorporado en la barra del sillín\n- Neumáticos: Neumáticos anchos de 20\"x 4.0\n- Llantas: 20 pulgadas\n- Altura del suelo al asiento: 83-106 cm\n- Iluminación: Luz delantera y trasera de LED.\n- Pantalla: Pantalla LCD con toda la información\n- Carga máxima: 120 Kg\n- Dimensiones del producto: 165x58x116 cm\n- Peso del producto: 33 kg\n- Tamaño producto plegado: 90 cm x 63 cm x 77 cm\n- Altura Manillar Regulable: 115-128 cm\n- Dimensiones del embalaje: 96x38x75 cm\n- Peso producto embalado: 40 kg\n\nConfiguración: Color: Gris.",
+      "price": 1078.81,
+      "currency": "EUR",
+      "stock": 5,
+      "category": "bicicleta",
+      "subcategory": null,
+      "categoryName": "Bicicletas eléctricas",
+      "subcategoryName": null,
+      "brand": null,
+      "shippingCost": 50,
+      "shippingCountries": "[\"ES\",\"FR\",\"IT\",\"PT\"]",
+      "stripeLink": "",
+      "active": true,
+      "featured": false,
+      "images": [
+        {
+          "url": "https://19e3cavvu8vlpeyt.public.blob.vercel-storage.com/products/import-apollo-20261113/f682539092e700b1210c253350b4c460fbb455b590972ffde96649faf93b05bf.jpg",
+          "alt": "Bicicleta eléctrica plegable Koolux BK6S 250W 48V 15.6AH - Gris"
+        }
+      ],
+      "source": {
+        "url": "https://www.motosapollo.com/bicicletas-electricas/bicicleta-electrica-plegable-koolux-bk6s-250w-48v-156ah?group%5B13%5D=401",
+        "productId": 6081,
+        "variantId": 2267,
+        "reference": "5523",
+        "priceCents": 89901,
+        "quantity": 0,
+        "availableForOrder": true,
+        "checkedAt": "2026-11-13T17:21:19.412106+00:00"
+      },
+      "motorPower": 250,
+      "battery": "Batería extraíble 48V 15.6Ah",
+      "range": 60,
+      "maxLoad": 120,
+      "weight": 33.0
+    },
+    {
+      "id": "imp20261113_ap6067_v2498",
+      "sku": "MA-6067-2498",
+      "slug": "bicicleta-electrica-plegable-koolux-bk5s-250w-36v-10-4ah-negro-imp20261113_ap6067_v2498",
+      "name": "Bicicleta eléctrica plegable KOOLUX BK5S 250W 36V 10.4Ah - Negro",
+      "shortDesc": "Bicicleta eléctrica plegable KOOLUX BK5S 250W 36V 10.4Ah - Negro",
+      "description": "Bicicleta eléctrica plegable KOOLUX BK5S 250W 36V 10.4Ah - Negro.\n\nUn modelo de la gama de bicicletas eléctricas con la configuración indicada en esta ficha. Revisa el tamaño de las ruedas y las características del motor para elegir la versión que necesitas.\n\nCaracterísticas de esta versión:\n- Motor: 250W sin escobillas\n- Potencia Nominal: 250 W\n- Potencia Máxima: 375W\n- Batería: Batería extraíble de litio 36V 10.4AH\n- Autonomia: 35 km - 70 km (observar detalle en descripción)\n- Velocidad Máxima: 25 km/h aprox. (según peso de la persona, estado/carga de la batería, estado del terreno)\n- Limitador de velocidad: En 3 posiciones/etapas\n- Tiempo de carga de la batería: 4-6 horas\n- Frenos: Disco\n- Chasis: Reforzado\n- Suspensión trasera: Incorporado en la barra del sillín\n- Neumáticos: Neumáticos anchos de 16\"x 3.0\n- Llantas: 16 pulgadas\n- Altura del suelo al asiento: 76-99 cm\n- Iluminación: Luz delantera y trasera de LED.\n- Pantalla: Pantalla LCD con toda la información\n- Carga máxima: 120 kg\n- Dimensiones del producto: 139x53x104 cm\n- Peso del producto: 24 kg\n- Tamaño producto plegado: 80x50x68 cm\n- Altura Manillar Regulable: 74-98 CM\n- Dimensiones del embalaje: 86x37x66 cm\n- Peso producto embalado: 30KG\n\nConfiguración: Color: Negro.",
+      "price": 718.8,
+      "currency": "EUR",
+      "stock": 5,
+      "category": "bicicleta",
+      "subcategory": null,
+      "categoryName": "Bicicletas eléctricas",
+      "subcategoryName": null,
+      "brand": null,
+      "shippingCost": 50,
+      "shippingCountries": "[\"ES\",\"FR\",\"IT\",\"PT\"]",
+      "stripeLink": "",
+      "active": true,
+      "featured": false,
+      "images": [
+        {
+          "url": "https://19e3cavvu8vlpeyt.public.blob.vercel-storage.com/products/import-apollo-20261113/0ae286b7ced6a6b7beadae0c0210ab47e6d487377181fe360a3b535ea9aae19b.jpg",
+          "alt": "Bicicleta eléctrica plegable KOOLUX BK5S 250W 36V 10.4Ah - Negro"
+        },
+        {
+          "url": "https://19e3cavvu8vlpeyt.public.blob.vercel-storage.com/products/import-apollo-20261113/c455b31e490378681e4cae9a58dbcd22b178207ddeb3824e0974e19438ecd1f3.jpg",
+          "alt": "Bicicleta eléctrica plegable KOOLUX BK5S 250W 36V 10.4Ah - Negro"
+        }
+      ],
+      "source": {
+        "url": "https://www.motosapollo.com/bicicletas-electricas/bicicleta-electrica-plegable-koolux-bk5s-250w-36v-104ah?group%5B13%5D=411",
+        "productId": 6067,
+        "variantId": 2498,
+        "reference": "5521",
+        "priceCents": 59900,
+        "quantity": 0,
+        "availableForOrder": true,
+        "checkedAt": "2026-11-13T17:21:19.297965+00:00"
+      },
+      "motorPower": 250,
+      "battery": "Batería extraíble de litio 36V 10.4AH",
+      "range": 35,
+      "maxSpeed": 25,
+      "maxLoad": 120,
+      "weight": 24.0
+    },
+    {
+      "id": "imp20261113_ap6067_v2497",
+      "sku": "MA-6067-2497",
+      "slug": "bicicleta-electrica-plegable-koolux-bk5s-250w-36v-10-4ah-gris-imp20261113_ap6067_v2497",
+      "name": "Bicicleta eléctrica plegable KOOLUX BK5S 250W 36V 10.4Ah - Gris",
+      "shortDesc": "Bicicleta eléctrica plegable KOOLUX BK5S 250W 36V 10.4Ah - Gris",
+      "description": "Bicicleta eléctrica plegable KOOLUX BK5S 250W 36V 10.4Ah - Gris.\n\nUn modelo de la gama de bicicletas eléctricas con la configuración indicada en esta ficha. Revisa el tamaño de las ruedas y las características del motor para elegir la versión que necesitas.\n\nCaracterísticas de esta versión:\n- Motor: 250W sin escobillas\n- Potencia Nominal: 250 W\n- Potencia Máxima: 375W\n- Batería: Batería extraíble de litio 36V 10.4AH\n- Autonomia: 35 km - 70 km (observar detalle en descripción)\n- Velocidad Máxima: 25 km/h aprox. (según peso de la persona, estado/carga de la batería, estado del terreno)\n- Limitador de velocidad: En 3 posiciones/etapas\n- Tiempo de carga de la batería: 4-6 horas\n- Frenos: Disco\n- Chasis: Reforzado\n- Suspensión trasera: Incorporado en la barra del sillín\n- Neumáticos: Neumáticos anchos de 16\"x 3.0\n- Llantas: 16 pulgadas\n- Altura del suelo al asiento: 76-99 cm\n- Iluminación: Luz delantera y trasera de LED.\n- Pantalla: Pantalla LCD con toda la información\n- Carga máxima: 120 kg\n- Dimensiones del producto: 139x53x104 cm\n- Peso del producto: 24 kg\n- Tamaño producto plegado: 80x50x68 cm\n- Altura Manillar Regulable: 74-98 CM\n- Dimensiones del embalaje: 86x37x66 cm\n- Peso producto embalado: 30KG\n\nConfiguración: Color: Gris.",
+      "price": 718.8,
+      "currency": "EUR",
+      "stock": 5,
+      "category": "bicicleta",
+      "subcategory": null,
+      "categoryName": "Bicicletas eléctricas",
+      "subcategoryName": null,
+      "brand": null,
+      "shippingCost": 50,
+      "shippingCountries": "[\"ES\",\"FR\",\"IT\",\"PT\"]",
+      "stripeLink": "",
+      "active": true,
+      "featured": false,
+      "images": [
+        {
+          "url": "https://19e3cavvu8vlpeyt.public.blob.vercel-storage.com/products/import-apollo-20261113/86626fc168e27249c7e2de4501e594f82cb98d31860b50586e37480bddbeb6f8.jpg",
+          "alt": "Bicicleta eléctrica plegable KOOLUX BK5S 250W 36V 10.4Ah - Gris"
+        },
+        {
+          "url": "https://19e3cavvu8vlpeyt.public.blob.vercel-storage.com/products/import-apollo-20261113/f3df12fd85de81b0e893d7a819bd45bb761d273364c2cb0d4c9edbe6805c8d8d.jpg",
+          "alt": "Bicicleta eléctrica plegable KOOLUX BK5S 250W 36V 10.4Ah - Gris"
+        },
+        {
+          "url": "https://19e3cavvu8vlpeyt.public.blob.vercel-storage.com/products/import-apollo-20261113/4bb166fc94fde113b02581980281da98ae52bd6488f0569db6b094ed01970b29.jpg",
+          "alt": "Bicicleta eléctrica plegable KOOLUX BK5S 250W 36V 10.4Ah - Gris"
+        }
+      ],
+      "source": {
+        "url": "https://www.motosapollo.com/bicicletas-electricas/bicicleta-electrica-plegable-koolux-bk5s-250w-36v-104ah?group%5B13%5D=401",
+        "productId": 6067,
+        "variantId": 2497,
+        "reference": "5521",
+        "priceCents": 59900,
+        "quantity": 0,
+        "availableForOrder": true,
+        "checkedAt": "2026-11-13T17:21:20.329086+00:00"
+      },
+      "motorPower": 250,
+      "battery": "Batería extraíble de litio 36V 10.4AH",
+      "range": 35,
+      "maxSpeed": 25,
+      "maxLoad": 120,
+      "weight": 24.0
+    },
+    {
+      "id": "imp20261113_ap6377_v3253",
+      "sku": "MA-6377-3253",
+      "slug": "bicicleta-electrica-koolux-x16-250w-48v-15-6ah-20-plegable-con-app-gris-imp20261113_ap6377_v3253",
+      "name": "Bicicleta eléctrica KOOLUX X16 250W 48V 15,6Ah 20” plegable con APP - Gris",
+      "shortDesc": "Bicicleta eléctrica KOOLUX X16 250W 48V 15,6Ah 20” plegable con APP - Gris",
+      "description": "Bicicleta eléctrica KOOLUX X16 250W 48V 15,6Ah 20” plegable con APP - Gris.\n\nUn modelo de la gama de bicicletas eléctricas con la configuración indicada en esta ficha. Revisa el tamaño de las ruedas y las características del motor para elegir la versión que necesitas.\n\nCaracterísticas de esta versión:\n- Modelo del producto: X16\n- Marca: Koolux\n- Tipo Motor: Motor eléctrico sin escobillas \"Brushless\"\n- Potencia Nominal: 250W\n- Potencia Máxima: 500W\n- Batería: 48V 15,6Ah\n- Autonomia: 70-150 km\n- Velocidad Máxima: 25 km/h (hasta 40-45 km/h desbloqueada)\n- Tiempo de carga de la batería: 5,5 horas\n- Frenos: De disco delantero y trasero\n- Neumáticos: 20\" x 3.0\n- Pantalla: S869 con APP\n- Carga máxima: 120 kg\n- Dimensiones del producto: 91x38x74.5 cm\n- Peso del producto: 31 kg\n- Dimensiones del embalaje: 164x56x120 cm\n\nConfiguración: Color: Gris.",
+      "price": 1078.81,
+      "currency": "EUR",
+      "stock": 5,
+      "category": "bicicleta",
+      "subcategory": null,
+      "categoryName": "Bicicletas eléctricas",
+      "subcategoryName": null,
+      "brand": "Koolux",
+      "shippingCost": 50,
+      "shippingCountries": "[\"ES\",\"FR\",\"IT\",\"PT\"]",
+      "stripeLink": "",
+      "active": true,
+      "featured": false,
+      "images": [
+        {
+          "url": "https://19e3cavvu8vlpeyt.public.blob.vercel-storage.com/products/import-apollo-20261113/cf98114abd34a2413c425639f2e832c625375dde881b25aa045bc4a161aada93.jpg",
+          "alt": "Bicicleta eléctrica KOOLUX X16 250W 48V 15,6Ah 20” plegable con APP - Gris"
+        },
+        {
+          "url": "https://19e3cavvu8vlpeyt.public.blob.vercel-storage.com/products/import-apollo-20261113/4133a0ad9d29981f9a3d02022d3209efa2c80c571f9dcd546f0b16015ab330f2.jpg",
+          "alt": "Bicicleta eléctrica KOOLUX X16 250W 48V 15,6Ah 20” plegable con APP - Gris"
+        },
+        {
+          "url": "https://19e3cavvu8vlpeyt.public.blob.vercel-storage.com/products/import-apollo-20261113/ec41c4d1625170e8854b1b6cf050f5fae48a9e9e5b8740d9048e16e7492a3bb0.jpg",
+          "alt": "Bicicleta eléctrica KOOLUX X16 250W 48V 15,6Ah 20” plegable con APP - Gris"
+        },
+        {
+          "url": "https://19e3cavvu8vlpeyt.public.blob.vercel-storage.com/products/import-apollo-20261113/74a2741ba3975e0521f0f643f63d097ce50f91f7758bc0051f0f0323ef79e548.jpg",
+          "alt": "Bicicleta eléctrica KOOLUX X16 250W 48V 15,6Ah 20” plegable con APP - Gris"
+        },
+        {
+          "url": "https://19e3cavvu8vlpeyt.public.blob.vercel-storage.com/products/import-apollo-20261113/c8bfc3d7496d238cf3cf9adc0c74ff2d650caa29b7b79363f894364e517fdbc7.jpg",
+          "alt": "Bicicleta eléctrica KOOLUX X16 250W 48V 15,6Ah 20” plegable con APP - Gris"
+        }
+      ],
+      "source": {
+        "url": "https://www.motosapollo.com/bicicletas-electricas/bicicleta-electrica-koolux-x16-250w-48v-156ah-20-plegable-con-app?group%5B13%5D=401",
+        "productId": 6377,
+        "variantId": 3253,
+        "reference": "5994",
+        "priceCents": 89901,
+        "quantity": 0,
+        "availableForOrder": true,
+        "checkedAt": "2026-11-13T17:21:20.015305+00:00"
+      },
+      "motorPower": 250,
+      "battery": "48V 15,6Ah",
+      "maxSpeed": 25,
+      "maxLoad": 120,
+      "weight": 31.0
+    },
+    {
+      "id": "imp20261113_ap6122_v3367",
+      "sku": "MA-6122-3367",
+      "slug": "bicicleta-electrica-infantil-350w-16-rfn-evo-s-morado-rosa-imp20261113_ap6122_v3367",
+      "name": "Bicicleta eléctrica infantil 350W 16\" RFN Evo-S - Morado-Rosa",
+      "shortDesc": "Bicicleta eléctrica infantil 350W 16\" RFN Evo-S - Morado-Rosa",
+      "description": "Bicicleta eléctrica infantil 350W 16\" RFN Evo-S - Morado-Rosa.\n\nUn modelo de la gama de bicicletas eléctricas con la configuración indicada en esta ficha. Revisa el tamaño de las ruedas y las características del motor para elegir la versión que necesitas.\n\nCaracterísticas de esta versión:\n- Modelo del producto: EVO-S\n- Marca: RFN\n- Tipo Motor: Motor eléctrico sin escobillas \"Brushless\"\n- Potencia Nominal: 350 W\n- Potencia Máxima: 525W\n- Batería: 24V 5.2Ah\n- Cargador de Batería: 29.4 V - 1 Ah\n- Autonomia: Hasta 15km (Mapa 1) / Hasta 10 km (Mapa2) / Hasta 8 km (Mapa 3)\n- Velocidad Máxima: 25 km/h aprox. (según peso de la persona, estado/carga de la batería, estado del terreno)\n- Limitador de velocidad: 15km/h - 20 km/h - 25km/h\n- Tiempo de carga de la batería: 3-5 horas\n- Frenos: Disco\n- Chasis: Aleación de Aluminio\n- Suspensión delantera: Hidráulico\n- Suspensión trasera: Amortiguador de Muelle\n- Neumáticos: Del. 16 x 2.5\" y Tra. Del. 16 x 2.5\"\n- Llantas: 16 pulgadas\n- Transmisión: Por cadena\n- Altura del suelo al asiento: Regulable entre 60 a 77 cm\n- Manillar: Aleación Aluminio tipo BMX\n- Carga máxima: 50 kg.\n- Dimensiones del producto: 127.3 cm largo x 60.5cm ancho ( manillar) x 79.5 cm alto (del manillar)\n- Peso del producto: 18 kg.\n- Dimensiones del embalaje: 109 cm x 26 cm x 58cm (Largo x Ancho x Alto)\n\nConfiguración: Color: Morado-Rosa.",
+      "price": 898.8,
+      "currency": "EUR",
+      "stock": 5,
+      "category": "bicicleta",
+      "subcategory": null,
+      "categoryName": "Bicicletas eléctricas",
+      "subcategoryName": null,
+      "brand": "RFN",
+      "shippingCost": 50,
+      "shippingCountries": "[\"ES\",\"FR\",\"IT\",\"PT\"]",
+      "stripeLink": "",
+      "active": true,
+      "featured": false,
+      "images": [
+        {
+          "url": "https://19e3cavvu8vlpeyt.public.blob.vercel-storage.com/products/import-apollo-20261113/d80b91238a2e472e4e3b4f1e4452c766052d06ce14e55d2f47255b729c0c1ee6.jpg",
+          "alt": "Bicicleta eléctrica infantil 350W 16\" RFN Evo-S - Morado-Rosa"
+        },
+        {
+          "url": "https://19e3cavvu8vlpeyt.public.blob.vercel-storage.com/products/import-apollo-20261113/4291cfc1cf1ac7527ca731ae1d5bb317ed80be344fa3c2b9fda1df7f6dde156d.jpg",
+          "alt": "Bicicleta eléctrica infantil 350W 16\" RFN Evo-S - Morado-Rosa"
+        },
+        {
+          "url": "https://19e3cavvu8vlpeyt.public.blob.vercel-storage.com/products/import-apollo-20261113/bc3f104c01cc517f5abc0247ac162c170dfd5415954b9245f75d83eecbb0a1ec.jpg",
+          "alt": "Bicicleta eléctrica infantil 350W 16\" RFN Evo-S - Morado-Rosa"
+        },
+        {
+          "url": "https://19e3cavvu8vlpeyt.public.blob.vercel-storage.com/products/import-apollo-20261113/2fa0c10cb6e049beeee399afa7a32f023e724b2a9f77b4b893f4135a589e4045.jpg",
+          "alt": "Bicicleta eléctrica infantil 350W 16\" RFN Evo-S - Morado-Rosa"
+        },
+        {
+          "url": "https://19e3cavvu8vlpeyt.public.blob.vercel-storage.com/products/import-apollo-20261113/09f7594e3fc9dc2f4756b495f520d7822771b77e217418d74026f5798251c79c.jpg",
+          "alt": "Bicicleta eléctrica infantil 350W 16\" RFN Evo-S - Morado-Rosa"
+        },
+        {
+          "url": "https://19e3cavvu8vlpeyt.public.blob.vercel-storage.com/products/import-apollo-20261113/3d126f1e010e5a5fe02a7b5d930b5bdcd00e5cf5c32e9fad192bad2219220051.jpg",
+          "alt": "Bicicleta eléctrica infantil 350W 16\" RFN Evo-S - Morado-Rosa"
+        }
+      ],
+      "source": {
+        "url": "https://www.motosapollo.com/bicicletas-electricas/bicicleta-electrica-infantil-350w-16-rfn-evo-s?group%5B13%5D=2335",
+        "productId": 6122,
+        "variantId": 3367,
+        "reference": "5520",
+        "priceCents": 74900,
+        "quantity": -3,
+        "availableForOrder": true,
+        "checkedAt": "2026-11-13T17:21:20.506427+00:00"
+      },
+      "motorPower": 350,
+      "battery": "24V 5.2Ah",
+      "range": 15,
+      "maxSpeed": 25
+    },
+    {
+      "id": "imp20261113_ap6122_v3228",
+      "sku": "MA-6122-3228",
+      "slug": "bicicleta-electrica-infantil-350w-16-rfn-evo-s-azul-imp20261113_ap6122_v3228",
+      "name": "Bicicleta eléctrica infantil 350W 16\" RFN Evo-S - Azul",
+      "shortDesc": "Bicicleta eléctrica infantil 350W 16\" RFN Evo-S - Azul",
+      "description": "Bicicleta eléctrica infantil 350W 16\" RFN Evo-S - Azul.\n\nUn modelo de la gama de bicicletas eléctricas con la configuración indicada en esta ficha. Revisa el tamaño de las ruedas y las características del motor para elegir la versión que necesitas.\n\nCaracterísticas de esta versión:\n- Modelo del producto: EVO-S\n- Marca: RFN\n- Tipo Motor: Motor eléctrico sin escobillas \"Brushless\"\n- Potencia Nominal: 350 W\n- Potencia Máxima: 525W\n- Batería: 24V 5.2Ah\n- Cargador de Batería: 29.4 V - 1 Ah\n- Autonomia: Hasta 15km (Mapa 1) / Hasta 10 km (Mapa2) / Hasta 8 km (Mapa 3)\n- Velocidad Máxima: 25 km/h aprox. (según peso de la persona, estado/carga de la batería, estado del terreno)\n- Limitador de velocidad: 15km/h - 20 km/h - 25km/h\n- Tiempo de carga de la batería: 3-5 horas\n- Frenos: Disco\n- Chasis: Aleación de Aluminio\n- Suspensión delantera: Hidráulico\n- Suspensión trasera: Amortiguador de Muelle\n- Neumáticos: Del. 16 x 2.5\" y Tra. Del. 16 x 2.5\"\n- Llantas: 16 pulgadas\n- Transmisión: Por cadena\n- Altura del suelo al asiento: Regulable entre 60 a 77 cm\n- Manillar: Aleación Aluminio tipo BMX\n- Carga máxima: 50 kg.\n- Dimensiones del producto: 127.3 cm largo x 60.5cm ancho ( manillar) x 79.5 cm alto (del manillar)\n- Peso del producto: 18 kg.\n- Dimensiones del embalaje: 109 cm x 26 cm x 58cm (Largo x Ancho x Alto)\n\nConfiguración: Color: Azul.",
+      "price": 898.8,
+      "currency": "EUR",
+      "stock": 5,
+      "category": "bicicleta",
+      "subcategory": null,
+      "categoryName": "Bicicletas eléctricas",
+      "subcategoryName": null,
+      "brand": "RFN",
+      "shippingCost": 50,
+      "shippingCountries": "[\"ES\",\"FR\",\"IT\",\"PT\"]",
+      "stripeLink": "",
+      "active": true,
+      "featured": false,
+      "images": [
+        {
+          "url": "https://19e3cavvu8vlpeyt.public.blob.vercel-storage.com/products/import-apollo-20261113/0313a2c7fe8132c487fc0a4d4f577a37917f07630a13db3d2afc6ecc2f724d83.jpg",
+          "alt": "Bicicleta eléctrica infantil 350W 16\" RFN Evo-S - Azul"
+        },
+        {
+          "url": "https://19e3cavvu8vlpeyt.public.blob.vercel-storage.com/products/import-apollo-20261113/9468ed420bc87ed93a653ded7d82877ce97f2f9c8b98d2563ad9343855b8bbf7.jpg",
+          "alt": "Bicicleta eléctrica infantil 350W 16\" RFN Evo-S - Azul"
+        },
+        {
+          "url": "https://19e3cavvu8vlpeyt.public.blob.vercel-storage.com/products/import-apollo-20261113/4fc3f571a5102e062317c6e42c34e96701eab4039ae0863953749b9af6d00f0d.jpg",
+          "alt": "Bicicleta eléctrica infantil 350W 16\" RFN Evo-S - Azul"
+        }
+      ],
+      "source": {
+        "url": "https://www.motosapollo.com/bicicletas-electricas/bicicleta-electrica-infantil-350w-16-rfn-evo-s?group%5B13%5D=391",
+        "productId": 6122,
+        "variantId": 3228,
+        "reference": "5520",
+        "priceCents": 74900,
+        "quantity": 5,
+        "availableForOrder": true,
+        "checkedAt": "2026-11-13T17:21:20.914290+00:00"
+      },
+      "motorPower": 350,
+      "battery": "24V 5.2Ah",
+      "range": 15,
+      "maxSpeed": 25
+    },
+    {
+      "id": "imp20261113_ap6122_v3233",
+      "sku": "MA-6122-3233",
+      "slug": "bicicleta-electrica-infantil-350w-16-rfn-evo-s-rojo-imp20261113_ap6122_v3233",
+      "name": "Bicicleta eléctrica infantil 350W 16\" RFN Evo-S - Rojo",
+      "shortDesc": "Bicicleta eléctrica infantil 350W 16\" RFN Evo-S - Rojo",
+      "description": "Bicicleta eléctrica infantil 350W 16\" RFN Evo-S - Rojo.\n\nUn modelo de la gama de bicicletas eléctricas con la configuración indicada en esta ficha. Revisa el tamaño de las ruedas y las características del motor para elegir la versión que necesitas.\n\nCaracterísticas de esta versión:\n- Modelo del producto: EVO-S\n- Marca: RFN\n- Tipo Motor: Motor eléctrico sin escobillas \"Brushless\"\n- Potencia Nominal: 350 W\n- Potencia Máxima: 525W\n- Batería: 24V 5.2Ah\n- Cargador de Batería: 29.4 V - 1 Ah\n- Autonomia: Hasta 15km (Mapa 1) / Hasta 10 km (Mapa2) / Hasta 8 km (Mapa 3)\n- Velocidad Máxima: 25 km/h aprox. (según peso de la persona, estado/carga de la batería, estado del terreno)\n- Limitador de velocidad: 15km/h - 20 km/h - 25km/h\n- Tiempo de carga de la batería: 3-5 horas\n- Frenos: Disco\n- Chasis: Aleación de Aluminio\n- Suspensión delantera: Hidráulico\n- Suspensión trasera: Amortiguador de Muelle\n- Neumáticos: Del. 16 x 2.5\" y Tra. Del. 16 x 2.5\"\n- Llantas: 16 pulgadas\n- Transmisión: Por cadena\n- Altura del suelo al asiento: Regulable entre 60 a 77 cm\n- Manillar: Aleación Aluminio tipo BMX\n- Carga máxima: 50 kg.\n- Dimensiones del producto: 127.3 cm largo x 60.5cm ancho ( manillar) x 79.5 cm alto (del manillar)\n- Peso del producto: 18 kg.\n- Dimensiones del embalaje: 109 cm x 26 cm x 58cm (Largo x Ancho x Alto)\n\nConfiguración: Color: Rojo.",
+      "price": 898.8,
+      "currency": "EUR",
+      "stock": 5,
+      "category": "bicicleta",
+      "subcategory": null,
+      "categoryName": "Bicicletas eléctricas",
+      "subcategoryName": null,
+      "brand": "RFN",
+      "shippingCost": 50,
+      "shippingCountries": "[\"ES\",\"FR\",\"IT\",\"PT\"]",
+      "stripeLink": "",
+      "active": true,
+      "featured": false,
+      "images": [
+        {
+          "url": "https://19e3cavvu8vlpeyt.public.blob.vercel-storage.com/products/import-apollo-20261113/0d8726bce17cf3a992996f5672264ab939e7eba341200b62dc3c797d9f9a35d3.jpg",
+          "alt": "Bicicleta eléctrica infantil 350W 16\" RFN Evo-S - Rojo"
+        },
+        {
+          "url": "https://19e3cavvu8vlpeyt.public.blob.vercel-storage.com/products/import-apollo-20261113/cac457693edc7e34e350d2a9205fca97ac93403c4cac988b6d21cb4c81917776.jpg",
+          "alt": "Bicicleta eléctrica infantil 350W 16\" RFN Evo-S - Rojo"
+        },
+        {
+          "url": "https://19e3cavvu8vlpeyt.public.blob.vercel-storage.com/products/import-apollo-20261113/3f0df432642e94f001a49f79bb0fde300f820b1e2a3722b9ca67c6772c2a1d09.jpg",
+          "alt": "Bicicleta eléctrica infantil 350W 16\" RFN Evo-S - Rojo"
+        }
+      ],
+      "source": {
+        "url": "https://www.motosapollo.com/bicicletas-electricas/bicicleta-electrica-infantil-350w-16-rfn-evo-s?group%5B13%5D=422",
+        "productId": 6122,
+        "variantId": 3233,
+        "reference": "5520",
+        "priceCents": 74900,
+        "quantity": -2,
+        "availableForOrder": true,
+        "checkedAt": "2026-11-13T17:21:20.945893+00:00"
+      },
+      "motorPower": 350,
+      "battery": "24V 5.2Ah",
+      "range": 15,
+      "maxSpeed": 25
+    },
+    {
+      "id": "imp20261113_ap6085_v0",
+      "sku": "MA-6085-0",
+      "slug": "bicicleta-electrica-koolux-bk29-250w-48v-15ah-20-imp20261113_ap6085_v0",
+      "name": "Bicicleta Eléctrica Koolux BK29 250W 48V/15Ah 20\"",
+      "shortDesc": "Bicicleta Eléctrica Koolux BK29 250W 48V/15Ah 20\"",
+      "description": "Bicicleta Eléctrica Koolux BK29 250W 48V/15Ah 20\".\n\nUn modelo de la gama de bicicletas eléctricas con la configuración indicada en esta ficha. Revisa el tamaño de las ruedas y las características del motor para elegir la versión que necesitas.\n\nCaracterísticas de esta versión:\n- Motor: 250W sin escobillas\n- Potencia Nominal: 250 W\n- Potencia Máxima: 375W\n- Batería: Batería extraíble 48V 15Ah\n- Autonomia: 60 km (observar detalle en descripción)\n- Velocidad Máxima: 25 km/h aprox. (según peso de la persona, estado/carga de la batería, estado del terreno)\n- Limitador de velocidad: En 3 posiciones/etapas\n- Tiempo de carga de la batería: 7.5 A 8.5 horas\n- Cambio: Shimano 7 velocidades\n- Frenos: Disco\n- Chasis: de acero alta resistencia\n- Suspensión delantera: Suspensión Horquilla Delantera\n- Suspensión trasera: Incorporado en la barra del sillín\n- Neumáticos: Neumáticos anchos de 20\"x 4.0\n- Llantas: 20 pulgadas\n- Altura del suelo al asiento: 65 cm\n- Asiento: Esponja Gruesa Suave con Absorción de Impactos\n- Iluminación: Luz delantera y trasera de LED.\n- Pantalla: Pantalla LCD con toda la información\n- Carga máxima: 150 Kg\n- Dimensiones del producto: 1630x660x1110 mm\n- Peso del producto: 33 kg\n- Dimensiones del embalaje: 1360x300x850 mm\n- Peso producto embalado: 41 kg",
+      "price": 1102.8,
+      "currency": "EUR",
+      "stock": 5,
+      "category": "bicicleta",
+      "subcategory": null,
+      "categoryName": "Bicicletas eléctricas",
+      "subcategoryName": null,
+      "brand": null,
+      "shippingCost": 50,
+      "shippingCountries": "[\"ES\",\"FR\",\"IT\",\"PT\"]",
+      "stripeLink": "",
+      "active": true,
+      "featured": false,
+      "images": [
+        {
+          "url": "https://19e3cavvu8vlpeyt.public.blob.vercel-storage.com/products/import-apollo-20261113/fa11d9d90c3f51d511e587f3f3b48072f4ea556e42afb3b633c2bd2132f2f55d.jpg",
+          "alt": "Bicicleta Eléctrica Koolux BK29 250W 48V/15Ah 20\""
+        }
+      ],
+      "source": {
+        "url": "https://www.motosapollo.com/bicicletas-electricas/bicicleta-electrica-koolux-bk29-250w-48v15ah-20",
+        "productId": 6085,
+        "variantId": 0,
+        "reference": "5595",
+        "priceCents": 91900,
+        "quantity": 0,
+        "availableForOrder": true,
+        "checkedAt": "2026-11-13T17:21:21.696215+00:00"
+      },
+      "motorPower": 250,
+      "battery": "Batería extraíble 48V 15Ah",
+      "range": 60,
+      "maxSpeed": 25,
+      "maxLoad": 150,
+      "weight": 33.0
+    },
+    {
+      "id": "imp20261113_ap6380_v3259",
+      "sku": "MA-6380-3259",
+      "slug": "bicicleta-electrica-koolux-rk10-250w-48v-13ah-20-fat-gris-imp20261113_ap6380_v3259",
+      "name": "Bicicleta eléctrica KOOLUX RK10 250W 48V 13Ah 20” fat - Gris",
+      "shortDesc": "Bicicleta eléctrica KOOLUX RK10 250W 48V 13Ah 20” fat - Gris",
+      "description": "Bicicleta eléctrica KOOLUX RK10 250W 48V 13Ah 20” fat - Gris.\n\nUn modelo de la gama de bicicletas eléctricas con la configuración indicada en esta ficha. Revisa el tamaño de las ruedas y las características del motor para elegir la versión que necesitas.\n\nCaracterísticas de esta versión:\n- Modelo del producto: 50XS\n- Marca: Koolux\n- Motor: Motor eléctrico sin escobillas \"Brushless\"\n- Potencia Nominal: 250 W\n- Potencia Máxima: 750w\n- Batería: 48V 13Ah Litio\n- Autonomia: 70-120 Km\n- Velocidad Máxima: 25 km/h (hasta 45-50 km/h desbloqueada)\n- Tiempo de carga de la batería: 7–8 horas\n- Frenos: Hidráulicos delanteros y traseros\n- Neumáticos: 20\" × 4,0\n- Pantalla: TW35H con APP + NFC\n- Carga máxima: 120 Kg\n- Dimensiones del producto: 135x63,5x106 cm\n- Peso del producto: 39 Kg\n- Dimensiones del embalaje: 120 x 31x76 cm\n\nConfiguración: Color: Gris.",
+      "price": 1150.8,
+      "currency": "EUR",
+      "stock": 5,
+      "category": "bicicleta",
+      "subcategory": null,
+      "categoryName": "Bicicletas eléctricas",
+      "subcategoryName": null,
+      "brand": "Koolux",
+      "shippingCost": 50,
+      "shippingCountries": "[\"ES\",\"FR\",\"IT\",\"PT\"]",
+      "stripeLink": "",
+      "active": true,
+      "featured": false,
+      "images": [
+        {
+          "url": "https://19e3cavvu8vlpeyt.public.blob.vercel-storage.com/products/import-apollo-20261113/d29475d7d51f792ccbcdea659ba33a22157675f4b3f2ea9ea33497553df9b39c.jpg",
+          "alt": "Bicicleta eléctrica KOOLUX RK10 250W 48V 13Ah 20” fat - Gris"
+        },
+        {
+          "url": "https://19e3cavvu8vlpeyt.public.blob.vercel-storage.com/products/import-apollo-20261113/003acd60d6afa48930718b117cae7e7634cf7e9f9bec98a5c878efe88f82b0e0.jpg",
+          "alt": "Bicicleta eléctrica KOOLUX RK10 250W 48V 13Ah 20” fat - Gris"
+        },
+        {
+          "url": "https://19e3cavvu8vlpeyt.public.blob.vercel-storage.com/products/import-apollo-20261113/63cecad85f0fa7d2b9612df3e4838525408a85f3ed76126bd0546ab5b7b2aef4.jpg",
+          "alt": "Bicicleta eléctrica KOOLUX RK10 250W 48V 13Ah 20” fat - Gris"
+        },
+        {
+          "url": "https://19e3cavvu8vlpeyt.public.blob.vercel-storage.com/products/import-apollo-20261113/6524ac4c2be830a4156710e090f138cac4b8631897e97bce758b6be8120d971f.jpg",
+          "alt": "Bicicleta eléctrica KOOLUX RK10 250W 48V 13Ah 20” fat - Gris"
+        },
+        {
+          "url": "https://19e3cavvu8vlpeyt.public.blob.vercel-storage.com/products/import-apollo-20261113/7f8ee429496b0fadb731748af3da3ee6658b521ba3d3bc267fc005276c61233d.jpg",
+          "alt": "Bicicleta eléctrica KOOLUX RK10 250W 48V 13Ah 20” fat - Gris"
+        },
+        {
+          "url": "https://19e3cavvu8vlpeyt.public.blob.vercel-storage.com/products/import-apollo-20261113/0c5b7b7d8725554eba54c3570e2f89ee2940fa20a737a61453e0e49c9f9d1326.jpg",
+          "alt": "Bicicleta eléctrica KOOLUX RK10 250W 48V 13Ah 20” fat - Gris"
+        },
+        {
+          "url": "https://19e3cavvu8vlpeyt.public.blob.vercel-storage.com/products/import-apollo-20261113/b67e2c528d9e837ee9a52bd8bf02c6d9129e6d4f5ac2d3b2dd31be3f9097a053.jpg",
+          "alt": "Bicicleta eléctrica KOOLUX RK10 250W 48V 13Ah 20” fat - Gris"
+        },
+        {
+          "url": "https://19e3cavvu8vlpeyt.public.blob.vercel-storage.com/products/import-apollo-20261113/cb47d137cd06c201ae70fc2b2124fd42b449f9c368798689e0cddbe11d33ecfc.jpg",
+          "alt": "Bicicleta eléctrica KOOLUX RK10 250W 48V 13Ah 20” fat - Gris"
+        },
+        {
+          "url": "https://19e3cavvu8vlpeyt.public.blob.vercel-storage.com/products/import-apollo-20261113/fe502b4f2464caa9eb83e156901d0daaee147e2c784db44eb7775916cada8442.jpg",
+          "alt": "Bicicleta eléctrica KOOLUX RK10 250W 48V 13Ah 20” fat - Gris"
+        },
+        {
+          "url": "https://19e3cavvu8vlpeyt.public.blob.vercel-storage.com/products/import-apollo-20261113/39597d95c366c10d8aaf72b1a1e9e5ea20ae2da266429e8fd5376738a37e14ac.jpg",
+          "alt": "Bicicleta eléctrica KOOLUX RK10 250W 48V 13Ah 20” fat - Gris"
+        },
+        {
+          "url": "https://19e3cavvu8vlpeyt.public.blob.vercel-storage.com/products/import-apollo-20261113/01921d45c8f366a442de83cf6cc00743bd71f450152dcf3f482ba456651aeb4e.jpg",
+          "alt": "Bicicleta eléctrica KOOLUX RK10 250W 48V 13Ah 20” fat - Gris"
+        }
+      ],
+      "source": {
+        "url": "https://www.motosapollo.com/bicicletas-electricas/bicicleta-electrica-koolux-rk10-250w-48v-13ah-20-fat?group%5B13%5D=401",
+        "productId": 6380,
+        "variantId": 3259,
+        "reference": "5996",
+        "priceCents": 95900,
+        "quantity": -1,
+        "availableForOrder": true,
+        "checkedAt": "2026-11-13T17:21:21.713308+00:00"
+      },
+      "motorPower": 250,
+      "battery": "48V 13Ah Litio",
+      "maxSpeed": 25,
+      "maxLoad": 120,
+      "weight": 39.0
+    },
+    {
+      "id": "imp20261113_ap6126_v2552",
+      "sku": "MA-6126-2552",
+      "slug": "bicicleta-electrica-500w-roan-rfn-evo-racing-18-azul-rojo-imp20261113_ap6126_v2552",
+      "name": "Bicicleta eléctrica 500W Roan RFN Evo Racing 18\" - Azul-Rojo",
+      "shortDesc": "Bicicleta eléctrica 500W Roan RFN Evo Racing 18\" - Azul-Rojo",
+      "description": "Bicicleta eléctrica 500W Roan RFN Evo Racing 18\" - Azul-Rojo.\n\nUn modelo de la gama de bicicletas eléctricas con la configuración indicada en esta ficha. Revisa el tamaño de las ruedas y las características del motor para elegir la versión que necesitas.\n\nCaracterísticas de esta versión:\n- Marca: RFN\n- Tipo Motor: Motor eléctrico sin escobillas \"Brushless\"\n- Potencia Nominal: 500W\n- Potencia Máxima: 750W\n- Batería: De litio 36v 5Ah\n- Cargador de Batería: 42V - 3Ah\n- Autonomia: Hasta 20km (Mapa 1) / Hasta 15 km (Mapa 2) / Hasta 12 km (Mapa 3)\n- Velocidad Máxima: 30 km/h aprox. (según peso de la persona, estado/carga de la batería, estado del terreno)\n- Limitador de velocidad: 3 posiciones: 15 km/h - 22 km/h - 30 km/h\n- Tiempo de carga de la batería: 3-5 horas\n- Frenos: De disco por cable\n- Chasis: Aleación de Aluminio\n- Suspensión delantera: Horquilla hidráulica 614 mm\n- Suspensión trasera: Amortiguador hidráulico\n- Neumáticos: Del. 18 x 2.5\" y Tra. 18 x 2.5\"\n- Llantas: 18 pulgadas\n- Transmisión: Por cadena\n- Altura del suelo al asiento: Regulable 68 a 78 cm\n- Manillar: Aleación Aluminio tipo BMX\n- Carga máxima: 50 kg.\n- Dimensiones del producto: 144cm Largo x 64 cm ancho( del manillar) x 91 de alto ( al manillar)\n- Peso del producto: 20 kg\n- Dimensiones del embalaje: 125 cm x 27 cm x 69 cm (Largo x Ancho x Alto)\n\nConfiguración: Color: Azul-Rojo.",
+      "price": 1079.47,
+      "currency": "EUR",
+      "stock": 5,
+      "category": "bicicleta",
+      "subcategory": null,
+      "categoryName": "Bicicletas eléctricas",
+      "subcategoryName": null,
+      "brand": "RFN",
+      "shippingCost": 50,
+      "shippingCountries": "[\"ES\",\"FR\",\"IT\",\"PT\"]",
+      "stripeLink": "",
+      "active": true,
+      "featured": false,
+      "images": [
+        {
+          "url": "https://19e3cavvu8vlpeyt.public.blob.vercel-storage.com/products/import-apollo-20261113/826ee4276ac1fa8749cf6690dd9e82a87533f146aaf8dba0e106103749292cdb.jpg",
+          "alt": "Bicicleta eléctrica 500W Roan RFN Evo Racing 18\" - Azul-Rojo"
+        },
+        {
+          "url": "https://19e3cavvu8vlpeyt.public.blob.vercel-storage.com/products/import-apollo-20261113/2c5b3b53573dab5f25fec93b95c4a2017a78ce4815063e6a3010e11429cec789.jpg",
+          "alt": "Bicicleta eléctrica 500W Roan RFN Evo Racing 18\" - Azul-Rojo"
+        },
+        {
+          "url": "https://19e3cavvu8vlpeyt.public.blob.vercel-storage.com/products/import-apollo-20261113/136fc275026f33fc320d350dac809e67e5b250e269212ba9bccdec5b4beea7f4.jpg",
+          "alt": "Bicicleta eléctrica 500W Roan RFN Evo Racing 18\" - Azul-Rojo"
+        },
+        {
+          "url": "https://19e3cavvu8vlpeyt.public.blob.vercel-storage.com/products/import-apollo-20261113/4d508a565771052e2b098a12ff0b652bbef7e60acff5682c53735c765a1dacbe.jpg",
+          "alt": "Bicicleta eléctrica 500W Roan RFN Evo Racing 18\" - Azul-Rojo"
+        },
+        {
+          "url": "https://19e3cavvu8vlpeyt.public.blob.vercel-storage.com/products/import-apollo-20261113/44b57adf8ca14d45b21fc4c471ff299b3a5377b64a3dfb47038f4edb8e1783ae.jpg",
+          "alt": "Bicicleta eléctrica 500W Roan RFN Evo Racing 18\" - Azul-Rojo"
+        },
+        {
+          "url": "https://19e3cavvu8vlpeyt.public.blob.vercel-storage.com/products/import-apollo-20261113/a2acac70e0507746705d6d9d8a888a9e2f909d8aa1780b111a9e7a76d05e32ec.jpg",
+          "alt": "Bicicleta eléctrica 500W Roan RFN Evo Racing 18\" - Azul-Rojo"
+        }
+      ],
+      "source": {
+        "url": "https://www.motosapollo.com/bicicletas-electricas/bicicleta-electrica-500w-roan-rfn-evo-racing-18?group%5B13%5D=2347",
+        "productId": 6126,
+        "variantId": 2552,
+        "reference": "4058",
+        "priceCents": 89956,
+        "quantity": -1,
+        "availableForOrder": true,
+        "checkedAt": "2026-11-13T17:21:24.438100+00:00"
+      },
+      "motorPower": 500,
+      "battery": "De litio 36v 5Ah",
+      "range": 20,
+      "maxSpeed": 30,
+      "weight": 20.0
+    },
+    {
+      "id": "imp20261113_ap6126_v3069",
+      "sku": "MA-6126-3069",
+      "slug": "bicicleta-electrica-500w-roan-rfn-evo-racing-18-negro-dorado-imp20261113_ap6126_v3069",
+      "name": "Bicicleta eléctrica 500W Roan RFN Evo Racing 18\" - Negro-Dorado",
+      "shortDesc": "Bicicleta eléctrica 500W Roan RFN Evo Racing 18\" - Negro-Dorado",
+      "description": "Bicicleta eléctrica 500W Roan RFN Evo Racing 18\" - Negro-Dorado.\n\nUn modelo de la gama de bicicletas eléctricas con la configuración indicada en esta ficha. Revisa el tamaño de las ruedas y las características del motor para elegir la versión que necesitas.\n\nCaracterísticas de esta versión:\n- Marca: RFN\n- Tipo Motor: Motor eléctrico sin escobillas \"Brushless\"\n- Potencia Nominal: 500W\n- Potencia Máxima: 750W\n- Batería: De litio 36v 5Ah\n- Cargador de Batería: 42V - 3Ah\n- Autonomia: Hasta 20km (Mapa 1) / Hasta 15 km (Mapa 2) / Hasta 12 km (Mapa 3)\n- Velocidad Máxima: 30 km/h aprox. (según peso de la persona, estado/carga de la batería, estado del terreno)\n- Limitador de velocidad: 3 posiciones: 15 km/h - 22 km/h - 30 km/h\n- Tiempo de carga de la batería: 3-5 horas\n- Frenos: De disco por cable\n- Chasis: Aleación de Aluminio\n- Suspensión delantera: Horquilla hidráulica 614 mm\n- Suspensión trasera: Amortiguador hidráulico\n- Neumáticos: Del. 18 x 2.5\" y Tra. 18 x 2.5\"\n- Llantas: 18 pulgadas\n- Transmisión: Por cadena\n- Altura del suelo al asiento: Regulable 68 a 78 cm\n- Manillar: Aleación Aluminio tipo BMX\n- Carga máxima: 50 kg.\n- Dimensiones del producto: 144cm Largo x 64 cm ancho( del manillar) x 91 de alto ( al manillar)\n- Peso del producto: 20 kg\n- Dimensiones del embalaje: 125 cm x 27 cm x 69 cm (Largo x Ancho x Alto)\n\nConfiguración: Color: Negro-Dorado.",
+      "price": 1079.47,
+      "currency": "EUR",
+      "stock": 5,
+      "category": "bicicleta",
+      "subcategory": null,
+      "categoryName": "Bicicletas eléctricas",
+      "subcategoryName": null,
+      "brand": "RFN",
+      "shippingCost": 50,
+      "shippingCountries": "[\"ES\",\"FR\",\"IT\",\"PT\"]",
+      "stripeLink": "",
+      "active": true,
+      "featured": false,
+      "images": [
+        {
+          "url": "https://19e3cavvu8vlpeyt.public.blob.vercel-storage.com/products/import-apollo-20261113/2a79b000452a543bbf483ebeca24c11a08ed12602f58fa4f9ebea2fe3e6c419c.jpg",
+          "alt": "Bicicleta eléctrica 500W Roan RFN Evo Racing 18\" - Negro-Dorado"
+        },
+        {
+          "url": "https://19e3cavvu8vlpeyt.public.blob.vercel-storage.com/products/import-apollo-20261113/48fde087efad6feda9cc0dd126d9e3837d69dfc10a05e22337392180ac127e53.jpg",
+          "alt": "Bicicleta eléctrica 500W Roan RFN Evo Racing 18\" - Negro-Dorado"
+        }
+      ],
+      "source": {
+        "url": "https://www.motosapollo.com/bicicletas-electricas/bicicleta-electrica-500w-roan-rfn-evo-racing-18?group%5B13%5D=2336",
+        "productId": 6126,
+        "variantId": 3069,
+        "reference": "4058",
+        "priceCents": 89956,
+        "quantity": -2,
+        "availableForOrder": true,
+        "checkedAt": "2026-11-13T17:21:24.650253+00:00"
+      },
+      "motorPower": 500,
+      "battery": "De litio 36v 5Ah",
+      "range": 20,
+      "maxSpeed": 30,
+      "weight": 20.0
+    },
+    {
+      "id": "imp20261113_ap6068_v2408",
+      "sku": "MA-6068-2408",
+      "slug": "bicicleta-electrica-koolux-bk10s-250w-48v-13ah-naranja-imp20261113_ap6068_v2408",
+      "name": "Bicicleta eléctrica KOOLUX BK10S 250W 48V 13AH - Naranja",
+      "shortDesc": "Bicicleta eléctrica KOOLUX BK10S 250W 48V 13AH - Naranja",
+      "description": "Bicicleta eléctrica KOOLUX BK10S 250W 48V 13AH - Naranja.\n\nUn modelo de la gama de bicicletas eléctricas con la configuración indicada en esta ficha. Revisa el tamaño de las ruedas y las características del motor para elegir la versión que necesitas.\n\nCaracterísticas de esta versión:\n- Motor: 250W sin escobillas\n- Potencia Nominal: 250 W\n- Potencia Máxima: 375W\n- Batería: Batería extraíble de litio 48V 13AH\n- Autonomia: 35 km - 90 km (observar detalle en descripción)\n- Velocidad Máxima: 25 km/h aprox. (según peso de la persona, estado/carga de la batería, estado del terreno)\n- Limitador de velocidad: En 3 posiciones/etapas\n- Tiempo de carga de la batería: 4-6 horas\n- Cambio: Shimano 7 velocidades\n- Frenos: Disco\n- Chasis: Reforzado\n- Suspensión delantera: Suspensión Horquilla Delantera\n- Suspensión trasera: Incorporado en la barra del sillín\n- Neumáticos: Neumáticos anchos de 20\"x 4.0\n- Llantas: 20 pulgadas\n- Altura del suelo al asiento: 82 -102 cm\n- Iluminación: Luz delantera y trasera de LED.\n- Pantalla: Pantalla LCD con toda la información\n- Carga máxima: 120 Kg\n- Dimensiones del producto: 165x58x116 cm\n- Peso del producto: 29 kg\n- Tamaño producto plegado: 92x50x80 cm\n- Altura Manillar Regulable: 96 -108 cm\n- Dimensiones del embalaje: 86x37x66 cm\n- Peso producto embalado: 36 kg\n\nConfiguración: Color: Naranja.",
+      "price": 1078.81,
+      "currency": "EUR",
+      "stock": 5,
+      "category": "bicicleta",
+      "subcategory": null,
+      "categoryName": "Bicicletas eléctricas",
+      "subcategoryName": null,
+      "brand": null,
+      "shippingCost": 50,
+      "shippingCountries": "[\"ES\",\"FR\",\"IT\",\"PT\"]",
+      "stripeLink": "",
+      "active": true,
+      "featured": false,
+      "images": [
+        {
+          "url": "https://19e3cavvu8vlpeyt.public.blob.vercel-storage.com/products/import-apollo-20261113/0c7e7cd1ee64a8117574eaffd351afa68b5fdad837823d0aa841a5ba2c912011.jpg",
+          "alt": "Bicicleta eléctrica KOOLUX BK10S 250W 48V 13AH - Naranja"
+        },
+        {
+          "url": "https://19e3cavvu8vlpeyt.public.blob.vercel-storage.com/products/import-apollo-20261113/4b232e035f54b5fb98e2942527377ff96e93c94c3e0e5cc5546957aecec5fd14.jpg",
+          "alt": "Bicicleta eléctrica KOOLUX BK10S 250W 48V 13AH - Naranja"
+        },
+        {
+          "url": "https://19e3cavvu8vlpeyt.public.blob.vercel-storage.com/products/import-apollo-20261113/8312836fb83f56285862afbfb77b849a9d5a3eceb3ca2b4168a559a16ac6efa0.jpg",
+          "alt": "Bicicleta eléctrica KOOLUX BK10S 250W 48V 13AH - Naranja"
+        },
+        {
+          "url": "https://19e3cavvu8vlpeyt.public.blob.vercel-storage.com/products/import-apollo-20261113/9d8b5aa40c4a35fcaf883ed09fe652664f12aa6ea8c645f8d07143cddfab56e1.jpg",
+          "alt": "Bicicleta eléctrica KOOLUX BK10S 250W 48V 13AH - Naranja"
+        },
+        {
+          "url": "https://19e3cavvu8vlpeyt.public.blob.vercel-storage.com/products/import-apollo-20261113/1fdbedda55fcff1615e68bfbc928a78161f7ea8729cd40664bc0c0425d908628.jpg",
+          "alt": "Bicicleta eléctrica KOOLUX BK10S 250W 48V 13AH - Naranja"
+        },
+        {
+          "url": "https://19e3cavvu8vlpeyt.public.blob.vercel-storage.com/products/import-apollo-20261113/92d4ed9306340a4b72448059f2839795c484c9e162471e163a75be7dc6456c3b.jpg",
+          "alt": "Bicicleta eléctrica KOOLUX BK10S 250W 48V 13AH - Naranja"
+        }
+      ],
+      "source": {
+        "url": "https://www.motosapollo.com/bicicletas-electricas/bicicleta-electrica-koolux-bk10s-250w-48v-13ah?group%5B13%5D=408",
+        "productId": 6068,
+        "variantId": 2408,
+        "reference": "5522",
+        "priceCents": 89901,
+        "quantity": 0,
+        "availableForOrder": true,
+        "checkedAt": "2026-11-13T17:21:27.874057+00:00"
+      },
+      "motorPower": 250,
+      "battery": "Batería extraíble de litio 48V 13AH",
+      "range": 35,
+      "maxSpeed": 25,
+      "maxLoad": 120,
+      "weight": 29.0
+    },
+    {
+      "id": "imp20261113_ap6068_v2206",
+      "sku": "MA-6068-2206",
+      "slug": "bicicleta-electrica-koolux-bk10s-250w-48v-13ah-negro-imp20261113_ap6068_v2206",
+      "name": "Bicicleta eléctrica KOOLUX BK10S 250W 48V 13AH - Negro",
+      "shortDesc": "Bicicleta eléctrica KOOLUX BK10S 250W 48V 13AH - Negro",
+      "description": "Bicicleta eléctrica KOOLUX BK10S 250W 48V 13AH - Negro.\n\nUn modelo de la gama de bicicletas eléctricas con la configuración indicada en esta ficha. Revisa el tamaño de las ruedas y las características del motor para elegir la versión que necesitas.\n\nCaracterísticas de esta versión:\n- Motor: 250W sin escobillas\n- Potencia Nominal: 250 W\n- Potencia Máxima: 375W\n- Batería: Batería extraíble de litio 48V 13AH\n- Autonomia: 35 km - 90 km (observar detalle en descripción)\n- Velocidad Máxima: 25 km/h aprox. (según peso de la persona, estado/carga de la batería, estado del terreno)\n- Limitador de velocidad: En 3 posiciones/etapas\n- Tiempo de carga de la batería: 4-6 horas\n- Cambio: Shimano 7 velocidades\n- Frenos: Disco\n- Chasis: Reforzado\n- Suspensión delantera: Suspensión Horquilla Delantera\n- Suspensión trasera: Incorporado en la barra del sillín\n- Neumáticos: Neumáticos anchos de 20\"x 4.0\n- Llantas: 20 pulgadas\n- Altura del suelo al asiento: 82 -102 cm\n- Iluminación: Luz delantera y trasera de LED.\n- Pantalla: Pantalla LCD con toda la información\n- Carga máxima: 120 Kg\n- Dimensiones del producto: 165x58x116 cm\n- Peso del producto: 29 kg\n- Tamaño producto plegado: 92x50x80 cm\n- Altura Manillar Regulable: 96 -108 cm\n- Dimensiones del embalaje: 86x37x66 cm\n- Peso producto embalado: 36 kg\n\nConfiguración: Color: Negro.",
+      "price": 1078.81,
+      "currency": "EUR",
+      "stock": 5,
+      "category": "bicicleta",
+      "subcategory": null,
+      "categoryName": "Bicicletas eléctricas",
+      "subcategoryName": null,
+      "brand": null,
+      "shippingCost": 50,
+      "shippingCountries": "[\"ES\",\"FR\",\"IT\",\"PT\"]",
+      "stripeLink": "",
+      "active": true,
+      "featured": false,
+      "images": [
+        {
+          "url": "https://19e3cavvu8vlpeyt.public.blob.vercel-storage.com/products/import-apollo-20261113/3fe6f22753218a899b12e0cca6235d5918854af3dd85c5151b0b4514f9626c21.jpg",
+          "alt": "Bicicleta eléctrica KOOLUX BK10S 250W 48V 13AH - Negro"
+        },
+        {
+          "url": "https://19e3cavvu8vlpeyt.public.blob.vercel-storage.com/products/import-apollo-20261113/12639b28d4a559c338e96e74bfdc73b65f5f99e5e55871283c47f41f53c14da0.jpg",
+          "alt": "Bicicleta eléctrica KOOLUX BK10S 250W 48V 13AH - Negro"
+        },
+        {
+          "url": "https://19e3cavvu8vlpeyt.public.blob.vercel-storage.com/products/import-apollo-20261113/57c1d2f88b349ec62407bee210372e7ca9dd49e381dfc5ede36e67a599344d6b.jpg",
+          "alt": "Bicicleta eléctrica KOOLUX BK10S 250W 48V 13AH - Negro"
+        },
+        {
+          "url": "https://19e3cavvu8vlpeyt.public.blob.vercel-storage.com/products/import-apollo-20261113/54c772e1e8d3c26204b28135fb88e96fa500fb4d3615c0fa29566ce210f9b155.jpg",
+          "alt": "Bicicleta eléctrica KOOLUX BK10S 250W 48V 13AH - Negro"
+        },
+        {
+          "url": "https://19e3cavvu8vlpeyt.public.blob.vercel-storage.com/products/import-apollo-20261113/9c8971d761891acd0024fcfcec1c050ab6ff4f38eccf05a7827926c5d586fbae.jpg",
+          "alt": "Bicicleta eléctrica KOOLUX BK10S 250W 48V 13AH - Negro"
+        },
+        {
+          "url": "https://19e3cavvu8vlpeyt.public.blob.vercel-storage.com/products/import-apollo-20261113/55ba4e7375c85161df1e2987968372c67e7066c0fb75e0bcedd5854acfa48b40.jpg",
+          "alt": "Bicicleta eléctrica KOOLUX BK10S 250W 48V 13AH - Negro"
+        },
+        {
+          "url": "https://19e3cavvu8vlpeyt.public.blob.vercel-storage.com/products/import-apollo-20261113/81d2e75a89c0cd905d3735e2d1fe282e952b58bf3bfd228f15df4b8c55888d52.jpg",
+          "alt": "Bicicleta eléctrica KOOLUX BK10S 250W 48V 13AH - Negro"
+        },
+        {
+          "url": "https://19e3cavvu8vlpeyt.public.blob.vercel-storage.com/products/import-apollo-20261113/2a34961553240a7692ce85bb0248adb01fe80499a7edcf27641865b0d1c35d43.jpg",
+          "alt": "Bicicleta eléctrica KOOLUX BK10S 250W 48V 13AH - Negro"
+        }
+      ],
+      "source": {
+        "url": "https://www.motosapollo.com/bicicletas-electricas/bicicleta-electrica-koolux-bk10s-250w-48v-13ah?group%5B13%5D=411",
+        "productId": 6068,
+        "variantId": 2206,
+        "reference": "5522",
+        "priceCents": 89901,
+        "quantity": 0,
+        "availableForOrder": true,
+        "checkedAt": "2026-11-13T17:21:27.863546+00:00"
+      },
+      "motorPower": 250,
+      "battery": "Batería extraíble de litio 48V 13AH",
+      "range": 35,
+      "maxSpeed": 25,
+      "maxLoad": 120,
+      "weight": 29.0
+    },
+    {
+      "id": "imp20261113_ap6068_v2207",
+      "sku": "MA-6068-2207",
+      "slug": "bicicleta-electrica-koolux-bk10s-250w-48v-13ah-gris-imp20261113_ap6068_v2207",
+      "name": "Bicicleta eléctrica KOOLUX BK10S 250W 48V 13AH - Gris",
+      "shortDesc": "Bicicleta eléctrica KOOLUX BK10S 250W 48V 13AH - Gris",
+      "description": "Bicicleta eléctrica KOOLUX BK10S 250W 48V 13AH - Gris.\n\nUn modelo de la gama de bicicletas eléctricas con la configuración indicada en esta ficha. Revisa el tamaño de las ruedas y las características del motor para elegir la versión que necesitas.\n\nCaracterísticas de esta versión:\n- Motor: 250W sin escobillas\n- Potencia Nominal: 250 W\n- Potencia Máxima: 375W\n- Batería: Batería extraíble de litio 48V 13AH\n- Autonomia: 35 km - 90 km (observar detalle en descripción)\n- Velocidad Máxima: 25 km/h aprox. (según peso de la persona, estado/carga de la batería, estado del terreno)\n- Limitador de velocidad: En 3 posiciones/etapas\n- Tiempo de carga de la batería: 4-6 horas\n- Cambio: Shimano 7 velocidades\n- Frenos: Disco\n- Chasis: Reforzado\n- Suspensión delantera: Suspensión Horquilla Delantera\n- Suspensión trasera: Incorporado en la barra del sillín\n- Neumáticos: Neumáticos anchos de 20\"x 4.0\n- Llantas: 20 pulgadas\n- Altura del suelo al asiento: 82 -102 cm\n- Iluminación: Luz delantera y trasera de LED.\n- Pantalla: Pantalla LCD con toda la información\n- Carga máxima: 120 Kg\n- Dimensiones del producto: 165x58x116 cm\n- Peso del producto: 29 kg\n- Tamaño producto plegado: 92x50x80 cm\n- Altura Manillar Regulable: 96 -108 cm\n- Dimensiones del embalaje: 86x37x66 cm\n- Peso producto embalado: 36 kg\n\nConfiguración: Color: Gris.",
+      "price": 1078.81,
+      "currency": "EUR",
+      "stock": 5,
+      "category": "bicicleta",
+      "subcategory": null,
+      "categoryName": "Bicicletas eléctricas",
+      "subcategoryName": null,
+      "brand": null,
+      "shippingCost": 50,
+      "shippingCountries": "[\"ES\",\"FR\",\"IT\",\"PT\"]",
+      "stripeLink": "",
+      "active": true,
+      "featured": false,
+      "images": [
+        {
+          "url": "https://19e3cavvu8vlpeyt.public.blob.vercel-storage.com/products/import-apollo-20261113/3894bc3aef6de7478f30e6f6ab8bce8c91f65d54a4360286b86f1e70a88cfd72.jpg",
+          "alt": "Bicicleta eléctrica KOOLUX BK10S 250W 48V 13AH - Gris"
+        },
+        {
+          "url": "https://19e3cavvu8vlpeyt.public.blob.vercel-storage.com/products/import-apollo-20261113/b01384ff3eae33b7fc7ce2aa3a6db955a3fcb141d0c81d9a0dfa82433a71a9cd.jpg",
+          "alt": "Bicicleta eléctrica KOOLUX BK10S 250W 48V 13AH - Gris"
+        },
+        {
+          "url": "https://19e3cavvu8vlpeyt.public.blob.vercel-storage.com/products/import-apollo-20261113/09f00689013173811477b5cf42610d682ad88a929adc044225c20899b5412960.jpg",
+          "alt": "Bicicleta eléctrica KOOLUX BK10S 250W 48V 13AH - Gris"
+        },
+        {
+          "url": "https://19e3cavvu8vlpeyt.public.blob.vercel-storage.com/products/import-apollo-20261113/0e76bfe4fccc452011648b3ea881ca3557cd3f749ebc3fe4cb63f99fe61f27f9.jpg",
+          "alt": "Bicicleta eléctrica KOOLUX BK10S 250W 48V 13AH - Gris"
+        },
+        {
+          "url": "https://19e3cavvu8vlpeyt.public.blob.vercel-storage.com/products/import-apollo-20261113/e332e0d6ff92243a406f274350a0253972091afa2ef5c5dd525aec4383a18657.jpg",
+          "alt": "Bicicleta eléctrica KOOLUX BK10S 250W 48V 13AH - Gris"
+        },
+        {
+          "url": "https://19e3cavvu8vlpeyt.public.blob.vercel-storage.com/products/import-apollo-20261113/91f18b3b0fd1f1459169968caa376cb3e44ae63c2c8b9a08b38b4d035122850a.jpg",
+          "alt": "Bicicleta eléctrica KOOLUX BK10S 250W 48V 13AH - Gris"
+        },
+        {
+          "url": "https://19e3cavvu8vlpeyt.public.blob.vercel-storage.com/products/import-apollo-20261113/169f9e57a80a1598a14e2973537b1379e10d57556b485cc2ac303e71cd5d7342.jpg",
+          "alt": "Bicicleta eléctrica KOOLUX BK10S 250W 48V 13AH - Gris"
+        },
+        {
+          "url": "https://19e3cavvu8vlpeyt.public.blob.vercel-storage.com/products/import-apollo-20261113/0d58a482afde07aa70b1820b79889c55fb903dabcdc593f16bce067400f3873e.jpg",
+          "alt": "Bicicleta eléctrica KOOLUX BK10S 250W 48V 13AH - Gris"
+        }
+      ],
+      "source": {
+        "url": "https://www.motosapollo.com/bicicletas-electricas/bicicleta-electrica-koolux-bk10s-250w-48v-13ah?group%5B13%5D=401",
+        "productId": 6068,
+        "variantId": 2207,
+        "reference": "5522",
+        "priceCents": 89901,
+        "quantity": 0,
+        "availableForOrder": true,
+        "checkedAt": "2026-11-13T17:21:28.614292+00:00"
+      },
+      "motorPower": 250,
+      "battery": "Batería extraíble de litio 48V 13AH",
+      "range": 35,
+      "maxSpeed": 25,
+      "maxLoad": 120,
+      "weight": 29.0
+    },
+    {
+      "id": "imp20261113_ap6091_v0",
+      "sku": "MA-6091-0",
+      "slug": "bicicleta-electrica-koolux-x1-36v-6ah-imp20261113_ap6091_v0",
+      "name": "Bicicleta eléctrica KOOLUX X1 36V 6AH",
+      "shortDesc": "Bicicleta eléctrica KOOLUX X1 36V 6AH",
+      "description": "Bicicleta eléctrica KOOLUX X1 36V 6AH.\n\nUn modelo de la gama de bicicletas eléctricas con la configuración indicada en esta ficha. Revisa el tamaño de las ruedas y las características del motor para elegir la versión que necesitas.\n\nCaracterísticas de esta versión:\n- Motor: 250W sin escobillas\n- Potencia Nominal: 250 W\n- Potencia Máxima: 375W\n- Batería: Batería extraíble de litio 36V 10.4AH\n- Autonomia: 35 km - 70 km (observar detalle en descripción)\n- Velocidad Máxima: 25 km/h aprox. (según peso de la persona, estado/carga de la batería, estado del terreno)\n- Limitador de velocidad: 5 posiciones de velocidades\n- Tiempo de carga de la batería: 4-6 horas\n- Frenos: Disco\n- Chasis: de acero alta resistencia\n- Neumáticos: Del. 16 x 2.5\" y Tra. Del. 16 x 2.5\"\n- Llantas: 16 pulgadas\n- Altura del suelo al asiento: 78-107 cm\n- Iluminación: Luz delantera y trasera de LED.\n- Pantalla: Pantalla LCD con toda la información\n- Carga máxima: 120 Kg\n- Dimensiones del producto: 1390x530x1040 mm\n- Peso del producto: 17.50 kg\n- Tamaño producto plegado: 75cm x 50cm x 70cm\n- Altura Manillar Regulable: 870-980 mm\n- Dimensiones del embalaje: 860x370x660 mm\n- Peso producto embalado: 23.50 kg",
+      "price": 658.8,
+      "currency": "EUR",
+      "stock": 5,
+      "category": "bicicleta",
+      "subcategory": null,
+      "categoryName": "Bicicletas eléctricas",
+      "subcategoryName": null,
+      "brand": null,
+      "shippingCost": 50,
+      "shippingCountries": "[\"ES\",\"FR\",\"IT\",\"PT\"]",
+      "stripeLink": "",
+      "active": true,
+      "featured": false,
+      "images": [
+        {
+          "url": "https://19e3cavvu8vlpeyt.public.blob.vercel-storage.com/products/import-apollo-20261113/0d85af6ca21253477bfd1731083e2e95006e94050dba860c3cc24f0853ae7b36.jpg",
+          "alt": "Bicicleta eléctrica KOOLUX X1 36V 6AH"
+        },
+        {
+          "url": "https://19e3cavvu8vlpeyt.public.blob.vercel-storage.com/products/import-apollo-20261113/bae2a6a3d02511e4ca613947e97f89187d6171a2b566dd844865fbb1fbaa5467.jpg",
+          "alt": "Bicicleta eléctrica KOOLUX X1 36V 6AH"
+        },
+        {
+          "url": "https://19e3cavvu8vlpeyt.public.blob.vercel-storage.com/products/import-apollo-20261113/91054ef5347a261d04b0e14d5e85602ecdff5416648d339f673c2e26a08c0a39.jpg",
+          "alt": "Bicicleta eléctrica KOOLUX X1 36V 6AH"
+        },
+        {
+          "url": "https://19e3cavvu8vlpeyt.public.blob.vercel-storage.com/products/import-apollo-20261113/7cfd7f139b42bc1e698606e6d43142a7b4dbbbbde87686548474121492251831.jpg",
+          "alt": "Bicicleta eléctrica KOOLUX X1 36V 6AH"
+        },
+        {
+          "url": "https://19e3cavvu8vlpeyt.public.blob.vercel-storage.com/products/import-apollo-20261113/d0421679d913e870d3ed1baa1757b5bbc263bab3a35101a427fc8c5d9c846cc0.jpg",
+          "alt": "Bicicleta eléctrica KOOLUX X1 36V 6AH"
+        }
+      ],
+      "source": {
+        "url": "https://www.motosapollo.com/bicicletas-electricas/bicicleta-electrica-koolux-x1-36v-6ah",
+        "productId": 6091,
+        "variantId": 0,
+        "reference": "5596",
+        "priceCents": 54900,
+        "quantity": 0,
+        "availableForOrder": true,
+        "checkedAt": "2026-11-13T17:21:29.459195+00:00"
+      },
+      "motorPower": 250,
+      "battery": "Batería extraíble de litio 36V 10.4AH",
+      "range": 35,
+      "maxSpeed": 25,
+      "maxLoad": 120,
+      "weight": 17.5
+    }
+  ]
+}
