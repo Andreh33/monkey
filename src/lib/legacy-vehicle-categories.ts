@@ -6,6 +6,7 @@ import {
 } from "./storefront-routes";
 
 const destinations = new Map<string, { cat: string; sub: string }>([
+  ["bicicletas-electricas", { cat: "bicicleta", sub: "" }],
   ["pit-bikes-de-gasolina", { cat: "pit-bikes", sub: "pit-bikes-de-gasolina" }],
   ["pit-bikes-electricas", { cat: "pit-bikes", sub: "pit-bikes-electricas" }],
   ["minimotos-gasolina", { cat: "minimotos", sub: "minimotos-gasolina" }],
@@ -21,7 +22,8 @@ const destinations = new Map<string, { cat: string; sub: string }>([
 /** Keep old category bookmarks useful after removing the generic vehicle group. */
 export function legacyVehicleCategoryPath(input: QueryInput, locale: Locale) {
   const query = catalogQuery(input);
-  if (!query.valid || query.cat !== "vehiculos") return null;
+  const redundantBicycleFilter = query.cat === "bicicleta" && query.sub === "bicicletas-electricas";
+  if (!query.valid || (query.cat !== "vehiculos" && !redundantBicycleFilter)) return null;
 
   const destination = destinations.get(query.sub) ?? { cat: "", sub: "" };
   // Product regrouping changes page boundaries; an old page can now be empty.

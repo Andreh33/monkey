@@ -5,6 +5,20 @@ import ts from "typescript";
 import { legacyVehicleCategoryPath } from "../src/lib/legacy-vehicle-categories";
 import { catalogQuery, locales } from "../src/lib/storefront-routes";
 
+test("the old electric bicycle submenu includes manual and Apollo bicycles in every language", () => {
+  for (const locale of locales) {
+    const prefix = locale === "es" ? "" : `/${locale}`;
+    for (const cat of ["bicicleta", "vehiculos"]) {
+      assert.equal(legacyVehicleCategoryPath({ cat, sub: "bicicletas-electricas", page: "2" }, locale),
+        `${prefix}/tienda?cat=bicicleta`);
+    }
+    assert.equal(legacyVehicleCategoryPath({cat: "bicicleta"}, locale), null);
+    assert.equal(legacyVehicleCategoryPath({cat: "bicicleta", sub: "other"}, locale), null);
+  }
+  assert.equal(legacyVehicleCategoryPath({cat: "bicicleta", sub: "bicicletas-electricas", brand: "Ecoxtrem", sort: "price-asc", utm_source: "whatsapp"}, "es"),
+    "/tienda?cat=bicicleta&brand=Ecoxtrem&sort=price-asc&utm_source=whatsapp");
+});
+
 test("old vehicle subcategories redirect to their new groups in every language", () => {
   for (const locale of locales) {
     const prefix = locale === "es" ? "" : `/${locale}`;

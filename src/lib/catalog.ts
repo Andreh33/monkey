@@ -57,7 +57,7 @@ const readCatalogPage = unstable_cache(async (where: Prisma.ProductWhereInput, o
     prisma.product.count({ where }),
   ]);
   return { products, total };
-}, ["public-catalog-page-v7"], catalogCacheOptions);
+}, ["public-catalog-page-v8"], catalogCacheOptions);
 
 const readBrands = unstable_cache(() => prisma.product.groupBy({
   by: ["brand"], where: { active: true, brand: { not: null } }, orderBy: { brand: "asc" },
@@ -133,7 +133,7 @@ const readPublicProduct = unstable_cache(async (slug: string) => {
         })
       : null);
   return product?.active ? product : null;
-}, ["public-product-v3"], catalogCacheOptions);
+}, ["public-product-v4"], catalogCacheOptions);
 
 export const findPublicProduct = cache(async (slug: string) => {
   const product = await readPublicProduct(slug);
