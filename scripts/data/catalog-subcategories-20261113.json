@@ -1,0 +1,1693 @@
+{
+  "migration": "20261113_complete_catalog_subcategories",
+  "products": [
+    {
+      "id": "imp20261113_ap2906_v2068",
+      "name": "CHALECO PROTECTOR INFANTIL PRO HOMBRERA - M - INFANTIL",
+      "category": "equipacion-cross-y-mini-quads-para-ninos-y-adultos",
+      "subcategory": null,
+      "targetCategory": "equipacion-cross-y-mini-quads-para-ninos-y-adultos",
+      "targetSubcategory": "petos-y-protecciones"
+    },
+    {
+      "id": "imp20261113_ap2906_v2070",
+      "name": "CHALECO PROTECTOR INFANTIL PRO HOMBRERA - L - INFANTIL",
+      "category": "equipacion-cross-y-mini-quads-para-ninos-y-adultos",
+      "subcategory": null,
+      "targetCategory": "equipacion-cross-y-mini-quads-para-ninos-y-adultos",
+      "targetSubcategory": "petos-y-protecciones"
+    },
+    {
+      "id": "imp20261113_ap2744_v3427",
+      "name": "Casco cross niño Madix Ajustable - Celeste - S-49/50 M-51/52",
+      "category": "equipacion-cross-y-mini-quads-para-ninos-y-adultos",
+      "subcategory": null,
+      "targetCategory": "equipacion-cross-y-mini-quads-para-ninos-y-adultos",
+      "targetSubcategory": "cascos"
+    },
+    {
+      "id": "imp20261113_ap6117_v2411",
+      "name": "Quad 250cc Roan DAKAR manual R-1-2-3-4 R10 - Azul",
+      "category": "quads",
+      "subcategory": null,
+      "targetCategory": "quads",
+      "targetSubcategory": "mini-quads-gasolina"
+    },
+    {
+      "id": "imp20261113_ap6456_v0",
+      "name": "Pit Bike ROAN SX65 65cc 2T Refrigerada por Agua 14/12",
+      "category": "pit-bikes",
+      "subcategory": null,
+      "targetCategory": "pit-bikes",
+      "targetSubcategory": "pit-bikes-de-gasolina"
+    },
+    {
+      "id": "imp20261113_ap1127_v3345",
+      "name": "Kit ropa motocross infantil Madix CN19 - Blanco-Rojo - 20 1XS 5/6AÑOS",
+      "category": "equipacion-cross-y-mini-quads-para-ninos-y-adultos",
+      "subcategory": null,
+      "targetCategory": "equipacion-cross-y-mini-quads-para-ninos-y-adultos",
+      "targetSubcategory": "ropa-motocross"
+    },
+    {
+      "id": "imp20261113_ap1127_v3348",
+      "name": "Kit ropa motocross infantil Madix CN19 - Blanco-Rojo - 22 2XS 6/7AÑOS",
+      "category": "equipacion-cross-y-mini-quads-para-ninos-y-adultos",
+      "subcategory": null,
+      "targetCategory": "equipacion-cross-y-mini-quads-para-ninos-y-adultos",
+      "targetSubcategory": "ropa-motocross"
+    },
+    {
+      "id": "imp20261113_ap1127_v3350",
+      "name": "Kit ropa motocross infantil Madix CN19 - Verde-Azul - 22 2XS 6/7AÑOS",
+      "category": "equipacion-cross-y-mini-quads-para-ninos-y-adultos",
+      "subcategory": null,
+      "targetCategory": "equipacion-cross-y-mini-quads-para-ninos-y-adultos",
+      "targetSubcategory": "ropa-motocross"
+    },
+    {
+      "id": "imp20261113_ap1127_v3351",
+      "name": "Kit ropa motocross infantil Madix CN19 - Blanco-Rojo - 24 3XS 7/8AÑOS",
+      "category": "equipacion-cross-y-mini-quads-para-ninos-y-adultos",
+      "subcategory": null,
+      "targetCategory": "equipacion-cross-y-mini-quads-para-ninos-y-adultos",
+      "targetSubcategory": "ropa-motocross"
+    },
+    {
+      "id": "imp20261113_ap1127_v3353",
+      "name": "Kit ropa motocross infantil Madix CN19 - Verde-Azul - 24 3XS 7/8AÑOS",
+      "category": "equipacion-cross-y-mini-quads-para-ninos-y-adultos",
+      "subcategory": null,
+      "targetCategory": "equipacion-cross-y-mini-quads-para-ninos-y-adultos",
+      "targetSubcategory": "ropa-motocross"
+    },
+    {
+      "id": "imp20261113_ap1127_v3354",
+      "name": "Kit ropa motocross infantil Madix CN19 - Blanco-Rojo - 26 4XS 8/9AÑOS",
+      "category": "equipacion-cross-y-mini-quads-para-ninos-y-adultos",
+      "subcategory": null,
+      "targetCategory": "equipacion-cross-y-mini-quads-para-ninos-y-adultos",
+      "targetSubcategory": "ropa-motocross"
+    },
+    {
+      "id": "imp20261113_ap1127_v3356",
+      "name": "Kit ropa motocross infantil Madix CN19 - Verde-Azul - 26 4XS 8/9AÑOS",
+      "category": "equipacion-cross-y-mini-quads-para-ninos-y-adultos",
+      "subcategory": null,
+      "targetCategory": "equipacion-cross-y-mini-quads-para-ninos-y-adultos",
+      "targetSubcategory": "ropa-motocross"
+    },
+    {
+      "id": "imp20261113_ap1127_v3357",
+      "name": "Kit ropa motocross infantil Madix CN19 - Blanco-Rojo - 28 5XS 9/10AÑOS",
+      "category": "equipacion-cross-y-mini-quads-para-ninos-y-adultos",
+      "subcategory": null,
+      "targetCategory": "equipacion-cross-y-mini-quads-para-ninos-y-adultos",
+      "targetSubcategory": "ropa-motocross"
+    },
+    {
+      "id": "imp20261113_ap1127_v3359",
+      "name": "Kit ropa motocross infantil Madix CN19 - Verde-Azul - 28 5XS 9/10AÑOS",
+      "category": "equipacion-cross-y-mini-quads-para-ninos-y-adultos",
+      "subcategory": null,
+      "targetCategory": "equipacion-cross-y-mini-quads-para-ninos-y-adultos",
+      "targetSubcategory": "ropa-motocross"
+    },
+    {
+      "id": "imp20261113_ap2717_v1860",
+      "name": "Minicross 60cc Roan RXT 12\"/10\" - Naranja",
+      "category": "minimotos",
+      "subcategory": null,
+      "targetCategory": "minimotos",
+      "targetSubcategory": "minimotos-gasolina"
+    },
+    {
+      "id": "imp20261113_ap2717_v2098",
+      "name": "Minicross 60cc Roan RXT 12\"/10\" - Verde",
+      "category": "minimotos",
+      "subcategory": null,
+      "targetCategory": "minimotos",
+      "targetSubcategory": "minimotos-gasolina"
+    },
+    {
+      "id": "imp20261113_ap2744_v3420",
+      "name": "Casco cross niño Madix Ajustable - Celeste - L-53/54 XL-55/56",
+      "category": "equipacion-cross-y-mini-quads-para-ninos-y-adultos",
+      "subcategory": null,
+      "targetCategory": "equipacion-cross-y-mini-quads-para-ninos-y-adultos",
+      "targetSubcategory": "cascos"
+    },
+    {
+      "id": "imp20261113_ap2744_v3423",
+      "name": "Casco cross niño Madix Ajustable - Negro - L-53/54 XL-55/56",
+      "category": "equipacion-cross-y-mini-quads-para-ninos-y-adultos",
+      "subcategory": null,
+      "targetCategory": "equipacion-cross-y-mini-quads-para-ninos-y-adultos",
+      "targetSubcategory": "cascos"
+    },
+    {
+      "id": "imp20261113_ap2744_v3426",
+      "name": "Casco cross niño Madix Ajustable - Verde - L-53/54 XL-55/56",
+      "category": "equipacion-cross-y-mini-quads-para-ninos-y-adultos",
+      "subcategory": null,
+      "targetCategory": "equipacion-cross-y-mini-quads-para-ninos-y-adultos",
+      "targetSubcategory": "cascos"
+    },
+    {
+      "id": "imp20261113_ap2744_v3430",
+      "name": "Casco cross niño Madix Ajustable - Negro - S-49/50 M-51/52",
+      "category": "equipacion-cross-y-mini-quads-para-ninos-y-adultos",
+      "subcategory": null,
+      "targetCategory": "equipacion-cross-y-mini-quads-para-ninos-y-adultos",
+      "targetSubcategory": "cascos"
+    },
+    {
+      "id": "imp20261113_ap2744_v3433",
+      "name": "Casco cross niño Madix Ajustable - Verde - S-49/50 M-51/52",
+      "category": "equipacion-cross-y-mini-quads-para-ninos-y-adultos",
+      "subcategory": null,
+      "targetCategory": "equipacion-cross-y-mini-quads-para-ninos-y-adultos",
+      "targetSubcategory": "cascos"
+    },
+    {
+      "id": "imp20261113_ap3156_v2946",
+      "name": "Mini quad Roan Bull 49cc tipo ATV para niños - Amarillo",
+      "category": "quads",
+      "subcategory": null,
+      "targetCategory": "quads",
+      "targetSubcategory": "mini-quads-gasolina"
+    },
+    {
+      "id": "imp20261113_ap6165_v3418",
+      "name": "Pit bike eléctrica Roan 907 2000W 48V 13Ah Litio Brushless - Naranja",
+      "category": "pit-bikes",
+      "subcategory": null,
+      "targetCategory": "pit-bikes",
+      "targetSubcategory": "pit-bikes-electricas"
+    },
+    {
+      "id": "imp20261113_ap6183_v2840",
+      "name": "Minicross eléctrica RFN Warrior SX-E350 14/14” 350W Infantil - Negro-Dorado",
+      "category": "minimotos",
+      "subcategory": null,
+      "targetCategory": "minimotos",
+      "targetSubcategory": "minimotos-electricas"
+    },
+    {
+      "id": "imp20261113_ap6183_v2841",
+      "name": "Minicross eléctrica RFN Warrior SX-E350 14/14” 350W Infantil - Verde-Rosa",
+      "category": "minimotos",
+      "subcategory": null,
+      "targetCategory": "minimotos",
+      "targetSubcategory": "minimotos-electricas"
+    },
+    {
+      "id": "imp20261113_ap6184_v2842",
+      "name": "Minicross Eléctrica RFN SX-E350 WARRIOR 350W Supermotard 14/14” - Celeste",
+      "category": "minimotos",
+      "subcategory": null,
+      "targetCategory": "minimotos",
+      "targetSubcategory": "minimotos-electricas"
+    },
+    {
+      "id": "imp20261113_ap6184_v2843",
+      "name": "Minicross Eléctrica RFN SX-E350 WARRIOR 350W Supermotard 14/14” - Azul-Rojo",
+      "category": "minimotos",
+      "subcategory": null,
+      "targetCategory": "minimotos",
+      "targetSubcategory": "minimotos-electricas"
+    },
+    {
+      "id": "imp20261113_ap6184_v2844",
+      "name": "Minicross Eléctrica RFN SX-E350 WARRIOR 350W Supermotard 14/14” - Negro-Dorado",
+      "category": "minimotos",
+      "subcategory": null,
+      "targetCategory": "minimotos",
+      "targetSubcategory": "minimotos-electricas"
+    },
+    {
+      "id": "imp20261113_ap6190_v2891",
+      "name": "Quad Roan Dakar 300cc Zongshen R10 - Azul",
+      "category": "quads",
+      "subcategory": null,
+      "targetCategory": "quads",
+      "targetSubcategory": "mini-quads-gasolina"
+    },
+    {
+      "id": "imp20261113_ap6418_v3407",
+      "name": "Pit Bike Dorado DMX 140cc 17/14\" 4T Refrigeración por Aceite - Celeste",
+      "category": "pit-bikes",
+      "subcategory": null,
+      "targetCategory": "pit-bikes",
+      "targetSubcategory": "pit-bikes-de-gasolina"
+    },
+    {
+      "id": "imp20261113_ap6418_v3408",
+      "name": "Pit Bike Dorado DMX 140cc 17/14\" 4T Refrigeración por Aceite - Negro",
+      "category": "pit-bikes",
+      "subcategory": null,
+      "targetCategory": "pit-bikes",
+      "targetSubcategory": "pit-bikes-de-gasolina"
+    },
+    {
+      "id": "imp20261113_ap6448_v4297",
+      "name": "Minicross Eléctrica Dorado MD4 550W 10/10\" Infantil - Rosa",
+      "category": "minimotos",
+      "subcategory": null,
+      "targetCategory": "minimotos",
+      "targetSubcategory": "minimotos-electricas"
+    },
+    {
+      "id": "imp20261113_ap725_v2060",
+      "name": "Guantes cross junior pro - L - INFANTIL - Verde Claro",
+      "category": "equipacion-cross-y-mini-quads-para-ninos-y-adultos",
+      "subcategory": null,
+      "targetCategory": "equipacion-cross-y-mini-quads-para-ninos-y-adultos",
+      "targetSubcategory": "guantes"
+    },
+    {
+      "id": "imp20261113_ap725_v2061",
+      "name": "Guantes cross junior pro - S - INFANTIL - Verde Claro",
+      "category": "equipacion-cross-y-mini-quads-para-ninos-y-adultos",
+      "subcategory": null,
+      "targetCategory": "equipacion-cross-y-mini-quads-para-ninos-y-adultos",
+      "targetSubcategory": "guantes"
+    },
+    {
+      "id": "imp20261113_ap1127_v3346",
+      "name": "Kit ropa motocross infantil Madix CN19 - Gris-Verde - 20 1XS 5/6AÑOS",
+      "category": "equipacion-cross-y-mini-quads-para-ninos-y-adultos",
+      "subcategory": null,
+      "targetCategory": "equipacion-cross-y-mini-quads-para-ninos-y-adultos",
+      "targetSubcategory": "ropa-motocross"
+    },
+    {
+      "id": "imp20261113_ap1127_v3347",
+      "name": "Kit ropa motocross infantil Madix CN19 - Verde-Azul - 20 1XS 5/6AÑOS",
+      "category": "equipacion-cross-y-mini-quads-para-ninos-y-adultos",
+      "subcategory": null,
+      "targetCategory": "equipacion-cross-y-mini-quads-para-ninos-y-adultos",
+      "targetSubcategory": "ropa-motocross"
+    },
+    {
+      "id": "imp20261113_ap1127_v3349",
+      "name": "Kit ropa motocross infantil Madix CN19 - Gris-Verde - 22 2XS 6/7AÑOS",
+      "category": "equipacion-cross-y-mini-quads-para-ninos-y-adultos",
+      "subcategory": null,
+      "targetCategory": "equipacion-cross-y-mini-quads-para-ninos-y-adultos",
+      "targetSubcategory": "ropa-motocross"
+    },
+    {
+      "id": "imp20261113_ap1127_v3352",
+      "name": "Kit ropa motocross infantil Madix CN19 - Gris-Verde - 24 3XS 7/8AÑOS",
+      "category": "equipacion-cross-y-mini-quads-para-ninos-y-adultos",
+      "subcategory": null,
+      "targetCategory": "equipacion-cross-y-mini-quads-para-ninos-y-adultos",
+      "targetSubcategory": "ropa-motocross"
+    },
+    {
+      "id": "imp20261113_ap1127_v3355",
+      "name": "Kit ropa motocross infantil Madix CN19 - Gris-Verde - 26 4XS 8/9AÑOS",
+      "category": "equipacion-cross-y-mini-quads-para-ninos-y-adultos",
+      "subcategory": null,
+      "targetCategory": "equipacion-cross-y-mini-quads-para-ninos-y-adultos",
+      "targetSubcategory": "ropa-motocross"
+    },
+    {
+      "id": "imp20261113_ap1127_v3358",
+      "name": "Kit ropa motocross infantil Madix CN19 - Gris-Verde - 28 5XS 9/10AÑOS",
+      "category": "equipacion-cross-y-mini-quads-para-ninos-y-adultos",
+      "subcategory": null,
+      "targetCategory": "equipacion-cross-y-mini-quads-para-ninos-y-adultos",
+      "targetSubcategory": "ropa-motocross"
+    },
+    {
+      "id": "imp20261113_ap2717_v1852",
+      "name": "Minicross 60cc Roan RXT 12\"/10\" - Azul",
+      "category": "minimotos",
+      "subcategory": null,
+      "targetCategory": "minimotos",
+      "targetSubcategory": "minimotos-gasolina"
+    },
+    {
+      "id": "imp20261113_ap2744_v3428",
+      "name": "Casco cross niño Madix Ajustable - Azul - S-49/50 M-51/52",
+      "category": "equipacion-cross-y-mini-quads-para-ninos-y-adultos",
+      "subcategory": null,
+      "targetCategory": "equipacion-cross-y-mini-quads-para-ninos-y-adultos",
+      "targetSubcategory": "cascos"
+    },
+    {
+      "id": "imp20261113_ap2744_v3431",
+      "name": "Casco cross niño Madix Ajustable - Rojo - S-49/50 M-51/52",
+      "category": "equipacion-cross-y-mini-quads-para-ninos-y-adultos",
+      "subcategory": null,
+      "targetCategory": "equipacion-cross-y-mini-quads-para-ninos-y-adultos",
+      "targetSubcategory": "cascos"
+    },
+    {
+      "id": "imp20261113_ap2744_v3432",
+      "name": "Casco cross niño Madix Ajustable - Rosa - S-49/50 M-51/52",
+      "category": "equipacion-cross-y-mini-quads-para-ninos-y-adultos",
+      "subcategory": null,
+      "targetCategory": "equipacion-cross-y-mini-quads-para-ninos-y-adultos",
+      "targetSubcategory": "cascos"
+    },
+    {
+      "id": "imp20261113_ap6165_v2815",
+      "name": "Pit bike eléctrica Roan 907 2000W 48V 13Ah Litio Brushless - Azul",
+      "category": "pit-bikes",
+      "subcategory": null,
+      "targetCategory": "pit-bikes",
+      "targetSubcategory": "pit-bikes-electricas"
+    },
+    {
+      "id": "imp20261113_ap6165_v2817",
+      "name": "Pit bike eléctrica Roan 907 2000W 48V 13Ah Litio Brushless - Verde",
+      "category": "pit-bikes",
+      "subcategory": null,
+      "targetCategory": "pit-bikes",
+      "targetSubcategory": "pit-bikes-electricas"
+    },
+    {
+      "id": "imp20261113_ap6165_v4299",
+      "name": "Pit bike eléctrica Roan 907 2000W 48V 13Ah Litio Brushless - Rosa",
+      "category": "pit-bikes",
+      "subcategory": null,
+      "targetCategory": "pit-bikes",
+      "targetSubcategory": "pit-bikes-electricas"
+    },
+    {
+      "id": "imp20261113_ap6176_v2835",
+      "name": "Minimoto eléctrica RFN Warrior Kids SX-E150 150W 12/12” Supermotard - Azul-Rojo",
+      "category": "minimotos",
+      "subcategory": null,
+      "targetCategory": "minimotos",
+      "targetSubcategory": "minimotos-electricas"
+    },
+    {
+      "id": "imp20261113_ap6176_v2836",
+      "name": "Minimoto eléctrica RFN Warrior Kids SX-E150 150W 12/12” Supermotard - Negro-Dorado",
+      "category": "minimotos",
+      "subcategory": null,
+      "targetCategory": "minimotos",
+      "targetSubcategory": "minimotos-electricas"
+    },
+    {
+      "id": "imp20261113_ap6176_v2837",
+      "name": "Minimoto eléctrica RFN Warrior Kids SX-E150 150W 12/12” Supermotard - Verde-Rosa",
+      "category": "minimotos",
+      "subcategory": null,
+      "targetCategory": "minimotos",
+      "targetSubcategory": "minimotos-electricas"
+    },
+    {
+      "id": "imp20261113_ap6182_v2828",
+      "name": "Minicross eléctrica RFN Warrior SX-E250 12/12” 250W Infantil - Negro-Dorado",
+      "category": "minimotos",
+      "subcategory": null,
+      "targetCategory": "minimotos",
+      "targetSubcategory": "minimotos-electricas"
+    },
+    {
+      "id": "imp20261113_ap6183_v2838",
+      "name": "Minicross eléctrica RFN Warrior SX-E350 14/14” 350W Infantil - Celeste",
+      "category": "minimotos",
+      "subcategory": null,
+      "targetCategory": "minimotos",
+      "targetSubcategory": "minimotos-electricas"
+    },
+    {
+      "id": "imp20261113_ap6183_v2839",
+      "name": "Minicross eléctrica RFN Warrior SX-E350 14/14” 350W Infantil - Azul-Rojo",
+      "category": "minimotos",
+      "subcategory": null,
+      "targetCategory": "minimotos",
+      "targetSubcategory": "minimotos-electricas"
+    },
+    {
+      "id": "imp20261113_ap6184_v2845",
+      "name": "Minicross Eléctrica RFN SX-E350 WARRIOR 350W Supermotard 14/14” - Verde-Rosa",
+      "category": "minimotos",
+      "subcategory": null,
+      "targetCategory": "minimotos",
+      "targetSubcategory": "minimotos-electricas"
+    },
+    {
+      "id": "imp20261113_ap6189_v2890",
+      "name": "Quad infantil ROAN DAKAR 110cc Automático - Azul",
+      "category": "quads",
+      "subcategory": null,
+      "targetCategory": "quads",
+      "targetSubcategory": "mini-quads-gasolina"
+    },
+    {
+      "id": "imp20261113_ap6448_v4298",
+      "name": "Minicross Eléctrica Dorado MD4 550W 10/10\" Infantil - Verde",
+      "category": "minimotos",
+      "subcategory": null,
+      "targetCategory": "minimotos",
+      "targetSubcategory": "minimotos-electricas"
+    },
+    {
+      "id": "imp20261113_ap6451_v4301",
+      "name": "Pit Bike Dorado Storm 150cc 4T 17/14\" Manual - Negro",
+      "category": "pit-bikes",
+      "subcategory": null,
+      "targetCategory": "pit-bikes",
+      "targetSubcategory": "pit-bikes-de-gasolina"
+    },
+    {
+      "id": "imp20261113_ap725_v2063",
+      "name": "Guantes cross junior pro - S - INFANTIL - Azul",
+      "category": "equipacion-cross-y-mini-quads-para-ninos-y-adultos",
+      "subcategory": null,
+      "targetCategory": "equipacion-cross-y-mini-quads-para-ninos-y-adultos",
+      "targetSubcategory": "guantes"
+    },
+    {
+      "id": "imp20261113_ap725_v2064",
+      "name": "Guantes cross junior pro - L - INFANTIL - Azul",
+      "category": "equipacion-cross-y-mini-quads-para-ninos-y-adultos",
+      "subcategory": null,
+      "targetCategory": "equipacion-cross-y-mini-quads-para-ninos-y-adultos",
+      "targetSubcategory": "guantes"
+    },
+    {
+      "id": "imp20261113_ap725_v2066",
+      "name": "Guantes cross junior pro - L - INFANTIL - Rosa",
+      "category": "equipacion-cross-y-mini-quads-para-ninos-y-adultos",
+      "subcategory": null,
+      "targetCategory": "equipacion-cross-y-mini-quads-para-ninos-y-adultos",
+      "targetSubcategory": "guantes"
+    },
+    {
+      "id": "imp20261113_ap1511_v2472",
+      "name": "Guantes de moto para niños - L - INFANTIL - Azul",
+      "category": "equipacion-cross-y-mini-quads-para-ninos-y-adultos",
+      "subcategory": null,
+      "targetCategory": "equipacion-cross-y-mini-quads-para-ninos-y-adultos",
+      "targetSubcategory": "guantes"
+    },
+    {
+      "id": "imp20261113_ap1511_v2475",
+      "name": "Guantes de moto para niños - M - INFANTIL - Azul",
+      "category": "equipacion-cross-y-mini-quads-para-ninos-y-adultos",
+      "subcategory": null,
+      "targetCategory": "equipacion-cross-y-mini-quads-para-ninos-y-adultos",
+      "targetSubcategory": "guantes"
+    },
+    {
+      "id": "imp20261113_ap2744_v3421",
+      "name": "Casco cross niño Madix Ajustable - Azul - L-53/54 XL-55/56",
+      "category": "equipacion-cross-y-mini-quads-para-ninos-y-adultos",
+      "subcategory": null,
+      "targetCategory": "equipacion-cross-y-mini-quads-para-ninos-y-adultos",
+      "targetSubcategory": "cascos"
+    },
+    {
+      "id": "imp20261113_ap2744_v3424",
+      "name": "Casco cross niño Madix Ajustable - Rojo - L-53/54 XL-55/56",
+      "category": "equipacion-cross-y-mini-quads-para-ninos-y-adultos",
+      "subcategory": null,
+      "targetCategory": "equipacion-cross-y-mini-quads-para-ninos-y-adultos",
+      "targetSubcategory": "cascos"
+    },
+    {
+      "id": "imp20261113_ap2744_v3425",
+      "name": "Casco cross niño Madix Ajustable - Rosa - L-53/54 XL-55/56",
+      "category": "equipacion-cross-y-mini-quads-para-ninos-y-adultos",
+      "subcategory": null,
+      "targetCategory": "equipacion-cross-y-mini-quads-para-ninos-y-adultos",
+      "targetSubcategory": "cascos"
+    },
+    {
+      "id": "imp20261113_ap2744_v3429",
+      "name": "Casco cross niño Madix Ajustable - Naranja - S-49/50 M-51/52",
+      "category": "equipacion-cross-y-mini-quads-para-ninos-y-adultos",
+      "subcategory": null,
+      "targetCategory": "equipacion-cross-y-mini-quads-para-ninos-y-adultos",
+      "targetSubcategory": "cascos"
+    },
+    {
+      "id": "imp20261113_ap6088_v2570",
+      "name": "Pit bike 105CC Roan SX105 2T Agua 19/16\" - Naranja",
+      "category": "pit-bikes",
+      "subcategory": null,
+      "targetCategory": "pit-bikes",
+      "targetSubcategory": "pit-bikes-de-gasolina"
+    },
+    {
+      "id": "imp20261113_ap6176_v2834",
+      "name": "Minimoto eléctrica RFN Warrior Kids SX-E150 150W 12/12” Supermotard - Celeste",
+      "category": "minimotos",
+      "subcategory": null,
+      "targetCategory": "minimotos",
+      "targetSubcategory": "minimotos-electricas"
+    },
+    {
+      "id": "imp20261113_ap6177_v2832",
+      "name": "Minimoto Eléctrica RFN Warrior SX-E250 Supermotard 250W 12/12\" - Negro-Dorado",
+      "category": "minimotos",
+      "subcategory": null,
+      "targetCategory": "minimotos",
+      "targetSubcategory": "minimotos-electricas"
+    },
+    {
+      "id": "imp20261113_ap6182_v2826",
+      "name": "Minicross eléctrica RFN Warrior SX-E250 12/12” 250W Infantil - Celeste",
+      "category": "minimotos",
+      "subcategory": null,
+      "targetCategory": "minimotos",
+      "targetSubcategory": "minimotos-electricas"
+    },
+    {
+      "id": "imp20261113_ap6182_v2829",
+      "name": "Minicross eléctrica RFN Warrior SX-E250 12/12” 250W Infantil - Verde-Rosa",
+      "category": "minimotos",
+      "subcategory": null,
+      "targetCategory": "minimotos",
+      "targetSubcategory": "minimotos-electricas"
+    },
+    {
+      "id": "imp20261113_ap6435_v0",
+      "name": "Minicross Gasolina ROAN RZ60 60CC 4T 10/10\" Automática",
+      "category": "minimotos",
+      "subcategory": null,
+      "targetCategory": "minimotos",
+      "targetSubcategory": "minimotos-gasolina"
+    },
+    {
+      "id": "imp20261113_ap6437_v0",
+      "name": "Pit bike Roan SX250 250CC 2T 21/18\" Refrigeración por Agua",
+      "category": "pit-bikes",
+      "subcategory": null,
+      "targetCategory": "pit-bikes",
+      "targetSubcategory": "pit-bikes-de-gasolina"
+    },
+    {
+      "id": "imp20261113_ap6441_v4286",
+      "name": "Minicross Eléctrica Dorado MX350 350W 14/14\" - Azul",
+      "category": "minimotos",
+      "subcategory": null,
+      "targetCategory": "minimotos",
+      "targetSubcategory": "minimotos-electricas"
+    },
+    {
+      "id": "imp20261113_ap6441_v4287",
+      "name": "Minicross Eléctrica Dorado MX350 350W 14/14\" - Rojo",
+      "category": "minimotos",
+      "subcategory": null,
+      "targetCategory": "minimotos",
+      "targetSubcategory": "minimotos-electricas"
+    },
+    {
+      "id": "imp20261113_ap6442_v4291",
+      "name": "Minicross Eléctrica Dorado MX150 150W 12/12\" - Rojo",
+      "category": "minimotos",
+      "subcategory": null,
+      "targetCategory": "minimotos",
+      "targetSubcategory": "minimotos-electricas"
+    },
+    {
+      "id": "imp20261113_ap6448_v4296",
+      "name": "Minicross Eléctrica Dorado MD4 550W 10/10\" Infantil - Azul",
+      "category": "minimotos",
+      "subcategory": null,
+      "targetCategory": "minimotos",
+      "targetSubcategory": "minimotos-electricas"
+    },
+    {
+      "id": "imp20261113_ap6463_v5786",
+      "name": "Minicross Eléctrica DORADO PD9 800W 12/10 - Rosa",
+      "category": "minimotos",
+      "subcategory": null,
+      "targetCategory": "minimotos",
+      "targetSubcategory": "minimotos-electricas"
+    },
+    {
+      "id": "imp20261113_ap725_v2062",
+      "name": "Guantes cross junior pro - S - INFANTIL - Naranja",
+      "category": "equipacion-cross-y-mini-quads-para-ninos-y-adultos",
+      "subcategory": null,
+      "targetCategory": "equipacion-cross-y-mini-quads-para-ninos-y-adultos",
+      "targetSubcategory": "guantes"
+    },
+    {
+      "id": "imp20261113_ap1511_v2473",
+      "name": "Guantes de moto para niños - L - INFANTIL - Negro",
+      "category": "equipacion-cross-y-mini-quads-para-ninos-y-adultos",
+      "subcategory": null,
+      "targetCategory": "equipacion-cross-y-mini-quads-para-ninos-y-adultos",
+      "targetSubcategory": "guantes"
+    },
+    {
+      "id": "imp20261113_ap1511_v2476",
+      "name": "Guantes de moto para niños - M - INFANTIL - Negro",
+      "category": "equipacion-cross-y-mini-quads-para-ninos-y-adultos",
+      "subcategory": null,
+      "targetCategory": "equipacion-cross-y-mini-quads-para-ninos-y-adultos",
+      "targetSubcategory": "guantes"
+    },
+    {
+      "id": "imp20261113_ap1511_v2478",
+      "name": "Guantes de moto para niños - S - INFANTIL - Azul",
+      "category": "equipacion-cross-y-mini-quads-para-ninos-y-adultos",
+      "subcategory": null,
+      "targetCategory": "equipacion-cross-y-mini-quads-para-ninos-y-adultos",
+      "targetSubcategory": "guantes"
+    },
+    {
+      "id": "imp20261113_ap2715_v2481",
+      "name": "Quad automático 125cc R8 Roan Ratte R-N-1 marcha atrás - Azul",
+      "category": "quads",
+      "subcategory": null,
+      "targetCategory": "quads",
+      "targetSubcategory": "mini-quads-gasolina"
+    },
+    {
+      "id": "imp20261113_ap2715_v2482",
+      "name": "Quad automático 125cc R8 Roan Ratte R-N-1 marcha atrás - Verde",
+      "category": "quads",
+      "subcategory": null,
+      "targetCategory": "quads",
+      "targetSubcategory": "mini-quads-gasolina"
+    },
+    {
+      "id": "imp20261113_ap2715_v2509",
+      "name": "Quad automático 125cc R8 Roan Ratte R-N-1 marcha atrás - Naranja",
+      "category": "quads",
+      "subcategory": null,
+      "targetCategory": "quads",
+      "targetSubcategory": "mini-quads-gasolina"
+    },
+    {
+      "id": "imp20261113_ap2744_v3422",
+      "name": "Casco cross niño Madix Ajustable - Naranja - L-53/54 XL-55/56",
+      "category": "equipacion-cross-y-mini-quads-para-ninos-y-adultos",
+      "subcategory": null,
+      "targetCategory": "equipacion-cross-y-mini-quads-para-ninos-y-adultos",
+      "targetSubcategory": "cascos"
+    },
+    {
+      "id": "imp20261113_ap52_v3075",
+      "name": "Gafas cross Madix vega - Azul",
+      "category": "equipacion-cross-y-mini-quads-para-ninos-y-adultos",
+      "subcategory": null,
+      "targetCategory": "equipacion-cross-y-mini-quads-para-ninos-y-adultos",
+      "targetSubcategory": "gafas"
+    },
+    {
+      "id": "imp20261113_ap52_v3076",
+      "name": "Gafas cross Madix vega - Blanco",
+      "category": "equipacion-cross-y-mini-quads-para-ninos-y-adultos",
+      "subcategory": null,
+      "targetCategory": "equipacion-cross-y-mini-quads-para-ninos-y-adultos",
+      "targetSubcategory": "gafas"
+    },
+    {
+      "id": "imp20261113_ap52_v3077",
+      "name": "Gafas cross Madix vega - Negro",
+      "category": "equipacion-cross-y-mini-quads-para-ninos-y-adultos",
+      "subcategory": null,
+      "targetCategory": "equipacion-cross-y-mini-quads-para-ninos-y-adultos",
+      "targetSubcategory": "gafas"
+    },
+    {
+      "id": "imp20261113_ap52_v3078",
+      "name": "Gafas cross Madix vega - Rojo",
+      "category": "equipacion-cross-y-mini-quads-para-ninos-y-adultos",
+      "subcategory": null,
+      "targetCategory": "equipacion-cross-y-mini-quads-para-ninos-y-adultos",
+      "targetSubcategory": "gafas"
+    },
+    {
+      "id": "imp20261113_ap52_v3098",
+      "name": "Gafas cross Madix vega - Rosa",
+      "category": "equipacion-cross-y-mini-quads-para-ninos-y-adultos",
+      "subcategory": null,
+      "targetCategory": "equipacion-cross-y-mini-quads-para-ninos-y-adultos",
+      "targetSubcategory": "gafas"
+    },
+    {
+      "id": "imp20261113_ap6064_v2190",
+      "name": "Patinete eléctrico infantil ROAN P26 150W 24V - Azul",
+      "category": "patinete",
+      "subcategory": null,
+      "targetCategory": "patinete",
+      "targetSubcategory": "otros-patinetes"
+    },
+    {
+      "id": "imp20261113_ap6177_v2830",
+      "name": "Minimoto Eléctrica RFN Warrior SX-E250 Supermotard 250W 12/12\" - Celeste",
+      "category": "minimotos",
+      "subcategory": null,
+      "targetCategory": "minimotos",
+      "targetSubcategory": "minimotos-electricas"
+    },
+    {
+      "id": "imp20261113_ap6177_v2831",
+      "name": "Minimoto Eléctrica RFN Warrior SX-E250 Supermotard 250W 12/12\" - Azul-Rojo",
+      "category": "minimotos",
+      "subcategory": null,
+      "targetCategory": "minimotos",
+      "targetSubcategory": "minimotos-electricas"
+    },
+    {
+      "id": "imp20261113_ap6177_v2833",
+      "name": "Minimoto Eléctrica RFN Warrior SX-E250 Supermotard 250W 12/12\" - Verde-Rosa",
+      "category": "minimotos",
+      "subcategory": null,
+      "targetCategory": "minimotos",
+      "targetSubcategory": "minimotos-electricas"
+    },
+    {
+      "id": "imp20261113_ap6441_v4288",
+      "name": "Minicross Eléctrica Dorado MX350 350W 14/14\" - Rosa",
+      "category": "minimotos",
+      "subcategory": null,
+      "targetCategory": "minimotos",
+      "targetSubcategory": "minimotos-electricas"
+    },
+    {
+      "id": "imp20261113_ap6442_v4290",
+      "name": "Minicross Eléctrica Dorado MX150 150W 12/12\" - Azul",
+      "category": "minimotos",
+      "subcategory": null,
+      "targetCategory": "minimotos",
+      "targetSubcategory": "minimotos-electricas"
+    },
+    {
+      "id": "imp20261113_ap6442_v4292",
+      "name": "Minicross Eléctrica Dorado MX150 150W 12/12\" - Rosa",
+      "category": "minimotos",
+      "subcategory": null,
+      "targetCategory": "minimotos",
+      "targetSubcategory": "minimotos-electricas"
+    },
+    {
+      "id": "imp20261113_ap6452_v4303",
+      "name": "Pit Bike Dorado Thunder 250cc 4T 21/18\" - Negro",
+      "category": "pit-bikes",
+      "subcategory": null,
+      "targetCategory": "pit-bikes",
+      "targetSubcategory": "pit-bikes-de-gasolina"
+    },
+    {
+      "id": "imp20261113_ap6463_v5784",
+      "name": "Minicross Eléctrica DORADO PD9 800W 12/10 - Amarillo",
+      "category": "minimotos",
+      "subcategory": null,
+      "targetCategory": "minimotos",
+      "targetSubcategory": "minimotos-electricas"
+    },
+    {
+      "id": "imp20261113_ap6463_v5787",
+      "name": "Minicross Eléctrica DORADO PD9 800W 12/10 - Verde",
+      "category": "minimotos",
+      "subcategory": null,
+      "targetCategory": "minimotos",
+      "targetSubcategory": "minimotos-electricas"
+    },
+    {
+      "id": "imp20261113_ap725_v2065",
+      "name": "Guantes cross junior pro - L - INFANTIL - Naranja",
+      "category": "equipacion-cross-y-mini-quads-para-ninos-y-adultos",
+      "subcategory": null,
+      "targetCategory": "equipacion-cross-y-mini-quads-para-ninos-y-adultos",
+      "targetSubcategory": "guantes"
+    },
+    {
+      "id": "imp20261113_ap3136_v2495",
+      "name": "Minimoto electrica 350W ROAN Warrior MX-E350 14/14\" - Rosa",
+      "category": "minimotos",
+      "subcategory": null,
+      "targetCategory": "minimotos",
+      "targetSubcategory": "minimotos-electricas"
+    },
+    {
+      "id": "imp20261113_ap52_v1362",
+      "name": "Gafas cross Madix vega - Naranja",
+      "category": "equipacion-cross-y-mini-quads-para-ninos-y-adultos",
+      "subcategory": null,
+      "targetCategory": "equipacion-cross-y-mini-quads-para-ninos-y-adultos",
+      "targetSubcategory": "gafas"
+    },
+    {
+      "id": "imp20261113_ap6063_v2298",
+      "name": "Mini Harley eléctrica infantil 200W REXO 36V - Verde militar",
+      "category": "minimotos",
+      "subcategory": null,
+      "targetCategory": "minimotos",
+      "targetSubcategory": "minimotos-electricas"
+    },
+    {
+      "id": "imp20261113_ap6063_v2299",
+      "name": "Mini Harley eléctrica infantil 200W REXO 36V - Naranja",
+      "category": "minimotos",
+      "subcategory": null,
+      "targetCategory": "minimotos",
+      "targetSubcategory": "minimotos-electricas"
+    },
+    {
+      "id": "imp20261113_ap6064_v2196",
+      "name": "Patinete eléctrico infantil ROAN P26 150W 24V - Negro",
+      "category": "patinete",
+      "subcategory": null,
+      "targetCategory": "patinete",
+      "targetSubcategory": "otros-patinetes"
+    },
+    {
+      "id": "imp20261113_ap6064_v3381",
+      "name": "Patinete eléctrico infantil ROAN P26 150W 24V - Rosa",
+      "category": "patinete",
+      "subcategory": null,
+      "targetCategory": "patinete",
+      "targetSubcategory": "otros-patinetes"
+    },
+    {
+      "id": "imp20261113_ap6106_v2410",
+      "name": "Quad 125cc Roan Dakar R8 Semi-Automático - Azul",
+      "category": "quads",
+      "subcategory": null,
+      "targetCategory": "quads",
+      "targetSubcategory": "mini-quads-gasolina"
+    },
+    {
+      "id": "imp20261113_ap6197_v2963",
+      "name": "Minicross Eléctrica RFN Warrior SX-E150 150W 12” - Negro-Dorado",
+      "category": "minimotos",
+      "subcategory": null,
+      "targetCategory": "minimotos",
+      "targetSubcategory": "minimotos-electricas"
+    },
+    {
+      "id": "imp20261113_ap6200_v2988",
+      "name": "Quad automático 200cc AM Commander R10 matriculable T3B - Verde",
+      "category": "quads",
+      "subcategory": null,
+      "targetCategory": "quads",
+      "targetSubcategory": "mini-quads-gasolina"
+    },
+    {
+      "id": "imp20261113_ap6398_v3333",
+      "name": "Equipación de Cross Adulto MADIX - Blanco-Rojo - 34 L",
+      "category": "equipacion-cross-y-mini-quads-para-ninos-y-adultos",
+      "subcategory": null,
+      "targetCategory": "equipacion-cross-y-mini-quads-para-ninos-y-adultos",
+      "targetSubcategory": "ropa-motocross"
+    },
+    {
+      "id": "imp20261113_ap6398_v3337",
+      "name": "Equipación de Cross Adulto MADIX - Blanco-Rojo - 32 M",
+      "category": "equipacion-cross-y-mini-quads-para-ninos-y-adultos",
+      "subcategory": null,
+      "targetCategory": "equipacion-cross-y-mini-quads-para-ninos-y-adultos",
+      "targetSubcategory": "ropa-motocross"
+    },
+    {
+      "id": "imp20261113_ap6398_v3341",
+      "name": "Equipación de Cross Adulto MADIX - Blanco-Rojo - 30 S",
+      "category": "equipacion-cross-y-mini-quads-para-ninos-y-adultos",
+      "subcategory": null,
+      "targetCategory": "equipacion-cross-y-mini-quads-para-ninos-y-adultos",
+      "targetSubcategory": "ropa-motocross"
+    },
+    {
+      "id": "imp20261113_ap6422_v3403",
+      "name": "Pit Bike Dorado DMX 110cc 14/12\" Automática - Celeste",
+      "category": "pit-bikes",
+      "subcategory": null,
+      "targetCategory": "pit-bikes",
+      "targetSubcategory": "pit-bikes-de-gasolina"
+    },
+    {
+      "id": "imp20261113_ap6422_v3404",
+      "name": "Pit Bike Dorado DMX 110cc 14/12\" Automática - Negro",
+      "category": "pit-bikes",
+      "subcategory": null,
+      "targetCategory": "pit-bikes",
+      "targetSubcategory": "pit-bikes-de-gasolina"
+    },
+    {
+      "id": "imp20261113_ap6424_v3401",
+      "name": "Pit Bike Dorado DMX 90cc 4T 12/10\" Automática - Celeste",
+      "category": "pit-bikes",
+      "subcategory": null,
+      "targetCategory": "pit-bikes",
+      "targetSubcategory": "pit-bikes-de-gasolina"
+    },
+    {
+      "id": "imp20261113_ap6441_v4289",
+      "name": "Minicross Eléctrica Dorado MX350 350W 14/14\" - Verde",
+      "category": "minimotos",
+      "subcategory": null,
+      "targetCategory": "minimotos",
+      "targetSubcategory": "minimotos-electricas"
+    },
+    {
+      "id": "imp20261113_ap6442_v4293",
+      "name": "Minicross Eléctrica Dorado MX150 150W 12/12\" - Verde",
+      "category": "minimotos",
+      "subcategory": null,
+      "targetCategory": "minimotos",
+      "targetSubcategory": "minimotos-electricas"
+    },
+    {
+      "id": "imp20261113_ap6454_v4313",
+      "name": "Minicross Eléctrica RFN Warrior SX-E800 800W 16/16\" - Negro-Dorado",
+      "category": "minimotos",
+      "subcategory": null,
+      "targetCategory": "minimotos",
+      "targetSubcategory": "minimotos-electricas"
+    },
+    {
+      "id": "imp20261113_ap6463_v5785",
+      "name": "Minicross Eléctrica DORADO PD9 800W 12/10 - Azul",
+      "category": "minimotos",
+      "subcategory": null,
+      "targetCategory": "minimotos",
+      "targetSubcategory": "minimotos-electricas"
+    },
+    {
+      "id": "imp20261113_ap725_v3121",
+      "name": "Guantes cross junior pro - L - INFANTIL - Rojo",
+      "category": "equipacion-cross-y-mini-quads-para-ninos-y-adultos",
+      "subcategory": null,
+      "targetCategory": "equipacion-cross-y-mini-quads-para-ninos-y-adultos",
+      "targetSubcategory": "guantes"
+    },
+    {
+      "id": "imp20261113_ap725_v3122",
+      "name": "Guantes cross junior pro - S - INFANTIL - Rojo",
+      "category": "equipacion-cross-y-mini-quads-para-ninos-y-adultos",
+      "subcategory": null,
+      "targetCategory": "equipacion-cross-y-mini-quads-para-ninos-y-adultos",
+      "targetSubcategory": "guantes"
+    },
+    {
+      "id": "imp20261113_ap829_v979",
+      "name": "Juego rodilleras cross scoyco - Amarillo",
+      "category": "equipacion-cross-y-mini-quads-para-ninos-y-adultos",
+      "subcategory": null,
+      "targetCategory": "equipacion-cross-y-mini-quads-para-ninos-y-adultos",
+      "targetSubcategory": "rodilleras-y-coderas"
+    },
+    {
+      "id": "imp20261113_ap1511_v2474",
+      "name": "Guantes de moto para niños - L - INFANTIL - Rojo",
+      "category": "equipacion-cross-y-mini-quads-para-ninos-y-adultos",
+      "subcategory": null,
+      "targetCategory": "equipacion-cross-y-mini-quads-para-ninos-y-adultos",
+      "targetSubcategory": "guantes"
+    },
+    {
+      "id": "imp20261113_ap1511_v2477",
+      "name": "Guantes de moto para niños - M - INFANTIL - Rojo",
+      "category": "equipacion-cross-y-mini-quads-para-ninos-y-adultos",
+      "subcategory": null,
+      "targetCategory": "equipacion-cross-y-mini-quads-para-ninos-y-adultos",
+      "targetSubcategory": "guantes"
+    },
+    {
+      "id": "imp20261113_ap2746_v4326",
+      "name": "Casco motocross adulto Madix - Talla 56-S - Celeste",
+      "category": "equipacion-cross-y-mini-quads-para-ninos-y-adultos",
+      "subcategory": null,
+      "targetCategory": "equipacion-cross-y-mini-quads-para-ninos-y-adultos",
+      "targetSubcategory": "cascos"
+    },
+    {
+      "id": "imp20261113_ap2746_v4331",
+      "name": "Casco motocross adulto Madix - Talla 58-M - Celeste",
+      "category": "equipacion-cross-y-mini-quads-para-ninos-y-adultos",
+      "subcategory": null,
+      "targetCategory": "equipacion-cross-y-mini-quads-para-ninos-y-adultos",
+      "targetSubcategory": "cascos"
+    },
+    {
+      "id": "imp20261113_ap2746_v4336",
+      "name": "Casco motocross adulto Madix - Talla 60-L - Celeste",
+      "category": "equipacion-cross-y-mini-quads-para-ninos-y-adultos",
+      "subcategory": null,
+      "targetCategory": "equipacion-cross-y-mini-quads-para-ninos-y-adultos",
+      "targetSubcategory": "cascos"
+    },
+    {
+      "id": "imp20261113_ap6063_v2297",
+      "name": "Mini Harley eléctrica infantil 200W REXO 36V - Rosa",
+      "category": "minimotos",
+      "subcategory": null,
+      "targetCategory": "minimotos",
+      "targetSubcategory": "minimotos-electricas"
+    },
+    {
+      "id": "imp20261113_ap6076_v2234",
+      "name": "Pit bike 125cc ROAN RXF-Z OPEN 17/14\" - Azul",
+      "category": "pit-bikes",
+      "subcategory": null,
+      "targetCategory": "pit-bikes",
+      "targetSubcategory": "pit-bikes-de-gasolina"
+    },
+    {
+      "id": "imp20261113_ap6197_v2961",
+      "name": "Minicross Eléctrica RFN Warrior SX-E150 150W 12” - Celeste",
+      "category": "minimotos",
+      "subcategory": null,
+      "targetCategory": "minimotos",
+      "targetSubcategory": "minimotos-electricas"
+    },
+    {
+      "id": "imp20261113_ap6197_v2964",
+      "name": "Minicross Eléctrica RFN Warrior SX-E150 150W 12” - Verde-Rosa",
+      "category": "minimotos",
+      "subcategory": null,
+      "targetCategory": "minimotos",
+      "targetSubcategory": "minimotos-electricas"
+    },
+    {
+      "id": "imp20261113_ap6200_v2987",
+      "name": "Quad automático 200cc AM Commander R10 matriculable T3B - Rojo",
+      "category": "quads",
+      "subcategory": null,
+      "targetCategory": "quads",
+      "targetSubcategory": "mini-quads-gasolina"
+    },
+    {
+      "id": "imp20261113_ap6398_v3335",
+      "name": "Equipación de Cross Adulto MADIX - Verde-Azul - 34 L",
+      "category": "equipacion-cross-y-mini-quads-para-ninos-y-adultos",
+      "subcategory": null,
+      "targetCategory": "equipacion-cross-y-mini-quads-para-ninos-y-adultos",
+      "targetSubcategory": "ropa-motocross"
+    },
+    {
+      "id": "imp20261113_ap6398_v3336",
+      "name": "Equipación de Cross Adulto MADIX - 34 L - Naranja-Blanco",
+      "category": "equipacion-cross-y-mini-quads-para-ninos-y-adultos",
+      "subcategory": null,
+      "targetCategory": "equipacion-cross-y-mini-quads-para-ninos-y-adultos",
+      "targetSubcategory": "ropa-motocross"
+    },
+    {
+      "id": "imp20261113_ap6398_v3339",
+      "name": "Equipación de Cross Adulto MADIX - Verde-Azul - 32 M",
+      "category": "equipacion-cross-y-mini-quads-para-ninos-y-adultos",
+      "subcategory": null,
+      "targetCategory": "equipacion-cross-y-mini-quads-para-ninos-y-adultos",
+      "targetSubcategory": "ropa-motocross"
+    },
+    {
+      "id": "imp20261113_ap6398_v3340",
+      "name": "Equipación de Cross Adulto MADIX - 32 M - Naranja-Blanco",
+      "category": "equipacion-cross-y-mini-quads-para-ninos-y-adultos",
+      "subcategory": null,
+      "targetCategory": "equipacion-cross-y-mini-quads-para-ninos-y-adultos",
+      "targetSubcategory": "ropa-motocross"
+    },
+    {
+      "id": "imp20261113_ap6398_v3343",
+      "name": "Equipación de Cross Adulto MADIX - Verde-Azul - 30 S",
+      "category": "equipacion-cross-y-mini-quads-para-ninos-y-adultos",
+      "subcategory": null,
+      "targetCategory": "equipacion-cross-y-mini-quads-para-ninos-y-adultos",
+      "targetSubcategory": "ropa-motocross"
+    },
+    {
+      "id": "imp20261113_ap6398_v3344",
+      "name": "Equipación de Cross Adulto MADIX - 30 S - Naranja-Blanco",
+      "category": "equipacion-cross-y-mini-quads-para-ninos-y-adultos",
+      "subcategory": null,
+      "targetCategory": "equipacion-cross-y-mini-quads-para-ninos-y-adultos",
+      "targetSubcategory": "ropa-motocross"
+    },
+    {
+      "id": "imp20261113_ap6419_v3405",
+      "name": "Pit Bike Dorado DMX 125cc 17/14\" 4T Manual - Celeste",
+      "category": "pit-bikes",
+      "subcategory": null,
+      "targetCategory": "pit-bikes",
+      "targetSubcategory": "pit-bikes-de-gasolina"
+    },
+    {
+      "id": "imp20261113_ap6419_v3406",
+      "name": "Pit Bike Dorado DMX 125cc 17/14\" 4T Manual - Negro",
+      "category": "pit-bikes",
+      "subcategory": null,
+      "targetCategory": "pit-bikes",
+      "targetSubcategory": "pit-bikes-de-gasolina"
+    },
+    {
+      "id": "imp20261113_ap6424_v3402",
+      "name": "Pit Bike Dorado DMX 90cc 4T 12/10\" Automática - Negro",
+      "category": "pit-bikes",
+      "subcategory": null,
+      "targetCategory": "pit-bikes",
+      "targetSubcategory": "pit-bikes-de-gasolina"
+    },
+    {
+      "id": "imp20261113_ap6451_v4302",
+      "name": "Pit Bike Dorado Storm 150cc 4T 17/14\" Manual - Rojo",
+      "category": "pit-bikes",
+      "subcategory": null,
+      "targetCategory": "pit-bikes",
+      "targetSubcategory": "pit-bikes-de-gasolina"
+    },
+    {
+      "id": "imp20261113_ap6452_v4304",
+      "name": "Pit Bike Dorado Thunder 250cc 4T 21/18\" - Rojo",
+      "category": "pit-bikes",
+      "subcategory": null,
+      "targetCategory": "pit-bikes",
+      "targetSubcategory": "pit-bikes-de-gasolina"
+    },
+    {
+      "id": "imp20261113_ap6454_v4311",
+      "name": "Minicross Eléctrica RFN Warrior SX-E800 800W 16/16\" - Celeste",
+      "category": "minimotos",
+      "subcategory": null,
+      "targetCategory": "minimotos",
+      "targetSubcategory": "minimotos-electricas"
+    },
+    {
+      "id": "imp20261113_ap6454_v4312",
+      "name": "Minicross Eléctrica RFN Warrior SX-E800 800W 16/16\" - Azul-Rojo",
+      "category": "minimotos",
+      "subcategory": null,
+      "targetCategory": "minimotos",
+      "targetSubcategory": "minimotos-electricas"
+    },
+    {
+      "id": "imp20261113_ap2746_v1913",
+      "name": "Casco motocross adulto Madix - Talla 60-L - Verde",
+      "category": "equipacion-cross-y-mini-quads-para-ninos-y-adultos",
+      "subcategory": null,
+      "targetCategory": "equipacion-cross-y-mini-quads-para-ninos-y-adultos",
+      "targetSubcategory": "cascos"
+    },
+    {
+      "id": "imp20261113_ap2746_v4328",
+      "name": "Casco motocross adulto Madix - Talla 56-S - Negro",
+      "category": "equipacion-cross-y-mini-quads-para-ninos-y-adultos",
+      "subcategory": null,
+      "targetCategory": "equipacion-cross-y-mini-quads-para-ninos-y-adultos",
+      "targetSubcategory": "cascos"
+    },
+    {
+      "id": "imp20261113_ap2746_v4333",
+      "name": "Casco motocross adulto Madix - Talla 58-M - Negro",
+      "category": "equipacion-cross-y-mini-quads-para-ninos-y-adultos",
+      "subcategory": null,
+      "targetCategory": "equipacion-cross-y-mini-quads-para-ninos-y-adultos",
+      "targetSubcategory": "cascos"
+    },
+    {
+      "id": "imp20261113_ap2746_v4338",
+      "name": "Casco motocross adulto Madix - Talla 60-L - Negro",
+      "category": "equipacion-cross-y-mini-quads-para-ninos-y-adultos",
+      "subcategory": null,
+      "targetCategory": "equipacion-cross-y-mini-quads-para-ninos-y-adultos",
+      "targetSubcategory": "cascos"
+    },
+    {
+      "id": "imp20261113_ap2746_v4341",
+      "name": "Casco motocross adulto Madix - Talla 62-XL - Celeste",
+      "category": "equipacion-cross-y-mini-quads-para-ninos-y-adultos",
+      "subcategory": null,
+      "targetCategory": "equipacion-cross-y-mini-quads-para-ninos-y-adultos",
+      "targetSubcategory": "cascos"
+    },
+    {
+      "id": "imp20261113_ap2746_v4344",
+      "name": "Casco motocross adulto Madix - Talla 62-XL - Negro",
+      "category": "equipacion-cross-y-mini-quads-para-ninos-y-adultos",
+      "subcategory": null,
+      "targetCategory": "equipacion-cross-y-mini-quads-para-ninos-y-adultos",
+      "targetSubcategory": "cascos"
+    },
+    {
+      "id": "imp20261113_ap2746_v4347",
+      "name": "Casco motocross adulto Madix - Talla 62-XL - Verde",
+      "category": "equipacion-cross-y-mini-quads-para-ninos-y-adultos",
+      "subcategory": null,
+      "targetCategory": "equipacion-cross-y-mini-quads-para-ninos-y-adultos",
+      "targetSubcategory": "cascos"
+    },
+    {
+      "id": "imp20261113_ap6076_v2235",
+      "name": "Pit bike 125cc ROAN RXF-Z OPEN 17/14\" - Verde",
+      "category": "pit-bikes",
+      "subcategory": null,
+      "targetCategory": "pit-bikes",
+      "targetSubcategory": "pit-bikes-de-gasolina"
+    },
+    {
+      "id": "imp20261113_ap6076_v2236",
+      "name": "Pit bike 125cc ROAN RXF-Z OPEN 17/14\" - Rojo",
+      "category": "pit-bikes",
+      "subcategory": null,
+      "targetCategory": "pit-bikes",
+      "targetSubcategory": "pit-bikes-de-gasolina"
+    },
+    {
+      "id": "imp20261113_ap6089_v3185",
+      "name": "Pit bike 250CC 2T ROAN RR250 21/18\" - Naranja",
+      "category": "pit-bikes",
+      "subcategory": null,
+      "targetCategory": "pit-bikes",
+      "targetSubcategory": "pit-bikes-de-gasolina"
+    },
+    {
+      "id": "imp20261113_ap6166_v2577",
+      "name": "PIT BIKE 125CC Manual Junior 14/12\" ROAN RXF-Z - Azul",
+      "category": "pit-bikes",
+      "subcategory": null,
+      "targetCategory": "pit-bikes",
+      "targetSubcategory": "pit-bikes-de-gasolina"
+    },
+    {
+      "id": "imp20261113_ap6166_v2578",
+      "name": "PIT BIKE 125CC Manual Junior 14/12\" ROAN RXF-Z - Rojo",
+      "category": "pit-bikes",
+      "subcategory": null,
+      "targetCategory": "pit-bikes",
+      "targetSubcategory": "pit-bikes-de-gasolina"
+    },
+    {
+      "id": "imp20261113_ap6166_v2579",
+      "name": "PIT BIKE 125CC Manual Junior 14/12\" ROAN RXF-Z - Verde",
+      "category": "pit-bikes",
+      "subcategory": null,
+      "targetCategory": "pit-bikes",
+      "targetSubcategory": "pit-bikes-de-gasolina"
+    },
+    {
+      "id": "imp20261113_ap6268_v0",
+      "name": "Patinete eléctrico ROAN 4W 3200W 48V",
+      "category": "patinete",
+      "subcategory": null,
+      "targetCategory": "patinete",
+      "targetSubcategory": "otros-patinetes"
+    },
+    {
+      "id": "imp20261113_ap6398_v3334",
+      "name": "Equipación de Cross Adulto MADIX - Gris-Verde - 34 L",
+      "category": "equipacion-cross-y-mini-quads-para-ninos-y-adultos",
+      "subcategory": null,
+      "targetCategory": "equipacion-cross-y-mini-quads-para-ninos-y-adultos",
+      "targetSubcategory": "ropa-motocross"
+    },
+    {
+      "id": "imp20261113_ap6398_v3338",
+      "name": "Equipación de Cross Adulto MADIX - Gris-Verde - 32 M",
+      "category": "equipacion-cross-y-mini-quads-para-ninos-y-adultos",
+      "subcategory": null,
+      "targetCategory": "equipacion-cross-y-mini-quads-para-ninos-y-adultos",
+      "targetSubcategory": "ropa-motocross"
+    },
+    {
+      "id": "imp20261113_ap6398_v3342",
+      "name": "Equipación de Cross Adulto MADIX - Gris-Verde - 30 S",
+      "category": "equipacion-cross-y-mini-quads-para-ninos-y-adultos",
+      "subcategory": null,
+      "targetCategory": "equipacion-cross-y-mini-quads-para-ninos-y-adultos",
+      "targetSubcategory": "ropa-motocross"
+    },
+    {
+      "id": "imp20261113_ap6454_v4314",
+      "name": "Minicross Eléctrica RFN Warrior SX-E800 800W 16/16\" - Rosa",
+      "category": "minimotos",
+      "subcategory": null,
+      "targetCategory": "minimotos",
+      "targetSubcategory": "minimotos-electricas"
+    },
+    {
+      "id": "imp20261113_ap2746_v1907",
+      "name": "Casco motocross adulto Madix - Talla 56-S - Verde",
+      "category": "equipacion-cross-y-mini-quads-para-ninos-y-adultos",
+      "subcategory": null,
+      "targetCategory": "equipacion-cross-y-mini-quads-para-ninos-y-adultos",
+      "targetSubcategory": "cascos"
+    },
+    {
+      "id": "imp20261113_ap2746_v1910",
+      "name": "Casco motocross adulto Madix - Talla 58-M - Verde",
+      "category": "equipacion-cross-y-mini-quads-para-ninos-y-adultos",
+      "subcategory": null,
+      "targetCategory": "equipacion-cross-y-mini-quads-para-ninos-y-adultos",
+      "targetSubcategory": "cascos"
+    },
+    {
+      "id": "imp20261113_ap2746_v4327",
+      "name": "Casco motocross adulto Madix - Talla 56-S - Azul",
+      "category": "equipacion-cross-y-mini-quads-para-ninos-y-adultos",
+      "subcategory": null,
+      "targetCategory": "equipacion-cross-y-mini-quads-para-ninos-y-adultos",
+      "targetSubcategory": "cascos"
+    },
+    {
+      "id": "imp20261113_ap2746_v4329",
+      "name": "Casco motocross adulto Madix - Talla 56-S - Rojo",
+      "category": "equipacion-cross-y-mini-quads-para-ninos-y-adultos",
+      "subcategory": null,
+      "targetCategory": "equipacion-cross-y-mini-quads-para-ninos-y-adultos",
+      "targetSubcategory": "cascos"
+    },
+    {
+      "id": "imp20261113_ap2746_v4330",
+      "name": "Casco motocross adulto Madix - Talla 56-S - Rosa",
+      "category": "equipacion-cross-y-mini-quads-para-ninos-y-adultos",
+      "subcategory": null,
+      "targetCategory": "equipacion-cross-y-mini-quads-para-ninos-y-adultos",
+      "targetSubcategory": "cascos"
+    },
+    {
+      "id": "imp20261113_ap2746_v4332",
+      "name": "Casco motocross adulto Madix - Talla 58-M - Azul",
+      "category": "equipacion-cross-y-mini-quads-para-ninos-y-adultos",
+      "subcategory": null,
+      "targetCategory": "equipacion-cross-y-mini-quads-para-ninos-y-adultos",
+      "targetSubcategory": "cascos"
+    },
+    {
+      "id": "imp20261113_ap2746_v4334",
+      "name": "Casco motocross adulto Madix - Talla 58-M - Rojo",
+      "category": "equipacion-cross-y-mini-quads-para-ninos-y-adultos",
+      "subcategory": null,
+      "targetCategory": "equipacion-cross-y-mini-quads-para-ninos-y-adultos",
+      "targetSubcategory": "cascos"
+    },
+    {
+      "id": "imp20261113_ap2746_v4335",
+      "name": "Casco motocross adulto Madix - Talla 58-M - Rosa",
+      "category": "equipacion-cross-y-mini-quads-para-ninos-y-adultos",
+      "subcategory": null,
+      "targetCategory": "equipacion-cross-y-mini-quads-para-ninos-y-adultos",
+      "targetSubcategory": "cascos"
+    },
+    {
+      "id": "imp20261113_ap2746_v4342",
+      "name": "Casco motocross adulto Madix - Talla 62-XL - Azul",
+      "category": "equipacion-cross-y-mini-quads-para-ninos-y-adultos",
+      "subcategory": null,
+      "targetCategory": "equipacion-cross-y-mini-quads-para-ninos-y-adultos",
+      "targetSubcategory": "cascos"
+    },
+    {
+      "id": "imp20261113_ap2746_v4345",
+      "name": "Casco motocross adulto Madix - Talla 62-XL - Rojo",
+      "category": "equipacion-cross-y-mini-quads-para-ninos-y-adultos",
+      "subcategory": null,
+      "targetCategory": "equipacion-cross-y-mini-quads-para-ninos-y-adultos",
+      "targetSubcategory": "cascos"
+    },
+    {
+      "id": "imp20261113_ap2746_v4346",
+      "name": "Casco motocross adulto Madix - Talla 62-XL - Rosa",
+      "category": "equipacion-cross-y-mini-quads-para-ninos-y-adultos",
+      "subcategory": null,
+      "targetCategory": "equipacion-cross-y-mini-quads-para-ninos-y-adultos",
+      "targetSubcategory": "cascos"
+    },
+    {
+      "id": "imp20261113_ap6063_v2300",
+      "name": "Mini Harley eléctrica infantil 200W REXO 36V - Negro",
+      "category": "minimotos",
+      "subcategory": null,
+      "targetCategory": "minimotos",
+      "targetSubcategory": "minimotos-electricas"
+    },
+    {
+      "id": "imp20261113_ap2721_v1868",
+      "name": "Quad 140cc Semi-automático RFZ Falcon R-123 - Verde",
+      "category": "quads",
+      "subcategory": null,
+      "targetCategory": "quads",
+      "targetSubcategory": "mini-quads-gasolina"
+    },
+    {
+      "id": "imp20261113_ap2721_v2536",
+      "name": "Quad 140cc Semi-automático RFZ Falcon R-123 - Azul",
+      "category": "quads",
+      "subcategory": null,
+      "targetCategory": "quads",
+      "targetSubcategory": "mini-quads-gasolina"
+    },
+    {
+      "id": "imp20261113_ap2746_v1906",
+      "name": "Casco motocross adulto Madix - Talla 56-S - Naranja",
+      "category": "equipacion-cross-y-mini-quads-para-ninos-y-adultos",
+      "subcategory": null,
+      "targetCategory": "equipacion-cross-y-mini-quads-para-ninos-y-adultos",
+      "targetSubcategory": "cascos"
+    },
+    {
+      "id": "imp20261113_ap2746_v1909",
+      "name": "Casco motocross adulto Madix - Talla 58-M - Naranja",
+      "category": "equipacion-cross-y-mini-quads-para-ninos-y-adultos",
+      "subcategory": null,
+      "targetCategory": "equipacion-cross-y-mini-quads-para-ninos-y-adultos",
+      "targetSubcategory": "cascos"
+    },
+    {
+      "id": "imp20261113_ap2746_v1912",
+      "name": "Casco motocross adulto Madix - Talla 60-L - Naranja",
+      "category": "equipacion-cross-y-mini-quads-para-ninos-y-adultos",
+      "subcategory": null,
+      "targetCategory": "equipacion-cross-y-mini-quads-para-ninos-y-adultos",
+      "targetSubcategory": "cascos"
+    },
+    {
+      "id": "imp20261113_ap2746_v4337",
+      "name": "Casco motocross adulto Madix - Talla 60-L - Azul",
+      "category": "equipacion-cross-y-mini-quads-para-ninos-y-adultos",
+      "subcategory": null,
+      "targetCategory": "equipacion-cross-y-mini-quads-para-ninos-y-adultos",
+      "targetSubcategory": "cascos"
+    },
+    {
+      "id": "imp20261113_ap2746_v4339",
+      "name": "Casco motocross adulto Madix - Talla 60-L - Rojo",
+      "category": "equipacion-cross-y-mini-quads-para-ninos-y-adultos",
+      "subcategory": null,
+      "targetCategory": "equipacion-cross-y-mini-quads-para-ninos-y-adultos",
+      "targetSubcategory": "cascos"
+    },
+    {
+      "id": "imp20261113_ap2746_v4340",
+      "name": "Casco motocross adulto Madix - Talla 60-L - Rosa",
+      "category": "equipacion-cross-y-mini-quads-para-ninos-y-adultos",
+      "subcategory": null,
+      "targetCategory": "equipacion-cross-y-mini-quads-para-ninos-y-adultos",
+      "targetSubcategory": "cascos"
+    },
+    {
+      "id": "imp20261113_ap2746_v4343",
+      "name": "Casco motocross adulto Madix - Talla 62-XL - Naranja",
+      "category": "equipacion-cross-y-mini-quads-para-ninos-y-adultos",
+      "subcategory": null,
+      "targetCategory": "equipacion-cross-y-mini-quads-para-ninos-y-adultos",
+      "targetSubcategory": "cascos"
+    },
+    {
+      "id": "imp20261113_ap2877_v2057",
+      "name": "Mini quad gasolina 110cc Roan Ratte R6 R-N-1 - Verde",
+      "category": "quads",
+      "subcategory": null,
+      "targetCategory": "quads",
+      "targetSubcategory": "mini-quads-gasolina"
+    },
+    {
+      "id": "imp20261113_ap2877_v3382",
+      "name": "Mini quad gasolina 110cc Roan Ratte R6 R-N-1 - Naranja",
+      "category": "quads",
+      "subcategory": null,
+      "targetCategory": "quads",
+      "targetSubcategory": "mini-quads-gasolina"
+    },
+    {
+      "id": "imp20261113_ap6436_v0",
+      "name": "Pit bike ROAN 250CC RZ250 21/18\" Aire",
+      "category": "pit-bikes",
+      "subcategory": null,
+      "targetCategory": "pit-bikes",
+      "targetSubcategory": "pit-bikes-de-gasolina"
+    },
+    {
+      "id": "imp20261113_ap6438_v0",
+      "name": "Pit bike Roan RX50 50cc aire 12/10\" (9cv)",
+      "category": "pit-bikes",
+      "subcategory": null,
+      "targetCategory": "pit-bikes",
+      "targetSubcategory": "pit-bikes-de-gasolina"
+    },
+    {
+      "id": "imp20261113_ap730_v0",
+      "name": "Peto protector niño",
+      "category": "equipacion-cross-y-mini-quads-para-ninos-y-adultos",
+      "subcategory": null,
+      "targetCategory": "equipacion-cross-y-mini-quads-para-ninos-y-adultos",
+      "targetSubcategory": "petos-y-protecciones"
+    },
+    {
+      "id": "imp20261113_ap2877_v2058",
+      "name": "Mini quad gasolina 110cc Roan Ratte R6 R-N-1 - Azul",
+      "category": "quads",
+      "subcategory": null,
+      "targetCategory": "quads",
+      "targetSubcategory": "mini-quads-gasolina"
+    },
+    {
+      "id": "imp20261113_ap2877_v2086",
+      "name": "Mini quad gasolina 110cc Roan Ratte R6 R-N-1 - Rosa",
+      "category": "quads",
+      "subcategory": null,
+      "targetCategory": "quads",
+      "targetSubcategory": "mini-quads-gasolina"
+    },
+    {
+      "id": "imp20261113_ap6163_v2819",
+      "name": "Minicross eléctrica 1100W Roan 907 36V 12/10\" - Azul",
+      "category": "minimotos",
+      "subcategory": null,
+      "targetCategory": "minimotos",
+      "targetSubcategory": "minimotos-electricas"
+    },
+    {
+      "id": "imp20261113_ap6163_v2821",
+      "name": "Minicross eléctrica 1100W Roan 907 36V 12/10\" - Verde",
+      "category": "minimotos",
+      "subcategory": null,
+      "targetCategory": "minimotos",
+      "targetSubcategory": "minimotos-electricas"
+    },
+    {
+      "id": "imp20261113_ap6163_v3419",
+      "name": "Minicross eléctrica 1100W Roan 907 36V 12/10\" - Naranja",
+      "category": "minimotos",
+      "subcategory": null,
+      "targetCategory": "minimotos",
+      "targetSubcategory": "minimotos-electricas"
+    },
+    {
+      "id": "imp20261113_ap6163_v4300",
+      "name": "Minicross eléctrica 1100W Roan 907 36V 12/10\" - Rosa",
+      "category": "minimotos",
+      "subcategory": null,
+      "targetCategory": "minimotos",
+      "targetSubcategory": "minimotos-electricas"
+    },
+    {
+      "id": "cms3jiezf0000hi32xm940z55",
+      "name": "Portamatrícula Lateral para Patinete Eléctrico VMP Flexible con Protector Transparente - Derecho",
+      "category": "patinete",
+      "subcategory": null,
+      "targetCategory": "recambio",
+      "targetSubcategory": "accesorios-y-complementos"
+    },
+    {
+      "id": "cms3hwo7z001ckalua8hrnte1",
+      "name": "Matrícula para patinete eléctrico aprobada por la DGT en España (VMP) | Pegatina antirrobo 2026",
+      "category": "patinete",
+      "subcategory": null,
+      "targetCategory": "recambio",
+      "targetSubcategory": "accesorios-y-complementos"
+    },
+    {
+      "id": "cmrdg1oxw001p3bpuj7mpjkgf",
+      "name": "Peto niño ROAN ninja",
+      "category": "equipacion-cross-y-mini-quads-para-ninos-y-adultos",
+      "subcategory": null,
+      "targetCategory": "equipacion-cross-y-mini-quads-para-ninos-y-adultos",
+      "targetSubcategory": "petos-y-protecciones"
+    },
+    {
+      "id": "cmrdfv17a001k3bpuiyjj914g",
+      "name": "Guantes ciclismo junior Madix Huwai",
+      "category": "equipacion-cross-y-mini-quads-para-ninos-y-adultos",
+      "subcategory": null,
+      "targetCategory": "equipacion-cross-y-mini-quads-para-ninos-y-adultos",
+      "targetSubcategory": "guantes"
+    },
+    {
+      "id": "cmrdfmz5m001d3bpuzebpf75z",
+      "name": "Casco Integral BMX infantil",
+      "category": "equipacion-cross-y-mini-quads-para-ninos-y-adultos",
+      "subcategory": null,
+      "targetCategory": "equipacion-cross-y-mini-quads-para-ninos-y-adultos",
+      "targetSubcategory": "cascos"
+    },
+    {
+      "id": "cmrddn88y00083bpuov7nl4yi",
+      "name": "Gafas Cross con Protector nasal",
+      "category": "equipacion-cross-y-mini-quads-para-ninos-y-adultos",
+      "subcategory": null,
+      "targetCategory": "equipacion-cross-y-mini-quads-para-ninos-y-adultos",
+      "targetSubcategory": "gafas"
+    },
+    {
+      "id": "cmrddb7dn00003bpuo216iukj",
+      "name": "Peto Protector Junior MADIX",
+      "category": "equipacion-cross-y-mini-quads-para-ninos-y-adultos",
+      "subcategory": null,
+      "targetCategory": "equipacion-cross-y-mini-quads-para-ninos-y-adultos",
+      "targetSubcategory": "petos-y-protecciones"
+    },
+    {
+      "id": "cmqicweum001hzlvcb7jro5as",
+      "name": "Guantes Motocross Madix PRO23 Adulto",
+      "category": "equipacion-cross-y-mini-quads-para-ninos-y-adultos",
+      "subcategory": null,
+      "targetCategory": "equipacion-cross-y-mini-quads-para-ninos-y-adultos",
+      "targetSubcategory": "guantes"
+    },
+    {
+      "id": "cmqicgocc0018zlvcqxvz6kim",
+      "name": "Guantes pro biker adulto",
+      "category": "equipacion-cross-y-mini-quads-para-ninos-y-adultos",
+      "subcategory": null,
+      "targetCategory": "equipacion-cross-y-mini-quads-para-ninos-y-adultos",
+      "targetSubcategory": "guantes"
+    },
+    {
+      "id": "cmqic311f0011zlvc4ggiagws",
+      "name": "Peto adulto Madix ninja",
+      "category": "equipacion-cross-y-mini-quads-para-ninos-y-adultos",
+      "subcategory": null,
+      "targetCategory": "equipacion-cross-y-mini-quads-para-ninos-y-adultos",
+      "targetSubcategory": "petos-y-protecciones"
+    },
+    {
+      "id": "cmqiasimk000lzlvcpybzr8nk",
+      "name": "Equipación cross RFN adulto",
+      "category": "equipacion-cross-y-mini-quads-para-ninos-y-adultos",
+      "subcategory": null,
+      "targetCategory": "equipacion-cross-y-mini-quads-para-ninos-y-adultos",
+      "targetSubcategory": "ropa-motocross"
+    },
+    {
+      "id": "cmqi9qtma0000zlvciiu4xv1n",
+      "name": "Casco Integral Ecoxtreme ideal para patinete electrico, moto o enduro. ",
+      "category": "equipacion-cross-y-mini-quads-para-ninos-y-adultos",
+      "subcategory": null,
+      "targetCategory": "equipacion-cross-y-mini-quads-para-ninos-y-adultos",
+      "targetSubcategory": "cascos"
+    },
+    {
+      "id": "cmq9tlbh900003flyj4wq1ah0",
+      "name": "ROAN MADIX Equipación Cross Niño - Transpirable y Ligera",
+      "category": "equipacion-cross-y-mini-quads-para-ninos-y-adultos",
+      "subcategory": null,
+      "targetCategory": "equipacion-cross-y-mini-quads-para-ninos-y-adultos",
+      "targetSubcategory": "ropa-motocross"
+    },
+    {
+      "id": "cmp4dinjr0000l91e763ikdjb",
+      "name": "Cámara de aire 9065-6,5 VC 90x90 Black Cat",
+      "category": "recambio",
+      "subcategory": null,
+      "targetCategory": "recambio",
+      "targetSubcategory": "neumaticos-y-camaras"
+    }
+  ]
+}

@@ -57,7 +57,7 @@ const readCatalogPage = unstable_cache(async (where: Prisma.ProductWhereInput, o
     prisma.product.count({ where }),
   ]);
   return { products, total };
-}, ["public-catalog-page-v8"], catalogCacheOptions);
+}, ["public-catalog-page-v9"], catalogCacheOptions);
 
 const readBrands = unstable_cache(() => prisma.product.groupBy({
   by: ["brand"], where: { active: true, brand: { not: null } }, orderBy: { brand: "asc" },
@@ -133,7 +133,7 @@ const readPublicProduct = unstable_cache(async (slug: string) => {
         })
       : null);
   return product?.active ? product : null;
-}, ["public-product-v4"], catalogCacheOptions);
+}, ["public-product-v5"], catalogCacheOptions);
 
 export const findPublicProduct = cache(async (slug: string) => {
   const product = await readPublicProduct(slug);
@@ -151,7 +151,7 @@ export const relatedProductCards = unstable_cache(async (id: string, category: s
     orderBy: [{ featured: "desc" }, { createdAt: "desc" }], take: 3 - related.length,
   }));
   return related;
-}, ["public-related-cards-v4"], catalogCacheOptions);
+}, ["public-related-cards-v5"], catalogCacheOptions);
 
 const readTranslationSources = unstable_cache((ids: string[]) => prisma.product.findMany({
   where: { id: { in: ids }, active: true },

@@ -54,7 +54,7 @@ async function readCategoryTree(onlyWithActiveProducts: boolean): Promise<Catego
   }));
 }
 
-const publicCategoryTree = unstable_cache(() => readCategoryTree(true), ["public-category-tree-v5"], catalogCacheOptions);
+const publicCategoryTree = unstable_cache(() => readCategoryTree(true), ["public-category-tree-v6"], catalogCacheOptions);
 export function getCategoryTree(options: { onlyWithActiveProducts?: boolean } = {}): Promise<CategoryNode[]> {
   return options.onlyWithActiveProducts ? publicCategoryTree() : readCategoryTree(false);
 }
