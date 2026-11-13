@@ -42,10 +42,11 @@ export function validateApolloManifest(manifest, { bicycleStockOverride = false 
 }
 
 /** Additive, resumable batches. Never updates an existing product, price, stock or order. */
-export async function importApolloCatalog(client, manifest, { batchSize = 25, onProgress = () => {}, bicycleStockOverride = false, bicycleImportGroup = 'bicycles' } = {}) {
+export async function importApolloCatalog(client, manifest, { batchSize = 25, onProgress = () => {}, bicycleStockOverride = false, bicycleImportGroup = 'bicycles', allowExistingBicycleNames = false } = {}) {
   validateApolloManifest(manifest, { bicycleStockOverride });
   // Separate, explicit follow-up authorized by the user; the original import stays strict.
   assert(/^[a-z]+$/.test(bicycleImportGroup) && bicycleImportGroup !== 'catalog', 'invalid bicycle import group');
+  assert(!allowExistingBicycleNames || bicycleStockOverride, 'duplicate-name permission is limited to the authorized bicycle import');
   const prefix = bicycleStockOverride ? `20261113_apollo_${bicycleImportGroup}_` : PREFIX;
   assert(Number.isInteger(batchSize) && batchSize > 0 && batchSize <= 25, 'invalid batch size');
   const digest = createHash('sha256').update(JSON.stringify(manifest)).digest('hex');
@@ -68,7 +69,7 @@ export async function importApolloCatalog(client, manifest, { batchSize = 25, on
         assert(byId.get(p.id).sku === p.sku, 'existing ID belongs to a different SKU');
         skipped++; continue;
       }
-      if (skus.has(p.sku) || names.has(normalizedName(p.name))) { skipped++; continue; }
+      if (skus.has(p.sku) || (!allowExistingBicycleNames && names.has(normalizedName(p.name)))) { skipped++; continue; }
       statements.push({ sql: 'INSERT INTO "Category" (id, slug, name, "order", "updatedAt") VALUES (?, ?, ?, 100, CURRENT_TIMESTAMP) ON CONFLICT(slug) DO NOTHING', args: ['ap-cat-' + p.category, p.category, p.categoryName] });
       if (p.subcategory) {
         statements.push({ sql: 'INSERT INTO "Subcategory" (id, "categoryId", slug, name, "order", "updatedAt") SELECT ?, id, ?, ?, 100, CURRENT_TIMESTAMP FROM "Category" WHERE slug = ? ON CONFLICT("categoryId", slug) DO NOTHING', args: ['ap-sub-' + p.category + '-' + p.subcategory, p.subcategory, p.subcategoryName, p.category] });

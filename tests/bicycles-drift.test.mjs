@@ -41,6 +41,13 @@ test('authorized bicycle follow-up accepts unavailable source stock only for bic
     assert.equal((await importApolloCatalog(client, bicycles, { bicycleStockOverride: true })).status, 'already-applied');
     assert.equal((await importApolloCatalog(client, specialBicycle, { bicycleStockOverride: true, bicycleImportGroup: 'specialbicycle' })).status, 'already-applied');
     assert.deepEqual((await client.execute({ sql: 'SELECT stock,price FROM Product WHERE id=?', args: [specialBicycle.products[0].id] })).rows[0], { stock: 5, price: 742.81 });
+    const includingExisting = JSON.parse(readFileSync('scripts/data/apollo-bicycles-including-existing-20261113.json', 'utf8'));
+    await client.execute({ sql: 'INSERT INTO Product(id,slug,name,description,shortDesc,price,stock,category,stripeLink,updatedAt) VALUES(?,?,?,\'Original\',\'Original\',555,2,\'bicicleta\',\'\',CURRENT_TIMESTAMP)', args: ['original-bicycle','original-bicycle',includingExisting.products[0].name] });
+    const options = { bicycleStockOverride: true, bicycleImportGroup: 'allbicycles', allowExistingBicycleNames: true };
+    assert.deepEqual(await importApolloCatalog(client, includingExisting, options), { status: 'applied', inserted: 14, skipped: 0 });
+    assert.equal((await importApolloCatalog(client, includingExisting, options)).status, 'already-applied');
+    assert.equal((await importApolloCatalog(client, bicycles, { bicycleStockOverride: true })).status, 'already-applied');
+    assert.deepEqual((await client.execute('SELECT price,stock FROM Product WHERE id=\'original-bicycle\'')).rows[0], { price: 555, stock: 2 });
   } finally { client.close(); }
 });
 

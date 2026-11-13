@@ -41,6 +41,8 @@ if (process.argv[1] && path.resolve(process.argv[1]) === fileURLToPath(import.me
       console.log('[bicycles-import]', await importApolloCatalog(client, manifest, { bicycleStockOverride: true }));
       const specialBicycle = JSON.parse(await readFile(new URL('./data/apollo-special-bicycle-20261113.json', import.meta.url), 'utf8'));
       console.log('[special-bicycle-import]', await importApolloCatalog(client, specialBicycle, { bicycleStockOverride: true, bicycleImportGroup: 'specialbicycle' }));
+      const includingExisting = JSON.parse(await readFile(new URL('./data/apollo-bicycles-including-existing-20261113.json', import.meta.url), 'utf8'));
+      console.log('[all-bicycles-import]', await importApolloCatalog(client, includingExisting, { bicycleStockOverride: true, bicycleImportGroup: 'allbicycles', allowExistingBicycleNames: true }));
       console.log('[drift-category]', await migrateDriftCategory(client));
     } catch (error) { console.error('[bicycles-drift] Failed; deployment stopped.', error.message); process.exitCode = 1; }
     finally { client.close(); }

@@ -1,0 +1,925 @@
+{
+  "version": 1,
+  "products": [
+    {
+      "id": "imp20261113_ap6376_v3252",
+      "sku": "MA-6376-3252",
+      "slug": "bicicleta-electrica-koolux-x10-250w-36v-13ah-16-negro-imp20261113_ap6376_v3252",
+      "name": "Bicicleta eléctrica KOOLUX X10 250W 36V 13Ah 16” - Negro",
+      "shortDesc": "Bicicleta eléctrica KOOLUX X10 250W 36V 13Ah 16” - Negro",
+      "description": "Bicicleta eléctrica KOOLUX X10 250W 36V 13Ah 16” - Negro.\n\nUn modelo de la gama de bicicletas eléctricas con la configuración indicada en esta ficha. Revisa el tamaño de las ruedas y las características del motor para elegir la versión que necesitas.\n\nCaracterísticas de esta versión:\n- Modelo del producto: X10\n- Marca: KOOLUX\n- Motor: 250W\n- Potencia Máxima: 350W\n- Batería: 36V 13 Ah\n- Autonomia: 50-65 km\n- Velocidad Máxima: 25 km/h aprox. (según peso de la persona, estado/carga de la batería, estado del terreno)\n- Tiempo de carga de la batería: 7-8 horas\n- Frenos: Disco delantero y trasero\n- Neumáticos: Wanda 16\" x 3.0\n- Pantalla: S869 con APP\n- Carga máxima: 120 Kg\n- Dimensiones del producto: 130x28x67 cm\n- Peso del producto: 25,62 kg\n\nConfiguración: Color: Negro.",
+      "price": 778.8,
+      "currency": "EUR",
+      "stock": 5,
+      "category": "bicicleta",
+      "subcategory": null,
+      "categoryName": "Bicicletas eléctricas",
+      "subcategoryName": null,
+      "brand": "KOOLUX",
+      "shippingCost": 50,
+      "shippingCountries": "[\"ES\",\"FR\",\"IT\",\"PT\"]",
+      "stripeLink": "",
+      "active": true,
+      "featured": false,
+      "images": [
+        {
+          "url": "https://19e3cavvu8vlpeyt.public.blob.vercel-storage.com/products/import-apollo-20261113/d774f8110aeb45026444b6ff0d80d28447c50c029a4f84a2bc8d6db554fd4bfc.jpg",
+          "alt": "Bicicleta eléctrica KOOLUX X10 250W 36V 13Ah 16” - Negro"
+        },
+        {
+          "url": "https://19e3cavvu8vlpeyt.public.blob.vercel-storage.com/products/import-apollo-20261113/c6cea2032b63d9dca6db47ae2c948e612ec36b906ee6257ffb16f5981919966b.jpg",
+          "alt": "Bicicleta eléctrica KOOLUX X10 250W 36V 13Ah 16” - Negro"
+        },
+        {
+          "url": "https://19e3cavvu8vlpeyt.public.blob.vercel-storage.com/products/import-apollo-20261113/42030ae6eae842d06e66db62a53c1f8eaf4175332893a6161d474d5b47c2629e.jpg",
+          "alt": "Bicicleta eléctrica KOOLUX X10 250W 36V 13Ah 16” - Negro"
+        },
+        {
+          "url": "https://19e3cavvu8vlpeyt.public.blob.vercel-storage.com/products/import-apollo-20261113/0af799edcbf70e22d54c9eea04eba4ca0a615e1946ca9504d1aee4ec99e26a15.jpg",
+          "alt": "Bicicleta eléctrica KOOLUX X10 250W 36V 13Ah 16” - Negro"
+        },
+        {
+          "url": "https://19e3cavvu8vlpeyt.public.blob.vercel-storage.com/products/import-apollo-20261113/f1b819960206aded600a5d32b807d2c00ade06575832218dc75534b07da53805.jpg",
+          "alt": "Bicicleta eléctrica KOOLUX X10 250W 36V 13Ah 16” - Negro"
+        },
+        {
+          "url": "https://19e3cavvu8vlpeyt.public.blob.vercel-storage.com/products/import-apollo-20261113/a7fd1ad95378576330c2c73244d1b1cec6429e26f6c7e17505ea615a3db3c6b7.jpg",
+          "alt": "Bicicleta eléctrica KOOLUX X10 250W 36V 13Ah 16” - Negro"
+        },
+        {
+          "url": "https://19e3cavvu8vlpeyt.public.blob.vercel-storage.com/products/import-apollo-20261113/d1d17be3ae68e84c34955a7a1d105a8481bf8cf493dfa1a7ffd885a849b782c9.jpg",
+          "alt": "Bicicleta eléctrica KOOLUX X10 250W 36V 13Ah 16” - Negro"
+        },
+        {
+          "url": "https://19e3cavvu8vlpeyt.public.blob.vercel-storage.com/products/import-apollo-20261113/b0d194235ab649da10458ddbebc9ce22bc9576200f93d5dd819dff2c448022b0.jpg",
+          "alt": "Bicicleta eléctrica KOOLUX X10 250W 36V 13Ah 16” - Negro"
+        },
+        {
+          "url": "https://19e3cavvu8vlpeyt.public.blob.vercel-storage.com/products/import-apollo-20261113/e5f0a1201396bcbf76ef61446d084b5393765d99bbf4ada19b2ad526efc0ac2a.jpg",
+          "alt": "Bicicleta eléctrica KOOLUX X10 250W 36V 13Ah 16” - Negro"
+        },
+        {
+          "url": "https://19e3cavvu8vlpeyt.public.blob.vercel-storage.com/products/import-apollo-20261113/e7f189f051066f2e4ca33c1593160c603786870c697be153b219ddeeff597fde.jpg",
+          "alt": "Bicicleta eléctrica KOOLUX X10 250W 36V 13Ah 16” - Negro"
+        },
+        {
+          "url": "https://19e3cavvu8vlpeyt.public.blob.vercel-storage.com/products/import-apollo-20261113/fb9f6e81b51c19e0250a692529351397b2ec17ff4959e8bdfa59225bb56629f1.jpg",
+          "alt": "Bicicleta eléctrica KOOLUX X10 250W 36V 13Ah 16” - Negro"
+        },
+        {
+          "url": "https://19e3cavvu8vlpeyt.public.blob.vercel-storage.com/products/import-apollo-20261113/62a095e8c34aac4dc91945ee5fc7d4bafb7f7cc6fc205388f946744ad63e6d60.jpg",
+          "alt": "Bicicleta eléctrica KOOLUX X10 250W 36V 13Ah 16” - Negro"
+        },
+        {
+          "url": "https://19e3cavvu8vlpeyt.public.blob.vercel-storage.com/products/import-apollo-20261113/acbb391517cd3508f69e7d09c9102664bc1be2bc5b37cb106c1e2bbfd6ce9546.jpg",
+          "alt": "Bicicleta eléctrica KOOLUX X10 250W 36V 13Ah 16” - Negro"
+        },
+        {
+          "url": "https://19e3cavvu8vlpeyt.public.blob.vercel-storage.com/products/import-apollo-20261113/5f9ecc4a1c65810ec3ac9cf3b110c41ddb12e73e78a96210b644be78ffb8041d.jpg",
+          "alt": "Bicicleta eléctrica KOOLUX X10 250W 36V 13Ah 16” - Negro"
+        },
+        {
+          "url": "https://19e3cavvu8vlpeyt.public.blob.vercel-storage.com/products/import-apollo-20261113/2c2782dfc2e857d62a639ce8d39a467b0f35e4b30d30a21e49e02f2539235d21.jpg",
+          "alt": "Bicicleta eléctrica KOOLUX X10 250W 36V 13Ah 16” - Negro"
+        },
+        {
+          "url": "https://19e3cavvu8vlpeyt.public.blob.vercel-storage.com/products/import-apollo-20261113/a2e0cabd569d125d77482ff0053ee32e22c6f785f08f6846d1f9bd9ca53f54da.jpg",
+          "alt": "Bicicleta eléctrica KOOLUX X10 250W 36V 13Ah 16” - Negro"
+        },
+        {
+          "url": "https://19e3cavvu8vlpeyt.public.blob.vercel-storage.com/products/import-apollo-20261113/b9809c3449ed2edb9fc22cb7adb42eea687462fe6e0a144d9cc91ba15a43089e.jpg",
+          "alt": "Bicicleta eléctrica KOOLUX X10 250W 36V 13Ah 16” - Negro"
+        },
+        {
+          "url": "https://19e3cavvu8vlpeyt.public.blob.vercel-storage.com/products/import-apollo-20261113/264e03d228aa85a21c992c3175e310fecd8d7d13e0e97188fdf5867f1036cf3a.jpg",
+          "alt": "Bicicleta eléctrica KOOLUX X10 250W 36V 13Ah 16” - Negro"
+        },
+        {
+          "url": "https://19e3cavvu8vlpeyt.public.blob.vercel-storage.com/products/import-apollo-20261113/6a1fd78ce1fc9369212aa5c3c5f6f6d107c77c18b1a32a0b466b1e3ecb5d4d7c.jpg",
+          "alt": "Bicicleta eléctrica KOOLUX X10 250W 36V 13Ah 16” - Negro"
+        }
+      ],
+      "source": {
+        "url": "https://www.motosapollo.com/bicicletas-electricas/bicicleta-electrica-koolux-x10-250w-36v-13ah-16?group%5B13%5D=411",
+        "productId": 6376,
+        "variantId": 3252,
+        "reference": "5993",
+        "priceCents": 64900,
+        "quantity": 5,
+        "availableForOrder": true,
+        "checkedAt": "2026-11-13T17:21:18.498492+00:00"
+      },
+      "motorPower": 250,
+      "battery": "36V 13 Ah",
+      "maxSpeed": 25,
+      "maxLoad": 120,
+      "weight": 25.62
+    },
+    {
+      "id": "imp20261113_ap2738_v2544",
+      "sku": "MA-2738-2544",
+      "slug": "bicicleta-electrica-nino-16-170w-roan-rfn-dna-azul-rojo-imp20261113_ap2738_v2544",
+      "name": "Bicicleta eléctrica niño 16\" 170W Roan RFN DNA - Azul-Rojo",
+      "shortDesc": "Bicicleta eléctrica niño 16\" 170W Roan RFN DNA - Azul-Rojo",
+      "description": "Bicicleta eléctrica niño 16\" 170W Roan RFN DNA - Azul-Rojo.\n\nUn modelo de la gama de bicicletas eléctricas con la configuración indicada en esta ficha. Revisa el tamaño de las ruedas y las características del motor para elegir la versión que necesitas.\n\nCaracterísticas de esta versión:\n- Modelo del producto: RFN SEDNA\n- Marca: ROAN\n- Tipo Motor: Eléctrico Brush\n- Potencia Nominal: 170 W\n- Potencia Máxima: 255W\n- Batería: Litio extraible 24V 5.2Ah\n- Cargador de Batería: 29.4 V - 1 Ah\n- Autonomia: 10 a 15 km\n- Velocidad Máxima: Hasta 19 km/h ( según peso del conductor y terreno)\n- Limitador de velocidad: En 2 posiciones 10km/h - 19 km/h\n- Tiempo de carga de la batería: 1-2 horas\n- Frenos: de Tambor Trasero\n- Chasis: Aleación de Aluminio\n- Suspensión delantera: Horquilla convencional\n- Neumáticos: Del. 16\"x2.40\" y Tra. 16\"x2.40\"\n- Llantas: 16 Pulgadas\n- Transmisión: Por cadena\n- Altura del suelo al asiento: Regulable 43cm a 53cm\n- Manillar: Aluminio\n- Carga máxima: 40 Kg\n- Dimensiones del producto: 118 cm x 70 cm x 57.5 cm (Largo x Ancho x Alto)\n- Peso del producto: 11 Kg\n- Dimensiones del embalaje: 107 cm x 25 cm x 59 cm (Largo x Ancho x Alto)\n\nConfiguración: Color: Azul-Rojo.",
+      "price": 478.8,
+      "currency": "EUR",
+      "stock": 5,
+      "category": "bicicleta",
+      "subcategory": null,
+      "categoryName": "Bicicletas eléctricas",
+      "subcategoryName": null,
+      "brand": "RFN",
+      "shippingCost": 50,
+      "shippingCountries": "[\"ES\",\"FR\",\"IT\",\"PT\"]",
+      "stripeLink": "",
+      "active": true,
+      "featured": false,
+      "images": [
+        {
+          "url": "https://19e3cavvu8vlpeyt.public.blob.vercel-storage.com/products/import-apollo-20261113/2b2594171eeeb97e03985d150c7c18726b35a4ff17cab488e8b219347b1361ed.jpg",
+          "alt": "Bicicleta eléctrica niño 16\" 170W Roan RFN DNA - Azul-Rojo"
+        },
+        {
+          "url": "https://19e3cavvu8vlpeyt.public.blob.vercel-storage.com/products/import-apollo-20261113/3859ed6dd5f6dfcad2bdde08137113206e778425dd575b3300b1d7edc86baa26.jpg",
+          "alt": "Bicicleta eléctrica niño 16\" 170W Roan RFN DNA - Azul-Rojo"
+        },
+        {
+          "url": "https://19e3cavvu8vlpeyt.public.blob.vercel-storage.com/products/import-apollo-20261113/5481813fd58bfb935a87e8a8eba54d61e8338d71c2c09718c99862ebda31375e.jpg",
+          "alt": "Bicicleta eléctrica niño 16\" 170W Roan RFN DNA - Azul-Rojo"
+        },
+        {
+          "url": "https://19e3cavvu8vlpeyt.public.blob.vercel-storage.com/products/import-apollo-20261113/c5092d73f24c41ed71f1d44c7ac14fd4c2b1af16c534cfb393f55edd8a38a108.jpg",
+          "alt": "Bicicleta eléctrica niño 16\" 170W Roan RFN DNA - Azul-Rojo"
+        },
+        {
+          "url": "https://19e3cavvu8vlpeyt.public.blob.vercel-storage.com/products/import-apollo-20261113/b9d6ae002fdf51a597e87dbc0d5e88f99f2c442e1aeebf56ab07c4c4ab937efc.jpg",
+          "alt": "Bicicleta eléctrica niño 16\" 170W Roan RFN DNA - Azul-Rojo"
+        },
+        {
+          "url": "https://19e3cavvu8vlpeyt.public.blob.vercel-storage.com/products/import-apollo-20261113/f8a8479f08645beee62dfa12177a16a4be04a055af8414de4ccc1166c41e48d1.jpg",
+          "alt": "Bicicleta eléctrica niño 16\" 170W Roan RFN DNA - Azul-Rojo"
+        }
+      ],
+      "source": {
+        "url": "https://www.motosapollo.com/bicicletas-electricas/bicicleta-electrica-nino-16-170w-roan-rfn-dna?group%5B13%5D=2347",
+        "productId": 2738,
+        "variantId": 2544,
+        "reference": "3095",
+        "priceCents": 39900,
+        "quantity": -1,
+        "availableForOrder": true,
+        "checkedAt": "2026-11-13T17:21:22.710670+00:00"
+      },
+      "motorPower": 170,
+      "battery": "Litio extraible 24V 5.2Ah",
+      "maxSpeed": 19,
+      "maxLoad": 40,
+      "weight": 11.0
+    },
+    {
+      "id": "imp20261113_ap2738_v2545",
+      "sku": "MA-2738-2545",
+      "slug": "bicicleta-electrica-nino-16-170w-roan-rfn-dna-negro-dorado-imp20261113_ap2738_v2545",
+      "name": "Bicicleta eléctrica niño 16\" 170W Roan RFN DNA - Negro-Dorado",
+      "shortDesc": "Bicicleta eléctrica niño 16\" 170W Roan RFN DNA - Negro-Dorado",
+      "description": "Bicicleta eléctrica niño 16\" 170W Roan RFN DNA - Negro-Dorado.\n\nUn modelo de la gama de bicicletas eléctricas con la configuración indicada en esta ficha. Revisa el tamaño de las ruedas y las características del motor para elegir la versión que necesitas.\n\nCaracterísticas de esta versión:\n- Modelo del producto: RFN SEDNA\n- Marca: ROAN\n- Tipo Motor: Eléctrico Brush\n- Potencia Nominal: 170 W\n- Potencia Máxima: 255W\n- Batería: Litio extraible 24V 5.2Ah\n- Cargador de Batería: 29.4 V - 1 Ah\n- Autonomia: 10 a 15 km\n- Velocidad Máxima: Hasta 19 km/h ( según peso del conductor y terreno)\n- Limitador de velocidad: En 2 posiciones 10km/h - 19 km/h\n- Tiempo de carga de la batería: 1-2 horas\n- Frenos: de Tambor Trasero\n- Chasis: Aleación de Aluminio\n- Suspensión delantera: Horquilla convencional\n- Neumáticos: Del. 16\"x2.40\" y Tra. 16\"x2.40\"\n- Llantas: 16 Pulgadas\n- Transmisión: Por cadena\n- Altura del suelo al asiento: Regulable 43cm a 53cm\n- Manillar: Aluminio\n- Carga máxima: 40 Kg\n- Dimensiones del producto: 118 cm x 70 cm x 57.5 cm (Largo x Ancho x Alto)\n- Peso del producto: 11 Kg\n- Dimensiones del embalaje: 107 cm x 25 cm x 59 cm (Largo x Ancho x Alto)\n\nConfiguración: Color: Negro-Dorado.",
+      "price": 478.8,
+      "currency": "EUR",
+      "stock": 5,
+      "category": "bicicleta",
+      "subcategory": null,
+      "categoryName": "Bicicletas eléctricas",
+      "subcategoryName": null,
+      "brand": "RFN",
+      "shippingCost": 50,
+      "shippingCountries": "[\"ES\",\"FR\",\"IT\",\"PT\"]",
+      "stripeLink": "",
+      "active": true,
+      "featured": false,
+      "images": [
+        {
+          "url": "https://19e3cavvu8vlpeyt.public.blob.vercel-storage.com/products/import-apollo-20261113/8145005c5355cd6f94d5d8a4db699343a8369f59d66272cc481087d37fde83ae.jpg",
+          "alt": "Bicicleta eléctrica niño 16\" 170W Roan RFN DNA - Negro-Dorado"
+        },
+        {
+          "url": "https://19e3cavvu8vlpeyt.public.blob.vercel-storage.com/products/import-apollo-20261113/14d8eb5c137a12da22d346124c9c6fb3a76bb9e0155237834e9f7f54ebfbf875.jpg",
+          "alt": "Bicicleta eléctrica niño 16\" 170W Roan RFN DNA - Negro-Dorado"
+        },
+        {
+          "url": "https://19e3cavvu8vlpeyt.public.blob.vercel-storage.com/products/import-apollo-20261113/5c456f9beb099c85b9df060a52fadf47903ecda91282e73c083341c1568d8ade.jpg",
+          "alt": "Bicicleta eléctrica niño 16\" 170W Roan RFN DNA - Negro-Dorado"
+        },
+        {
+          "url": "https://19e3cavvu8vlpeyt.public.blob.vercel-storage.com/products/import-apollo-20261113/e4566ed445f98304f1d7abc650097fc2b5a40d1c1837374316baf159d96fac58.jpg",
+          "alt": "Bicicleta eléctrica niño 16\" 170W Roan RFN DNA - Negro-Dorado"
+        },
+        {
+          "url": "https://19e3cavvu8vlpeyt.public.blob.vercel-storage.com/products/import-apollo-20261113/711712653894fdd1674be33b5f64ab6702478dc18dad6fa20fb646b7d2068011.jpg",
+          "alt": "Bicicleta eléctrica niño 16\" 170W Roan RFN DNA - Negro-Dorado"
+        }
+      ],
+      "source": {
+        "url": "https://www.motosapollo.com/bicicletas-electricas/bicicleta-electrica-nino-16-170w-roan-rfn-dna?group%5B13%5D=2336",
+        "productId": 2738,
+        "variantId": 2545,
+        "reference": "3095",
+        "priceCents": 39900,
+        "quantity": -1,
+        "availableForOrder": true,
+        "checkedAt": "2026-11-13T17:21:22.642045+00:00"
+      },
+      "motorPower": 170,
+      "battery": "Litio extraible 24V 5.2Ah",
+      "maxSpeed": 19,
+      "maxLoad": 40,
+      "weight": 11.0
+    },
+    {
+      "id": "imp20261113_ap2738_v3213",
+      "sku": "MA-2738-3213",
+      "slug": "bicicleta-electrica-nino-16-170w-roan-rfn-dna-azul-imp20261113_ap2738_v3213",
+      "name": "Bicicleta eléctrica niño 16\" 170W Roan RFN DNA - Azul",
+      "shortDesc": "Bicicleta eléctrica niño 16\" 170W Roan RFN DNA - Azul",
+      "description": "Bicicleta eléctrica niño 16\" 170W Roan RFN DNA - Azul.\n\nUn modelo de la gama de bicicletas eléctricas con la configuración indicada en esta ficha. Revisa el tamaño de las ruedas y las características del motor para elegir la versión que necesitas.\n\nCaracterísticas de esta versión:\n- Modelo del producto: RFN SEDNA\n- Marca: ROAN\n- Tipo Motor: Eléctrico Brush\n- Potencia Nominal: 170 W\n- Potencia Máxima: 255W\n- Batería: Litio extraible 24V 5.2Ah\n- Cargador de Batería: 29.4 V - 1 Ah\n- Autonomia: 10 a 15 km\n- Velocidad Máxima: Hasta 19 km/h ( según peso del conductor y terreno)\n- Limitador de velocidad: En 2 posiciones 10km/h - 19 km/h\n- Tiempo de carga de la batería: 1-2 horas\n- Frenos: de Tambor Trasero\n- Chasis: Aleación de Aluminio\n- Suspensión delantera: Horquilla convencional\n- Neumáticos: Del. 16\"x2.40\" y Tra. 16\"x2.40\"\n- Llantas: 16 Pulgadas\n- Transmisión: Por cadena\n- Altura del suelo al asiento: Regulable 43cm a 53cm\n- Manillar: Aluminio\n- Carga máxima: 40 Kg\n- Dimensiones del producto: 118 cm x 70 cm x 57.5 cm (Largo x Ancho x Alto)\n- Peso del producto: 11 Kg\n- Dimensiones del embalaje: 107 cm x 25 cm x 59 cm (Largo x Ancho x Alto)\n\nConfiguración: Color: Azul.",
+      "price": 478.8,
+      "currency": "EUR",
+      "stock": 5,
+      "category": "bicicleta",
+      "subcategory": null,
+      "categoryName": "Bicicletas eléctricas",
+      "subcategoryName": null,
+      "brand": "RFN",
+      "shippingCost": 50,
+      "shippingCountries": "[\"ES\",\"FR\",\"IT\",\"PT\"]",
+      "stripeLink": "",
+      "active": true,
+      "featured": false,
+      "images": [
+        {
+          "url": "https://19e3cavvu8vlpeyt.public.blob.vercel-storage.com/products/import-apollo-20261113/2918c5839ad6d147ea5565980ee4eabc85c3eeff41de204c39841ed710cbccc9.jpg",
+          "alt": "Bicicleta eléctrica niño 16\" 170W Roan RFN DNA - Azul"
+        },
+        {
+          "url": "https://19e3cavvu8vlpeyt.public.blob.vercel-storage.com/products/import-apollo-20261113/217f9972d3b294e45253381adb8e4f69e09e7dd3fb3e6167680a34158510a70d.jpg",
+          "alt": "Bicicleta eléctrica niño 16\" 170W Roan RFN DNA - Azul"
+        },
+        {
+          "url": "https://19e3cavvu8vlpeyt.public.blob.vercel-storage.com/products/import-apollo-20261113/77b8cdbc20c25a58700324da22b66a19866184ac5d069d291733eef3560c9289.jpg",
+          "alt": "Bicicleta eléctrica niño 16\" 170W Roan RFN DNA - Azul"
+        },
+        {
+          "url": "https://19e3cavvu8vlpeyt.public.blob.vercel-storage.com/products/import-apollo-20261113/4422fbef09348fc8ee4b8c85ca4497c250d06b83d7cbf9c6deb55bebe4e8a3c5.jpg",
+          "alt": "Bicicleta eléctrica niño 16\" 170W Roan RFN DNA - Azul"
+        },
+        {
+          "url": "https://19e3cavvu8vlpeyt.public.blob.vercel-storage.com/products/import-apollo-20261113/2e05d94b29645627c00fa879800d68bbc2a21bce14e6e4ca5f7a6218cb946a59.jpg",
+          "alt": "Bicicleta eléctrica niño 16\" 170W Roan RFN DNA - Azul"
+        },
+        {
+          "url": "https://19e3cavvu8vlpeyt.public.blob.vercel-storage.com/products/import-apollo-20261113/2c9dd4d02a735b350021145a6630384964b5655bbbaeabe3666db226494a8e64.jpg",
+          "alt": "Bicicleta eléctrica niño 16\" 170W Roan RFN DNA - Azul"
+        }
+      ],
+      "source": {
+        "url": "https://www.motosapollo.com/bicicletas-electricas/bicicleta-electrica-nino-16-170w-roan-rfn-dna?group%5B13%5D=391",
+        "productId": 2738,
+        "variantId": 3213,
+        "reference": "3095",
+        "priceCents": 39900,
+        "quantity": -1,
+        "availableForOrder": true,
+        "checkedAt": "2026-11-13T17:21:22.642045+00:00"
+      },
+      "motorPower": 170,
+      "battery": "Litio extraible 24V 5.2Ah",
+      "maxSpeed": 19,
+      "maxLoad": 40,
+      "weight": 11.0
+    },
+    {
+      "id": "imp20261113_ap2738_v3234",
+      "sku": "MA-2738-3234",
+      "slug": "bicicleta-electrica-nino-16-170w-roan-rfn-dna-gris-imp20261113_ap2738_v3234",
+      "name": "Bicicleta eléctrica niño 16\" 170W Roan RFN DNA - Gris",
+      "shortDesc": "Bicicleta eléctrica niño 16\" 170W Roan RFN DNA - Gris",
+      "description": "Bicicleta eléctrica niño 16\" 170W Roan RFN DNA - Gris.\n\nUn modelo de la gama de bicicletas eléctricas con la configuración indicada en esta ficha. Revisa el tamaño de las ruedas y las características del motor para elegir la versión que necesitas.\n\nCaracterísticas de esta versión:\n- Modelo del producto: RFN SEDNA\n- Marca: ROAN\n- Tipo Motor: Eléctrico Brush\n- Potencia Nominal: 170 W\n- Potencia Máxima: 255W\n- Batería: Litio extraible 24V 5.2Ah\n- Cargador de Batería: 29.4 V - 1 Ah\n- Autonomia: 10 a 15 km\n- Velocidad Máxima: Hasta 19 km/h ( según peso del conductor y terreno)\n- Limitador de velocidad: En 2 posiciones 10km/h - 19 km/h\n- Tiempo de carga de la batería: 1-2 horas\n- Frenos: de Tambor Trasero\n- Chasis: Aleación de Aluminio\n- Suspensión delantera: Horquilla convencional\n- Neumáticos: Del. 16\"x2.40\" y Tra. 16\"x2.40\"\n- Llantas: 16 Pulgadas\n- Transmisión: Por cadena\n- Altura del suelo al asiento: Regulable 43cm a 53cm\n- Manillar: Aluminio\n- Carga máxima: 40 Kg\n- Dimensiones del producto: 118 cm x 70 cm x 57.5 cm (Largo x Ancho x Alto)\n- Peso del producto: 11 Kg\n- Dimensiones del embalaje: 107 cm x 25 cm x 59 cm (Largo x Ancho x Alto)\n\nConfiguración: Color: Gris.",
+      "price": 478.8,
+      "currency": "EUR",
+      "stock": 5,
+      "category": "bicicleta",
+      "subcategory": null,
+      "categoryName": "Bicicletas eléctricas",
+      "subcategoryName": null,
+      "brand": "RFN",
+      "shippingCost": 50,
+      "shippingCountries": "[\"ES\",\"FR\",\"IT\",\"PT\"]",
+      "stripeLink": "",
+      "active": true,
+      "featured": false,
+      "images": [
+        {
+          "url": "https://19e3cavvu8vlpeyt.public.blob.vercel-storage.com/products/import-apollo-20261113/f3ed3f03299232c313874cc5accf839370bda86471432d156ad15a32521ace4f.jpg",
+          "alt": "Bicicleta eléctrica niño 16\" 170W Roan RFN DNA - Gris"
+        },
+        {
+          "url": "https://19e3cavvu8vlpeyt.public.blob.vercel-storage.com/products/import-apollo-20261113/0ca3799ff2511ef971fb563b1292f3b9a9d39d8e47eca400285112e3af363490.jpg",
+          "alt": "Bicicleta eléctrica niño 16\" 170W Roan RFN DNA - Gris"
+        },
+        {
+          "url": "https://19e3cavvu8vlpeyt.public.blob.vercel-storage.com/products/import-apollo-20261113/2fa8f3b5bcb33d29d8de5eec171229aa38e698f4f2d677d7c09439cc9d233910.jpg",
+          "alt": "Bicicleta eléctrica niño 16\" 170W Roan RFN DNA - Gris"
+        },
+        {
+          "url": "https://19e3cavvu8vlpeyt.public.blob.vercel-storage.com/products/import-apollo-20261113/8430ff4ea5159e22567372f18f5bc176e59fb65f5bac9c9a6de48cd8f502cd1f.jpg",
+          "alt": "Bicicleta eléctrica niño 16\" 170W Roan RFN DNA - Gris"
+        },
+        {
+          "url": "https://19e3cavvu8vlpeyt.public.blob.vercel-storage.com/products/import-apollo-20261113/697248f2e9b73bfb93e5cd4e3338b92426e1c38411d3d311c3e0846ab2d4f96f.jpg",
+          "alt": "Bicicleta eléctrica niño 16\" 170W Roan RFN DNA - Gris"
+        }
+      ],
+      "source": {
+        "url": "https://www.motosapollo.com/bicicletas-electricas/bicicleta-electrica-nino-16-170w-roan-rfn-dna?group%5B13%5D=401",
+        "productId": 2738,
+        "variantId": 3234,
+        "reference": "3095",
+        "priceCents": 39900,
+        "quantity": 0,
+        "availableForOrder": true,
+        "checkedAt": "2026-11-13T17:21:22.996248+00:00"
+      },
+      "motorPower": 170,
+      "battery": "Litio extraible 24V 5.2Ah",
+      "maxSpeed": 19,
+      "maxLoad": 40,
+      "weight": 11.0
+    },
+    {
+      "id": "imp20261113_ap2738_v2547",
+      "sku": "MA-2738-2547",
+      "slug": "bicicleta-electrica-nino-16-170w-roan-rfn-dna-verde-amarillo-imp20261113_ap2738_v2547",
+      "name": "Bicicleta eléctrica niño 16\" 170W Roan RFN DNA - Verde-Amarillo",
+      "shortDesc": "Bicicleta eléctrica niño 16\" 170W Roan RFN DNA - Verde-Amarillo",
+      "description": "Bicicleta eléctrica niño 16\" 170W Roan RFN DNA - Verde-Amarillo.\n\nUn modelo de la gama de bicicletas eléctricas con la configuración indicada en esta ficha. Revisa el tamaño de las ruedas y las características del motor para elegir la versión que necesitas.\n\nCaracterísticas de esta versión:\n- Modelo del producto: RFN SEDNA\n- Marca: ROAN\n- Tipo Motor: Eléctrico Brush\n- Potencia Nominal: 170 W\n- Potencia Máxima: 255W\n- Batería: Litio extraible 24V 5.2Ah\n- Cargador de Batería: 29.4 V - 1 Ah\n- Autonomia: 10 a 15 km\n- Velocidad Máxima: Hasta 19 km/h ( según peso del conductor y terreno)\n- Limitador de velocidad: En 2 posiciones 10km/h - 19 km/h\n- Tiempo de carga de la batería: 1-2 horas\n- Frenos: de Tambor Trasero\n- Chasis: Aleación de Aluminio\n- Suspensión delantera: Horquilla convencional\n- Neumáticos: Del. 16\"x2.40\" y Tra. 16\"x2.40\"\n- Llantas: 16 Pulgadas\n- Transmisión: Por cadena\n- Altura del suelo al asiento: Regulable 43cm a 53cm\n- Manillar: Aluminio\n- Carga máxima: 40 Kg\n- Dimensiones del producto: 118 cm x 70 cm x 57.5 cm (Largo x Ancho x Alto)\n- Peso del producto: 11 Kg\n- Dimensiones del embalaje: 107 cm x 25 cm x 59 cm (Largo x Ancho x Alto)\n\nConfiguración: Color: Verde-Amarillo.",
+      "price": 478.8,
+      "currency": "EUR",
+      "stock": 5,
+      "category": "bicicleta",
+      "subcategory": null,
+      "categoryName": "Bicicletas eléctricas",
+      "subcategoryName": null,
+      "brand": "RFN",
+      "shippingCost": 50,
+      "shippingCountries": "[\"ES\",\"FR\",\"IT\",\"PT\"]",
+      "stripeLink": "",
+      "active": true,
+      "featured": false,
+      "images": [
+        {
+          "url": "https://19e3cavvu8vlpeyt.public.blob.vercel-storage.com/products/import-apollo-20261113/3643a1ef3100555c16e8112f7a9b52d9c50729e6fcbe2b0842404fb323bdd096.jpg",
+          "alt": "Bicicleta eléctrica niño 16\" 170W Roan RFN DNA - Verde-Amarillo"
+        },
+        {
+          "url": "https://19e3cavvu8vlpeyt.public.blob.vercel-storage.com/products/import-apollo-20261113/172f68803b49dc61ee58910ef5eeb162b8388c3fc818ec700070ac1c768d678d.jpg",
+          "alt": "Bicicleta eléctrica niño 16\" 170W Roan RFN DNA - Verde-Amarillo"
+        },
+        {
+          "url": "https://19e3cavvu8vlpeyt.public.blob.vercel-storage.com/products/import-apollo-20261113/764333925c89ac640377821de64f9c58b23100673eb7f1fe4bb078c2a7fafe80.jpg",
+          "alt": "Bicicleta eléctrica niño 16\" 170W Roan RFN DNA - Verde-Amarillo"
+        },
+        {
+          "url": "https://19e3cavvu8vlpeyt.public.blob.vercel-storage.com/products/import-apollo-20261113/2b6229b5e9aecd0cf0a73ce5ae8a09b19471e55b627f86653e9fa5cd91990087.jpg",
+          "alt": "Bicicleta eléctrica niño 16\" 170W Roan RFN DNA - Verde-Amarillo"
+        },
+        {
+          "url": "https://19e3cavvu8vlpeyt.public.blob.vercel-storage.com/products/import-apollo-20261113/529dbc5843d04e61225c724b1a531b016f7a187e0a83ebd89d51158bf2620d8a.jpg",
+          "alt": "Bicicleta eléctrica niño 16\" 170W Roan RFN DNA - Verde-Amarillo"
+        },
+        {
+          "url": "https://19e3cavvu8vlpeyt.public.blob.vercel-storage.com/products/import-apollo-20261113/124a53d6d42b54e84373cb336e3989f7510cbed0dfae396c194a33ae740bca89.jpg",
+          "alt": "Bicicleta eléctrica niño 16\" 170W Roan RFN DNA - Verde-Amarillo"
+        }
+      ],
+      "source": {
+        "url": "https://www.motosapollo.com/bicicletas-electricas/bicicleta-electrica-nino-16-170w-roan-rfn-dna?group%5B13%5D=2350",
+        "productId": 2738,
+        "variantId": 2547,
+        "reference": "3095",
+        "priceCents": 39900,
+        "quantity": 0,
+        "availableForOrder": true,
+        "checkedAt": "2026-11-13T17:21:23.489312+00:00"
+      },
+      "motorPower": 170,
+      "battery": "Litio extraible 24V 5.2Ah",
+      "maxSpeed": 19,
+      "maxLoad": 40,
+      "weight": 11.0
+    },
+    {
+      "id": "imp20261113_ap2738_v3215",
+      "sku": "MA-2738-3215",
+      "slug": "bicicleta-electrica-nino-16-170w-roan-rfn-dna-verde-imp20261113_ap2738_v3215",
+      "name": "Bicicleta eléctrica niño 16\" 170W Roan RFN DNA - Verde",
+      "shortDesc": "Bicicleta eléctrica niño 16\" 170W Roan RFN DNA - Verde",
+      "description": "Bicicleta eléctrica niño 16\" 170W Roan RFN DNA - Verde.\n\nUn modelo de la gama de bicicletas eléctricas con la configuración indicada en esta ficha. Revisa el tamaño de las ruedas y las características del motor para elegir la versión que necesitas.\n\nCaracterísticas de esta versión:\n- Modelo del producto: RFN SEDNA\n- Marca: ROAN\n- Tipo Motor: Eléctrico Brush\n- Potencia Nominal: 170 W\n- Potencia Máxima: 255W\n- Batería: Litio extraible 24V 5.2Ah\n- Cargador de Batería: 29.4 V - 1 Ah\n- Autonomia: 10 a 15 km\n- Velocidad Máxima: Hasta 19 km/h ( según peso del conductor y terreno)\n- Limitador de velocidad: En 2 posiciones 10km/h - 19 km/h\n- Tiempo de carga de la batería: 1-2 horas\n- Frenos: de Tambor Trasero\n- Chasis: Aleación de Aluminio\n- Suspensión delantera: Horquilla convencional\n- Neumáticos: Del. 16\"x2.40\" y Tra. 16\"x2.40\"\n- Llantas: 16 Pulgadas\n- Transmisión: Por cadena\n- Altura del suelo al asiento: Regulable 43cm a 53cm\n- Manillar: Aluminio\n- Carga máxima: 40 Kg\n- Dimensiones del producto: 118 cm x 70 cm x 57.5 cm (Largo x Ancho x Alto)\n- Peso del producto: 11 Kg\n- Dimensiones del embalaje: 107 cm x 25 cm x 59 cm (Largo x Ancho x Alto)\n\nConfiguración: Color: Verde.",
+      "price": 478.8,
+      "currency": "EUR",
+      "stock": 5,
+      "category": "bicicleta",
+      "subcategory": null,
+      "categoryName": "Bicicletas eléctricas",
+      "subcategoryName": null,
+      "brand": "RFN",
+      "shippingCost": 50,
+      "shippingCountries": "[\"ES\",\"FR\",\"IT\",\"PT\"]",
+      "stripeLink": "",
+      "active": true,
+      "featured": false,
+      "images": [
+        {
+          "url": "https://19e3cavvu8vlpeyt.public.blob.vercel-storage.com/products/import-apollo-20261113/3b7a33039efe12d13f4188085f65cc5a407f8c6623ee31d0c1976efd14e99785.jpg",
+          "alt": "Bicicleta eléctrica niño 16\" 170W Roan RFN DNA - Verde"
+        },
+        {
+          "url": "https://19e3cavvu8vlpeyt.public.blob.vercel-storage.com/products/import-apollo-20261113/ea9aa0cca68e403ee6e007bde5d53f0057ee2d6108eb4e346527626160c397e3.jpg",
+          "alt": "Bicicleta eléctrica niño 16\" 170W Roan RFN DNA - Verde"
+        },
+        {
+          "url": "https://19e3cavvu8vlpeyt.public.blob.vercel-storage.com/products/import-apollo-20261113/fb648b32e1b1142173359e9c90abe9be8ea737d2b5b69aca13f6b5845ba0bc77.jpg",
+          "alt": "Bicicleta eléctrica niño 16\" 170W Roan RFN DNA - Verde"
+        },
+        {
+          "url": "https://19e3cavvu8vlpeyt.public.blob.vercel-storage.com/products/import-apollo-20261113/9a36e8c997f1328ffcbd357f11dc9045b456bf41fc677d1bd4ee0e42c3888d21.jpg",
+          "alt": "Bicicleta eléctrica niño 16\" 170W Roan RFN DNA - Verde"
+        },
+        {
+          "url": "https://19e3cavvu8vlpeyt.public.blob.vercel-storage.com/products/import-apollo-20261113/5ab5e349a397641c4de07d0189d74e1f4a0b000cb4a0e19c5abfa0b7eabd230d.jpg",
+          "alt": "Bicicleta eléctrica niño 16\" 170W Roan RFN DNA - Verde"
+        },
+        {
+          "url": "https://19e3cavvu8vlpeyt.public.blob.vercel-storage.com/products/import-apollo-20261113/2068f984336591180f47c2597bc95182cd3c737b32675da0cd2fb491ae792601.jpg",
+          "alt": "Bicicleta eléctrica niño 16\" 170W Roan RFN DNA - Verde"
+        }
+      ],
+      "source": {
+        "url": "https://www.motosapollo.com/bicicletas-electricas/bicicleta-electrica-nino-16-170w-roan-rfn-dna?group%5B13%5D=429",
+        "productId": 2738,
+        "variantId": 3215,
+        "reference": "3095",
+        "priceCents": 39900,
+        "quantity": 0,
+        "availableForOrder": true,
+        "checkedAt": "2026-11-13T17:21:23.997894+00:00"
+      },
+      "motorPower": 170,
+      "battery": "Litio extraible 24V 5.2Ah",
+      "maxSpeed": 19,
+      "maxLoad": 40,
+      "weight": 11.0
+    },
+    {
+      "id": "imp20261113_ap2738_v3214",
+      "sku": "MA-2738-3214",
+      "slug": "bicicleta-electrica-nino-16-170w-roan-rfn-dna-rosa-imp20261113_ap2738_v3214",
+      "name": "Bicicleta eléctrica niño 16\" 170W Roan RFN DNA - Rosa",
+      "shortDesc": "Bicicleta eléctrica niño 16\" 170W Roan RFN DNA - Rosa",
+      "description": "Bicicleta eléctrica niño 16\" 170W Roan RFN DNA - Rosa.\n\nUn modelo de la gama de bicicletas eléctricas con la configuración indicada en esta ficha. Revisa el tamaño de las ruedas y las características del motor para elegir la versión que necesitas.\n\nCaracterísticas de esta versión:\n- Modelo del producto: RFN SEDNA\n- Marca: ROAN\n- Tipo Motor: Eléctrico Brush\n- Potencia Nominal: 170 W\n- Potencia Máxima: 255W\n- Batería: Litio extraible 24V 5.2Ah\n- Cargador de Batería: 29.4 V - 1 Ah\n- Autonomia: 10 a 15 km\n- Velocidad Máxima: Hasta 19 km/h ( según peso del conductor y terreno)\n- Limitador de velocidad: En 2 posiciones 10km/h - 19 km/h\n- Tiempo de carga de la batería: 1-2 horas\n- Frenos: de Tambor Trasero\n- Chasis: Aleación de Aluminio\n- Suspensión delantera: Horquilla convencional\n- Neumáticos: Del. 16\"x2.40\" y Tra. 16\"x2.40\"\n- Llantas: 16 Pulgadas\n- Transmisión: Por cadena\n- Altura del suelo al asiento: Regulable 43cm a 53cm\n- Manillar: Aluminio\n- Carga máxima: 40 Kg\n- Dimensiones del producto: 118 cm x 70 cm x 57.5 cm (Largo x Ancho x Alto)\n- Peso del producto: 11 Kg\n- Dimensiones del embalaje: 107 cm x 25 cm x 59 cm (Largo x Ancho x Alto)\n\nConfiguración: Color: Rosa.",
+      "price": 478.8,
+      "currency": "EUR",
+      "stock": 5,
+      "category": "bicicleta",
+      "subcategory": null,
+      "categoryName": "Bicicletas eléctricas",
+      "subcategoryName": null,
+      "brand": "RFN",
+      "shippingCost": 50,
+      "shippingCountries": "[\"ES\",\"FR\",\"IT\",\"PT\"]",
+      "stripeLink": "",
+      "active": true,
+      "featured": false,
+      "images": [
+        {
+          "url": "https://19e3cavvu8vlpeyt.public.blob.vercel-storage.com/products/import-apollo-20261113/16f93dfe3ba8c920ad8043a34d59b44efa8ac331cec62d995e696e3d63da9060.jpg",
+          "alt": "Bicicleta eléctrica niño 16\" 170W Roan RFN DNA - Rosa"
+        },
+        {
+          "url": "https://19e3cavvu8vlpeyt.public.blob.vercel-storage.com/products/import-apollo-20261113/ba24253129fb48646be192cbc346aa45d1996ffaf260953d1ecca405c676f526.jpg",
+          "alt": "Bicicleta eléctrica niño 16\" 170W Roan RFN DNA - Rosa"
+        },
+        {
+          "url": "https://19e3cavvu8vlpeyt.public.blob.vercel-storage.com/products/import-apollo-20261113/c5acaafb123daea93f62269b3b1fd60e7c1facb0b0074fe3232048f0bb78c6a4.jpg",
+          "alt": "Bicicleta eléctrica niño 16\" 170W Roan RFN DNA - Rosa"
+        },
+        {
+          "url": "https://19e3cavvu8vlpeyt.public.blob.vercel-storage.com/products/import-apollo-20261113/a163167b089800bdaf04d7d328c2589e521a6247d11bc3c1b6453c1adffb7f3a.jpg",
+          "alt": "Bicicleta eléctrica niño 16\" 170W Roan RFN DNA - Rosa"
+        },
+        {
+          "url": "https://19e3cavvu8vlpeyt.public.blob.vercel-storage.com/products/import-apollo-20261113/8bb84d3b38e86e1f995d2f7810647fbe1e801b82a9c3cdb41960ef7ebc4ef6d7.jpg",
+          "alt": "Bicicleta eléctrica niño 16\" 170W Roan RFN DNA - Rosa"
+        },
+        {
+          "url": "https://19e3cavvu8vlpeyt.public.blob.vercel-storage.com/products/import-apollo-20261113/1e8a181efd12a7ff17725e1681b1b2a70cb323c0978f4d1c2db3b1beec238e49.jpg",
+          "alt": "Bicicleta eléctrica niño 16\" 170W Roan RFN DNA - Rosa"
+        }
+      ],
+      "source": {
+        "url": "https://www.motosapollo.com/bicicletas-electricas/bicicleta-electrica-nino-16-170w-roan-rfn-dna?group%5B13%5D=433",
+        "productId": 2738,
+        "variantId": 3214,
+        "reference": "3095",
+        "priceCents": 39900,
+        "quantity": 0,
+        "availableForOrder": true,
+        "checkedAt": "2026-11-13T17:21:24.029544+00:00"
+      },
+      "motorPower": 170,
+      "battery": "Litio extraible 24V 5.2Ah",
+      "maxSpeed": 19,
+      "maxLoad": 40,
+      "weight": 11.0
+    },
+    {
+      "id": "imp20261113_ap6379_v3257",
+      "sku": "MA-6379-3257",
+      "slug": "bicicleta-electrica-koolux-x9-mini-250w-48v-13ah-16-negro-imp20261113_ap6379_v3257",
+      "name": "Bicicleta eléctrica KOOLUX X9 Mini 250W 48V 13Ah 16” - Negro",
+      "shortDesc": "Bicicleta eléctrica KOOLUX X9 Mini 250W 48V 13Ah 16” - Negro",
+      "description": "Bicicleta eléctrica KOOLUX X9 Mini 250W 48V 13Ah 16” - Negro.\n\nUn modelo de la gama de bicicletas eléctricas con la configuración indicada en esta ficha. Revisa el tamaño de las ruedas y las características del motor para elegir la versión que necesitas.\n\nCaracterísticas de esta versión:\n- Modelo del producto: X9 MINI\n- Marca: Koolux\n- Tipo Motor: Motor eléctrico sin escobillas \"Brushless\"\n- Potencia Nominal: 250 W\n- Potencia Máxima: 500 W\n- Batería: 48V 13Ah\n- Autonomia: 60 - 80 Km\n- Velocidad Máxima: 25 km/h (hasta 32 km/h desbloqueada)\n- Tiempo de carga de la batería: 7-8 horas\n- Frenos: Frenos de disco delanteros y traseros\n- Neumáticos: 16\" x 4.0 pulgadas\n- Pantalla: XF013\n- Carga máxima: 120 kg\n- Dimensiones del producto: 135 x 63,5 x 106 cm\n- Peso del producto: 39 Kg\n- Dimensiones del embalaje: 120 x 31 x 76 cm\n\nConfiguración: Color: Negro.",
+      "price": 948.0,
+      "currency": "EUR",
+      "stock": 5,
+      "category": "bicicleta",
+      "subcategory": null,
+      "categoryName": "Bicicletas eléctricas",
+      "subcategoryName": null,
+      "brand": "Koolux",
+      "shippingCost": 50,
+      "shippingCountries": "[\"ES\",\"FR\",\"IT\",\"PT\"]",
+      "stripeLink": "",
+      "active": true,
+      "featured": false,
+      "images": [
+        {
+          "url": "https://19e3cavvu8vlpeyt.public.blob.vercel-storage.com/products/import-apollo-20261113/05ea43ee40d5810de31900246c70998fe10ddbbde0bcc3209b88d9e00e4cb46d.jpg",
+          "alt": "Bicicleta eléctrica KOOLUX X9 Mini 250W 48V 13Ah 16” - Negro"
+        },
+        {
+          "url": "https://19e3cavvu8vlpeyt.public.blob.vercel-storage.com/products/import-apollo-20261113/188defa84b111084354d7273cedadc6754ecd4ad48c803ff49e8e8b3bd5eeffc.jpg",
+          "alt": "Bicicleta eléctrica KOOLUX X9 Mini 250W 48V 13Ah 16” - Negro"
+        },
+        {
+          "url": "https://19e3cavvu8vlpeyt.public.blob.vercel-storage.com/products/import-apollo-20261113/7234d0c5bcdda11b2085c1954d427d405267905157fed9bc94f29d4447b10f47.jpg",
+          "alt": "Bicicleta eléctrica KOOLUX X9 Mini 250W 48V 13Ah 16” - Negro"
+        },
+        {
+          "url": "https://19e3cavvu8vlpeyt.public.blob.vercel-storage.com/products/import-apollo-20261113/d510de9544a55490f5f2cd8445ac12fafa686c79fd23581b97ea87486739439b.jpg",
+          "alt": "Bicicleta eléctrica KOOLUX X9 Mini 250W 48V 13Ah 16” - Negro"
+        },
+        {
+          "url": "https://19e3cavvu8vlpeyt.public.blob.vercel-storage.com/products/import-apollo-20261113/d30e94260c5d448107e801332cb8cff7df83d2ba00641a425e59a2cac28f1972.jpg",
+          "alt": "Bicicleta eléctrica KOOLUX X9 Mini 250W 48V 13Ah 16” - Negro"
+        },
+        {
+          "url": "https://19e3cavvu8vlpeyt.public.blob.vercel-storage.com/products/import-apollo-20261113/64581bf1b78e0d0a65afd114c74876746e7efb79a53a36120531d351b04244a5.jpg",
+          "alt": "Bicicleta eléctrica KOOLUX X9 Mini 250W 48V 13Ah 16” - Negro"
+        },
+        {
+          "url": "https://19e3cavvu8vlpeyt.public.blob.vercel-storage.com/products/import-apollo-20261113/0c0cefcb96aa99b79ef5e0d599d274c243c7244b4ff0cf922fdc8a630db703d6.jpg",
+          "alt": "Bicicleta eléctrica KOOLUX X9 Mini 250W 48V 13Ah 16” - Negro"
+        },
+        {
+          "url": "https://19e3cavvu8vlpeyt.public.blob.vercel-storage.com/products/import-apollo-20261113/33f82482e115c653f8ddf326da2dd2d67e33678b66ed0690c66da4be9741c246.jpg",
+          "alt": "Bicicleta eléctrica KOOLUX X9 Mini 250W 48V 13Ah 16” - Negro"
+        }
+      ],
+      "source": {
+        "url": "https://www.motosapollo.com/bicicletas-electricas/bicicleta-electrica-koolux-x9-mini-250w-48v-13ah-16?group%5B13%5D=411",
+        "productId": 6379,
+        "variantId": 3257,
+        "reference": "5997",
+        "priceCents": 79000,
+        "quantity": 14,
+        "availableForOrder": true,
+        "checkedAt": "2026-11-13T17:21:23.795855+00:00"
+      },
+      "motorPower": 250,
+      "battery": "48V 13Ah",
+      "maxSpeed": 25,
+      "maxLoad": 120,
+      "weight": 39.0
+    },
+    {
+      "id": "imp20261113_ap2737_v2549",
+      "sku": "MA-2737-2549",
+      "slug": "bicicleta-electrica-nino-12-100w-rfn-dna-negro-dorado-imp20261113_ap2737_v2549",
+      "name": "Bicicleta eléctrica niño 12\" 100W RFN DNA - Negro-Dorado",
+      "shortDesc": "Bicicleta eléctrica niño 12\" 100W RFN DNA - Negro-Dorado",
+      "description": "Bicicleta eléctrica niño 12\" 100W RFN DNA - Negro-Dorado.\n\nUn modelo de la gama de bicicletas eléctricas con la configuración indicada en esta ficha. Revisa el tamaño de las ruedas y las características del motor para elegir la versión que necesitas.\n\nCaracterísticas de esta versión:\n- Modelo del producto: DNA\n- Marca: RFN\n- Tipo Motor: Eléctrico Brush\n- Potencia Nominal: 100 W\n- Potencia Máxima: 150W\n- Batería: De litio extraible 24V 2.6Ah\n- Cargador de Batería: 29.4 V - 1 Ah\n- Autonomia: de 10 a 15 km\n- Velocidad Máxima: Hasta 15km/h ( según peso del conductor y terreno )\n- Limitador de velocidad: En 2 posiciones ( 7km/h - 15km/h)\n- Tiempo de carga de la batería: 1-2 horas\n- Frenos: de Tambor Trasero\n- Chasis: Aleación de Aluminio\n- Suspensión delantera: Horquilla convencional\n- Neumáticos: Del. y Tra.: 12\" x 2.40\"\n- Llantas: 12 pulgadas\n- Transmisión: Por cadena\n- Altura del suelo al asiento: Regulable de 39 a 44cm\n- Manillar: Aluminio\n- Carga máxima: 34 Kg\n- Dimensiones del producto: 98 cm x 52 cm x 57 cm (Largo x Ancho x Alto)\n- Peso del producto: 9 Kg\n- Dimensiones del embalaje: 87 cm x 27 cm x 47.5 cm (Largo x Ancho x Alto)\n\nConfiguración: Color: Negro-Dorado.",
+      "price": 358.8,
+      "currency": "EUR",
+      "stock": 5,
+      "category": "bicicleta",
+      "subcategory": null,
+      "categoryName": "Bicicletas eléctricas",
+      "subcategoryName": null,
+      "brand": "RFN",
+      "shippingCost": 50,
+      "shippingCountries": "[\"ES\",\"FR\",\"IT\",\"PT\"]",
+      "stripeLink": "",
+      "active": true,
+      "featured": false,
+      "images": [
+        {
+          "url": "https://19e3cavvu8vlpeyt.public.blob.vercel-storage.com/products/import-apollo-20261113/237a88e273a5d525aaf4e1dd6fab304a9111859dbec50f1263a2569e007bff5d.jpg",
+          "alt": "Bicicleta eléctrica niño 12\" 100W RFN DNA - Negro-Dorado"
+        },
+        {
+          "url": "https://19e3cavvu8vlpeyt.public.blob.vercel-storage.com/products/import-apollo-20261113/b8796f1f5dea701de0437bd4a00fef6f0557e4eef50f13982e729a908946fd7b.jpg",
+          "alt": "Bicicleta eléctrica niño 12\" 100W RFN DNA - Negro-Dorado"
+        },
+        {
+          "url": "https://19e3cavvu8vlpeyt.public.blob.vercel-storage.com/products/import-apollo-20261113/02430149b91389522411cd903dadd499af472ca276083d8ab25bcc647e1bf965.jpg",
+          "alt": "Bicicleta eléctrica niño 12\" 100W RFN DNA - Negro-Dorado"
+        },
+        {
+          "url": "https://19e3cavvu8vlpeyt.public.blob.vercel-storage.com/products/import-apollo-20261113/ca652354aaf156be642df3f59d28a646019d25ec95ca07fe8b0432ce1004ac86.jpg",
+          "alt": "Bicicleta eléctrica niño 12\" 100W RFN DNA - Negro-Dorado"
+        },
+        {
+          "url": "https://19e3cavvu8vlpeyt.public.blob.vercel-storage.com/products/import-apollo-20261113/fe76207982087012dc011daf536997bf481fa5183c94b23ef38a1b185f670522.jpg",
+          "alt": "Bicicleta eléctrica niño 12\" 100W RFN DNA - Negro-Dorado"
+        },
+        {
+          "url": "https://19e3cavvu8vlpeyt.public.blob.vercel-storage.com/products/import-apollo-20261113/8ee2e450106dc24512e6223185ed0cfffd2a8d6d71c58b7f20b3b326c1fc5310.jpg",
+          "alt": "Bicicleta eléctrica niño 12\" 100W RFN DNA - Negro-Dorado"
+        }
+      ],
+      "source": {
+        "url": "https://www.motosapollo.com/bicicletas-electricas/bicicleta-electrica-nino-12-100w-rfn-dna?group%5B13%5D=2336",
+        "productId": 2737,
+        "variantId": 2549,
+        "reference": "4057",
+        "priceCents": 29900,
+        "quantity": 52,
+        "availableForOrder": true,
+        "checkedAt": "2026-11-13T17:21:28.785477+00:00"
+      },
+      "motorPower": 100,
+      "battery": "De litio extraible 24V 2.6Ah",
+      "maxSpeed": 15,
+      "maxLoad": 34,
+      "weight": 9.0
+    },
+    {
+      "id": "imp20261113_ap2737_v3216",
+      "sku": "MA-2737-3216",
+      "slug": "bicicleta-electrica-nino-12-100w-rfn-dna-azul-imp20261113_ap2737_v3216",
+      "name": "Bicicleta eléctrica niño 12\" 100W RFN DNA - Azul",
+      "shortDesc": "Bicicleta eléctrica niño 12\" 100W RFN DNA - Azul",
+      "description": "Bicicleta eléctrica niño 12\" 100W RFN DNA - Azul.\n\nUn modelo de la gama de bicicletas eléctricas con la configuración indicada en esta ficha. Revisa el tamaño de las ruedas y las características del motor para elegir la versión que necesitas.\n\nCaracterísticas de esta versión:\n- Modelo del producto: DNA\n- Marca: RFN\n- Tipo Motor: Eléctrico Brush\n- Potencia Nominal: 100 W\n- Potencia Máxima: 150W\n- Batería: De litio extraible 24V 2.6Ah\n- Cargador de Batería: 29.4 V - 1 Ah\n- Autonomia: de 10 a 15 km\n- Velocidad Máxima: Hasta 15km/h ( según peso del conductor y terreno )\n- Limitador de velocidad: En 2 posiciones ( 7km/h - 15km/h)\n- Tiempo de carga de la batería: 1-2 horas\n- Frenos: de Tambor Trasero\n- Chasis: Aleación de Aluminio\n- Suspensión delantera: Horquilla convencional\n- Neumáticos: Del. y Tra.: 12\" x 2.40\"\n- Llantas: 12 pulgadas\n- Transmisión: Por cadena\n- Altura del suelo al asiento: Regulable de 39 a 44cm\n- Manillar: Aluminio\n- Carga máxima: 34 Kg\n- Dimensiones del producto: 98 cm x 52 cm x 57 cm (Largo x Ancho x Alto)\n- Peso del producto: 9 Kg\n- Dimensiones del embalaje: 87 cm x 27 cm x 47.5 cm (Largo x Ancho x Alto)\n\nConfiguración: Color: Azul.",
+      "price": 358.8,
+      "currency": "EUR",
+      "stock": 5,
+      "category": "bicicleta",
+      "subcategory": null,
+      "categoryName": "Bicicletas eléctricas",
+      "subcategoryName": null,
+      "brand": "RFN",
+      "shippingCost": 50,
+      "shippingCountries": "[\"ES\",\"FR\",\"IT\",\"PT\"]",
+      "stripeLink": "",
+      "active": true,
+      "featured": false,
+      "images": [
+        {
+          "url": "https://19e3cavvu8vlpeyt.public.blob.vercel-storage.com/products/import-apollo-20261113/0da94950cf7faefd53ca47e5a010649e4b379c9c42b872a291fd4ff6073f710f.jpg",
+          "alt": "Bicicleta eléctrica niño 12\" 100W RFN DNA - Azul"
+        },
+        {
+          "url": "https://19e3cavvu8vlpeyt.public.blob.vercel-storage.com/products/import-apollo-20261113/2dd435fa44dd23df3de18bc798fb3bbf46d085d6b20846bd1021f513cc9e75f5.jpg",
+          "alt": "Bicicleta eléctrica niño 12\" 100W RFN DNA - Azul"
+        },
+        {
+          "url": "https://19e3cavvu8vlpeyt.public.blob.vercel-storage.com/products/import-apollo-20261113/e938312ecc1fa5a7304af3fc9806fd583bc1c08829f503b8c288d428fe26e030.jpg",
+          "alt": "Bicicleta eléctrica niño 12\" 100W RFN DNA - Azul"
+        },
+        {
+          "url": "https://19e3cavvu8vlpeyt.public.blob.vercel-storage.com/products/import-apollo-20261113/c4a41978e515e49a4b1d8f5818737f602f0914358c14786a1a7d818f1a6136d3.jpg",
+          "alt": "Bicicleta eléctrica niño 12\" 100W RFN DNA - Azul"
+        },
+        {
+          "url": "https://19e3cavvu8vlpeyt.public.blob.vercel-storage.com/products/import-apollo-20261113/9106e8b2ca39b4d0e1772775777d371b404a3720bf17e3fd15c07f260b5486e1.jpg",
+          "alt": "Bicicleta eléctrica niño 12\" 100W RFN DNA - Azul"
+        },
+        {
+          "url": "https://19e3cavvu8vlpeyt.public.blob.vercel-storage.com/products/import-apollo-20261113/2138ee3577f83f4bf6a6b062bb71dff593e485a4a8e8a852f0fda9295b5328e0.jpg",
+          "alt": "Bicicleta eléctrica niño 12\" 100W RFN DNA - Azul"
+        }
+      ],
+      "source": {
+        "url": "https://www.motosapollo.com/bicicletas-electricas/bicicleta-electrica-nino-12-100w-rfn-dna?group%5B13%5D=391",
+        "productId": 2737,
+        "variantId": 3216,
+        "reference": "4057",
+        "priceCents": 29900,
+        "quantity": 57,
+        "availableForOrder": true,
+        "checkedAt": "2026-11-13T17:21:28.768188+00:00"
+      },
+      "motorPower": 100,
+      "battery": "De litio extraible 24V 2.6Ah",
+      "maxSpeed": 15,
+      "maxLoad": 34,
+      "weight": 9.0
+    },
+    {
+      "id": "imp20261113_ap2737_v3236",
+      "sku": "MA-2737-3236",
+      "slug": "bicicleta-electrica-nino-12-100w-rfn-dna-gris-imp20261113_ap2737_v3236",
+      "name": "Bicicleta eléctrica niño 12\" 100W RFN DNA - Gris",
+      "shortDesc": "Bicicleta eléctrica niño 12\" 100W RFN DNA - Gris",
+      "description": "Bicicleta eléctrica niño 12\" 100W RFN DNA - Gris.\n\nUn modelo de la gama de bicicletas eléctricas con la configuración indicada en esta ficha. Revisa el tamaño de las ruedas y las características del motor para elegir la versión que necesitas.\n\nCaracterísticas de esta versión:\n- Modelo del producto: DNA\n- Marca: RFN\n- Tipo Motor: Eléctrico Brush\n- Potencia Nominal: 100 W\n- Potencia Máxima: 150W\n- Batería: De litio extraible 24V 2.6Ah\n- Cargador de Batería: 29.4 V - 1 Ah\n- Autonomia: de 10 a 15 km\n- Velocidad Máxima: Hasta 15km/h ( según peso del conductor y terreno )\n- Limitador de velocidad: En 2 posiciones ( 7km/h - 15km/h)\n- Tiempo de carga de la batería: 1-2 horas\n- Frenos: de Tambor Trasero\n- Chasis: Aleación de Aluminio\n- Suspensión delantera: Horquilla convencional\n- Neumáticos: Del. y Tra.: 12\" x 2.40\"\n- Llantas: 12 pulgadas\n- Transmisión: Por cadena\n- Altura del suelo al asiento: Regulable de 39 a 44cm\n- Manillar: Aluminio\n- Carga máxima: 34 Kg\n- Dimensiones del producto: 98 cm x 52 cm x 57 cm (Largo x Ancho x Alto)\n- Peso del producto: 9 Kg\n- Dimensiones del embalaje: 87 cm x 27 cm x 47.5 cm (Largo x Ancho x Alto)\n\nConfiguración: Color: Gris.",
+      "price": 358.8,
+      "currency": "EUR",
+      "stock": 5,
+      "category": "bicicleta",
+      "subcategory": null,
+      "categoryName": "Bicicletas eléctricas",
+      "subcategoryName": null,
+      "brand": "RFN",
+      "shippingCost": 50,
+      "shippingCountries": "[\"ES\",\"FR\",\"IT\",\"PT\"]",
+      "stripeLink": "",
+      "active": true,
+      "featured": false,
+      "images": [
+        {
+          "url": "https://19e3cavvu8vlpeyt.public.blob.vercel-storage.com/products/import-apollo-20261113/0557c282da694cd71d2de4e7032d9fbde3277e57c51d7e66ba8179ed999a4954.jpg",
+          "alt": "Bicicleta eléctrica niño 12\" 100W RFN DNA - Gris"
+        },
+        {
+          "url": "https://19e3cavvu8vlpeyt.public.blob.vercel-storage.com/products/import-apollo-20261113/76ef778617c476602d17b76dbdf5f8e9fdc121643c3c740226b5edfd4a05e047.jpg",
+          "alt": "Bicicleta eléctrica niño 12\" 100W RFN DNA - Gris"
+        },
+        {
+          "url": "https://19e3cavvu8vlpeyt.public.blob.vercel-storage.com/products/import-apollo-20261113/7374733a539e2d76e0d2c41416284f4bca2ede2cc5b18ad7793c551550cf854e.jpg",
+          "alt": "Bicicleta eléctrica niño 12\" 100W RFN DNA - Gris"
+        },
+        {
+          "url": "https://19e3cavvu8vlpeyt.public.blob.vercel-storage.com/products/import-apollo-20261113/3b1b668b31d9027634d79513478180de089090d86783e3e58d17aeb23a5472e4.jpg",
+          "alt": "Bicicleta eléctrica niño 12\" 100W RFN DNA - Gris"
+        },
+        {
+          "url": "https://19e3cavvu8vlpeyt.public.blob.vercel-storage.com/products/import-apollo-20261113/19cb972cd2f9eab376555b3a4ac211cc96093a9e7517524cf4919ed55e12b9a3.jpg",
+          "alt": "Bicicleta eléctrica niño 12\" 100W RFN DNA - Gris"
+        },
+        {
+          "url": "https://19e3cavvu8vlpeyt.public.blob.vercel-storage.com/products/import-apollo-20261113/4b1af2a88188744c83b474868737293ef1a5e7297b52cd0cd343e91bfd664e04.jpg",
+          "alt": "Bicicleta eléctrica niño 12\" 100W RFN DNA - Gris"
+        }
+      ],
+      "source": {
+        "url": "https://www.motosapollo.com/bicicletas-electricas/bicicleta-electrica-nino-12-100w-rfn-dna?group%5B13%5D=401",
+        "productId": 2737,
+        "variantId": 3236,
+        "reference": "4057",
+        "priceCents": 29900,
+        "quantity": 77,
+        "availableForOrder": true,
+        "checkedAt": "2026-11-13T17:21:28.941543+00:00"
+      },
+      "motorPower": 100,
+      "battery": "De litio extraible 24V 2.6Ah",
+      "maxSpeed": 15,
+      "maxLoad": 34,
+      "weight": 9.0
+    },
+    {
+      "id": "imp20261113_ap2737_v3218",
+      "sku": "MA-2737-3218",
+      "slug": "bicicleta-electrica-nino-12-100w-rfn-dna-verde-imp20261113_ap2737_v3218",
+      "name": "Bicicleta eléctrica niño 12\" 100W RFN DNA - Verde",
+      "shortDesc": "Bicicleta eléctrica niño 12\" 100W RFN DNA - Verde",
+      "description": "Bicicleta eléctrica niño 12\" 100W RFN DNA - Verde.\n\nUn modelo de la gama de bicicletas eléctricas con la configuración indicada en esta ficha. Revisa el tamaño de las ruedas y las características del motor para elegir la versión que necesitas.\n\nCaracterísticas de esta versión:\n- Modelo del producto: DNA\n- Marca: RFN\n- Tipo Motor: Eléctrico Brush\n- Potencia Nominal: 100 W\n- Potencia Máxima: 150W\n- Batería: De litio extraible 24V 2.6Ah\n- Cargador de Batería: 29.4 V - 1 Ah\n- Autonomia: de 10 a 15 km\n- Velocidad Máxima: Hasta 15km/h ( según peso del conductor y terreno )\n- Limitador de velocidad: En 2 posiciones ( 7km/h - 15km/h)\n- Tiempo de carga de la batería: 1-2 horas\n- Frenos: de Tambor Trasero\n- Chasis: Aleación de Aluminio\n- Suspensión delantera: Horquilla convencional\n- Neumáticos: Del. y Tra.: 12\" x 2.40\"\n- Llantas: 12 pulgadas\n- Transmisión: Por cadena\n- Altura del suelo al asiento: Regulable de 39 a 44cm\n- Manillar: Aluminio\n- Carga máxima: 34 Kg\n- Dimensiones del producto: 98 cm x 52 cm x 57 cm (Largo x Ancho x Alto)\n- Peso del producto: 9 Kg\n- Dimensiones del embalaje: 87 cm x 27 cm x 47.5 cm (Largo x Ancho x Alto)\n\nConfiguración: Color: Verde.",
+      "price": 358.8,
+      "currency": "EUR",
+      "stock": 5,
+      "category": "bicicleta",
+      "subcategory": null,
+      "categoryName": "Bicicletas eléctricas",
+      "subcategoryName": null,
+      "brand": "RFN",
+      "shippingCost": 50,
+      "shippingCountries": "[\"ES\",\"FR\",\"IT\",\"PT\"]",
+      "stripeLink": "",
+      "active": true,
+      "featured": false,
+      "images": [
+        {
+          "url": "https://19e3cavvu8vlpeyt.public.blob.vercel-storage.com/products/import-apollo-20261113/4c74a969ac78167436db30b245694825dc4932899dd5bb98b43bdc9afdc03057.jpg",
+          "alt": "Bicicleta eléctrica niño 12\" 100W RFN DNA - Verde"
+        },
+        {
+          "url": "https://19e3cavvu8vlpeyt.public.blob.vercel-storage.com/products/import-apollo-20261113/81f0fb6693945f090ccc743b66d543621182c2d4c133027f92d0149c9a08f668.jpg",
+          "alt": "Bicicleta eléctrica niño 12\" 100W RFN DNA - Verde"
+        },
+        {
+          "url": "https://19e3cavvu8vlpeyt.public.blob.vercel-storage.com/products/import-apollo-20261113/313d61433867f53647d8500eb0183a467aabde6e00cf6e6e2735d0c48f5823f9.jpg",
+          "alt": "Bicicleta eléctrica niño 12\" 100W RFN DNA - Verde"
+        },
+        {
+          "url": "https://19e3cavvu8vlpeyt.public.blob.vercel-storage.com/products/import-apollo-20261113/b9de87f090b1a51ad13e7b1ac59b2eedd00ea89b0262d004263df50021a59fd4.jpg",
+          "alt": "Bicicleta eléctrica niño 12\" 100W RFN DNA - Verde"
+        },
+        {
+          "url": "https://19e3cavvu8vlpeyt.public.blob.vercel-storage.com/products/import-apollo-20261113/459d42af5044bcfe745da3aea3a16414132d5bdf823fa6a797630caf823d00b6.jpg",
+          "alt": "Bicicleta eléctrica niño 12\" 100W RFN DNA - Verde"
+        },
+        {
+          "url": "https://19e3cavvu8vlpeyt.public.blob.vercel-storage.com/products/import-apollo-20261113/c72b2c67116c292ff19b309d11b4c6757b296544a7b1491e365d779a7b76f363.jpg",
+          "alt": "Bicicleta eléctrica niño 12\" 100W RFN DNA - Verde"
+        }
+      ],
+      "source": {
+        "url": "https://www.motosapollo.com/bicicletas-electricas/bicicleta-electrica-nino-12-100w-rfn-dna?group%5B13%5D=429",
+        "productId": 2737,
+        "variantId": 3218,
+        "reference": "4057",
+        "priceCents": 29900,
+        "quantity": 74,
+        "availableForOrder": true,
+        "checkedAt": "2026-11-13T17:21:29.005146+00:00"
+      },
+      "motorPower": 100,
+      "battery": "De litio extraible 24V 2.6Ah",
+      "maxSpeed": 15,
+      "maxLoad": 34,
+      "weight": 9.0
+    },
+    {
+      "id": "imp20261113_ap2737_v3217",
+      "sku": "MA-2737-3217",
+      "slug": "bicicleta-electrica-nino-12-100w-rfn-dna-rosa-imp20261113_ap2737_v3217",
+      "name": "Bicicleta eléctrica niño 12\" 100W RFN DNA - Rosa",
+      "shortDesc": "Bicicleta eléctrica niño 12\" 100W RFN DNA - Rosa",
+      "description": "Bicicleta eléctrica niño 12\" 100W RFN DNA - Rosa.\n\nUn modelo de la gama de bicicletas eléctricas con la configuración indicada en esta ficha. Revisa el tamaño de las ruedas y las características del motor para elegir la versión que necesitas.\n\nCaracterísticas de esta versión:\n- Modelo del producto: DNA\n- Marca: RFN\n- Tipo Motor: Eléctrico Brush\n- Potencia Nominal: 100 W\n- Potencia Máxima: 150W\n- Batería: De litio extraible 24V 2.6Ah\n- Cargador de Batería: 29.4 V - 1 Ah\n- Autonomia: de 10 a 15 km\n- Velocidad Máxima: Hasta 15km/h ( según peso del conductor y terreno )\n- Limitador de velocidad: En 2 posiciones ( 7km/h - 15km/h)\n- Tiempo de carga de la batería: 1-2 horas\n- Frenos: de Tambor Trasero\n- Chasis: Aleación de Aluminio\n- Suspensión delantera: Horquilla convencional\n- Neumáticos: Del. y Tra.: 12\" x 2.40\"\n- Llantas: 12 pulgadas\n- Transmisión: Por cadena\n- Altura del suelo al asiento: Regulable de 39 a 44cm\n- Manillar: Aluminio\n- Carga máxima: 34 Kg\n- Dimensiones del producto: 98 cm x 52 cm x 57 cm (Largo x Ancho x Alto)\n- Peso del producto: 9 Kg\n- Dimensiones del embalaje: 87 cm x 27 cm x 47.5 cm (Largo x Ancho x Alto)\n\nConfiguración: Color: Rosa.",
+      "price": 358.8,
+      "currency": "EUR",
+      "stock": 5,
+      "category": "bicicleta",
+      "subcategory": null,
+      "categoryName": "Bicicletas eléctricas",
+      "subcategoryName": null,
+      "brand": "RFN",
+      "shippingCost": 50,
+      "shippingCountries": "[\"ES\",\"FR\",\"IT\",\"PT\"]",
+      "stripeLink": "",
+      "active": true,
+      "featured": false,
+      "images": [
+        {
+          "url": "https://19e3cavvu8vlpeyt.public.blob.vercel-storage.com/products/import-apollo-20261113/0a4fee424eaf38b2ce4923ab625ed04068c5b8e3000ac2f96c15efeda35ed703.jpg",
+          "alt": "Bicicleta eléctrica niño 12\" 100W RFN DNA - Rosa"
+        },
+        {
+          "url": "https://19e3cavvu8vlpeyt.public.blob.vercel-storage.com/products/import-apollo-20261113/25357737245103bac83775cb48a65bec6f8b49612c1218cbfc512e5ab75eff94.jpg",
+          "alt": "Bicicleta eléctrica niño 12\" 100W RFN DNA - Rosa"
+        },
+        {
+          "url": "https://19e3cavvu8vlpeyt.public.blob.vercel-storage.com/products/import-apollo-20261113/30524dcc90ca970e27b5b3b206635e745c85101b93d6196d1ce4b9153365e3bd.jpg",
+          "alt": "Bicicleta eléctrica niño 12\" 100W RFN DNA - Rosa"
+        },
+        {
+          "url": "https://19e3cavvu8vlpeyt.public.blob.vercel-storage.com/products/import-apollo-20261113/9b2d4daab28563c062982993fb1461d673f2fb5fd0f26c9c99d8cd4b30d84de5.jpg",
+          "alt": "Bicicleta eléctrica niño 12\" 100W RFN DNA - Rosa"
+        },
+        {
+          "url": "https://19e3cavvu8vlpeyt.public.blob.vercel-storage.com/products/import-apollo-20261113/3affd391e02fd18059f29ed1fdf6502e76854f446c83a50c097f34f09a3a2cd3.jpg",
+          "alt": "Bicicleta eléctrica niño 12\" 100W RFN DNA - Rosa"
+        },
+        {
+          "url": "https://19e3cavvu8vlpeyt.public.blob.vercel-storage.com/products/import-apollo-20261113/79c83790002b2106161072bf2b7db60334a9dd27d49ca79dd5b0dd2cee0f8897.jpg",
+          "alt": "Bicicleta eléctrica niño 12\" 100W RFN DNA - Rosa"
+        }
+      ],
+      "source": {
+        "url": "https://www.motosapollo.com/bicicletas-electricas/bicicleta-electrica-nino-12-100w-rfn-dna?group%5B13%5D=433",
+        "productId": 2737,
+        "variantId": 3217,
+        "reference": "4057",
+        "priceCents": 29900,
+        "quantity": 30,
+        "availableForOrder": true,
+        "checkedAt": "2026-11-13T17:21:29.401814+00:00"
+      },
+      "motorPower": 100,
+      "battery": "De litio extraible 24V 2.6Ah",
+      "maxSpeed": 15,
+      "maxLoad": 34,
+      "weight": 9.0
+    }
+  ]
+}
