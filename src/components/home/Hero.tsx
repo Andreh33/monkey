@@ -6,11 +6,11 @@ import { motion } from "framer-motion";
 import { ArrowDown, Wrench, ShoppingBag } from "lucide-react";
 import { PhoneButtons } from "@/components/shared/PhoneButtons";
 import promotion from "@/config/black-friday.json";
-import { BlackFridayRibbon } from "@/components/shop/BlackFridayRibbon";
+import { BlackFridayPopup } from "@/components/shop/BlackFridayPopup";
 
 export function Hero() {
   return (
-    <section className="relative min-h-screen w-full overflow-hidden flex items-center">
+    <><section className="relative min-h-screen w-full overflow-hidden flex items-center">
       <div className="absolute inset-0">
         <Image
           src="/imagenes/local-15.jpeg"
@@ -25,25 +25,6 @@ export function Hero() {
       </div>
 
       <div className="container-custom relative z-10 min-w-0 w-full py-24">
-        {promotion.active && (
-          <motion.div
-            data-mobile-arrival=""
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="mb-4 max-w-xl overflow-hidden rounded-lg bg-accent-red text-white text-sm font-bold"
-          >
-            <BlackFridayRibbon />
-            <div className="flex flex-col items-start gap-2 px-5 py-4">
-              <span>Ya está aquí tu día más esperado.</span>
-              <span className="font-display text-3xl leading-none tracking-wide sm:text-4xl">Los precios más monos. BLACK FRIDAY</span>
-              <span>12 € de descuento con <strong className="font-mono">monkeymotion</strong> en compras superiores a 200 € en productos.</span>
-              <span className="text-xs font-normal">Envío no incluido en el mínimo. Introduce el código al finalizar la compra.</span>
-            </div>
-            <BlackFridayRibbon reverse />
-          </motion.div>
-        )}
-
         <motion.p
           data-mobile-arrival=""
             initial={{ opacity: 0, y: 20 }}
@@ -121,5 +102,6 @@ export function Hero() {
         <ArrowDown className="w-4 h-4" />
       </motion.div>
     </section>
+    {promotion.active && <BlackFridayPopup />}</>
   );
 }
