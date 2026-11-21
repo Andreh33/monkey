@@ -35,17 +35,28 @@ export function Hero() {
           ★ TARRAGONA · DESDE 2017 ★
         </motion.p>
 
+        <div className="grid min-w-0 items-center gap-7 lg:grid-cols-[minmax(0,1fr)_250px] lg:gap-10">
         <motion.h1
           data-mobile-arrival=""
             initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.1 }}
-          className="display-xl max-w-5xl"
+          className="min-w-0 font-display text-[clamp(2.75rem,6.5vw,7.5rem)] leading-[0.92] tracking-[-0.01em] uppercase"
         >
           TU PATINETE FALLA.<br />
           NOSOTROS LO DEJAMOS<br />
           <span className="text-gradient">NUEVO.</span>
         </motion.h1>
+
+        {promotion.active && (
+          <div className="min-w-0 justify-self-start px-3 py-2 lg:justify-self-center" data-hero-promo-code="">
+            <p className="flex -rotate-6 items-center gap-3 rounded-md border-2 border-black bg-accent-red px-4 py-3 text-white shadow-xl lg:flex-col lg:items-start lg:gap-1 lg:px-5 lg:py-5">
+              <span className="text-sm font-semibold lg:text-base">Código:</span>
+              <strong className="font-mono text-lg font-bold tracking-tight sm:text-xl lg:text-2xl">{promotion.code}</strong>
+            </p>
+          </div>
+        )}
+        </div>
 
         <motion.p
           data-mobile-arrival=""
