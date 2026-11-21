@@ -31,17 +31,17 @@ export function BlackFridayPopup() {
   if (!visible) return null;
 
   return (
-    <aside data-black-friday-popup="" aria-label="Oferta Black Friday" className="fixed left-1/2 top-1/2 z-40 max-h-[calc(100dvh-2rem)] w-[calc(100%-2rem)] max-w-[320px] -translate-x-1/2 -translate-y-1/2 overflow-y-auto overflow-x-hidden rounded-xl border-2 border-black bg-black/[0.72] text-white shadow-[0_16px_60px_rgba(0,0,0,0.5)] backdrop-blur-md">
-      <button type="button" onClick={dismiss} aria-label="Cerrar oferta Black Friday" className="absolute right-2 top-2 flex h-11 w-11 items-center justify-center rounded-full border border-black bg-black text-white hover:bg-neutral-800 focus-visible:outline focus-visible:outline-2 focus-visible:outline-white"><X size={20}/></button>
-      <div className="px-5 pb-3 pt-5">
-        <p className="pr-12 text-[11px] font-bold tracking-[0.18em] text-accent-red">BLACK FRIDAY</p>
-        <p className="mt-3 pr-4 font-display text-[32px] leading-[1.05] tracking-wide">Ya están aquí las ofertas más monas.</p>
-        <p className="mt-4 text-sm font-bold"><span className="text-xl">12 €</span> de descuento</p>
-        <p className="mt-2 text-xs leading-relaxed">En compras superiores a 200 € en productos, envío aparte. Aplica el código al pagar.</p>
-        <button type="button" onClick={copyCode} className="mt-4 min-h-11 w-full rounded-md border border-black bg-accent-red px-3 py-2.5 text-xs font-bold text-white hover:bg-accent-red-deep focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white">{copyStatus === 'copied' ? 'Código copiado ✓' : 'Copiar código: monkeymotion'}</button>
+    <aside data-black-friday-popup="" aria-label="Oferta Black Friday" className="fixed left-1/2 top-1/2 z-40 max-h-[calc(100dvh-2rem)] w-[calc(100%-2rem)] max-w-[320px] lg:max-w-[520px] -translate-x-1/2 -translate-y-1/2 overflow-y-auto overflow-x-hidden rounded-xl border-2 border-black bg-black/[0.72] text-white shadow-[0_16px_60px_rgba(0,0,0,0.5)] backdrop-blur-md">
+      <button type="button" onClick={dismiss} aria-label="Cerrar oferta Black Friday" className="absolute right-2 top-2 lg:right-4 lg:top-4 flex h-11 w-11 items-center justify-center rounded-full border border-black bg-black text-white hover:bg-neutral-800 focus-visible:outline focus-visible:outline-2 focus-visible:outline-white"><X size={20}/></button>
+      <div className="px-5 pb-3 pt-5 lg:px-8 lg:pb-4 lg:pt-8">
+        <p className="pr-12 text-[11px] lg:text-sm font-bold tracking-[0.18em] text-accent-red">BLACK FRIDAY</p>
+        <p className="mt-3 pr-4 font-display text-[32px] lg:text-5xl leading-[1.05] tracking-wide">Ya están aquí las ofertas más monas.</p>
+        <p className="mt-4 text-sm lg:mt-5 lg:text-xl font-bold"><span className="text-xl lg:text-3xl">12 €</span> de descuento</p>
+        <p className="mt-2 text-xs lg:text-base leading-relaxed">En compras superiores a 200 € en productos, envío aparte. Aplica el código al pagar.</p>
+        <button type="button" onClick={copyCode} className="mt-4 min-h-11 w-full rounded-md border border-black bg-accent-red px-3 py-2.5 text-xs lg:text-base lg:min-h-14 lg:mt-5 font-bold text-white hover:bg-accent-red-deep focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white">{copyStatus === 'copied' ? 'Código copiado ✓' : 'Copiar código: monkeymotion'}</button>
         <p role="status" className="sr-only">{copyStatus === 'copied' ? 'Código monkeymotion copiado.' : ''}</p>
         {copyStatus === 'manual' && <p className="mt-1 select-text text-xs">Copia este código: <strong>monkeymotion</strong></p>}
-        <Link href="/tienda" onClick={dismiss} className="mt-1 flex min-h-11 items-center justify-center text-xs font-semibold underline underline-offset-4 focus-visible:outline focus-visible:outline-2 focus-visible:outline-white">Ver ofertas</Link>
+        <Link href="/tienda" onClick={dismiss} className="mt-1 flex min-h-11 items-center justify-center text-xs lg:text-sm font-semibold underline underline-offset-4 focus-visible:outline focus-visible:outline-2 focus-visible:outline-white">Ver ofertas</Link>
       </div>
       <div aria-hidden="true" className="pointer-events-none relative h-12 overflow-hidden sm:h-16">
         <div className="absolute -left-4 -right-4 top-2 -rotate-6 sm:top-3"><BlackFridayRibbon /></div>
