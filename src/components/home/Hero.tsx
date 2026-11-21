@@ -24,7 +24,7 @@ export function Hero() {
         <div className="absolute inset-0 bg-gradient-to-t from-bg-primary via-transparent to-transparent" />
       </div>
 
-      <div className="container-custom relative z-10 py-24">
+      <div className="container-custom relative z-10 min-w-0 w-full py-24">
         {promotion.active && (
           <motion.div
             data-mobile-arrival=""
