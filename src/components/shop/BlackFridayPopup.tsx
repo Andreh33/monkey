@@ -31,7 +31,7 @@ export function BlackFridayPopup() {
   if (!visible) return null;
 
   return (
-    <aside aria-label="Oferta Black Friday" className="fixed left-1/2 top-1/2 z-40 max-h-[calc(100dvh-2rem)] w-[calc(100%-2rem)] max-w-[320px] -translate-x-1/2 -translate-y-1/2 overflow-y-auto overflow-x-hidden rounded-xl border-2 border-black bg-black/[0.72] text-white shadow-[0_16px_60px_rgba(0,0,0,0.5)]">
+    <aside data-black-friday-popup="" aria-label="Oferta Black Friday" className="fixed left-1/2 top-1/2 z-40 max-h-[calc(100dvh-2rem)] w-[calc(100%-2rem)] max-w-[320px] -translate-x-1/2 -translate-y-1/2 overflow-y-auto overflow-x-hidden rounded-xl border-2 border-black bg-black/[0.72] text-white shadow-[0_16px_60px_rgba(0,0,0,0.5)] backdrop-blur-md">
       <button type="button" onClick={dismiss} aria-label="Cerrar oferta Black Friday" className="absolute right-2 top-2 flex h-11 w-11 items-center justify-center rounded-full border border-black bg-black text-white hover:bg-neutral-800 focus-visible:outline focus-visible:outline-2 focus-visible:outline-white"><X size={20}/></button>
       <div className="px-5 pb-3 pt-5">
         <p className="pr-12 text-[11px] font-bold tracking-[0.18em] text-accent-red">BLACK FRIDAY</p>

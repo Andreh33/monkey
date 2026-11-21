@@ -101,6 +101,7 @@ export function InstallPrompt() {
           transition={{ type: "spring", stiffness: 300, damping: 26 }}
           className="fixed bottom-24 sm:bottom-4 left-4 right-4 sm:right-auto z-[60] w-auto sm:w-[360px] max-w-[calc(100vw-2rem)]"
           role="dialog"
+          data-install-prompt=""
           aria-label="Instalar la aplicación"
         >
           <div
