@@ -8,7 +8,6 @@ import { TikTokSection } from "@/components/home/TikTokSection";
 import { TestimonialsCarousel } from "@/components/home/TestimonialsCarousel";
 import { CtaBanner } from "@/components/home/CtaBanner";
 import { RegistrationCta } from "@/components/home/RegistrationCta";
-import MonkeyWalkerLoader from "@/components/layout/MonkeyWalkerLoader";
 import { equivalentLanguages } from "@/lib/storefront-routes";
 
 export const metadata = {
@@ -21,7 +20,6 @@ export const revalidate = 300;
 export default function HomePage() {
   return (
     <>
-      <MonkeyWalkerLoader />
       <Hero />
       <ServicesSplit />
       <RegistrationCta />
