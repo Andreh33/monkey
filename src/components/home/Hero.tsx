@@ -6,6 +6,7 @@ import { motion } from "framer-motion";
 import { ArrowDown, Wrench, ShoppingBag } from "lucide-react";
 import { PhoneButtons } from "@/components/shared/PhoneButtons";
 import promotion from "@/config/black-friday.json";
+import { BlackFridayRibbon } from "@/components/shop/BlackFridayRibbon";
 
 export function Hero() {
   return (
@@ -30,11 +31,16 @@ export function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="mb-4 inline-flex flex-col items-start gap-1 rounded-lg bg-accent-red text-white px-4 py-3 text-sm font-bold"
+            className="mb-4 max-w-xl overflow-hidden rounded-lg bg-accent-red text-white text-sm font-bold"
           >
-            <span className="font-display text-2xl tracking-wide">BLACK FRIDAY · 12 € DE DESCUENTO</span>
-            <span>Código <strong className="font-mono">monkeymotion</strong> en compras superiores a 200 € en productos.</span>
-            <span className="text-xs font-normal">Envío no incluido en el mínimo. Introduce el código al finalizar la compra.</span>
+            <BlackFridayRibbon />
+            <div className="flex flex-col items-start gap-2 px-5 py-4">
+              <span>Ya está aquí tu día más esperado.</span>
+              <span className="font-display text-3xl leading-none tracking-wide sm:text-4xl">Los precios más monos. BLACK FRIDAY</span>
+              <span>12 € de descuento con <strong className="font-mono">monkeymotion</strong> en compras superiores a 200 € en productos.</span>
+              <span className="text-xs font-normal">Envío no incluido en el mínimo. Introduce el código al finalizar la compra.</span>
+            </div>
+            <BlackFridayRibbon reverse />
           </motion.div>
         )}
 
