@@ -16,7 +16,6 @@ export function BlackFridayBanner() {
   const d=promotionCopy[locale];
   if(!promotion.active||closed||pathname.includes('/admin')) return null;
   return <aside aria-label="Black Friday" className="relative w-full overflow-hidden bg-accent-red text-white sm:mx-auto sm:max-w-4xl">
-    <BlackFridayRibbon />
     <div className="mx-auto max-w-7xl px-3 py-2 text-center sm:px-5 sm:py-4">
       <p className="px-7 text-[10px] font-semibold sm:text-sm">{d.arrival}</p>
       <p className="mt-0.5 font-display text-xl leading-none tracking-wide sm:mt-1 sm:text-4xl">{d.headline} <span className="inline-block">BLACK FRIDAY</span></p>
@@ -27,6 +26,6 @@ export function BlackFridayBanner() {
       <p className="mx-auto mt-1 max-w-3xl text-[10px] leading-snug sm:mt-2 sm:text-xs sm:leading-relaxed"><span className="sm:hidden">{d.mobileTerms}</span><span className="hidden sm:inline">{d.terms}</span></p>
     </div>
     <BlackFridayRibbon reverse />
-    <button type="button" onClick={()=>setClosed(true)} aria-label={d.close} className="absolute right-0 top-3 p-2 rounded sm:right-1 sm:top-7 sm:p-3 hover:bg-black/20 focus-visible:outline focus-visible:outline-2 focus-visible:outline-white"><X className="h-3.5 w-3.5 sm:h-[18px] sm:w-[18px]"/></button>
+    <button type="button" onClick={()=>setClosed(true)} aria-label={d.close} className="absolute right-0 top-0 p-2 rounded sm:right-1 sm:top-0 sm:p-3 hover:bg-black/20 focus-visible:outline focus-visible:outline-2 focus-visible:outline-white"><X className="h-3.5 w-3.5 sm:h-[18px] sm:w-[18px]"/></button>
   </aside>;
 }
