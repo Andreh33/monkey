@@ -25,7 +25,10 @@ export function BlackFridayBanner() {
       </div>
       <p className="mx-auto mt-1 max-w-3xl text-[10px] leading-snug sm:mt-2 sm:text-xs sm:leading-relaxed"><span className="sm:hidden">{d.mobileTerms}</span><span className="hidden sm:inline">{d.terms}</span></p>
     </div>
-    <BlackFridayRibbon reverse />
+    <div aria-hidden="true" className="pointer-events-none relative h-10 overflow-hidden sm:h-16">
+      <div className="absolute -left-4 -right-4 top-2 -rotate-3 sm:top-4 sm:-rotate-2"><BlackFridayRibbon /></div>
+      <div className="absolute -left-4 -right-4 top-3 rotate-3 sm:top-5 sm:rotate-2"><BlackFridayRibbon reverse /></div>
+    </div>
     <button type="button" onClick={()=>setClosed(true)} aria-label={d.close} className="absolute right-0 top-0 p-2 rounded sm:right-1 sm:top-0 sm:p-3 hover:bg-black/20 focus-visible:outline focus-visible:outline-2 focus-visible:outline-white"><X className="h-3.5 w-3.5 sm:h-[18px] sm:w-[18px]"/></button>
   </aside>;
 }
