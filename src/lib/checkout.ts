@@ -1,12 +1,14 @@
 import { z } from "zod";
 import type { CheckoutCountry, CheckoutLineInput, CheckoutQuote } from "./checkout-types";
 import { CHECKOUT_COUNTRIES } from "./checkout-types";
+import promotion from "../config/black-friday.json";
 export { CHECKOUT_COUNTRIES } from "./checkout-types";
 
 export const checkoutTokenSchema = z.string().regex(/^[a-f0-9]{64}$/);
 const countrySchema = z.enum(CHECKOUT_COUNTRIES);
 const lineSchema = z.object({ productId: z.string().min(1).max(160), quantity: z.number().int().min(1).max(99) }).strict();
-export const checkoutQuoteSchema = z.object({ items: z.array(lineSchema).min(1).max(50), country: countrySchema, postalCode: z.string().trim().max(20).optional() }).strict();
+const promoCodeSchema = z.string().trim().max(64).transform(value => value.toLowerCase()).optional();
+export const checkoutQuoteSchema = z.object({ items: z.array(lineSchema).min(1).max(50), country: countrySchema, postalCode: z.string().trim().max(20).optional(), promoCode: promoCodeSchema }).strict();
 export const checkoutCustomerSchema = z.object({
   firstName: z.string().trim().min(1).max(100), lastName: z.string().trim().min(1).max(150),
   email: z.string().trim().email().max(254).transform(value => value.toLowerCase()),
@@ -21,6 +23,7 @@ export const checkoutCustomerSchema = z.object({
 export const checkoutCreateSchema = z.object({
   items: z.array(lineSchema).min(1).max(50), customer: checkoutCustomerSchema,
   checkoutToken: checkoutTokenSchema, termsAccepted: z.literal(true), locale: z.enum(["es", "fr", "it", "pt"]),
+  promoCode: promoCodeSchema,
 }).strict();
 
 export class CheckoutError extends Error {
@@ -47,7 +50,7 @@ export function moneyToCents(value: number): number {
   return Math.round((value + Number.EPSILON) * 100);
 }
 
-export function buildCheckoutQuote(items: CheckoutLineInput[], products: CheckoutCatalogProduct[], country: CheckoutCountry, _postalCode?: string): CheckoutQuote {
+export function buildCheckoutQuote(items: CheckoutLineInput[], products: CheckoutCatalogProduct[], country: CheckoutCountry, _postalCode?: string, rawPromoCode?: string): CheckoutQuote {
   if (!CHECKOUT_COUNTRIES.includes(country)) throw new CheckoutError("UNSUPPORTED_DESTINATION", "No está disponible el envío al país seleccionado.");
   if (!items.length || items.length > 50) throw new CheckoutError("INVALID_CART", "El carrito debe contener entre 1 y 50 productos.");
   const byId = new Map(products.map(product => [product.id, product]));
@@ -73,8 +76,15 @@ export function buildCheckoutQuote(items: CheckoutLineInput[], products: Checkou
   }
   const subtotalCents = lines.reduce((sum, line) => sum + line.lineTotalCents, 0);
   const shippingCents = lines.reduce((sum, line) => sum + line.shippingUnitCents * line.quantity, 0);
-  const totalCents = subtotalCents + shippingCents;
+  const promoCode = rawPromoCode?.trim().toLowerCase() || null;
+  let discountCents = 0;
+  if (promoCode) {
+    if (!promotion.active || promoCode !== promotion.code) throw new CheckoutError("INVALID_PROMO_CODE", "El código de descuento no es válido.");
+    if (subtotalCents <= promotion.minimumExclusiveCents) throw new CheckoutError("PROMO_MINIMUM", "El código requiere más de 200 € en productos, sin incluir el envío.");
+    discountCents = promotion.discountCents;
+  }
+  const totalCents = subtotalCents + shippingCents - discountCents;
   if (!Number.isSafeInteger(totalCents) || totalCents > 99999999) throw new CheckoutError("AMOUNT_TOO_LARGE", "El total supera el importe permitido para una compra.");
   if (totalCents < 50) throw new CheckoutError("MINIMUM_AMOUNT", "El importe mínimo de compra es 0,50 €.");
-  return { items: lines, subtotalCents, shippingCents, totalCents, currency: "EUR", allowedCountries };
+  return { items: lines, subtotalCents, shippingCents, totalCents, currency: "EUR", allowedCountries, discountCents, promoCode };
 }

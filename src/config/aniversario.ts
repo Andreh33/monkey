@@ -7,7 +7,7 @@
  * (El estado previo al aniversario está además guardado en el tag git `pre-aniversario-9`.)
  */
 export const ANIVERSARIO = {
-  activo: true,
+  activo: false,
   desde: "2017",
   hasta: "2026",
   anios: 9,

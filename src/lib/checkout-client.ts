@@ -6,6 +6,7 @@ const rejectedBeforeReservation = new Set([
   "PRODUCT_UNAVAILABLE", "INVALID_CATALOG_PRICE", "INVALID_SHIPPING_CONFIGURATION",
   "AMOUNT_TOO_LARGE", "MINIMUM_AMOUNT", "TOO_MANY_REQUESTS", "TOO_MANY_CHECKOUTS",
   "PAYMENT_NOT_CONFIGURED",
+  "INVALID_PROMO_CODE", "PROMO_MINIMUM",
 ]);
 export function checkoutAttemptCanReset(code: unknown, hasPreviousAttempt: boolean): boolean {
   if (code === "CHECKOUT_CHANGED" || code === "CHECKOUT_EXPIRED") return true;

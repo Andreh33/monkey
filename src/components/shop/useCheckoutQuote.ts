@@ -4,13 +4,13 @@ import { useCart, useCartHydration } from "@/lib/cart-store";
 import { CHECKOUT_COUNTRIES, type CheckoutCountry, type CheckoutQuote } from "@/lib/checkout-types";
 import { checkoutError } from "@/lib/checkout-copy";
 import type { Locale } from "@/lib/storefront-routes";
-export function useCheckoutQuote(locale: Locale, country: CheckoutCountry, postalCode: string, enabled = true) {
+export function useCheckoutQuote(locale: Locale, country: CheckoutCountry, postalCode: string, enabled = true, promoCode = "") {
   const hydrated = useCartHydration();
   const items = useCart(s => s.items);
   const syncQuote = useCart(s => s.syncQuote);
   const [revision, setRevision] = useState(0);
   const [allowedCountries, setAllowedCountries] = useState<CheckoutCountry[]>(["ES"]);
-  const requestKey = JSON.stringify({ items: items.map(i => ({ productId: i.id, quantity: i.quantity })), country, ...(postalCode.trim() ? { postalCode: postalCode.trim() } : {}) });
+  const requestKey = JSON.stringify({ items: items.map(i => ({ productId: i.id, quantity: i.quantity })), country, ...(postalCode.trim() ? { postalCode: postalCode.trim() } : {}), ...(promoCode ? { promoCode } : {}) });
   const [state, setState] = useState<{ key: string; quote: CheckoutQuote | null; error: string; loading: boolean }>({ key: "", quote: null, error: "", loading: true });
   useEffect(() => {
     if (!hydrated || !enabled) return;

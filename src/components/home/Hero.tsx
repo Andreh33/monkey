@@ -5,7 +5,7 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 import { ArrowDown, Wrench, ShoppingBag } from "lucide-react";
 import { PhoneButtons } from "@/components/shared/PhoneButtons";
-import { ANIVERSARIO } from "@/config/aniversario";
+import promotion from "@/config/black-friday.json";
 
 export function Hero() {
   return (
@@ -24,16 +24,17 @@ export function Hero() {
       </div>
 
       <div className="container-custom relative z-10 py-24">
-        {ANIVERSARIO.activo && (
+        {promotion.active && (
           <motion.div
             data-mobile-arrival=""
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="mb-4 inline-flex items-center gap-2 rounded-full px-4 py-1.5 text-xs font-extrabold uppercase tracking-wider"
-            style={{ background: "#FFD60A", color: "#0A0A0C" }}
+            className="mb-4 inline-flex flex-col items-start gap-1 rounded-lg bg-accent-red text-white px-4 py-3 text-sm font-bold"
           >
-            🎉 {ANIVERSARIO.anios} años rodando contigo · {ANIVERSARIO.desde}–{ANIVERSARIO.hasta}
+            <span className="font-display text-2xl tracking-wide">BLACK FRIDAY · 12 € DE DESCUENTO</span>
+            <span>Código <strong className="font-mono">monkeymotion</strong> en compras superiores a 200 € en productos.</span>
+            <span className="text-xs font-normal">Envío no incluido en el mínimo. Introduce el código al finalizar la compra.</span>
           </motion.div>
         )}
 

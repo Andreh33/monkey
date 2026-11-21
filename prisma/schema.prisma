@@ -127,6 +127,8 @@ model Order {
   postalCode String?
   country String?
   subtotalCents Int?
+  discountCents Int @default(0)
+  promoCode String?
   shippingCents Int?
   totalCents Int?
   currency String @default("EUR")

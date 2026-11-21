@@ -1,4 +1,5 @@
 import type { Locale } from "./storefront-routes";
+import { promotionCopy } from "./promotion-copy";
 const es = {
   cartLimit: "El carrito admite hasta 50 productos distintos. Finaliza este pedido antes de añadir más.", invalid: "Revisa los datos de contacto y la dirección de entrega.",
   cart: "Carrito", delivery: "Entrega", payment: "Pago", checkout: "Finalizar compra",
@@ -95,6 +96,8 @@ export function checkoutMoney(cents: number, locale: Locale) {
   return new Intl.NumberFormat({ es: "es-ES", fr: "fr-FR", it: "it-IT", pt: "pt-PT" }[locale], { style: "currency", currency: "EUR" }).format(cents / 100);
 }
 export function checkoutError(code: string | undefined, locale: Locale) {
+  if (code === "INVALID_PROMO_CODE") return promotionCopy[locale].invalid;
+  if (code === "PROMO_MINIMUM") return promotionCopy[locale].minimum;
   const d = checkoutCopy[locale];
   if (code && /STOCK|QUANTITY/.test(code)) return d.stockError;
   if (code && /COUNTRY|POSTAL|SHIPPING|DESTINATION/.test(code)) return d.countryError;

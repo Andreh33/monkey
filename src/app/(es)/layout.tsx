@@ -7,7 +7,7 @@ import { Footer } from "@/components/layout/Footer";
 import { TopBar } from "@/components/layout/TopBar";
 import { WhatsAppButton } from "@/components/shared/WhatsAppButton";
 import { InstallPrompt } from "@/components/shared/InstallPrompt";
-import { BannerAniversario } from "@/components/aniversario/BannerAniversario";
+import { BlackFridayBanner } from "@/components/shop/BlackFridayBanner";
 import { OverlayAniversario } from "@/components/aniversario/OverlayAniversario";
 import { CartDrawer } from "@/components/shop/CartDrawer";
 import { Analytics } from "@vercel/analytics/next";
@@ -114,7 +114,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
         {/* Grafo único de entidad (Store/OnlineStore ↔ WebSite por @id). */}
         <JsonLd data={siteGraphSchema()} />
         <Providers>
-          <BannerAniversario />
+          <BlackFridayBanner />
           <TopBar />
           <Navbar categories={categories} />
           <div className="container-custom py-3 border-b border-border"><Suspense><LanguageSwitcher locale="es" /></Suspense></div>

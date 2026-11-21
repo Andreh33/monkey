@@ -25,6 +25,7 @@ class FakeStripe implements CheckoutGateway {
     if (!session) {
       this.params.push(params);
       session = { id: `cs_test_${key}`, url: `https://checkout.stripe.com/pay/${key}`, status: "open", payment_status: "unpaid", currency: "eur", amount_total: params.line_items.reduce((n: number, line: any) => n + line.price_data.unit_amount * line.quantity, 0) + (params.shipping_options?.[0]?.shipping_rate_data.fixed_amount.amount ?? 0), client_reference_id: params.client_reference_id, metadata: params.metadata, payment_intent: null, livemode: false };
+      if (params.discounts?.[0]?.coupon === 'monkey_black_friday_2026_12eur') session.amount_total! -= 1200;
       this.sessions.set(key, session);
     }
     if (this.nextError === "timeout") { this.nextError = undefined; throw new CheckoutGatewayError(false); }
@@ -53,6 +54,27 @@ async function fixture(run: (db: PrismaClient, gateway: FakeStripe, service: Ret
     if (path.dirname(resolved) === tempRoot && path.basename(resolved).startsWith("monkey-checkout-test-")) rmSync(resolved, { recursive: true, force: true });
   }
 }
+
+test("Black Friday survives idempotent retries, Stripe confirmation and admin persistence", () => fixture(async (db, gateway, service) => {
+  await db.product.update({where:{id:'p1'},data:{price:200.01}});
+  const discounted={...input('a',1),promoCode:' MONKEYMOTION '};
+  const created=await service.create(discounted);
+  assert.equal((await service.create({...discounted,promoCode:'monkeymotion'})).orderId,created.orderId);
+  assert.deepEqual(gateway.params[0].discounts,[{coupon:'monkey_black_friday_2026_12eur'}]);
+  assert.equal(gateway.params[0].allow_promotion_codes,undefined);
+  assert.equal(gateway.params[0].line_items[0].price_data.unit_amount,20001);
+  assert.equal(gateway.params[0].shipping_options[0].shipping_rate_data.fixed_amount.amount,500);
+  await assert.rejects(service.create({...discounted,promoCode:undefined}),(e:any)=>e.code==='CHECKOUT_CHANGED');
+  const session=[...gateway.sessions.values()][0];session.status='complete';session.payment_status='paid';
+  await service.processEvent({id:'evt_promo',type:'checkout.session.completed',session});
+  const order=await db.order.findUniqueOrThrow({where:{id:created.orderId}});
+  assert.equal(order.status,'PAID');assert.equal(order.totalCents,19301);assert.equal(order.total,193.01);
+  assert.equal(order.discountCents,1200);assert.equal(order.promoCode,'monkeymotion');
+  assert.equal((await service.status(discounted.checkoutToken)).discountCents,1200);
+  await db.product.update({where:{id:'p1'},data:{price:100}});
+  await assert.rejects(service.create({...input('b',1),promoCode:'monkeymotion'}),(e:any)=>e.code==='PROMO_MINIMUM');
+  assert.equal(await db.order.count(),1);assert.equal((await db.product.findUniqueOrThrow({where:{id:'p1'}})).stock,4);
+}));
 
 test("stock invalidation runs after committed reservations/releases and not read-only payment polls", () => fixture(async (db, gateway) => {
   let invalidations = 0;

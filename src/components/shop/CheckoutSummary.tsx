@@ -2,7 +2,8 @@ import { LockKeyhole } from "lucide-react";
 import { checkoutCopy, checkoutMoney } from "@/lib/checkout-copy";
 import type { CheckoutQuote } from "@/lib/checkout-types";
 import type { Locale } from "@/lib/storefront-routes";
-export function CheckoutSummary({ locale, quote, loading, children, showItems = false, showPaymentNote = true }: { locale: Locale; quote: (Pick<CheckoutQuote, "subtotalCents" | "shippingCents" | "totalCents"> & Partial<Pick<CheckoutQuote, "items">>) | null; loading?: boolean; children?: React.ReactNode; showItems?: boolean; showPaymentNote?: boolean }) {
+import { promotionCopy } from "@/lib/promotion-copy";
+export function CheckoutSummary({ locale, quote, loading, children, showItems = false, showPaymentNote = true }: { locale: Locale; quote: (Pick<CheckoutQuote, "subtotalCents" | "shippingCents" | "totalCents"> & Partial<Pick<CheckoutQuote, "items" | "discountCents" | "promoCode">>) | null; loading?: boolean; children?: React.ReactNode; showItems?: boolean; showPaymentNote?: boolean }) {
   const d = checkoutCopy[locale];
   return <aside className="card-base p-6 sm:p-8 self-start lg:sticky lg:top-36">
     <h2 className="font-display text-3xl mb-6">{d.summary}</h2>
@@ -10,6 +11,7 @@ export function CheckoutSummary({ locale, quote, loading, children, showItems = 
     {loading ? <p className="text-text-secondary py-6" role="status">{d.loading}</p> : quote && <dl className="space-y-4">
       <div className="flex justify-between gap-4"><dt className="text-text-secondary">{d.subtotal}</dt><dd className="font-mono">{checkoutMoney(quote.subtotalCents, locale)}</dd></div>
       <div className="flex justify-between gap-4"><dt className="text-text-secondary">{d.shipping}</dt><dd className="font-mono">{checkoutMoney(quote.shippingCents, locale)}</dd></div>
+      {!!quote.discountCents && <div className="flex justify-between gap-4 text-success"><dt>{promotionCopy[locale].discount} <span className="font-mono text-xs">{quote.promoCode}</span></dt><dd className="font-mono">−{checkoutMoney(quote.discountCents, locale)}</dd></div>}
       <div className="flex justify-between gap-4 border-t border-border pt-5"><dt className="font-semibold">{d.total}</dt><dd className="font-mono text-2xl text-accent-orange">{checkoutMoney(quote.totalCents, locale)}</dd></div>
     </dl>}
     <p className="text-xs text-text-muted mt-4">{d.included}. {d.shippingNotice}</p>

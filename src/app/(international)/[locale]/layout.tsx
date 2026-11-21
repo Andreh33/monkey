@@ -1,3 +1,4 @@
+import { BlackFridayBanner } from "@/components/shop/BlackFridayBanner";
 import type { Metadata } from "next";
 import {
   Bebas_Neue,
@@ -71,6 +72,7 @@ export default function InternationalLayout({
       <body>
         <Providers>
           <LocaleProvider locale={locale}>
+            <BlackFridayBanner />
             <StoreHeader locale={locale} />
             <main className="min-h-screen">{children}</main>
             <StoreFooter locale={locale} />

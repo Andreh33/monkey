@@ -4,6 +4,7 @@ import type Stripe from "stripe";
 import { buildCheckoutQuote, CheckoutError, checkoutCreateSchema, checkoutQuoteSchema, checkoutTokenSchema, normalizedLines } from "./checkout";
 import type { CheckoutCreateInput, CheckoutQuoteInput, CheckoutQuoteItem, CheckoutStatusResult } from "./checkout-types";
 import { decryptStripeRequest, encryptStripeRequest } from "./checkout-crypto";
+import promotion from "../config/black-friday.json";
 
 export const CHECKOUT_INTEGRATION = "monkey-checkout-v1";
 export type PaymentSession = {
@@ -31,6 +32,7 @@ export function buildStripeSessionParams(order: Order, token: string, origin: st
   const items = orderItems(order);
   return {
     mode: "payment",
+    ...(order.discountCents ? { discounts: [{ coupon: promotion.stripeCouponId }] } : {}),
     adaptive_pricing: { enabled: false },
     automatic_tax: { enabled: false },
     client_reference_id: order.id,
@@ -166,13 +168,13 @@ export function createCheckoutService({ db, gateway, origin, encryptionSecret, n
     const input = checkoutQuoteSchema.parse(raw);
     await reconcileExpiredReservations();
     const products = await db.product.findMany({ where: { id: { in: input.items.map(item => item.productId) } }, include: { images: { orderBy: { order: "asc" }, take: 1 } } });
-    return buildCheckoutQuote(input.items, products, input.country, input.postalCode);
+    return buildCheckoutQuote(input.items, products, input.country, input.postalCode, input.promoCode);
   }
 
   async function create(raw: CheckoutCreateInput, userId?: string, reservationOwnerHash?: string) {
     const input = checkoutCreateSchema.parse(raw);
     const checkoutTokenHash = hash(input.checkoutToken);
-    const requestHash = hash(JSON.stringify({ items: normalizedLines(input.items), customer: { ...input.customer, addressLine2: input.customer.addressLine2 || "" }, locale: input.locale, termsAccepted: true }));
+    const requestHash = hash(JSON.stringify({ items: normalizedLines(input.items), customer: { ...input.customer, addressLine2: input.customer.addressLine2 || "" }, locale: input.locale, termsAccepted: true, ...(input.promoCode ? { promoCode: input.promoCode } : {}) }));
     let order: Order;
     try {
       order = await transaction(async tx => {
@@ -180,7 +182,7 @@ export function createCheckoutService({ db, gateway, origin, encryptionSecret, n
         if (existing) return existing;
         if (reservationOwnerHash && await tx.order.count({ where: { reservationOwnerHash, status: "PENDING", stockReleased: false } }) >= 5) throw new CheckoutError("TOO_MANY_CHECKOUTS", "Hay varios pagos pendientes. Termina o cancela uno antes de iniciar otro.", 429);
         const products = await tx.product.findMany({ where: { id: { in: input.items.map(item => item.productId) } }, include: { images: { orderBy: { order: "asc" }, take: 1 } } });
-        const priced = buildCheckoutQuote(input.items, products, input.customer.country, input.customer.postalCode);
+        const priced = buildCheckoutQuote(input.items, products, input.customer.country, input.customer.postalCode, input.promoCode);
         for (const item of priced.items) {
           const reserved = await tx.product.updateMany({ where: { id: item.productId, active: true, stock: { gte: item.quantity } }, data: { stock: { decrement: item.quantity } } });
           if (reserved.count !== 1) throw new CheckoutError("INSUFFICIENT_STOCK", `No hay unidades suficientes de ${item.name}.`, 409, item.productId);
@@ -189,6 +191,7 @@ export function createCheckoutService({ db, gateway, origin, encryptionSecret, n
         const created = await tx.order.create({ data: {
           ...(userId ? { userId } : {}), ...input.customer, locale: input.locale, status: "PENDING", fulfillmentStatus: "UNFULFILLED",
           subtotalCents: priced.subtotalCents, shippingCents: priced.shippingCents, totalCents: priced.totalCents, currency: "EUR",
+          discountCents: priced.discountCents ?? 0, promoCode: priced.promoCode,
           total: priced.totalCents / 100, items: JSON.stringify(priced.items), checkoutTokenHash, requestHash, reservationOwnerHash, stripeLiveMode: gateway.liveMode,
           expiresAt: new Date(Math.floor(now().getTime() / 1000) * 1000 + 35 * 60 * 1000),
         } });
@@ -223,7 +226,7 @@ export function createCheckoutService({ db, gateway, origin, encryptionSecret, n
     return order;
   }
   function publicStatus(order: Order): CheckoutStatusResult {
-    return { orderId: order.id, status: order.status as CheckoutStatusResult["status"], paid: order.status === "PAID", createdAt: order.createdAt.toISOString(), items: orderItems(order), subtotalCents: order.subtotalCents!, shippingCents: order.shippingCents!, totalCents: order.totalCents!, currency: "EUR" };
+    return { orderId: order.id, status: order.status as CheckoutStatusResult["status"], paid: order.status === "PAID", createdAt: order.createdAt.toISOString(), items: orderItems(order), subtotalCents: order.subtotalCents!, shippingCents: order.shippingCents!, totalCents: order.totalCents!, discountCents: order.discountCents, promoCode: order.promoCode, currency: "EUR" };
   }
   async function status(token: string) {
     let order = await findTokenOrder(token);

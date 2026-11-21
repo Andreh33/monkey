@@ -9,11 +9,15 @@ import type { CheckoutCountry, CheckoutCustomer, CheckoutCreateInput, CheckoutCr
 import { useCheckoutQuote } from "./useCheckoutQuote";
 import { CheckoutSummary } from "./CheckoutSummary";
 import { CheckoutSteps, CountrySelect, EmptyCart } from "./CartPage";
+import { promotionCopy } from "@/lib/promotion-copy";
 
 const tokenIsValid = (value: string) => /^[a-f0-9]{64}$/.test(value);
 function newToken() { return Array.from(crypto.getRandomValues(new Uint8Array(32)), b => b.toString(16).padStart(2, "0")).join(""); }
 export function CheckoutPage({ locale = "es", initialCountry = "ES", cancelled = false, cancelToken = "" }: { locale?: Locale; initialCountry?: CheckoutCountry; cancelled?: boolean; cancelToken?: string }) {
   const d = checkoutCopy[locale];
+  const promoText = promotionCopy[locale];
+  const [promoDraft, setPromoDraft] = useState("");
+  const [promoCode, setPromoCode] = useState("");
   const items = useCart(s => s.items);
   const [customer, setCustomer] = useState<CheckoutCustomer>({ firstName: "", lastName: "", email: "", phone: "", addressLine1: "", addressLine2: "", city: "", region: "", postalCode: "", country: initialCountry });
   const [terms, setTerms] = useState(false);
@@ -23,7 +27,7 @@ export function CheckoutPage({ locale = "es", initialCountry = "ES", cancelled =
   const [cancelRevision, retryCancel] = useState(0);
   const [cancelError, setCancelError] = useState("");
   const attempt = useRef<{ fingerprint: string; token: string }>();
-  const { quote, allowedCountries, loading, error: quoteError, refresh, hydrated } = useCheckoutQuote(locale, customer.country, customer.postalCode, cancelReady);
+  const { quote, allowedCountries, loading, error: quoteError, refresh, hydrated } = useCheckoutQuote(locale, customer.country, customer.postalCode, cancelReady, promoCode);
   const confirmationUrl = (token: string) => localePath(locale, `/checkout/confirmacion?token=${encodeURIComponent(token)}`);
   useEffect(() => {
     if (!cancelled || !tokenIsValid(cancelToken)) return;
@@ -44,7 +48,7 @@ export function CheckoutPage({ locale = "es", initialCountry = "ES", cancelled =
   async function submit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
     if (submitting || !terms || !items.length || !cancelReady) return;
-    const base = { items: items.map(i => ({ productId: i.id, quantity: i.quantity })), customer, termsAccepted: true as const, locale };
+    const base = { items: items.map(i => ({ productId: i.id, quantity: i.quantity })), customer, termsAccepted: true as const, locale, ...(promoCode ? { promoCode } : {}) };
     const fingerprint = JSON.stringify(base);
     const previous = attempt.current;
     setError("");
@@ -99,6 +103,11 @@ export function CheckoutPage({ locale = "es", initialCountry = "ES", cancelled =
         <CountrySelect locale={locale} value={customer.country} onChange={value => field("country", value)} allowedCountries={allowedCountries} />
       </fieldset></div><Link href={localePath(locale, "/carrito")} className="inline-block mt-6 text-sm text-accent-orange underline">{d.backCart}</Link></div>
       <CheckoutSummary locale={locale} quote={quote} loading={loading} showItems>
+        <fieldset disabled={submitting} className="space-y-2">
+          <label htmlFor="promo-code" className="label-base">{promoText.label}</label>
+          <div className="flex gap-2"><input id="promo-code" name="promoCode" value={promoDraft} maxLength={64} autoComplete="off" autoCapitalize="none" spellCheck={false} onChange={e=>setPromoDraft(e.target.value)} onKeyDown={e=>{if(e.key==='Enter'){e.preventDefault();setError('');setPromoCode(promoDraft.trim().toLowerCase());}}} className="input-base min-w-0 flex-1" /><button type="button" className="btn-outline px-3 shrink-0" onClick={()=>{setError('');setPromoCode(promoDraft.trim().toLowerCase());}}>{promoText.apply}</button></div>
+          {promoCode && <button type="button" className="text-sm underline text-text-secondary" onClick={()=>{setPromoCode('');setPromoDraft('');setError('');}}>{promoText.remove}</button>}
+        </fieldset>
         <label className="flex items-start gap-3 text-sm text-text-secondary leading-relaxed"><input type="checkbox" checked={terms} onChange={e => setTerms(e.target.checked)} required className="h-4 w-4 mt-1 shrink-0 accent-accent-red" /><span>{d.accept} <Link href={localePath(locale, "/condiciones-compra")} target="_blank" className="text-accent-orange underline">{d.conditions}</Link> {d.and} <Link href={localePath(locale, "/privacidad")} target="_blank" className="text-accent-orange underline">{d.privacy}</Link>.</span></label>
         {(error || quoteError) && <p role="alert" className="text-sm text-red-300">{error || quoteError}</p>}
         <button type="submit" disabled={submitting || !terms || ((!quote || loading) && !attempt.current)} className="btn-primary w-full disabled:opacity-50 disabled:cursor-not-allowed">{submitting ? d.redirect : d.pay}</button>

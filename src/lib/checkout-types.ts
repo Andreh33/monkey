@@ -21,6 +21,7 @@ export type CheckoutQuoteInput = {
   items: CheckoutLineInput[];
   country: CheckoutCountry;
   postalCode?: string;
+  promoCode?: string;
 };
 export type CheckoutCreateInput = {
   items: CheckoutLineInput[];
@@ -28,6 +29,7 @@ export type CheckoutCreateInput = {
   checkoutToken: string;
   termsAccepted: true;
   locale: CheckoutLocale;
+  promoCode?: string;
 };
 export type CheckoutQuoteItem = {
   productId: string;
@@ -41,6 +43,8 @@ export type CheckoutQuoteItem = {
   image?: string;
 };
 export type CheckoutQuote = {
+  discountCents?: number;
+  promoCode?: string | null;
   items: CheckoutQuoteItem[];
   subtotalCents: number;
   shippingCents: number;

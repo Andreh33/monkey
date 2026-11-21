@@ -31,6 +31,7 @@ export function OrderDetails({ order }: { order: Order }) {
       <dl className="border-t border-border p-5 ml-auto max-w-sm space-y-2">
         {order.subtotalCents !== null && <div className="flex justify-between gap-4"><dt>Productos</dt><dd className="font-mono">{formatOrderMoney(order.subtotalCents)}</dd></div>}
         {order.shippingCents !== null && <div className="flex justify-between gap-4"><dt>Envío</dt><dd className="font-mono">{formatOrderMoney(order.shippingCents)}</dd></div>}
+        {!!order.discountCents && <div className="flex justify-between gap-4 text-success"><dt>Descuento ({order.promoCode})</dt><dd className="font-mono">−{formatOrderMoney(order.discountCents)}</dd></div>}
         <div className="flex justify-between gap-4 font-semibold text-lg"><dt>Total</dt><dd className="font-mono">{formatOrderMoney(orderTotalCents(order))}</dd></div>
         <p className="text-xs text-text-muted">IVA incluido.</p>
       </dl>
