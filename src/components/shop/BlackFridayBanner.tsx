@@ -15,7 +15,7 @@ export function BlackFridayBanner() {
   const locale: Locale=segment==='fr'||segment==='it'||segment==='pt'?segment:'es';
   const d=promotionCopy[locale];
   if(!promotion.active||closed||pathname.includes('/admin')) return null;
-  return <aside aria-label="Black Friday" className="relative w-full overflow-hidden bg-accent-red text-white sm:mx-auto sm:max-w-4xl">
+  return <aside aria-label="Black Friday" className="relative w-full overflow-hidden border-2 border-black bg-accent-red text-white sm:mx-auto sm:max-w-4xl">
     <div className="mx-auto max-w-7xl px-3 py-2 text-center sm:px-5 sm:py-4">
       <p className="px-7 text-[10px] font-semibold sm:text-sm">{d.arrival}</p>
       <p className="mt-0.5 font-display text-xl leading-none tracking-wide sm:mt-1 sm:text-4xl">{d.headline} <span className="inline-block">BLACK FRIDAY</span></p>
