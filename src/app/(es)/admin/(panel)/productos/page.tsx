@@ -7,8 +7,9 @@ export default async function AdminProductos() {
   const products = await prisma.product.findMany({
     select: {
       id: true, slug: true, name: true, sku: true, brand: true, category: true,
-      price: true, stock: true, featured: true, active: true,
-      images: { orderBy: { order: "asc" }, take: 1, select: { url: true } },
+      price: true, stock: true, featured: true, active: true, createdAt: true,
+      // Prisma 5 needs ordering/relation fields when batching large lists.
+      images: { orderBy: { order: "asc" }, take: 1, select: { id: true, productId: true, order: true, url: true } },
     },
     orderBy: { createdAt: "desc" },
   });
