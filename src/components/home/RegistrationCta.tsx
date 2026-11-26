@@ -6,6 +6,7 @@ import {
   ShieldCheck,
 } from "lucide-react";
 import { ScrollReveal } from "@/components/shared/ScrollReveal";
+import { registrationPrices } from "@/lib/registration";
 
 export function RegistrationCta() {
   return (
@@ -28,7 +29,7 @@ export function RegistrationCta() {
                   Nuevo servicio
                 </span>
                 <span className="text-xs font-mono uppercase tracking-wider text-text-muted">
-                  Gestión · 19,50 €
+                  Gestión {registrationPrices.service} + envío {registrationPrices.shipping} · Total {registrationPrices.total}
                 </span>
               </div>
               <h2 className="display-lg max-w-3xl">

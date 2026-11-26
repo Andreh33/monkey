@@ -10,11 +10,12 @@ import {
 } from "lucide-react";
 import { ScooterRegistrationForm } from "@/components/registration/ScooterRegistrationForm";
 import { ScrollReveal } from "@/components/shared/ScrollReveal";
+import { registrationPrices } from "@/lib/registration";
 
 export const metadata: Metadata = {
   title: "Matriculación de patinetes eléctricos",
   description:
-    "Solicita online la gestión de la matrícula de tu patinete eléctrico por 19,50 €. Adjunta el certificado o te ayudamos a conseguirlo.",
+    `Matricula tu patinete eléctrico: ${registrationPrices.service} de gestión + ${registrationPrices.shipping} de envío. Total: ${registrationPrices.total}. Adjunta el certificado o te ayudamos a conseguirlo.`,
   alternates: { canonical: "/matriculaciones", languages: equivalentLanguages("/matriculaciones", staticLanguages("/matriculaciones")) },
 };
 
@@ -34,8 +35,8 @@ const steps = [
   {
     icon: CreditCard,
     number: "03",
-    title: "Abona 19,50 €",
-    text: "Tras enviar la solicitud verás el enlace de pago seguro en Stripe.",
+    title: `Abona ${registrationPrices.total}`,
+    text: `${registrationPrices.service} de gestión + ${registrationPrices.shipping} de gastos de envío. Tras enviar la solicitud verás el enlace de pago seguro en Stripe.`,
   },
 ];
 
@@ -66,8 +67,9 @@ export default function MatriculacionesPage() {
               </p>
               <div className="mt-7 flex flex-wrap items-center gap-3">
                 <span className="rounded-full border border-accent-red/40 bg-accent-red/10 px-4 py-2 text-sm font-semibold text-white">
-                  Precio de gestión: 19,50 €
+                  Gestión: {registrationPrices.service} + envío: {registrationPrices.shipping}
                 </span>
+                <span className="text-sm font-semibold text-white">Total: {registrationPrices.total}</span>
                 <span className="inline-flex items-center gap-2 text-sm text-text-muted">
                   <LockKeyhole className="h-4 w-4 text-success" />
                   Certificados con acceso privado

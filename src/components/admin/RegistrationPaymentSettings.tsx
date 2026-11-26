@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { CreditCard, ExternalLink, Loader2, Save } from "lucide-react";
 import { toast } from "sonner";
-import { scooterRegistrationPaymentUrlSchema } from "@/lib/registration";
+import { registrationPrices, scooterRegistrationPaymentUrlSchema } from "@/lib/registration";
 
 export function RegistrationPaymentSettings({
   initialUrl,
@@ -58,11 +58,11 @@ export function RegistrationPaymentSettings({
           <div className="mb-3 flex items-center gap-2">
             <CreditCard className="h-5 w-5 text-accent-orange" />
             <h2 className="font-display text-2xl tracking-wider">
-              Enlace de pago · 19,50 €
+              Enlace de pago · {registrationPrices.total}
             </h2>
           </div>
           <p className="mb-4 max-w-3xl text-sm leading-relaxed text-text-secondary">
-            Pega aquí el Payment Link que hayas creado en Stripe por 19,50 €.
+            Pega aquí el Payment Link de Stripe con {registrationPrices.service} de gestión y {registrationPrices.shipping} de gastos de envío (total {registrationPrices.total}).
             Se mostrará únicamente después de enviar una solicitud. La web no
             consulta ni cambia nada en Stripe.
           </p>

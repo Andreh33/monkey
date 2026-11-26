@@ -2,6 +2,8 @@ import assert from "node:assert/strict";
 import test from "node:test";
 import {
   SCOOTER_REGISTRATION_PRICE_EUR,
+  SCOOTER_REGISTRATION_SHIPPING_EUR,
+  SCOOTER_REGISTRATION_TOTAL_EUR,
   scooterRegistrationFormSchema,
   scooterRegistrationPaymentUrlSchema,
 } from "../src/lib/registration";
@@ -90,4 +92,6 @@ test("solo acepta Payment Links HTTPS de Stripe o un valor vacío", () => {
 
 test("mantiene fijo el precio mostrado de la gestión", () => {
   assert.equal(SCOOTER_REGISTRATION_PRICE_EUR, 19.5);
+  assert.equal(SCOOTER_REGISTRATION_SHIPPING_EUR, 4.95);
+  assert.equal(SCOOTER_REGISTRATION_TOTAL_EUR, 24.45);
 });

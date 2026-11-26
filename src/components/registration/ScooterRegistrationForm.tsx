@@ -23,7 +23,7 @@ import {
   SCOOTER_REGISTRATION_ACCEPTED_TYPES,
   SCOOTER_REGISTRATION_MAX_FILES,
   SCOOTER_REGISTRATION_MAX_TOTAL_BYTES,
-  SCOOTER_REGISTRATION_PRICE_EUR,
+  registrationPrices,
   scooterRegistrationFormSchema,
   type ScooterRegistrationFormValues,
 } from "@/lib/registration";
@@ -288,10 +288,10 @@ export function ScooterRegistrationForm() {
           {result.paymentUrl ? (
             <div className="mx-auto mt-8 max-w-lg rounded-2xl border border-border bg-bg-secondary p-5 sm:p-6">
               <p className="text-sm text-text-secondary">
-                El siguiente paso es abonar la gestión:
+                Gestión {registrationPrices.service} + gastos de envío {registrationPrices.shipping}
               </p>
               <p className="price-mono my-3 text-4xl text-white">
-                {SCOOTER_REGISTRATION_PRICE_EUR.toFixed(2).replace(".", ",")} €
+                Total: {registrationPrices.total}
               </p>
               <a
                 href={result.paymentUrl}
@@ -565,7 +565,7 @@ export function ScooterRegistrationForm() {
           )}
         </button>
         <p className="text-center text-[11px] leading-relaxed text-text-muted">
-          Tras enviarla verás el enlace de pago de 19,50 €. No almacenamos datos
+          Tras enviarla verás el enlace de pago de {registrationPrices.total}: {registrationPrices.service} de gestión + {registrationPrices.shipping} de gastos de envío. No almacenamos datos
           de tarjeta; el pago se realiza directamente en Stripe.
         </p>
       </form>

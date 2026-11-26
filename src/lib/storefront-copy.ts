@@ -70,7 +70,7 @@ const es = {
   repairText:
     "Reparamos baterías, ruedas, frenos, motores y electrónica de patinetes eléctricos. Presupuesto sin compromiso y piezas originales o equivalentes. Contacta con nuestro taller en C/ Jaume I, 5 para explicar la avería y organizar la visita.",
   registrationText:
-    "Gestionamos solicitudes de matrícula VMP en España. El servicio cuesta 19,50 €. Se necesita el nombre del titular, DNI o NIE, email, teléfono y el certificado del patinete. Si no tienes el certificado, te orientamos. El formulario y la tramitación se realizan en español.",
+    "Gestionamos solicitudes de matrícula VMP en España. El servicio cuesta 19,50 € + 4,95 € de gastos de envío (total: 24,45 €). Se necesita el nombre del titular, DNI o NIE, email, teléfono y el certificado del patinete. Si no tienes el certificado, te orientamos. El formulario y la tramitación se realizan en español.",
   spanishForm: "Abrir el formulario en español",
   aboutText:
     "MonopatinShop nace de la pasión por la movilidad eléctrica y la cultura urbana de Tarragona. Empezamos como un pequeño taller arreglando los patinetes de amigos y vecinos. Hoy ofrecemos venta y reparación con un equipo que conoce cada modelo y trata cada patinete como si fuera el suyo.",
@@ -164,7 +164,7 @@ export const copy: Record<Locale, StoreCopy> = {
     repairText:
       "Nous réparons les batteries, roues, freins, moteurs et systèmes électroniques des trottinettes électriques. Devis sans engagement, pièces d’origine ou équivalentes. Contactez notre atelier au C/ Jaume I, 5 pour décrire la panne et organiser votre visite.",
     registrationText:
-      "Nous traitons les demandes d’immatriculation VMP en Espagne. Le service coûte 19,50 €. Il faut le nom du titulaire, son DNI ou NIE, son email, son téléphone et le certificat de la trottinette. Si vous n’avez pas le certificat, nous vous orientons. Le formulaire et la procédure sont en espagnol.",
+      "Nous traitons les demandes d’immatriculation VMP en Espagne. Le service coûte 19,50 € + 4,95 € de frais de livraison (total : 24,45 €). Il faut le nom du titulaire, son DNI ou NIE, son email, son téléphone et le certificat de la trottinette. Si vous n’avez pas le certificat, nous vous orientons. Le formulaire et la procédure sont en espagnol.",
     spanishForm: "Ouvrir le formulaire en espagnol",
     aboutText:
       "MonopatinShop est né de la passion pour la mobilité électrique et la culture urbaine de Tarragone. Nous avons commencé dans un petit atelier en réparant les trottinettes de nos amis et voisins. Aujourd’hui, nous proposons vente et réparation avec une équipe qui connaît chaque modèle et traite chaque trottinette comme la sienne.",
@@ -255,7 +255,7 @@ export const copy: Record<Locale, StoreCopy> = {
     repairText:
       "Ripariamo batterie, ruote, freni, motori ed elettronica dei monopattini elettrici. Preventivo senza impegno e ricambi originali o equivalenti. Contatta la nostra officina in C/ Jaume I, 5 per descrivere il guasto e organizzare la visita.",
     registrationText:
-      "Gestiamo richieste di immatricolazione VMP in Spagna. Il servizio costa 19,50 €. Sono necessari nome del titolare, DNI o NIE, email, telefono e certificato del monopattino. Se non hai il certificato, ti orientiamo. Il modulo e la procedura sono in spagnolo.",
+      "Gestiamo richieste di immatricolazione VMP in Spagna. Il servizio costa 19,50 € + 4,95 € di spese di spedizione (totale: 24,45 €). Sono necessari nome del titolare, DNI o NIE, email, telefono e certificato del monopattino. Se non hai il certificato, ti orientiamo. Il modulo e la procedura sono in spagnolo.",
     spanishForm: "Apri il modulo in spagnolo",
     aboutText:
       "MonopatinShop nasce dalla passione per la mobilità elettrica e la cultura urbana di Tarragona. Abbiamo iniziato in una piccola officina riparando i monopattini di amici e vicini. Oggi offriamo vendita e riparazione con un team che conosce ogni modello e tratta ogni monopattino come il proprio.",
@@ -346,7 +346,7 @@ export const copy: Record<Locale, StoreCopy> = {
     repairText:
       "Reparamos baterias, rodas, travões, motores e eletrónica de trotinetes elétricas. Orçamento sem compromisso e peças originais ou equivalentes. Contacte a nossa oficina na C/ Jaume I, 5 para descrever a avaria e organizar a visita.",
     registrationText:
-      "Tratamos de pedidos de matrícula VMP em Espanha. O serviço custa 19,50 €. São necessários o nome do titular, DNI ou NIE, email, telefone e certificado da trotinete. Se não tiver o certificado, ajudamos a orientar o processo. O formulário e o procedimento são em espanhol.",
+      "Tratamos de pedidos de matrícula VMP em Espanha. O serviço custa 19,50 € + 4,95 € de portes de envio (total: 24,45 €). São necessários o nome do titular, DNI ou NIE, email, telefone e certificado da trotinete. Se não tiver o certificado, ajudamos a orientar o processo. O formulário e o procedimento são em espanhol.",
     spanishForm: "Abrir o formulário em espanhol",
     aboutText:
       "A MonopatinShop nasceu da paixão pela mobilidade elétrica e pela cultura urbana de Tarragona. Começámos numa pequena oficina a reparar as trotinetes de amigos e vizinhos. Hoje oferecemos venda e reparação com uma equipa que conhece cada modelo e trata cada trotinete como se fosse sua.",

@@ -1,6 +1,14 @@
 import { z } from "zod";
+import pricing from "@/config/registration-pricing.json";
 
-export const SCOOTER_REGISTRATION_PRICE_EUR = 19.5;
+export const SCOOTER_REGISTRATION_PRICE_EUR = pricing.serviceCents / 100;
+export const SCOOTER_REGISTRATION_SHIPPING_EUR = pricing.shippingCents / 100;
+export const SCOOTER_REGISTRATION_TOTAL_EUR = (pricing.serviceCents + pricing.shippingCents) / 100;
+export const registrationPrices = {
+  service: SCOOTER_REGISTRATION_PRICE_EUR.toFixed(2).replace(".", ",") + " €",
+  shipping: SCOOTER_REGISTRATION_SHIPPING_EUR.toFixed(2).replace(".", ",") + " €",
+  total: SCOOTER_REGISTRATION_TOTAL_EUR.toFixed(2).replace(".", ",") + " €",
+};
 export const SCOOTER_REGISTRATION_MAX_FILES = 3;
 export const SCOOTER_REGISTRATION_MAX_FILE_BYTES = 3 * 1024 * 1024;
 export const SCOOTER_REGISTRATION_MAX_TOTAL_BYTES = 3 * 1024 * 1024;
